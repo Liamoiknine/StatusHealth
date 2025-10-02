@@ -10,23 +10,6 @@ function getValueColor(value: number) {
   return 'text-gray-600';
 }
 
-function ChemicalCard({ chemical }: { chemical: ChemicalData }) {
-  return (
-    <Link 
-      href={`/chemical/${encodeURIComponent(chemical.name)}`}
-      className="block"
-    >
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 cursor-pointer">
-        <h3 className="text-sm font-semibold text-gray-900 mb-1 truncate">
-          {chemical.name}
-        </h3>
-        <div className="text-lg font-bold text-gray-700">
-          {chemical.content}
-        </div>
-      </div>
-    </Link>
-  );
-}
 
 export default function HomePage() {
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
@@ -57,7 +40,6 @@ export default function HomePage() {
 
   const highestExposure = chemicals.slice(0, 4);
   const underControl = chemicals.slice(-4);
-  const remainingChemicals = chemicals.slice(4, -4);
 
   return (
     <div className="min-h-screen bg-white">

@@ -19,7 +19,7 @@ export default async function ChemicalPage({ params }: ChemicalPageProps) {
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Chemical Not Found</h1>
-          <p className="text-gray-600 mb-8">The chemical "{chemicalName}" was not found.</p>
+          <p className="text-gray-600 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
           <Link 
             href="/" 
             className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"

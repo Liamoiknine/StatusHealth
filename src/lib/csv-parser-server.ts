@@ -17,10 +17,13 @@ export async function parseChemicalsCSV(): Promise<ChemicalData[]> {
         header: true,
         skipEmptyLines: true,
         complete: (results) => {
-          const data = results.data.map((row: any) => ({
-            name: row.name,
-            content: parseFloat(row.content)
-          }));
+          const data = results.data.map((row: unknown) => {
+            const typedRow = row as Record<string, string>;
+            return {
+              name: typedRow.name,
+              content: parseFloat(typedRow.content)
+            };
+          });
           // Sort by content value (highest first)
           data.sort((a, b) => b.content - a.content);
           resolve(data);
