@@ -12,7 +12,7 @@ export default async function ChemicalPage({ params }: ChemicalPageProps) {
   const chemicalName = decodeURIComponent(name);
   const chemicals: ChemicalData[] = await parseChemicalsCSV();
   
-  const chemical = chemicals.find(c => c.name === chemicalName);
+  const chemical = chemicals.find(c => c.compound === chemicalName);
   
   if (!chemical) {
     return (
@@ -44,27 +44,40 @@ export default async function ChemicalPage({ params }: ChemicalPageProps) {
           
           <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-6">
-              {chemical.name}
+              {chemical.compound}
             </h1>
             
             <div className="space-y-4">
               <div className="flex justify-between items-center py-4 border-b border-gray-200">
                 <span className="text-lg font-medium text-gray-700">Chemical Name:</span>
-                <span className="text-lg text-gray-900">{chemical.name}</span>
+                <span className="text-lg text-gray-900">{chemical.compound}</span>
+              </div>
+              
+              <div className="flex justify-between items-center py-4 border-b border-gray-200">
+                <span className="text-lg font-medium text-gray-700">Exposure Category:</span>
+                <span className="text-lg text-gray-900">{chemical.exposureCategory}</span>
               </div>
               
               <div className="flex justify-between items-center py-4 border-b border-gray-200">
                 <span className="text-lg font-medium text-gray-700">Value:</span>
-                <span className="text-2xl font-bold text-gray-900">{chemical.content}</span>
+                <span className="text-2xl font-bold text-gray-900">{chemical.value.toLocaleString()}</span>
               </div>
             </div>
             
             <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-              <h2 className="text-lg font-semibold text-gray-900 mb-2">Additional Information</h2>
-              <p className="text-gray-600">
-                This chemical has a content value of {chemical.content}. 
-                Higher values may indicate greater exposure levels.
-              </p>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Additional Information</h2>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="text-md font-medium text-gray-800 mb-1">Primary Source:</h3>
+                  <p className="text-gray-600">{chemical.primarySource}</p>
+                </div>
+                {chemical.secondarySources && (
+                  <div>
+                    <h3 className="text-md font-medium text-gray-800 mb-1">Secondary Sources:</h3>
+                    <p className="text-gray-600">{chemical.secondarySources}</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

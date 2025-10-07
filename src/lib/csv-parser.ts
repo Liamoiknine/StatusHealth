@@ -1,6 +1,9 @@
 export interface ChemicalData {
-  name: string;
-  content: number;
+  compound: string;
+  exposureCategory: string;
+  primarySource: string;
+  secondarySources: string | null;
+  value: number;
 }
 
 export async function parseChemicalsCSV(): Promise<ChemicalData[]> {

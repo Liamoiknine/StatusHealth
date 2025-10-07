@@ -4,17 +4,21 @@ import { parseChemicalsCSV, ChemicalData } from '@/lib/csv-parser';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+import { LifeLine } from 'react-loading-indicators';
+
+
 function getValueColor(value: number) {
-  if (value >= 0.7) return 'text-red-600';
-  if (value <= 0.3) return 'text-green-600';
+  if (value >= 1000) return 'text-red-600';
+  if (value <= 100) return 'text-green-600';
   return 'text-gray-600';
 }
 
 
 export default function HomePage() {
-  const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
-  const [showAll, setShowAll] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [chemicals, setChemicals] = useState<ChemicalData[]>([]); // stores all the chemicals recieved from the csv
+  const [showDetected, setShowDetected] = useState(false); // controls whether to show detected chemicals
+  const [showUndetected, setShowUndetected] = useState(false); // controls whether to show undetected chemicals
+  const [loading, setLoading] = useState(true); // controls whether to show a loading message or not
 
   useEffect(() => {
     async function loadChemicals() {
@@ -33,13 +37,36 @@ export default function HomePage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-lg text-gray-600">Loading chemicals...</div>
+        <LifeLine color="#32cd32" size="medium" text="" textColor="" />
       </div>
     );
   }
 
-  const highestExposure = chemicals.slice(0, 4);
-  const underControl = chemicals.slice(-4);
+  // Group chemicals by exposure category and get top 3 from each
+  const categoryGroups = chemicals.reduce((groups, chemical) => {
+    const category = chemical.exposureCategory;
+    if (!groups[category]) {
+      groups[category] = [];
+    }
+    groups[category].push(chemical);
+    return groups;
+  }, {} as Record<string, ChemicalData[]>);
+
+  // Calculate counts for buttons
+  const detectedCount = chemicals.filter(c => c.value > 0).length;
+  const undetectedCount = chemicals.filter(c => c.value === 0).length;
+
+  // Sort each category by value (highest first) and take top 3
+  const topChemicalsByCategory = Object.entries(categoryGroups).map(([category, chemicals]) => {
+    const categoryDetectedCount = chemicals.filter(c => c.value > 0).length;
+    const totalCount = chemicals.length;
+    return {
+      category,
+      chemicals: chemicals.sort((a, b) => b.value - a.value).slice(0, 3),
+      detectedCount: categoryDetectedCount,
+      totalCount
+    };
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -83,82 +110,117 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Top two windows */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Highest Exposure Chemicals */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-            <h2 className="text-xl font-bold text-red-800 mb-4">Highest Exposure Chemicals</h2>
-            <div className="grid grid-cols-1 gap-3">
-              {highestExposure.map((chemical, index) => (
-                <Link 
-                  key={index} 
-                  href={`/chemical/${encodeURIComponent(chemical.name)}`}
-                  className="block"
-                >
-                  <div className="bg-white border border-red-200 rounded-lg shadow-sm p-3 hover:shadow-md transition-shadow cursor-pointer">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1 truncate">
-                      {chemical.name}
-                    </h3>
-                    <div className="text-lg font-bold text-red-600">
-                      {chemical.content}
+        {/* Chemical Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {topChemicalsByCategory.map(({ category, chemicals, detectedCount, totalCount }) => (
+            <div key={category} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h2 className="text-lg font-bold text-gray-800 mb-2">{category}</h2>
+              <p className="text-sm text-gray-600 mb-4">Detected {detectedCount}/{totalCount}</p>
+              <div className="grid grid-cols-1 gap-3">
+                {chemicals.map((chemical, index) => (
+                  <Link 
+                    key={index} 
+                    href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                    className="block"
+                  >
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-3 hover:shadow-md transition-shadow cursor-pointer">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-1 truncate">
+                        {chemical.compound}
+                      </h3>
+                      <div className={`text-lg font-bold ${getValueColor(chemical.value)}`}>
+                        {chemical.value.toLocaleString()}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Under Control Chemicals */}
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <h2 className="text-xl font-bold text-green-800 mb-4">Under Control Chemicals</h2>
-            <div className="grid grid-cols-1 gap-3">
-              {underControl.map((chemical, index) => (
-                <Link 
-                  key={index} 
-                  href={`/chemical/${encodeURIComponent(chemical.name)}`}
-                  className="block"
-                >
-                  <div className="bg-white border border-green-200 rounded-lg shadow-sm p-3 hover:shadow-md transition-shadow cursor-pointer">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1 truncate">
-                      {chemical.name}
-                    </h3>
-                    <div className="text-lg font-bold text-green-600">
-                      {chemical.content}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* See All Chemicals Button */}
+        {/* See Detected/Undetected Buttons */}
         <div className="text-center mb-8">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-          >
-            {showAll ? 'Hide All Chemicals' : 'See All Chemicals'}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => {
+                setShowDetected(!showDetected);
+                setShowUndetected(false);
+              }}
+              className={`px-8 py-3 rounded-lg font-medium transition-colors ${
+                showDetected 
+                  ? 'bg-green-600 text-white hover:bg-green-700' 
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              }`}
+            >
+              {showDetected ? 'Hide Detected Chemicals' : `See All Detected (${detectedCount})`}
+            </button>
+            <button
+              onClick={() => {
+                setShowUndetected(!showUndetected);
+                setShowDetected(false);
+              }}
+              className={`px-8 py-3 rounded-lg font-medium transition-colors ${
+                showUndetected 
+                  ? 'bg-gray-600 text-white hover:bg-gray-700' 
+                  : 'bg-gray-500 text-white hover:bg-gray-600'
+              }`}
+            >
+              {showUndetected ? 'Hide Undetected Chemicals' : `See Undetected (${undetectedCount})`}
+            </button>
+          </div>
         </div>
 
-        {/* All Chemicals Grid */}
-        {showAll && (
+        {/* Detected Chemicals Grid */}
+        {showDetected && (
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">All Chemicals</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">All Detected Chemicals</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {chemicals.map((chemical, index) => (
+              {chemicals.filter(chemical => chemical.value > 0).map((chemical, index) => (
                 <Link 
                   key={index} 
-                  href={`/chemical/${encodeURIComponent(chemical.name)}`}
+                  href={`/chemical/${encodeURIComponent(chemical.compound)}`}
                   className="block"
                 >
                   <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 cursor-pointer">
                     <h3 className="text-sm font-semibold text-gray-900 mb-2 truncate">
-                      {chemical.name}
+                      {chemical.compound}
                     </h3>
-                    <div className={`text-lg font-bold ${getValueColor(chemical.content)}`}>
-                      {chemical.content}
+                    <div className={`text-lg font-bold ${getValueColor(chemical.value)}`}>
+                      {chemical.value.toLocaleString()}
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      {chemical.exposureCategory}
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      Click to view details
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Undetected Chemicals Grid */}
+        {showUndetected && (
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">All Undetected Chemicals</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {chemicals.filter(chemical => chemical.value === 0).map((chemical, index) => (
+                <Link 
+                  key={index} 
+                  href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                  className="block"
+                >
+                  <div className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 cursor-pointer">
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2 truncate">
+                      {chemical.compound}
+                    </h3>
+                    <div className="text-lg font-bold text-gray-400">
+                      Not Detected
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      {chemical.exposureCategory}
                     </div>
                     <div className="text-xs text-gray-500 mt-1">
                       Click to view details
