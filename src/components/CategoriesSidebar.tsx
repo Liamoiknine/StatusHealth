@@ -1,0 +1,68 @@
+'use client';
+
+import Link from 'next/link';
+import { ChemicalData } from '@/lib/csv-parser';
+
+interface CategoriesSidebarProps {
+  categories: Array<{
+    category: string;
+    detectedCount: number;
+    totalCount: number;
+  }>;
+  currentCategory?: string;
+}
+
+export default function CategoriesSidebar({ categories, currentCategory }: CategoriesSidebarProps) {
+  return (
+    <div className="w-80 bg-gray-50 border-r border-gray-200 min-h-screen">
+      <div className="p-6">
+        <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Dashboard
+        </Link>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">All Categories</h2>
+        <div className="space-y-2">
+          {categories.map(({ category, detectedCount, totalCount }, index) => {
+            // Determine status color for sidebar
+            let statusColor = 'bg-green-600';
+            if (detectedCount === 0) {
+              statusColor = 'bg-green-400';
+            } else if (index < 2) {
+              statusColor = 'bg-yellow-400';
+            }
+            
+            const isActive = currentCategory === category;
+            
+            return (
+              <Link
+                key={category}
+                href={`/category/${encodeURIComponent(category)}`}
+                className="block"
+              >
+                <div className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
+                  isActive 
+                    ? 'bg-blue-100 border border-blue-200' 
+                    : 'hover:bg-gray-100'
+                }`}>
+                  <div className={`w-3 h-3 rounded-full ${statusColor}`}></div>
+                  <div className="flex-1 min-w-0">
+                    <div className={`text-sm font-medium truncate ${
+                      isActive ? 'text-blue-900' : 'text-gray-900'
+                    }`}>
+                      {category}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {detectedCount}/{totalCount} detected
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
