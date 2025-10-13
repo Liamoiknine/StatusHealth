@@ -12,7 +12,7 @@ interface ExposureReportCardProps {
 export default function ExposureReportCard({ categories }: ExposureReportCardProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-8 min-h-[400px] flex flex-col">
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex items-start justify-between mb-2">
         <div className="flex items-center space-x-2">
           <h2 className="text-xl font-bold text-gray-900">Your Exposures</h2>
         </div>
@@ -23,11 +23,11 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
         </Link>
       </div>
       
-      <p className="text-gray-600 mb-6 text-[12px] leading-relaxed text-justify">
+      <p className="text-gray-600 mb-3 text-[12px] leading-relaxed text-justify">
         By examining the chemicals in your blood, this report provides key findings and personalized health recommendations while allowing you to check your health categories trends over your previous reports.
       </p>
       
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-2">
         <span className="text-sm font-bold text-gray-500">Oct 24</span>
       </div>
       
