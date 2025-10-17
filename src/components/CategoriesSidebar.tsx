@@ -1,20 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { ChemicalData } from '@/lib/csv-parser';
+import { getCategoryStatusInfo } from '@/app/api/utils';
+import { ChemicalData } from '@/app/api/csv-parser';
 
 interface CategoriesSidebarProps {
   categories: Array<{
     category: string;
     detectedCount: number;
     totalCount: number;
+    chemicals: ChemicalData[];
   }>;
   currentCategory?: string;
 }
 
 export default function CategoriesSidebar({ categories, currentCategory }: CategoriesSidebarProps) {
   return (
-    <div className="w-80 bg-gray-50 border-r border-gray-200 min-h-screen">
+    <div className="w-80 bg-white border-r border-gray-200 min-h-screen">
       <div className="p-6">
         <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6">
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,14 +26,9 @@ export default function CategoriesSidebar({ categories, currentCategory }: Categ
         </Link>
         <h2 className="text-lg font-semibold text-gray-900 mb-4">All Categories</h2>
         <div className="space-y-2">
-          {categories.map(({ category, detectedCount, totalCount }, index) => {
-            // Determine status color for sidebar
-            let statusColor = 'bg-green-600';
-            if (detectedCount === 0) {
-              statusColor = 'bg-green-400';
-            } else if (index < 2) {
-              statusColor = 'bg-yellow-400';
-            }
+          {categories.map(({ category, detectedCount, totalCount, chemicals }) => {
+            // Use the same classification system as category cards
+            const statusInfo = getCategoryStatusInfo(chemicals);
             
             const isActive = currentCategory === category;
             
@@ -46,7 +43,7 @@ export default function CategoriesSidebar({ categories, currentCategory }: Categ
                     ? 'bg-blue-100 border border-blue-200' 
                     : 'hover:bg-gray-100'
                 }`}>
-                  <div className={`w-3 h-3 rounded-full ${statusColor}`}></div>
+                  <div className={`w-3 h-3 rounded-full ${statusInfo.color}`}></div>
                   <div className="flex-1 min-w-0">
                     <div className={`text-sm font-medium truncate ${
                       isActive ? 'text-blue-900' : 'text-gray-900'

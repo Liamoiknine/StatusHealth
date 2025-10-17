@@ -1,18 +1,20 @@
 import Link from 'next/link';
-import { ChemicalData } from '@/lib/csv-parser';
+import { ChemicalData } from '@/app/api/csv-parser';
+import { getCategoryStatusInfo } from '@/app/api/utils';
 
 interface ExposureReportCardProps {
   categories: Array<{
     category: string;
     detectedCount: number;
     totalCount: number;
+    chemicals: ChemicalData[];
   }>;
 }
 
 export default function ExposureReportCard({ categories }: ExposureReportCardProps) {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-8 min-h-[400px] flex flex-col">
-      <div className="flex items-start justify-between mb-2">
+    <div className="bg-white border border-gray-200 rounded-lg p-8 h-full flex flex-col">
+      <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-2">
           <h2 className="text-xl font-bold text-gray-900">Your Exposures</h2>
         </div>
@@ -23,70 +25,63 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
         </Link>
       </div>
       
-      <p className="text-gray-600 mb-3 text-[12px] leading-relaxed text-justify">
+      <p className="text-gray-600 mb-6 text-sm leading-relaxed">
         By examining the chemicals in your blood, this report provides key findings and personalized health recommendations while allowing you to check your health categories trends over your previous reports.
       </p>
       
-      <div className="flex justify-end mb-2">
-        <span className="text-sm font-bold text-gray-500">Oct 24</span>
-      </div>
-      
-      <div className="space-y-2 flex-1 mb-6">
+      <div className="space-y-3 flex-1 mb-8">
         {categories
-          .map(({ category, detectedCount, totalCount }) => {
-            return {
-              category,
-              detectedCount,
-              totalCount
-            };
+          .map(({ category, detectedCount, totalCount, chemicals }) => {
+            const statusInfo = getCategoryStatusInfo(chemicals);
+            return { category, detectedCount, totalCount, chemicals, statusInfo };
           })
-          .sort((a, b) => b.detectedCount - a.detectedCount) // Sort by detected count (highest to lowest)
-          .map(({ category, detectedCount, totalCount }, index) => {
-            // Make exactly 2 categories "Monitor Only" (orange) - the ones with highest detected counts
-            let statusColor = 'bg-green-600'; // Optimal (dark green)
-            let statusText = 'Optimal';
+          .sort((a, b) => {
+            // Sort by classification priority: Pay Attention > Monitor Only > Optimal
+            const priorityOrder = { 'Pay Attention': 0, 'Monitor Only': 1, 'Optimal': 2 };
+            const aPriority = priorityOrder[a.statusInfo.text as keyof typeof priorityOrder] ?? 3;
+            const bPriority = priorityOrder[b.statusInfo.text as keyof typeof priorityOrder] ?? 3;
             
-            if (detectedCount === 0) {
-              statusColor = 'bg-green-400'; // Health Booster (light green)
-              statusText = 'Health Booster';
-            } else if (index < 2) {
-              statusColor = 'bg-yellow-400'; // Monitor Only (yellow-orange)
-              statusText = 'Monitor Only';
+            if (aPriority !== bPriority) {
+              return aPriority - bPriority;
             }
-          
-          return (
-            <div key={category} className="flex items-stretch">
-              <div className="flex items-center space-x-3 flex-1">
-                <div className="w-5 h-5 bg-gray-200 rounded flex items-center justify-center">
-                  <svg className="w-3 h-3 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm font-medium text-gray-900">{category}</div>
-                  <div className="text-xs text-gray-500">
-                    {detectedCount} exposures
+            
+            // If same priority, sort by detected count (highest first)
+            return b.detectedCount - a.detectedCount;
+          })
+          .map(({ category, detectedCount, statusInfo }) => {
+            return (
+              <div key={category} className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <div className="flex items-center space-x-3 flex-1">
+                  <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
+                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-sm font-medium text-gray-900">{category}</div>
+                    <div className="text-xs text-gray-500">
+                      {detectedCount} exposures
+                    </div>
                   </div>
                 </div>
+                <div className={`w-4 h-4 rounded-full ${statusInfo.color}`}></div>
               </div>
-              <div className={`w-12 rounded-sm ${statusColor}`}></div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
       
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4 text-xs justify-between">
-          <div className="flex items-center space-x-1">
-            <div className="w-3 h-3 bg-red-500 rounded"></div>
-            <span className="text-gray-600">Pay attention</span>
+      <div className="flex items-center justify-center">
+        <div className="flex items-center space-x-6 text-xs">
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <span className="text-gray-600">Pay Attention</span>
           </div>
-          <div className="flex items-center space-x-1">
-            <div className="w-3 h-3 bg-yellow-400 rounded"></div>
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
             <span className="text-gray-600">Monitor Only</span>
           </div>
-          <div className="flex items-center space-x-1">
-            <div className="w-3 h-3 bg-green-600 rounded"></div>
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
             <span className="text-gray-600">Optimal</span>
           </div>
         </div>

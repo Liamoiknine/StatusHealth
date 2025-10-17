@@ -1,25 +1,23 @@
 'use client';
 
-import { parseChemicalsCSV, ChemicalData } from '@/lib/csv-parser';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { LifeLine } from 'react-loading-indicators';
+import Link from 'next/link';
 import CategoriesSidebar from '@/components/CategoriesSidebar';
-
-function getValueColor(value: number) {
-  if (value >= 1000) return 'text-red-600';
-  if (value <= 100) return 'text-green-600';
-  return 'text-yellow-400';
-}
+import { parseChemicalsCSV } from '@/lib/csv-parser-client';
+import { groupChemicalsByCategory, getCategoryStats, getPercentileColor, formatPercentile, getCategoryStatusInfo } from '@/app/api/utils';
+import { useTest } from '@/contexts/TestContext';
+import { ChemicalData } from '@/app/api/csv-parser';
 
 export default function CategoriesPage() {
+  const { selectedTest } = useTest();
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadChemicals() {
+      setLoading(true);
       try {
-        const data = await parseChemicalsCSV();
+        const data = await parseChemicalsCSV(selectedTest);
         setChemicals(data);
       } catch (error) {
         console.error('Error loading chemicals:', error);
@@ -27,48 +25,29 @@ export default function CategoriesPage() {
         setLoading(false);
       }
     }
+    
     loadChemicals();
-  }, []);
+  }, [selectedTest]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <LifeLine color="#32cd32" size="medium" text="" textColor="" />
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading test data...</p>
+        </div>
       </div>
     );
   }
 
-  // Group chemicals by exposure category
-  const categoryGroups = chemicals.reduce((groups, chemical) => {
-    const category = chemical.exposureCategory;
-    if (!groups[category]) {
-      groups[category] = [];
-    }
-    groups[category].push(chemical);
-    return groups;
-  }, {} as Record<string, ChemicalData[]>);
-
-  // Sort each category by detected count (highest first) and take top 3 chemicals
-  const categoriesWithChemicals = Object.entries(categoryGroups)
-    .map(([category, chemicals]) => {
-      const categoryDetectedCount = chemicals.filter(c => c.value > 0).length;
-      const totalCount = chemicals.length;
-      return {
-        category,
-        chemicals: chemicals.sort((a, b) => b.value - a.value).slice(0, 3),
-        detectedCount: categoryDetectedCount,
-        totalCount
-      };
-    })
-    .sort((a, b) => b.detectedCount - a.detectedCount); // Sort by detected count (highest first)
+  const categoryGroups = groupChemicalsByCategory(chemicals);
+  const categoriesWithStats = getCategoryStats(categoryGroups);
 
   return (
     <div className="min-h-screen bg-white">
       <div className="flex">
-        {/* Sidebar */}
-        <CategoriesSidebar categories={categoriesWithChemicals} />
+        <CategoriesSidebar categories={categoriesWithStats} />
 
-        {/* Main Content */}
         <div className="flex-1">
           <div className="container mx-auto px-8 py-8">
             <div className="mb-8">
@@ -76,62 +55,47 @@ export default function CategoriesPage() {
               <p className="text-gray-600 mt-2">Detailed view of all health categories and their chemical exposures</p>
             </div>
 
-            {/* Categories Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {categoriesWithChemicals.map(({ category, chemicals, detectedCount, totalCount }, index) => {
-            // Determine status based on detected count (same logic as Exposure Report)
-            let statusColor = 'bg-green-600'; // Optimal (dark green)
-            let statusText = 'Optimal';
-            let statusBgColor = 'bg-green-50';
-            let statusTextColor = 'text-green-700';
-            
-            if (detectedCount === 0) {
-              statusColor = 'bg-green-400'; // Health Booster (light green)
-              statusText = 'Health Booster';
-              statusBgColor = 'bg-green-50';
-              statusTextColor = 'text-green-700';
-            } else if (index < 2) {
-              statusColor = 'bg-yellow-400'; // Monitor Only (yellow-orange)
-              statusText = 'Monitor Only';
-              statusBgColor = 'bg-yellow-50';
-              statusTextColor = 'text-yellow-700';
-            }
-            
-            return (
-            <Link key={category} href={`/category/${encodeURIComponent(category)}`} className="block">
-              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">{category}</h2>
-                    <p className="text-sm text-gray-600 mb-3">Detected {detectedCount}/{totalCount} exposures</p>
-                  </div>
-                  <div className={`px-3 py-1 rounded-full ${statusBgColor}`}>
-                    <span className={`text-xs font-medium ${statusTextColor}`}>{statusText}</span>
-                  </div>
-                </div>
-              <div className="grid grid-cols-1 gap-3">
-                {chemicals.map((chemical, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gray-50 border border-gray-200 rounded-lg shadow-sm p-3"
-                  >
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1 truncate">
-                      {chemical.compound}
-                    </h3>
-                    <div className={`text-lg font-bold ${getValueColor(chemical.value)}`}>
-                      {chemical.value.toLocaleString()}
+              {categoriesWithStats.map(({ category, chemicals, detectedCount, totalCount }) => {
+                const status = getCategoryStatusInfo(chemicals);
+                
+                return (
+                  <Link key={category} href={`/category/${encodeURIComponent(category)}`} className="block">
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h2 className="text-xl font-bold text-gray-900 mb-2">{category}</h2>
+                          <p className="text-sm text-gray-600 mb-3">Detected {detectedCount}/{totalCount} exposures</p>
+                          <div className="text-xs text-gray-500 space-y-1">
+                            <div>Pay Attention: {totalCount > 0 ? Math.round((chemicals.filter(c => (c.percentile || 0) > 0.6).length / totalCount) * 100) : 0}%</div>
+                            <div>Monitor Only: {totalCount > 0 ? Math.round((chemicals.filter(c => { const p = c.percentile || 0; return p > 0.1 && p <= 0.6; }).length / totalCount) * 100) : 0}%</div>
+                            <div>Optimal: {totalCount > 0 ? Math.round((chemicals.filter(c => (c.percentile || 0) <= 0.1).length / totalCount) * 100) : 0}%</div>
+                          </div>
+                        </div>
+                        <div className={`px-3 py-1 rounded-full ${status.bgColor}`}>
+                          <span className={`text-xs font-medium ${status.textColor}`}>{status.text}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {chemicals.slice(0, 3).map((chemical, index) => (
+                          <div key={index} className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg">
+                            <h3 className="text-sm font-semibold text-gray-900 truncate flex-1">
+                              {chemical.compound}
+                            </h3>
+                            <span className={`text-sm font-bold ml-3 ${getPercentileColor(chemical.percentile)}`}>
+                              {formatPercentile(chemical.percentile)}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              </div>
-            </Link>
-            );
-          })}
+                  </Link>
+                );
+              })}
             </div>
             
             <div className="text-sm text-gray-500 text-center">
-              Showing {chemicals.length} chemical entries across {categoriesWithChemicals.length} categories
+              Showing {chemicals.length} chemical entries across {categoriesWithStats.length} categories
             </div>
           </div>
         </div>

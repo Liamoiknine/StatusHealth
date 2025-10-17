@@ -1,28 +1,24 @@
 'use client';
 
-import { parseChemicalsCSV, ChemicalData } from '@/lib/csv-parser';
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { LifeLine } from 'react-loading-indicators';
+import { parseChemicalsCSV } from '@/lib/csv-parser-client';
+import { groupChemicalsByCategory, getCategoryStats } from '@/app/api/utils';
+import { useTest } from '@/contexts/TestContext';
 import ExposureReportCard from '@/components/ExposureReportCard';
 import ProfilePanel from '@/components/ProfilePanel';
-
-
-function getValueColor(value: number) {
-  if (value >= 1000) return 'text-red-600';
-  if (value <= 100) return 'text-green-600';
-  return 'text-yellow-400';
-}
-
+import LongitudinalPreview from '@/components/LongitudinalPreview';
+import { ChemicalData } from '@/app/api/csv-parser';
 
 export default function HomePage() {
-  const [chemicals, setChemicals] = useState<ChemicalData[]>([]); // stores all the chemicals recieved from the csv
-  const [loading, setLoading] = useState(true); // controls whether to show a loading message or not
+  const { selectedTest } = useTest();
+  const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadChemicals() {
+      setLoading(true);
       try {
-        const data = await parseChemicalsCSV();
+        const data = await parseChemicalsCSV(selectedTest);
         setChemicals(data);
       } catch (error) {
         console.error('Error loading chemicals:', error);
@@ -30,65 +26,41 @@ export default function HomePage() {
         setLoading(false);
       }
     }
+    
     loadChemicals();
-  }, []);
+  }, [selectedTest]);
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <LifeLine color="#32cd32" size="medium" text="" textColor="" />
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading test data...</p>
+        </div>
       </div>
     );
   }
 
-  // Group chemicals by exposure category and get top 3 from each
-  const categoryGroups = chemicals.reduce((groups, chemical) => {
-    const category = chemical.exposureCategory;
-    if (!groups[category]) {
-      groups[category] = [];
-    }
-    groups[category].push(chemical);
-    return groups;
-  }, {} as Record<string, ChemicalData[]>);
-
-
-  // Sort each category by value (highest first) and take top 3
-  const topChemicalsByCategory = Object.entries(categoryGroups).map(([category, chemicals]) => {
-    const categoryDetectedCount = chemicals.filter(c => c.value > 0).length;
-    const totalCount = chemicals.length;
-    return {
-      category,
-      chemicals: chemicals.sort((a, b) => b.value - a.value).slice(0, 3),
-      detectedCount: categoryDetectedCount,
-      totalCount
-    };
-  });
+  const categoryGroups = groupChemicalsByCategory(chemicals);
+  const categoriesWithStats = getCategoryStats(categoryGroups);
+  
+  // Get top 3 chemicals from each category for the exposure report
+  const topChemicalsByCategory = categoriesWithStats.map(({ category, chemicals, detectedCount, totalCount }) => ({
+    category,
+    chemicals: chemicals, // Use ALL chemicals for classification, not just top 3
+    detectedCount,
+    totalCount
+  }));
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-8 pt-4 pb-8 max-w-5xl">
-        
-        {/* Profile Panel */}
         <ProfilePanel />
         
-        {/* Cards Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
-          {/* Left Card - Blank */}
-          <div className="bg-white border border-gray-200 rounded-lg p-8 min-h-[400px]">
-            <div className="h-full flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-16 h-16 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-                <p className="text-base">Additional content coming soon</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Card - Exposure Report */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8 items-stretch">
+          <LongitudinalPreview selectedTest={selectedTest} />
           <ExposureReportCard categories={topChemicalsByCategory} />
         </div>
-
       </div>
     </div>
   );
