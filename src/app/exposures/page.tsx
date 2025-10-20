@@ -9,21 +9,16 @@ import CategoriesSidebar from '@/components/CategoriesSidebar';
 import { ChemicalData } from '@/app/api/csv-parser';
 
 
-export default function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
+export default function AllExposuresPage() {
   const { selectedTest } = useTest();
-  const [categoryName, setCategoryName] = useState<string>('');
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [exposureFilter, setExposureFilter] = useState<'all' | 'pay-attention' | 'monitor-only' | 'low-exposure' | 'not-detected'>('pay-attention');
+  const [exposureFilter, setExposureFilter] = useState<'all' | 'pay-attention' | 'monitor-only' | 'low-exposure' | 'not-detected'>('all');
 
   useEffect(() => {
     async function loadData() {
       setLoading(true);
       try {
-        const resolvedParams = await params;
-        const decodedName = decodeURIComponent(resolvedParams.name);
-        setCategoryName(decodedName);
-        
         const data = await parseChemicalsCSV(selectedTest);
         setChemicals(data);
       } catch (error) {
@@ -34,7 +29,7 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
     }
     
     loadData();
-  }, [params, selectedTest]);
+  }, [selectedTest]);
 
   if (loading) {
     return (
@@ -51,8 +46,7 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
   const categoriesWithStats = getCategoryStats(categoryGroups);
   
   // Filter chemicals by exposure level
-  const categoryChemicals = chemicals
-    .filter(chemical => chemical.exposureCategory === categoryName)
+  const filteredChemicals = chemicals
     .filter(chemical => {
       const percentile = chemical.percentile || 0;
       const value = chemical.value;
@@ -77,22 +71,16 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
       return bPercentile - aPercentile;
     });
   
-  const detectedCount = categoryChemicals.filter(c => c.value > 0).length;
-  const totalCount = categoryChemicals.length;
-
-  const info = {
-    description: `Detailed information about ${categoryName} and their potential health impacts.`,
-    sources: ['Various environmental and consumer sources'],
-    healthImpact: 'Health impact varies by specific chemical and exposure level.'
-  };
+  const detectedCount = filteredChemicals.filter(c => c.value > 0).length;
+  const totalCount = filteredChemicals.length;
 
   return (
     <div className="min-h-screen bg-white">
       <div className="flex">
-        <CategoriesSidebar categories={categoriesWithStats} currentCategory={categoryName} />
+        <CategoriesSidebar categories={categoriesWithStats} currentCategory="all-exposures" />
 
         <div className="flex-1">
-          <div className="container mx-auto px-8 py-8 max-w-5xl">
+          <div className="container mx-auto px-8 py-8 max-w-7xl">
             <div className="mb-8">
               <Link href="/categories" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,46 +91,21 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
               
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h1 className="text-3xl font-bold text-gray-900 mb-2">{categoryName}</h1>
-                  <p className="text-gray-600">Detected {detectedCount}/{totalCount} exposures</p>
+                  <h1 className="text-3xl font-bold text-gray-900 mb-2">All Chemical Exposures</h1>
+                  <p className="text-gray-600">Viewing all chemicals across all categories</p>
+                  <p className="text-sm text-gray-500 mt-1">Detected {detectedCount}/{totalCount} exposures</p>
                 </div>
                 <div className="bg-blue-50 px-4 py-2 rounded-lg">
                   <span className="text-sm font-medium text-blue-700">
-                    {totalCount} total chemicals
+                    {chemicals.length} total chemicals
                   </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">About {categoryName}</h2>
-              <p className="text-gray-700 mb-6 leading-relaxed">{info.description}</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Common Sources</h3>
-                  <ul className="space-y-2">
-                    {info.sources.map((source, index) => (
-                      <li key={index} className="flex items-center text-gray-700">
-                        <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
-                        </svg>
-                        {source}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Health Impact</h3>
-                  <p className="text-gray-700 leading-relaxed">{info.healthImpact}</p>
                 </div>
               </div>
             </div>
 
             <div className="mb-8">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Chemicals in this Category</h2>
+                <h2 className="text-2xl font-bold text-gray-900">All Chemicals</h2>
                 <div className="flex items-center space-x-1">
                   <span className="text-sm text-gray-600 mr-3">Filter by exposure level:</span>
                   <button
@@ -200,52 +163,58 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
               <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                 <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
                   <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-700">
-                    <div className="col-span-4">Chemical Name</div>
+                    <div className="col-span-3">Chemical Name</div>
+                    <div className="col-span-2">Category</div>
                     <div className="col-span-2 text-center">Measured Value</div>
-                    <div className="col-span-2 text-center">Percentile</div>
+                    <div className="col-span-1 text-center">Percentile</div>
                     <div className="col-span-2">Primary Source</div>
                     <div className="col-span-2">Status</div>
                   </div>
                 </div>
                 <div className="divide-y divide-gray-200">
-                  {categoryChemicals.map((chemical, index) => {
+                  {filteredChemicals.map((chemical, index) => {
                     const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
                     return (
-                      <Link 
-                        key={index} 
-                        href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                        className="block hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="px-6 py-4">
-                          <div className="grid grid-cols-12 gap-4 items-center">
-                            <div className="col-span-4">
-                              <h3 className="text-sm font-semibold text-gray-900 truncate">
-                                {chemical.compound}
-                              </h3>
-                            </div>
-                            <div className="col-span-2 text-center">
-                              <span className="text-sm text-gray-700">
-                                {chemical.value > 0 ? chemical.value.toLocaleString() : 'Not Detected'}
-                              </span>
-                            </div>
-                            <div className="col-span-2 text-center">
-                              <span className={`text-lg font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
-                                {formatPercentile(chemical.percentile, chemical.value)}
-                              </span>
-                            </div>
-                            <div className="col-span-2">
-                              <p className="text-sm text-gray-600 truncate">
-                                {chemical.primarySource}
-                              </p>
-                            </div>
-                            <div className="col-span-2">
-                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
-                                {statusInfo.text}
-                              </span>
-                            </div>
+                      <div key={index} className="px-6 py-4 hover:bg-gray-50 transition-colors">
+                        <div className="grid grid-cols-12 gap-4 items-center">
+                          <div className="col-span-3">
+                            <Link 
+                              href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                              className="text-sm font-semibold text-gray-900 hover:text-blue-600 truncate block"
+                            >
+                              {chemical.compound}
+                            </Link>
+                          </div>
+                          <div className="col-span-2">
+                            <Link
+                              href={`/category/${encodeURIComponent(chemical.exposureCategory)}`}
+                              className="text-sm text-blue-600 hover:text-blue-800 hover:underline truncate block"
+                            >
+                              {chemical.exposureCategory}
+                            </Link>
+                          </div>
+                          <div className="col-span-2 text-center">
+                            <span className="text-sm text-gray-700">
+                              {chemical.value > 0 ? chemical.value.toLocaleString() : 'Not Detected'}
+                            </span>
+                          </div>
+                          <div className="col-span-1 text-center">
+                            <span className={`text-sm font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                              {formatPercentile(chemical.percentile, chemical.value)}
+                            </span>
+                          </div>
+                          <div className="col-span-2">
+                            <p className="text-sm text-gray-600 truncate">
+                              {chemical.primarySource}
+                            </p>
+                          </div>
+                          <div className="col-span-2">
+                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                              {statusInfo.text}
+                            </span>
                           </div>
                         </div>
-                      </Link>
+                      </div>
                     );
                   })}
                 </div>
@@ -253,7 +222,7 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
             </div>
             
             <div className="text-sm text-gray-500 text-center">
-              Showing {categoryChemicals.length} chemicals in {categoryName}
+              Showing {filteredChemicals.length} chemicals across {categoriesWithStats.length} categories
               {exposureFilter !== 'all' && (
                 <span className="ml-2">
                   (filtered by {exposureFilter.replace('-', ' ')})
@@ -266,3 +235,4 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
     </div>
   );
 }
+

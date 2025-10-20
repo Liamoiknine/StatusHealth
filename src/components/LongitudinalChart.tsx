@@ -140,13 +140,34 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
 
-  // Find min/max values for scaling
+  // Find min/max values for scaling (including percentile ranges)
   const values = points.map(p => p.value).filter(v => v > 0);
-  const maxValue = values.length > 0 ? Math.max(...values) : 1;
-  const minValue = values.length > 0 ? Math.min(...values) : 0;
+  const rangeLows = points.map(p => p.rangeLow).filter((v): v is number => v !== undefined);
+  const rangeHighs = points.map(p => p.rangeHigh).filter((v): v is number => v !== undefined);
+  
+  // Combine all values to determine the full scale
+  const allValues = [...values, ...rangeLows, ...rangeHighs];
+  
+  let maxValue = 1;
+  let minValue = 0;
+  
+  if (allValues.length > 0) {
+    maxValue = Math.max(...allValues);
+    minValue = Math.min(...allValues);
+    
+    // Add some padding to the scale (10% on each side) for better visibility
+    const range = maxValue - minValue;
+    const padding = range * 0.1;
+    maxValue = maxValue + padding;
+    minValue = Math.max(0, minValue - padding); // Don't go below 0
+  }
 
   // Parse dates and create scales
-  const dates = points.map(p => new Date(p.date.replace(/\r/g, '')));
+  const dates = points.map(p => {
+    const cleanDate = p.date.replace(/\r/g, '').trim();
+    return new Date(cleanDate);
+  }).filter(d => !isNaN(d.getTime())); // Filter out invalid dates
+  
   const minDate = dates.length > 0 ? new Date(Math.min(...dates.map(d => d.getTime()))) : new Date();
   const maxDate = dates.length > 0 ? new Date(Math.max(...dates.map(d => d.getTime()))) : new Date();
 
@@ -183,8 +204,42 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
     return path;
   };
 
+  // Create path for the percentile range shaded area
+  const createRangePath = () => {
+    const pointsWithRange = points.filter(p => p.rangeLow !== undefined && p.rangeHigh !== undefined);
+    if (pointsWithRange.length === 0) return '';
+
+    let path = '';
+    
+    // Draw top line (rangeHigh) from left to right
+    pointsWithRange.forEach((point, index) => {
+      const x = getX(new Date(point.date.replace(/\r/g, '')));
+      const y = getY(point.rangeHigh!);
+      
+      if (index === 0) {
+        path += `M ${x} ${y}`;
+      } else {
+        path += ` L ${x} ${y}`;
+      }
+    });
+    
+    // Draw bottom line (rangeLow) from right to left
+    for (let i = pointsWithRange.length - 1; i >= 0; i--) {
+      const point = pointsWithRange[i];
+      const x = getX(new Date(point.date.replace(/\r/g, '')));
+      const y = getY(point.rangeLow!);
+      path += ` L ${x} ${y}`;
+    }
+    
+    path += ' Z'; // Close the path
+    return path;
+  };
+
   // Format date for display
   const formatDate = (date: Date) => {
+    if (isNaN(date.getTime())) {
+      return 'Invalid Date';
+    }
     return date.toLocaleDateString('en-US', { 
       month: 'short', 
       day: 'numeric', 
@@ -246,6 +301,14 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
               </text>
             );
           })}
+
+          {/* Shaded area for 25th-75th percentile range */}
+          <path
+            d={createRangePath()}
+            fill="#93c5fd"
+            fillOpacity="0.3"
+            stroke="none"
+          />
 
           {/* Line chart */}
           <path
@@ -315,11 +378,15 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
       <div className="flex justify-center space-x-6 mt-4 text-sm">
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-          <span className="text-gray-600">Detected</span>
+          <span className="text-gray-600">Your Results</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
           <span className="text-gray-600">Not Detected</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <div className="w-6 h-3 bg-blue-300 opacity-30 rounded"></div>
+          <span className="text-gray-600">25th-75th Percentile</span>
         </div>
       </div>
 

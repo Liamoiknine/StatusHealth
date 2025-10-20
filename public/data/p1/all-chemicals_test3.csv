@@ -1,314 +1,314 @@
-Compound,Exposure Category,Primary Source,Secondary Source(s),Value,range_low,range_high,percentile,date
-Benzoic acid,Agricultural Chemicals,Food preservatives,Cosmetics and Fragrances,290680.6158,146757.4499,444464.1382,0.532556225,6/13/25
-4-Nitrophenol,Agricultural Chemicals,Environmental contamination,,0,,,,
-Isodrin,Agricultural Chemicals,Environmental contamination,,0,,,,
-(E)-Fenpyroximate,Agricultural Chemicals,Food,,0,,,,
-Benzoximate,Agricultural Chemicals,Food,,0,,,,
-Bifenazate,Agricultural Chemicals,Food,,779.2742272,671.4854934,984.185626,0.659028523,
-Clofentezine,Agricultural Chemicals,Food,Soil contamination,0,,,,
-Etoxazole,Agricultural Chemicals,Food,Water contamination,964.3543877,350.9178673,1018.507509,0.843347317,
-Fenazaquin,Agricultural Chemicals,Food,,0,,,,
-Hexythiazox,Agricultural Chemicals,Food,,0,,,,
-Spirodiclofen,Agricultural Chemicals,Food,Water contamination,0,,,,
-Tebufenpyrad,Agricultural Chemicals,Occupational,Food,0,,,,
-Bupirimate,Agricultural Chemicals,Food,,0,293.2407548,833.9813931,0.426825041,
-Metalaxyl,Agricultural Chemicals,Food,Water contamination,74351.91804,72556.97903,109114.5323,0.235844311,
-Oxadixyl,Agricultural Chemicals,Food,,0,,,,
-Benalaxyl,Agricultural Chemicals,Food,"Water contamination, soil contamination",19166037.21,4261007.054,26462404.56,0.62927606,
-Furalaxyl,Agricultural Chemicals,Food,,0,,,,
-Chlorantraniliprole,Agricultural Chemicals,Food,,0,,,,
-Flubendiamide,Agricultural Chemicals,Food,,0,,,,
-Abamectin,Agricultural Chemicals,Food,Water contamination,0,,,,
-Doramectin,Agricultural Chemicals,Occupational,,0,,,,
-Emamectin-benzoate,Agricultural Chemicals,Food,Water contamination,0,,,,
-Moxidectin,Agricultural Chemicals,Occupational,,0,,,,
-Zoxamide,Agricultural Chemicals,Food,Water contamination,0,,,,
-Acibenzolar-S-methyl,Agricultural Chemicals,Food,Water contamination,0,,,,
-Chlorfluazuron,Agricultural Chemicals,Food,Water contamination,0,,,,
-Diflubenzuron,Agricultural Chemicals,Food,Water contamination,0,,,,
-Flufenoxuron,Agricultural Chemicals,Food,Water contamination,0.003343639,0.001440875,0.005081275,0.404660208,
-Hexaflumuron,Agricultural Chemicals,Food,"Water contamination, soil contamination",0,,,,
-Novaluron,Agricultural Chemicals,Food,,0,,,,
-Teflubenzuron,Agricultural Chemicals,Food,,0,,,,
-Triflumuron,Agricultural Chemicals,Food,Water contamination,0,,,,
-Iprovalicarb,Agricultural Chemicals,Food,Water contamination,0,,,,
-Propamocarb (free base),Agricultural Chemicals,Food,Water contamination,6299.242998,2687.764127,8872.475492,0.495060754,
-Aminocarb,Agricultural Chemicals,Food,Water contamination,0,,,,
-Benfuracarb,Agricultural Chemicals,Food,Water contamination,0,,,,
-Fenobucarb (BPMC),Agricultural Chemicals,Food,Water contamination,0,,,,
-Formetanate HCL,Agricultural Chemicals,Food,Water contamination,0,,,,
-Furathiocarb,Agricultural Chemicals,Food,Water contamination,4643.754384,4118.69994,6661.667586,0.203230686,
-Oxamyl,Agricultural Chemicals,Food,Water contamination,673.9489596,501.1780724,954.7316955,0.352771579,
-Pirimicarb,Agricultural Chemicals,Food,Water contamination,5644.793629,4244.645216,6345.790768,0.493238454,
-Propoxur (Baygon),Agricultural Chemicals,Food,"Water contamination, commercial building insecticide",40547.64565,11520.30268,42454.63256,0.874051496,
-Thiofanox,Agricultural Chemicals,Food,Water contamination,0,,,,
-Cymoxanil,Agricultural Chemicals,Food,,0,,,,
-Methoxyfenozide,Agricultural Chemicals,Food,,22430.30192,14531.23514,31211.42858,0.557429079,
-Tebufenozide,Agricultural Chemicals,Food,,0,164.3429868,443.7498014,0.792063764,
-Amitraz,Agricultural Chemicals,Food,,0,,,,
-Carbendazim,Agricultural Chemicals,Food,,71.64808597,44.52679157,74.96888571,0.455916678,
-Thiabendazole,Agricultural Chemicals,Soil contamination,Water contamination,4273.248394,3743.976035,8239.556334,0.131254015,
-Fenhexamid,Agricultural Chemicals,Air contamination,Occupational,0,,,,
-Imazalil,Agricultural Chemicals,Food,,0,,,,
-Mandipropamid,Agricultural Chemicals,Food,,0,,,,
-Fenpropimorph,Agricultural Chemicals,Food,,0,,,,
-Fludioxonil,Agricultural Chemicals,Food,,0,,,,
-Fenarimol,Agricultural Chemicals,Food,,0,,,,
-Nuarimol,Agricultural Chemicals,Food,,0,,,,
-Spiroxamine,Agricultural Chemicals,Food,Occupational,550.8702951,363.5222091,615.9713032,0.663087311,
-Thiophanate-methyl,Agricultural Chemicals,Food,,157.761091,148.3582356,182.5212562,0.497850135,
-Baycor (Bitertanol),Agricultural Chemicals,Food,,0,,,,
-Bromuconazole,Agricultural Chemicals,Food,,0,,,,
-Cyproconazole,Agricultural Chemicals,Food,Water contamination,1815.311531,750.8108188,2119.486154,0.755934701,
-Diclobutrazol,Agricultural Chemicals,Food,,0,,,,
-Difenoconazole,Agricultural Chemicals,Food,,0,,,,
-Diniconazole,Agricultural Chemicals,Food,,0,,,,
-Epoxiconazole,Agricultural Chemicals,Food,,0,,,,
-Fenbuconazole,Agricultural Chemicals,Food,"Water contamination, soil contamination",0,,,,
-Fluquinconazole,Agricultural Chemicals,Food,,0,,,,
-Flusilazole,Agricultural Chemicals,Food,,10943.92837,5852.414526,11265.60951,0.660666665,
-Flutriafol,Agricultural Chemicals,Food,Water contamination,12540.4822,9735.770977,30944.54084,0.463264918,
-Hexaconazole,Agricultural Chemicals,Food,Environmental contamination,0,,,,
-Ipconazole,Agricultural Chemicals,Food,,0,,,,
-Metconazole,Agricultural Chemicals,Food,Environmental contamination,0,,,,
-Myclobutanil,Agricultural Chemicals,Food,,980.7536214,798.7519183,1417.766421,0.298718335,
-Paclobutrazol,Agricultural Chemicals,Food,,0,,,,
-Penconazole,Agricultural Chemicals,Occupational,,0,,,,
-Propiconazole (Tilt),Agricultural Chemicals,Environmental contamination,,0,,,,
-Prothioconazole,Agricultural Chemicals,Food,,0,,,,
-Tebuconazole,Agricultural Chemicals,Food,Treated wood,5604.341011,1312.968376,9698.627812,0.494670295,
-Tetraconazole,Agricultural Chemicals,Food,,0,,,,
-Triadimefon,Agricultural Chemicals,Food,Water contamination,2113.699312,781.3848634,3626.222138,0.529313979,
-Triadimenol,Agricultural Chemicals,Environmental contamination,,45.13062134,,,,
-Triticonazole,Agricultural Chemicals,Food,,0,,,,
-Boscalid,Agricultural Chemicals,Food,Water contamination,0,,,,
-Carboxin,Agricultural Chemicals,Food,Water contamination,0,,,,
-Cyazofamid,Agricultural Chemicals,Food,,0,,,,
-Dimethomorph,Agricultural Chemicals,Food,"Water contamination, occupational",0,,,,
-Ethirimol,Agricultural Chemicals,Food,,0,,,,
-Fenamidone,Agricultural Chemicals,Food,,0,,,,
-Fluazinam,Agricultural Chemicals,Food,,0,,,,
-Flutolanil,Agricultural Chemicals,Food,,0,,,,
-Mepanipyrim,Agricultural Chemicals,Food,,0,,,,
-Monceren (Pencycuron),Agricultural Chemicals,Food,,31585.81938,14925.6305,40198.21484,0.650444738,
-Pyracarbolid,Agricultural Chemicals,Food,,0,,,,
-Pyrimethanil,Agricultural Chemicals,Food,,0,,,,
-Tricyclazole (Beam),Agricultural Chemicals,Food,,0,,,,
-Butafenacil,Agricultural Chemicals,Food,,0,,,,
-Clethodim,Agricultural Chemicals,Food,,0,,,,
-Ethofumesate,Agricultural Chemicals,Food,,8404.094418,7486.417334,15675.03919,0.132423585,
-Flufenacet (Fluthiamide),Agricultural Chemicals,Food,,0,,,,
-Buprofezin,Agricultural Chemicals,Food,,0,,,,
-Halofenozide,Agricultural Chemicals,Food,,2905.461512,1844.482558,2789.88812,0.658962108,
-Mepronil,Agricultural Chemicals,Food,,0,,,,
-Acetamiprid,Agricultural Chemicals,Food,,0,,,,
-Clothianidin,Agricultural Chemicals,Food,,0,,,,
-Thiacloprid,Agricultural Chemicals,Food,,212.6304616,192.2429224,235.4361344,0.501920942,
-Acephate,Agricultural Chemicals,Food,"Celery, lettuce, and peppers",0,,,,
-Dicrotophos,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,
-Dimethoate,Agricultural Chemicals,Food,Environmental contamination,0,,,,
-Isocarbophos,Agricultural Chemicals,Food,Chinese origin rice and cotton,0,,,,
-Methamidophos,Agricultural Chemicals,Food,"Potatoes, tomatoes, cotton",0,,,,
-Temephos (Abate),Agricultural Chemicals,Water contamination,,0,,,,
-Vamidothion (Vamidoate),Agricultural Chemicals,Food,,0,,,,
-Indoxacarb,Agricultural Chemicals,Food,,1919.623956,2070.443183,2599.185278,0.517164833,
-Desmedipham,Agricultural Chemicals,Food,Sugar Beets,0,,,,
-Pymetrozine,Agricultural Chemicals,Food,,528.6575238,339.6645275,991.5974201,0.38760657,
-Flonicamid,Agricultural Chemicals,Food,"Cotton, alfalfa, leafy vegetables, and some fruits",485.605838,355.4902451,927.1674695,0.593328264,
-Quinoxyfen,Agricultural Chemicals,Food,Grapes,0,,,,
-Spinosad (A & D),Agricultural Chemicals,Food,,0,,,,
-Azoxystrobin,Agricultural Chemicals,Food,"Fruits, vegtables, nuts, and cereals. Environmental contamination",991.8950554,212.6605387,980.646377,0.854491487,
-Dimoxystrobin,Agricultural Chemicals,Food,"cereals, vines, potatoes",0,,,,
-Fluoxastrobin,Agricultural Chemicals,Food,"Peanuts, leafy vegetables, fruiting vegetables, potatoes, golf courses",2242.17947,1779.6541,2966.10377,0.31666653,
-Picoxystrobin,Agricultural Chemicals,Food,"Corn, soy, wheat, canola, oats",0,,,,
-Pyraclostrobin,Agricultural Chemicals,Food,,0,,,,
-Trifloxystrobin,Agricultural Chemicals,Food,,0,,,,
-Spiromesifen,Agricultural Chemicals,Food,"Corn, cotton, melons",0,,,,
-Mefenacet,Agricultural Chemicals,Food,,574.1114431,584.6354698,818.5001734,0.609689397,
-Thiobencarb,Agricultural Chemicals,Food,Rice,0,,,,
-Metribuzin,Agricultural Chemicals,Food,Environmental contamination,1279.261433,1069.228801,2342.110353,0.286517782,
-Prometryne,Agricultural Chemicals,Food,"Cotton, celery",0,,,,
-Secbumeton,Agricultural Chemicals,Food,,0,,,,
-Simetryn,Agricultural Chemicals,Food,Environmental contamination,0,,,,
-Terbumeton,Agricultural Chemicals,Occupational,,0,,,,
-Terbutryn,Agricultural Chemicals,Environmental contamination,,0,,,,
-Cyromazine,Agricultural Chemicals,Food,"crops, animal products where used as additive",0,,,,
-Ametryn,Agricultural Chemicals,Food,Environmental contamination,40375.0644,32006.00584,48252.48543,0.281765914,
-Sulfentrazone,Agricultural Chemicals,Food,environmental contamination,0,,,,
-Chloroxuron,Agricultural Chemicals,Food,"Soy, strawberries, vegetables",0,,,,
-Chlortoluron,Agricultural Chemicals,Environmental contamination,,0,,,,
-Fluometuron,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,
-Linuron,Agricultural Chemicals,Food,"Soy, carrots, celery",0,,,,
-Methabenzthiazuron,Agricultural Chemicals,Food,Corn and wheat,275.0228141,209.3571145,296.9272179,0.300975841,
-Metobromuron,Agricultural Chemicals,Environmental contamination,,0,,,,
-Monolinuron,Agricultural Chemicals,Environmental contamination,"vegetables, fruits, fish",0,,,,
-Neburon,Agricultural Chemicals,Food,Environmental contamination,0,,,,
-Tebuthiuron,Agricultural Chemicals,Environmental contamination,,0,,,,
-Thidiazuron,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,
-Forchlorfenuron,Agricultural Chemicals,Food,"Grapes, kiwi, fruits",0,,,,
-"2,4-Dichlorophenol",Agricultural Chemicals,Environmental contamination,"Occupational, manufacturing",0,,,,
-Fenuron,Containers & Coatings,Occupational,"Adhesives, sealants, coatings, herbicides",1222.00704,806.7712765,1305.467337,0.563705522,
-"2,2',3,3',4,4',5,5',6-Nonachlorobiphenyl (BZ#206)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-"2,2',3,5'-Tetrachlorobiphenyl (BZ#44)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-"2,2',5-Trichlorobiphenyl (BZ#18)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-"2,3',4,4'-Tetrachlorobiphenyl (BZ#66)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-"2,4',5-Trichlorobiphenyl (BZ#31)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-2-Chlorobiphenyl (BZ#1),Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,
-2-Chloronaphthalene,Containers & Coatings,Building materials,"Lubricants, cable insulation, combustion processes, contaminated air, contaminated water, contaminated soil",0,,,,
-"2,3,4,6-Tetrachlorophenol",Containers & Coatings,Contaminated air,Treated wood,0,,,,
-Pentachlorophenol,Containers & Coatings,Treated wood,Indoor air,0,,,,
-Phenanthrene,Containers & Coatings,Combustion processes,Environmental contamination,0,,,,
-"2-(Heptafluoropropoxy)-2,3,3,3-tetrafluoropropionic acid (HFPO-DA)",Containers & Coatings,Fluoropolymer materials,Environmental contamination,0,,,,
-"4,8-dioxa-3H-perfluorononanoic acid (ADONA)",Containers & Coatings,Consumer products,"Food packaging, Environmental contamination",0,,,,
-Perfluorobutanoic acid (PFBA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products",0,,,,
-Perfluorodecanoic acid (PFDA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products, environmental contamination",0,,,,
-Perfluoroheptanoic acid (PFHpA),Containers & Coatings,Consumer products,Grease and stain resistance,0,,,,
-Perfluorohexanoic acid (PFHxA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products, environmental contamination",0,,,,
-Perfluorononanoic acid (PFNA),Containers & Coatings,Consumer products,"furniture materials, caprets, cleaning products, environmental contamination",0,,,,
-Perfluoropentanoic acid (PFPeA),Containers & Coatings,Consumer products,"furniture materials, caprets, cleaning products, environmental contamination",0,,,,
-Perfluorotetradecanoic acid (PFTeDA),Containers & Coatings,Consumer products,"Photographic films, firefighting foams, detergents, baby formula, food packaging, environmental contamination",0,,,,
-Perfluorotridecanoic acid (PFTrDA),Containers & Coatings,Consumer products,"Stain resistance, water repellents, non-stick products, environmental contamination",0,,,,
-Perfluoroundecanoic acid (PFUnA),Containers & Coatings,Environmental contamination,"Food packaging, consumer products, household dust",0,,,,
-Perfluoro-1-octanesulfonamide (FOSA),Containers & Coatings,Consumer products,"Food packaging, stain repellents",0,,,,
-9-chlorohexadecafluoro-3-oxanonane-1-sulfonic acid,Containers & Coatings,Consumer products,"Food packaging, stain repellents, carpeting, environmental contamination",0,,,,
-"1H,1H,2H,2H-Perfluorodecanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-"1H,1H,2H,2H-Perfluorohexanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-"1H,1H,2H,2H-Perfluorooctanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-Perfluoro-1-pentanesulfonic acid (PFPeS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-Perfluorobutanesulfonic acid (PFBS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-Perfluoroheptanesulfonic acid (PFHpS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,
-Perfluorohexanesulfonic acid (PFHxS)*,Containers & Coatings,Consumer products,Environmental contamination,0.042650338,0.03614716,0.06430578,0.202134912,
-Di-n-hexylphthalate,Containers & Coatings,Building materials,"vinyl, automotive parts, consumer products",0,,,,
-Bisphenol A (BPA),Containers & Coatings,Plastic products and packaging,"Canned products, Receipts, dental materials",0,,,,
-Bis(4-hydroxyphenyl)methane (BPF),Containers & Coatings,Plastic products and packaging,"Canned products, Receipts, dental materials",0,,,,
-Perfluorododecanoic acid (PFDoA),Containers & Coatings,Emissions,"Environmental contamination, nonstick coatings",0,,,,
-Perfluorooctanoic acid (PFOA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-Heptadecafluorooctanesulfonic acid (PFOS)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-Perfluoro-1-decanesulfonic acid (PFDS),Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-Perfluoro-1-nonanesulfonic acid (PFNS),Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-N-ethylperfluoro-1-octanesulfonamidoacetic acid (NEtFOSAA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-N-methylperfluoro-1-octanesulfonamidoacetic acid (NMeFOSAA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,
-Isophorone,Household Products,Printer ink and paints,"Industrial use, occupational, contaminated air",0,,,,
-"1,4-Dichlorobenzene",Household Products,Mothballs and deodorizers,"Contaminated air, industrial use, combustion processes",0,,,,
-"2,6-Dichlorophenol",Household Products,Occupational,"Photographic solutions, medications, treated wood",0,,,,
-Lufenuron,Household Products,Pet flea medicine,,0,,,,
-Carbaryl (Sevin),Household Products,Residential pesticides,"Water contamination, soil contamination",832.8996645,438.1235551,930.1655711,0.629211398,
-Carbetamide,Household Products,Residential pesticides,"Water contamination, soil contamination",2084.852033,1536.449531,2222.676547,0.683098243,
-Diethofencarb,Household Products,Residential pesticides,"Water contamination, soil contamination",94432.76532,30137.21438,81061.9542,0.835416455,
-Methiocarb,Household Products,Residential seed coatings,,0,,,,
-Methomyl,Household Products,Fly bait,,0,,,,
-Triflumizole,Household Products,Tree and Shrub treatments,,0,,,,
-Cyprodinil,Household Products,Ornamentals,Food,0,,,,
-Fenoxycarb,Household Products,Insecticide,,2680.167729,1448.019334,5508.089454,0.283953142,
-Pyriproxyfen,Household Products,Pet flea medicine,,6791.562409,4594.285909,11092.53669,0.1430679,
-Hydramethylnon,Household Products,Insecticide,,0,,,,
-Dinotefuran,Household Products,Pet flea medicine,Food,226.4990008,90.15333029,355.8328894,0.478057364,
-Imidacloprid,Household Products,Pet flea medicine,Food,0,,,,
-Nitenpyram,Household Products,Pet flea medicine,,0,,,,
-Ethiprole,Household Products,Pet parasite medicine,,0,,,,
-Fipronil,Household Products,Pest Control,Pets flea medicine,0,,,,
-Metaflumizone,Household Products,Pest Control,"Pets flea medicine, food",0,,,,
-Spinetoram (J & L),Household Products,Garden treatments,,0,,,,
-Prometon,Household Products,Landscaping,Food,0,,,,
-Mesotrione,Household Products,Landscaping,"Food, environmental contamination",0,,,,
-Siduron,Household Products,Landscaping,Golf courses,0,,,,
-Phenol,Household Products,Disinfectants,"ointments, antiseptics",0,,,,
-Piperonyl butoxide,Household Products,Pesticides,,0,,,,
-Benzo[a]pyrene,Industrial Chemicals,Combustion processes,,0,,,,
-2-Methylphenol (o-cresol),Industrial Chemicals,Combustion processes,"Tobacco smoke, petroleum, automobile exhaust",0,,,,
-3-Methylphenol (m-cresol),Industrial Chemicals,Combustion processes,"Coal, wood, tobacco smoke",0,,,,
-4-Methylphenol (p-cresol),Industrial Chemicals,Combustion processes,"Tobacco smoke, wood, coal",0,,,,
-Dibenzofuran,Industrial Chemicals,Combustion processes,,0,,,,
-Ethyl methanesulfonate,Industrial Chemicals,Occupational,"Trace contaminant in some pharmaceuticals, Contaminated air",3042.342563,1655.303506,4364.830267,0.756868145,
-Aniline,Industrial Chemicals,Contaminated air,"Tobacco smoke, occupational, contaminated water",0,,,,
-Benzidine,Industrial Chemicals,Occupational,"Dyes, contaminated soil, contaminated water",0,,,,
-Diphenylamine,Industrial Chemicals,Occupational,"Contaminated soil, contaminated water, agricultural use",0,,,,
-Azobenzene,Industrial Chemicals,Synthetic Fabrics and Dyes,"Occupational, contaminated water, contaminated air, contaminated soil",0,,,,
-"1,2-Dichlorobenzene",Industrial Chemicals,Contaminated air,"Occupational, contaminated soil, contaminated water",0,,,,
-"1,3-Dichlorobenzene",Industrial Chemicals,Contaminated air,"Occupational, contaminated soil, contaminated water",0,,,,
-"3,3'-Dichlorobenzidine",Industrial Chemicals,Occupational,"Dyes, Pigments",0,,,,
-4-Chloroaniline,Industrial Chemicals,Occupational,"Dyes, Medications, Pesticides",0,,,,
-4-Bromophenylphenyl ether,Industrial Chemicals,Occupational,Flame retardants,0,,,,
-4-Chlorophenylphenyl ether,Industrial Chemicals,Occupational,,0,,,,
-"2,2'-Oxybis (a.k.a. Bis(2-chloroisopropyl) ether)",Industrial Chemicals,Occupational,,0,,,,
-Bis(2-chloroethyl)ether (111-44-4),Industrial Chemicals,Water contamination,"Occupational, soil contamination, air contamination",0,,,,
-"2,4,5-Trichlorophenol",Industrial Chemicals,Occupational,"Contaminated water, contaminated air, contaminated soil",0,,,,
-2-Chlorophenol,Industrial Chemicals,Contaminated water,"Contamined soil, disinfectants",0,,,,
-Pyridine,Industrial Chemicals,Occupational,"Tobacco smoke, food",0,,,,
-"1,3-Dinitrobenzene",Industrial Chemicals,Environmental contamination,,0,,,,
-"2,4-Dinitrotoluene",Industrial Chemicals,Occupational,Dyes,0,,,,
-"2,6-Dinitrotoluene",Industrial Chemicals,Occupational,Dyes,0,,,,
-4-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments, medications",0,,,,
-Nitrobenzene,Industrial Chemicals,Occupational,"Contaminated air, contaminated water",0,,,,
-2-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments, medications",0,,,,
-3-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments",0,,,,
-4-Nitroquinoline-N-oxide,Industrial Chemicals,Environmental contamination,Occupational,0,,,,
-"2,4-Dinitrophenol",Industrial Chemicals,Environmental contamination,"Manufacturing, Pesticide",49093.97981,39913.45417,107113.4116,0.153248845,
-2-Nitrophenol,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments",0,,,,
-3-Methylcholanthrene,Industrial Chemicals,Combustion processes,,0,,,,
-Acenaphthene,Industrial Chemicals,Combustion processes,Environmental contamination,3647.190384,2538.950861,5329.697373,0.170965775,
-Acenaphthylene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-Anthracene,Industrial Chemicals,Combustion processes,,0,,,,
-Benzo[k]fluoranthene,Industrial Chemicals,Combustion processes,,0,,,,
-Naphthalene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-Benzo[b]fluoranthene,Industrial Chemicals,Combustion processes,,0,,,,
-Benzo[c]fluorene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-"Benzo[g,h,i]perylene",Industrial Chemicals,Combustion processes,Environmental contamination,63819.63836,35409.78014,102743.8226,0.390384847,
-Benzo[j]fluoranthene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-Chrysene,Industrial Chemicals,Combustion processes,Environmental contamination,1399.023269,1219.94162,1819.762355,0.260840232,
-"Dibenzo[a,e]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-"Dibenzo[a,h]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-"Dibenzo[a,i]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-"Dibenzo[a,l]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,
-1-Methylnaphthalene,Industrial Chemicals,Combustion processes,,0,,,,
-2-Methylnaphthalene,Industrial Chemicals,Combustion processes,Asphalt,0,,,,
-Diuron,Industrial Chemicals,Environmental contamination,,0.003428317,0.00331021,0.004485077,0.413485486,
-Phenacetin,Persistent Pollutants,Environmental contamination,Hair Dye,0,,,,
-"2,4,6-Trichlorophenol",Persistent Pollutants,Environmental contamination,"Contaminated soil, contaminated water, contaminated air",0,,,,
-"4,6-Dinitro-2-methylphenol (Dinitro-o-cresol)",Persistent Pollutants,Environmental contamination,Occupational,0,,,,
-Dinoseb,Persistent Pollutants,Environmental contamination,,0,,,,
-Aramite,Persistent Pollutants,Environmental contamination,,0,,,,
-Pyridaben,Persistent Pollutants,Environmental contamination,,0.024737206,0.024172081,0.029819408,0.475785978,
-Rotenone,Persistent Pollutants,Environmental contamination,,0,,,,
-Propham,Persistent Pollutants,Environmental contamination,,0,,,,
-3-Hydroxycarbofuran,Persistent Pollutants,Environmental contamination,,0,,,,
-Alanycarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Aldicarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Aldicarb sulfone,Persistent Pollutants,Environmental contamination,,0,,,,
-Aldicarb sulfoxide,Persistent Pollutants,Environmental contamination,,0,,,,
-Bendiocarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Butoxycarboxim,Persistent Pollutants,Environmental contamination,,0,,,,
-Carbofuran,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,
-Dioxacarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Ethiofencarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Mexacarbate (Zectran),Persistent Pollutants,Environmental contamination,,0,,,,
-Promecarb,Persistent Pollutants,Environmental contamination,,0,,,,
-Fuberidazole,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,
-Prochloraz,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,
-Etaconazole,Persistent Pollutants,Environmental contamination,,0,,,,
-Thiamethoxam,Persistent Pollutants,Environmental contamination,,0,,,,
-Mevinphos,Persistent Pollutants,Environmental contamination,,0,,,,
-Monocrotophos,Persistent Pollutants,Environmental contamination,,125.2424556,70.07047135,299.8164743,0.34875962,
-Omethoate,Persistent Pollutants,Environmental contamination,,0,,,,
-Kresoxim-methyl,Persistent Pollutants,Environmental contamination,,0,,,,
-Methoprotryne,Persistent Pollutants,Environmental contamination,,0,,,,
-Cycluron,Persistent Pollutants,Environmental contamination,,0,,,,
-Isoproturon,Persistent Pollutants,Environmental contamination,,0,,,,
-11-chloro eicosafluoro-3-oxaundecane-1-sulfonic acid,Persistent Pollutants,Environmental contamination,,0,,,,
-Dipentylphthalate,Personal Care Products,Consumer products,Building materials,0,,,,
-Acetophenone,Personal Care Products,Indoor air,"Fragrances, industrial use",0,,,,
-Isosafrole (cis & trans),Personal Care Products,Fragrances,"Essential oils, spices",17238.62673,9913.929446,22301.25858,0.554825054,
-Safrole,Personal Care Products,Spices,"Herbal products, Tobacco product inhalation",0,,,,
-Benzyl alcohol,Personal Care Products,Cosmetics and Fragrances,"Food additive, Medications",0,,,,
-4-Chloro-3-methylphenol,Personal Care Products,Creams and Shampoos,Industrial use,0,,,,
-Bis(2-ethylhexyl)phthalate,Personal Care Products,Food packaging,,0,,,,
-Di-n-octylphthalate,Personal Care Products,Environmental contamination,,0,,,,
-Benzyl butyl phthalate,Personal Care Products,Food packaging,Consumer products,570.1460936,338.3825766,702.0295497,0.755455273,
-Bis(2-ethoxyethyl)phthalate,Personal Care Products,Food packaging,,0,,,,
-Bis(2-methoxyethyl)phthalate,Personal Care Products,Consumer products,"films, fabrics, food packaging",0,,,,
-Bis(2-n-butoxyethyl)phthalate,Personal Care Products,Consumer products,"food packaging, cosmetics, personal care items",16079.96142,6306.47273,16028.14906,0.721823791,
-Bis(4-methyl-2-pentyl)phthalate,Personal Care Products,Consumer products,"Shampoos, perfumes",0,,,,
-Diethylphthalate,Personal Care Products,Consumer products,"Cosmetics, toys, food packaging",18203.64957,15520.48687,30296.27333,0.345336822,
-Di-n-butylphthalate,Personal Care Products,Food packaging,"paints, glues, personal care items",0,,,,
-Di-n-nonylphthalate,Personal Care Products,Consumer products,,0,,,,
-Phthalic acid diisobutyl ester,Personal Care Products,Consumer products,,0,,,,
+Compound,Exposure Category,Primary Source,Secondary Source(s),Value,range_low,range_high,percentile,date,population
+Benzoic acid,Agricultural Chemicals,Food preservatives,Cosmetics and Fragrances,290680.6158,146757.4499,444464.1382,0.532556225,6/13/25,0.36
+4-Nitrophenol,Agricultural Chemicals,Environmental contamination,,0,,,,,0.25
+Isodrin,Agricultural Chemicals,Environmental contamination,,0,,,,,0.08
+(E)-Fenpyroximate,Agricultural Chemicals,Food,,0,,,,,0.39
+Benzoximate,Agricultural Chemicals,Food,,0,,,,,0.09
+Bifenazate,Agricultural Chemicals,Food,,779.2742272,671.4854934,984.185626,0.659028523,,0.09
+Clofentezine,Agricultural Chemicals,Food,Soil contamination,0,,,,,0.16
+Etoxazole,Agricultural Chemicals,Food,Water contamination,964.3543877,350.9178673,1018.507509,0.843347317,,0.2
+Fenazaquin,Agricultural Chemicals,Food,,0,,,,,0.08
+Hexythiazox,Agricultural Chemicals,Food,,0,,,,,0.09
+Spirodiclofen,Agricultural Chemicals,Food,Water contamination,0,,,,,0.36
+Tebufenpyrad,Agricultural Chemicals,Occupational,Food,0,,,,,0.09
+Bupirimate,Agricultural Chemicals,Food,,0,293.2407548,833.9813931,0.426825041,,0.09
+Metalaxyl,Agricultural Chemicals,Food,Water contamination,74351.91804,72556.97903,109114.5323,0.235844311,,0.28
+Oxadixyl,Agricultural Chemicals,Food,,0,,,,,0.1
+Benalaxyl,Agricultural Chemicals,Food,"Water contamination, soil contamination",19166037.21,4261007.054,26462404.56,0.62927606,,0.1
+Furalaxyl,Agricultural Chemicals,Food,,0,,,,,0.2
+Chlorantraniliprole,Agricultural Chemicals,Food,,0,,,,,0.12
+Flubendiamide,Agricultural Chemicals,Food,,0,,,,,0.09
+Abamectin,Agricultural Chemicals,Food,Water contamination,0,,,,,0.1
+Doramectin,Agricultural Chemicals,Occupational,,0,,,,,0.14
+Emamectin-benzoate,Agricultural Chemicals,Food,Water contamination,0,,,,,0.45
+Moxidectin,Agricultural Chemicals,Occupational,,0,,,,,0.39
+Zoxamide,Agricultural Chemicals,Food,Water contamination,0,,,,,0.08
+Acibenzolar-S-methyl,Agricultural Chemicals,Food,Water contamination,0,,,,,0.26
+Chlorfluazuron,Agricultural Chemicals,Food,Water contamination,0,,,,,0.08
+Diflubenzuron,Agricultural Chemicals,Food,Water contamination,0,,,,,0.1
+Flufenoxuron,Agricultural Chemicals,Food,Water contamination,0.003343639,0.001440875,0.005081275,0.404660208,,0.1
+Hexaflumuron,Agricultural Chemicals,Food,"Water contamination, soil contamination",0,,,,,0.33
+Novaluron,Agricultural Chemicals,Food,,0,,,,,0.08
+Teflubenzuron,Agricultural Chemicals,Food,,0,,,,,0.32
+Triflumuron,Agricultural Chemicals,Food,Water contamination,0,,,,,0.08
+Iprovalicarb,Agricultural Chemicals,Food,Water contamination,0,,,,,0.15
+Propamocarb (free base),Agricultural Chemicals,Food,Water contamination,6299.242998,2687.764127,8872.475492,0.495060754,,0.1
+Aminocarb,Agricultural Chemicals,Food,Water contamination,0,,,,,0.09
+Benfuracarb,Agricultural Chemicals,Food,Water contamination,0,,,,,0.49
+Fenobucarb (BPMC),Agricultural Chemicals,Food,Water contamination,0,,,,,0.09
+Formetanate HCL,Agricultural Chemicals,Food,Water contamination,0,,,,,0.09
+Furathiocarb,Agricultural Chemicals,Food,Water contamination,4643.754384,4118.69994,6661.667586,0.203230686,,0.08
+Oxamyl,Agricultural Chemicals,Food,Water contamination,673.9489596,501.1780724,954.7316955,0.352771579,,0.09
+Pirimicarb,Agricultural Chemicals,Food,Water contamination,5644.793629,4244.645216,6345.790768,0.493238454,,0.18
+Propoxur (Baygon),Agricultural Chemicals,Food,"Water contamination, commercial building insecticide",40547.64565,11520.30268,42454.63256,0.874051496,,0.09
+Thiofanox,Agricultural Chemicals,Food,Water contamination,0,,,,,0.09
+Cymoxanil,Agricultural Chemicals,Food,,0,,,,,0.08
+Methoxyfenozide,Agricultural Chemicals,Food,,22430.30192,14531.23514,31211.42858,0.557429079,,0.6
+Tebufenozide,Agricultural Chemicals,Food,,0,164.3429868,443.7498014,0.792063764,,0.09
+Amitraz,Agricultural Chemicals,Food,,0,,,,,0.68
+Carbendazim,Agricultural Chemicals,Food,,71.64808597,44.52679157,74.96888571,0.455916678,,0.09
+Thiabendazole,Agricultural Chemicals,Soil contamination,Water contamination,4273.248394,3743.976035,8239.556334,0.131254015,,0.09
+Fenhexamid,Agricultural Chemicals,Air contamination,Occupational,0,,,,,0.46
+Imazalil,Agricultural Chemicals,Food,,0,,,,,0.1
+Mandipropamid,Agricultural Chemicals,Food,,0,,,,,0.38
+Fenpropimorph,Agricultural Chemicals,Food,,0,,,,,0.15
+Fludioxonil,Agricultural Chemicals,Food,,0,,,,,0.22
+Fenarimol,Agricultural Chemicals,Food,,0,,,,,0.09
+Nuarimol,Agricultural Chemicals,Food,,0,,,,,0.1
+Spiroxamine,Agricultural Chemicals,Food,Occupational,550.8702951,363.5222091,615.9713032,0.663087311,,0.21
+Thiophanate-methyl,Agricultural Chemicals,Food,,157.761091,148.3582356,182.5212562,0.497850135,,0.09
+Baycor (Bitertanol),Agricultural Chemicals,Food,,0,,,,,0.08
+Bromuconazole,Agricultural Chemicals,Food,,0,,,,,0.08
+Cyproconazole,Agricultural Chemicals,Food,Water contamination,1815.311531,750.8108188,2119.486154,0.755934701,,0.13
+Diclobutrazol,Agricultural Chemicals,Food,,0,,,,,0.09
+Difenoconazole,Agricultural Chemicals,Food,,0,,,,,0.09
+Diniconazole,Agricultural Chemicals,Food,,0,,,,,0.12
+Epoxiconazole,Agricultural Chemicals,Food,,0,,,,,0.4
+Fenbuconazole,Agricultural Chemicals,Food,"Water contamination, soil contamination",0,,,,,0.09
+Fluquinconazole,Agricultural Chemicals,Food,,0,,,,,0.62
+Flusilazole,Agricultural Chemicals,Food,,10943.92837,5852.414526,11265.60951,0.660666665,,0.09
+Flutriafol,Agricultural Chemicals,Food,Water contamination,12540.4822,9735.770977,30944.54084,0.463264918,,0.1
+Hexaconazole,Agricultural Chemicals,Food,Environmental contamination,0,,,,,0.09
+Ipconazole,Agricultural Chemicals,Food,,0,,,,,0.24
+Metconazole,Agricultural Chemicals,Food,Environmental contamination,0,,,,,0.27
+Myclobutanil,Agricultural Chemicals,Food,,980.7536214,798.7519183,1417.766421,0.298718335,,0.47
+Paclobutrazol,Agricultural Chemicals,Food,,0,,,,,0.27
+Penconazole,Agricultural Chemicals,Occupational,,0,,,,,0.08
+Propiconazole (Tilt),Agricultural Chemicals,Environmental contamination,,0,,,,,0.09
+Prothioconazole,Agricultural Chemicals,Food,,0,,,,,0.18
+Tebuconazole,Agricultural Chemicals,Food,Treated wood,5604.341011,1312.968376,9698.627812,0.494670295,,0.09
+Tetraconazole,Agricultural Chemicals,Food,,0,,,,,0.09
+Triadimefon,Agricultural Chemicals,Food,Water contamination,2113.699312,781.3848634,3626.222138,0.529313979,,0.1
+Triadimenol,Agricultural Chemicals,Environmental contamination,,45.13062134,,,,,0.68
+Triticonazole,Agricultural Chemicals,Food,,0,,,,,0.08
+Boscalid,Agricultural Chemicals,Food,Water contamination,0,,,,,0.1
+Carboxin,Agricultural Chemicals,Food,Water contamination,0,,,,,0.09
+Cyazofamid,Agricultural Chemicals,Food,,0,,,,,0.09
+Dimethomorph,Agricultural Chemicals,Food,"Water contamination, occupational",0,,,,,0.12
+Ethirimol,Agricultural Chemicals,Food,,0,,,,,0.18
+Fenamidone,Agricultural Chemicals,Food,,0,,,,,0.08
+Fluazinam,Agricultural Chemicals,Food,,0,,,,,0.09
+Flutolanil,Agricultural Chemicals,Food,,0,,,,,0.09
+Mepanipyrim,Agricultural Chemicals,Food,,0,,,,,0.38
+Monceren (Pencycuron),Agricultural Chemicals,Food,,31585.81938,14925.6305,40198.21484,0.650444738,,0.37
+Pyracarbolid,Agricultural Chemicals,Food,,0,,,,,0.09
+Pyrimethanil,Agricultural Chemicals,Food,,0,,,,,0.1
+Tricyclazole (Beam),Agricultural Chemicals,Food,,0,,,,,0.09
+Butafenacil,Agricultural Chemicals,Food,,0,,,,,0.08
+Clethodim,Agricultural Chemicals,Food,,0,,,,,0.18
+Ethofumesate,Agricultural Chemicals,Food,,8404.094418,7486.417334,15675.03919,0.132423585,,0.33
+Flufenacet (Fluthiamide),Agricultural Chemicals,Food,,0,,,,,0.61
+Buprofezin,Agricultural Chemicals,Food,,0,,,,,0.09
+Halofenozide,Agricultural Chemicals,Food,,2905.461512,1844.482558,2789.88812,0.658962108,,0.1
+Mepronil,Agricultural Chemicals,Food,,0,,,,,0.09
+Acetamiprid,Agricultural Chemicals,Food,,0,,,,,0.09
+Clothianidin,Agricultural Chemicals,Food,,0,,,,,0.25
+Thiacloprid,Agricultural Chemicals,Food,,212.6304616,192.2429224,235.4361344,0.501920942,,0.26
+Acephate,Agricultural Chemicals,Food,"Celery, lettuce, and peppers",0,,,,,0.09
+Dicrotophos,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,,0.66
+Dimethoate,Agricultural Chemicals,Food,Environmental contamination,0,,,,,0.1
+Isocarbophos,Agricultural Chemicals,Food,Chinese origin rice and cotton,0,,,,,0.59
+Methamidophos,Agricultural Chemicals,Food,"Potatoes, tomatoes, cotton",0,,,,,0.08
+Temephos (Abate),Agricultural Chemicals,Water contamination,,0,,,,,0.09
+Vamidothion (Vamidoate),Agricultural Chemicals,Food,,0,,,,,0.36
+Indoxacarb,Agricultural Chemicals,Food,,1919.623956,2070.443183,2599.185278,0.517164833,,0.09
+Desmedipham,Agricultural Chemicals,Food,Sugar Beets,0,,,,,0.23
+Pymetrozine,Agricultural Chemicals,Food,,528.6575238,339.6645275,991.5974201,0.38760657,,0.09
+Flonicamid,Agricultural Chemicals,Food,"Cotton, alfalfa, leafy vegetables, and some fruits",485.605838,355.4902451,927.1674695,0.593328264,,0.34
+Quinoxyfen,Agricultural Chemicals,Food,Grapes,0,,,,,0.11
+Spinosad (A & D),Agricultural Chemicals,Food,,0,,,,,0.09
+Azoxystrobin,Agricultural Chemicals,Food,"Fruits, vegtables, nuts, and cereals. Environmental contamination",991.8950554,212.6605387,980.646377,0.854491487,,0.29
+Dimoxystrobin,Agricultural Chemicals,Food,"cereals, vines, potatoes",0,,,,,0.52
+Fluoxastrobin,Agricultural Chemicals,Food,"Peanuts, leafy vegetables, fruiting vegetables, potatoes, golf courses",2242.17947,1779.6541,2966.10377,0.31666653,,0.09
+Picoxystrobin,Agricultural Chemicals,Food,"Corn, soy, wheat, canola, oats",0,,,,,0.36
+Pyraclostrobin,Agricultural Chemicals,Food,,0,,,,,0.09
+Trifloxystrobin,Agricultural Chemicals,Food,,0,,,,,0.1
+Spiromesifen,Agricultural Chemicals,Food,"Corn, cotton, melons",0,,,,,0.2
+Mefenacet,Agricultural Chemicals,Food,,574.1114431,584.6354698,818.5001734,0.609689397,,0.3
+Thiobencarb,Agricultural Chemicals,Food,Rice,0,,,,,0.08
+Metribuzin,Agricultural Chemicals,Food,Environmental contamination,1279.261433,1069.228801,2342.110353,0.286517782,,0.09
+Prometryne,Agricultural Chemicals,Food,"Cotton, celery",0,,,,,0.46
+Secbumeton,Agricultural Chemicals,Food,,0,,,,,0.1
+Simetryn,Agricultural Chemicals,Food,Environmental contamination,0,,,,,0.1
+Terbumeton,Agricultural Chemicals,Occupational,,0,,,,,0.1
+Terbutryn,Agricultural Chemicals,Environmental contamination,,0,,,,,0.24
+Cyromazine,Agricultural Chemicals,Food,"crops, animal products where used as additive",0,,,,,0.09
+Ametryn,Agricultural Chemicals,Food,Environmental contamination,40375.0644,32006.00584,48252.48543,0.281765914,,0.37
+Sulfentrazone,Agricultural Chemicals,Food,environmental contamination,0,,,,,0.09
+Chloroxuron,Agricultural Chemicals,Food,"Soy, strawberries, vegetables",0,,,,,0.09
+Chlortoluron,Agricultural Chemicals,Environmental contamination,,0,,,,,0.09
+Fluometuron,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,,0.09
+Linuron,Agricultural Chemicals,Food,"Soy, carrots, celery",0,,,,,0.1
+Methabenzthiazuron,Agricultural Chemicals,Food,Corn and wheat,275.0228141,209.3571145,296.9272179,0.300975841,,0.14
+Metobromuron,Agricultural Chemicals,Environmental contamination,,0,,,,,0.09
+Monolinuron,Agricultural Chemicals,Environmental contamination,"vegetables, fruits, fish",0,,,,,0.12
+Neburon,Agricultural Chemicals,Food,Environmental contamination,0,,,,,0.13
+Tebuthiuron,Agricultural Chemicals,Environmental contamination,,0,,,,,0.55
+Thidiazuron,Agricultural Chemicals,Environmental contamination,Cotton,0,,,,,0.19
+Forchlorfenuron,Agricultural Chemicals,Food,"Grapes, kiwi, fruits",0,,,,,0.09
+"2,4-Dichlorophenol",Agricultural Chemicals,Environmental contamination,"Occupational, manufacturing",0,,,,,0.1
+Fenuron,Containers & Coatings,Occupational,"Adhesives, sealants, coatings, herbicides",1222.00704,806.7712765,1305.467337,0.563705522,,0.66
+"2,2',3,3',4,4',5,5',6-Nonachlorobiphenyl (BZ#206)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.31
+"2,2',3,5'-Tetrachlorobiphenyl (BZ#44)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.09
+"2,2',5-Trichlorobiphenyl (BZ#18)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.1
+"2,3',4,4'-Tetrachlorobiphenyl (BZ#66)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.1
+"2,4',5-Trichlorobiphenyl (BZ#31)",Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.09
+2-Chlorobiphenyl (BZ#1),Containers & Coatings,Electrical equipment,Environmental contamination,0,,,,,0.1
+2-Chloronaphthalene,Containers & Coatings,Building materials,"Lubricants, cable insulation, combustion processes, contaminated air, contaminated water, contaminated soil",0,,,,,0.08
+"2,3,4,6-Tetrachlorophenol",Containers & Coatings,Contaminated air,Treated wood,0,,,,,0.17
+Pentachlorophenol,Containers & Coatings,Treated wood,Indoor air,0,,,,,0.62
+Phenanthrene,Containers & Coatings,Combustion processes,Environmental contamination,0,,,,,0.26
+"2-(Heptafluoropropoxy)-2,3,3,3-tetrafluoropropionic acid (HFPO-DA)",Containers & Coatings,Fluoropolymer materials,Environmental contamination,0,,,,,0.11
+"4,8-dioxa-3H-perfluorononanoic acid (ADONA)",Containers & Coatings,Consumer products,"Food packaging, Environmental contamination",0,,,,,0.08
+Perfluorobutanoic acid (PFBA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products",0,,,,,0.08
+Perfluorodecanoic acid (PFDA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products, environmental contamination",0,,,,,0.08
+Perfluoroheptanoic acid (PFHpA),Containers & Coatings,Consumer products,Grease and stain resistance,0,,,,,0.09
+Perfluorohexanoic acid (PFHxA),Containers & Coatings,Consumer products,"Food packaging, furniture materials, caprets, cleaning products, environmental contamination",0,,,,,0.6
+Perfluorononanoic acid (PFNA),Containers & Coatings,Consumer products,"furniture materials, caprets, cleaning products, environmental contamination",0,,,,,0.08
+Perfluoropentanoic acid (PFPeA),Containers & Coatings,Consumer products,"furniture materials, caprets, cleaning products, environmental contamination",0,,,,,0.09
+Perfluorotetradecanoic acid (PFTeDA),Containers & Coatings,Consumer products,"Photographic films, firefighting foams, detergents, baby formula, food packaging, environmental contamination",0,,,,,0.47
+Perfluorotridecanoic acid (PFTrDA),Containers & Coatings,Consumer products,"Stain resistance, water repellents, non-stick products, environmental contamination",0,,,,,0.1
+Perfluoroundecanoic acid (PFUnA),Containers & Coatings,Environmental contamination,"Food packaging, consumer products, household dust",0,,,,,0.37
+Perfluoro-1-octanesulfonamide (FOSA),Containers & Coatings,Consumer products,"Food packaging, stain repellents",0,,,,,0.36
+9-chlorohexadecafluoro-3-oxanonane-1-sulfonic acid,Containers & Coatings,Consumer products,"Food packaging, stain repellents, carpeting, environmental contamination",0,,,,,0.23
+"1H,1H,2H,2H-Perfluorodecanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.63
+"1H,1H,2H,2H-Perfluorohexanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.17
+"1H,1H,2H,2H-Perfluorooctanesulfonic acid",Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.09
+Perfluoro-1-pentanesulfonic acid (PFPeS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.08
+Perfluorobutanesulfonic acid (PFBS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.21
+Perfluoroheptanesulfonic acid (PFHpS),Containers & Coatings,Consumer products,Environmental contamination,0,,,,,0.09
+Perfluorohexanesulfonic acid (PFHxS)*,Containers & Coatings,Consumer products,Environmental contamination,0.042650338,0.03614716,0.06430578,0.202134912,,0.61
+Di-n-hexylphthalate,Containers & Coatings,Building materials,"vinyl, automotive parts, consumer products",0,,,,,0.08
+Bisphenol A (BPA),Containers & Coatings,Plastic products and packaging,"Canned products, Receipts, dental materials",0,,,,,0.66
+Bis(4-hydroxyphenyl)methane (BPF),Containers & Coatings,Plastic products and packaging,"Canned products, Receipts, dental materials",0,,,,,0.1
+Perfluorododecanoic acid (PFDoA),Containers & Coatings,Emissions,"Environmental contamination, nonstick coatings",0,,,,,0.09
+Perfluorooctanoic acid (PFOA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.09
+Heptadecafluorooctanesulfonic acid (PFOS)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.57
+Perfluoro-1-decanesulfonic acid (PFDS),Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.31
+Perfluoro-1-nonanesulfonic acid (PFNS),Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.1
+N-ethylperfluoro-1-octanesulfonamidoacetic acid (NEtFOSAA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.38
+N-methylperfluoro-1-octanesulfonamidoacetic acid (NMeFOSAA)*,Containers & Coatings,Environmental contamination,Nonstick coatings,0,,,,,0.1
+Isophorone,Household Products,Printer ink and paints,"Industrial use, occupational, contaminated air",0,,,,,0.08
+"1,4-Dichlorobenzene",Household Products,Mothballs and deodorizers,"Contaminated air, industrial use, combustion processes",0,,,,,0.09
+"2,6-Dichlorophenol",Household Products,Occupational,"Photographic solutions, medications, treated wood",0,,,,,0.09
+Lufenuron,Household Products,Pet flea medicine,,0,,,,,0.14
+Carbaryl (Sevin),Household Products,Residential pesticides,"Water contamination, soil contamination",832.8996645,438.1235551,930.1655711,0.629211398,,0.09
+Carbetamide,Household Products,Residential pesticides,"Water contamination, soil contamination",2084.852033,1536.449531,2222.676547,0.683098243,,0.09
+Diethofencarb,Household Products,Residential pesticides,"Water contamination, soil contamination",94432.76532,30137.21438,81061.9542,0.835416455,,0.15
+Methiocarb,Household Products,Residential seed coatings,,0,,,,,0.58
+Methomyl,Household Products,Fly bait,,0,,,,,0.08
+Triflumizole,Household Products,Tree and Shrub treatments,,0,,,,,0.7
+Cyprodinil,Household Products,Ornamentals,Food,0,,,,,0.51
+Fenoxycarb,Household Products,Insecticide,,2680.167729,1448.019334,5508.089454,0.283953142,,0.08
+Pyriproxyfen,Household Products,Pet flea medicine,,6791.562409,4594.285909,11092.53669,0.1430679,,0.09
+Hydramethylnon,Household Products,Insecticide,,0,,,,,0.14
+Dinotefuran,Household Products,Pet flea medicine,Food,226.4990008,90.15333029,355.8328894,0.478057364,,0.1
+Imidacloprid,Household Products,Pet flea medicine,Food,0,,,,,0.09
+Nitenpyram,Household Products,Pet flea medicine,,0,,,,,0.09
+Ethiprole,Household Products,Pet parasite medicine,,0,,,,,0.1
+Fipronil,Household Products,Pest Control,Pets flea medicine,0,,,,,0.53
+Metaflumizone,Household Products,Pest Control,"Pets flea medicine, food",0,,,,,0.48
+Spinetoram (J & L),Household Products,Garden treatments,,0,,,,,0.7
+Prometon,Household Products,Landscaping,Food,0,,,,,0.08
+Mesotrione,Household Products,Landscaping,"Food, environmental contamination",0,,,,,0.09
+Siduron,Household Products,Landscaping,Golf courses,0,,,,,0.09
+Phenol,Household Products,Disinfectants,"ointments, antiseptics",0,,,,,0.09
+Piperonyl butoxide,Household Products,Pesticides,,0,,,,,0.08
+Benzo[a]pyrene,Industrial Chemicals,Combustion processes,,0,,,,,0.09
+2-Methylphenol (o-cresol),Industrial Chemicals,Combustion processes,"Tobacco smoke, petroleum, automobile exhaust",0,,,,,0.69
+3-Methylphenol (m-cresol),Industrial Chemicals,Combustion processes,"Coal, wood, tobacco smoke",0,,,,,0.08
+4-Methylphenol (p-cresol),Industrial Chemicals,Combustion processes,"Tobacco smoke, wood, coal",0,,,,,0.09
+Dibenzofuran,Industrial Chemicals,Combustion processes,,0,,,,,0.62
+Ethyl methanesulfonate,Industrial Chemicals,Occupational,"Trace contaminant in some pharmaceuticals, Contaminated air",3042.342563,1655.303506,4364.830267,0.756868145,,0.09
+Aniline,Industrial Chemicals,Contaminated air,"Tobacco smoke, occupational, contaminated water",0,,,,,0.28
+Benzidine,Industrial Chemicals,Occupational,"Dyes, contaminated soil, contaminated water",0,,,,,0.09
+Diphenylamine,Industrial Chemicals,Occupational,"Contaminated soil, contaminated water, agricultural use",0,,,,,0.09
+Azobenzene,Industrial Chemicals,Synthetic Fabrics and Dyes,"Occupational, contaminated water, contaminated air, contaminated soil",0,,,,,0.09
+"1,2-Dichlorobenzene",Industrial Chemicals,Contaminated air,"Occupational, contaminated soil, contaminated water",0,,,,,0.09
+"1,3-Dichlorobenzene",Industrial Chemicals,Contaminated air,"Occupational, contaminated soil, contaminated water",0,,,,,0.09
+"3,3'-Dichlorobenzidine",Industrial Chemicals,Occupational,"Dyes, Pigments",0,,,,,0.09
+4-Chloroaniline,Industrial Chemicals,Occupational,"Dyes, Medications, Pesticides",0,,,,,0.5
+4-Bromophenylphenyl ether,Industrial Chemicals,Occupational,Flame retardants,0,,,,,0.42
+4-Chlorophenylphenyl ether,Industrial Chemicals,Occupational,,0,,,,,0.1
+"2,2'-Oxybis (a.k.a. Bis(2-chloroisopropyl) ether)",Industrial Chemicals,Occupational,,0,,,,,0.09
+Bis(2-chloroethyl)ether (111-44-4),Industrial Chemicals,Water contamination,"Occupational, soil contamination, air contamination",0,,,,,0.09
+"2,4,5-Trichlorophenol",Industrial Chemicals,Occupational,"Contaminated water, contaminated air, contaminated soil",0,,,,,0.09
+2-Chlorophenol,Industrial Chemicals,Contaminated water,"Contamined soil, disinfectants",0,,,,,0.09
+Pyridine,Industrial Chemicals,Occupational,"Tobacco smoke, food",0,,,,,0.6
+"1,3-Dinitrobenzene",Industrial Chemicals,Environmental contamination,,0,,,,,0.36
+"2,4-Dinitrotoluene",Industrial Chemicals,Occupational,Dyes,0,,,,,0.09
+"2,6-Dinitrotoluene",Industrial Chemicals,Occupational,Dyes,0,,,,,0.18
+4-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments, medications",0,,,,,0.16
+Nitrobenzene,Industrial Chemicals,Occupational,"Contaminated air, contaminated water",0,,,,,0.09
+2-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments, medications",0,,,,,0.08
+3-Nitroaniline,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments",0,,,,,0.49
+4-Nitroquinoline-N-oxide,Industrial Chemicals,Environmental contamination,Occupational,0,,,,,0.08
+"2,4-Dinitrophenol",Industrial Chemicals,Environmental contamination,"Manufacturing, Pesticide",49093.97981,39913.45417,107113.4116,0.153248845,,0.09
+2-Nitrophenol,Industrial Chemicals,Occupational,"Environmental contamination, dyes, pigments",0,,,,,0.1
+3-Methylcholanthrene,Industrial Chemicals,Combustion processes,,0,,,,,0.09
+Acenaphthene,Industrial Chemicals,Combustion processes,Environmental contamination,3647.190384,2538.950861,5329.697373,0.170965775,,0.08
+Acenaphthylene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.08
+Anthracene,Industrial Chemicals,Combustion processes,,0,,,,,0.23
+Benzo[k]fluoranthene,Industrial Chemicals,Combustion processes,,0,,,,,0.3
+Naphthalene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.7
+Benzo[b]fluoranthene,Industrial Chemicals,Combustion processes,,0,,,,,0.08
+Benzo[c]fluorene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.09
+"Benzo[g,h,i]perylene",Industrial Chemicals,Combustion processes,Environmental contamination,63819.63836,35409.78014,102743.8226,0.390384847,,0.1
+Benzo[j]fluoranthene,Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.08
+Chrysene,Industrial Chemicals,Combustion processes,Environmental contamination,1399.023269,1219.94162,1819.762355,0.260840232,,0.1
+"Dibenzo[a,e]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.09
+"Dibenzo[a,h]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.09
+"Dibenzo[a,i]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.21
+"Dibenzo[a,l]pyrene",Industrial Chemicals,Combustion processes,Environmental contamination,0,,,,,0.1
+1-Methylnaphthalene,Industrial Chemicals,Combustion processes,,0,,,,,0.15
+2-Methylnaphthalene,Industrial Chemicals,Combustion processes,Asphalt,0,,,,,0.5
+Diuron,Industrial Chemicals,Environmental contamination,,0.003428317,0.00331021,0.004485077,0.413485486,,0.09
+Phenacetin,Persistent Pollutants,Environmental contamination,Hair Dye,0,,,,,0.1
+"2,4,6-Trichlorophenol",Persistent Pollutants,Environmental contamination,"Contaminated soil, contaminated water, contaminated air",0,,,,,0.1
+"4,6-Dinitro-2-methylphenol (Dinitro-o-cresol)",Persistent Pollutants,Environmental contamination,Occupational,0,,,,,0.1
+Dinoseb,Persistent Pollutants,Environmental contamination,,0,,,,,0.1
+Aramite,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Pyridaben,Persistent Pollutants,Environmental contamination,,0.024737206,0.024172081,0.029819408,0.475785978,,0.09
+Rotenone,Persistent Pollutants,Environmental contamination,,0,,,,,0.67
+Propham,Persistent Pollutants,Environmental contamination,,0,,,,,0.1
+3-Hydroxycarbofuran,Persistent Pollutants,Environmental contamination,,0,,,,,0.44
+Alanycarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Aldicarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Aldicarb sulfone,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Aldicarb sulfoxide,Persistent Pollutants,Environmental contamination,,0,,,,,0.08
+Bendiocarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.16
+Butoxycarboxim,Persistent Pollutants,Environmental contamination,,0,,,,,0.1
+Carbofuran,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,,0.1
+Dioxacarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Ethiofencarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Mexacarbate (Zectran),Persistent Pollutants,Environmental contamination,,0,,,,,0.11
+Promecarb,Persistent Pollutants,Environmental contamination,,0,,,,,0.61
+Fuberidazole,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,,0.21
+Prochloraz,Persistent Pollutants,Environmental contamination,Overseas food,0,,,,,0.2
+Etaconazole,Persistent Pollutants,Environmental contamination,,0,,,,,0.08
+Thiamethoxam,Persistent Pollutants,Environmental contamination,,0,,,,,0.09
+Mevinphos,Persistent Pollutants,Environmental contamination,,0,,,,,0.3
+Monocrotophos,Persistent Pollutants,Environmental contamination,,125.2424556,70.07047135,299.8164743,0.34875962,,0.25
+Omethoate,Persistent Pollutants,Environmental contamination,,0,,,,,0.13
+Kresoxim-methyl,Persistent Pollutants,Environmental contamination,,0,,,,,0.26
+Methoprotryne,Persistent Pollutants,Environmental contamination,,0,,,,,0.19
+Cycluron,Persistent Pollutants,Environmental contamination,,0,,,,,0.1
+Isoproturon,Persistent Pollutants,Environmental contamination,,0,,,,,0.68
+11-chloro eicosafluoro-3-oxaundecane-1-sulfonic acid,Persistent Pollutants,Environmental contamination,,0,,,,,0.26
+Dipentylphthalate,Personal Care Products,Consumer products,Building materials,0,,,,,0.18
+Acetophenone,Personal Care Products,Indoor air,"Fragrances, industrial use",0,,,,,0.19
+Isosafrole (cis & trans),Personal Care Products,Fragrances,"Essential oils, spices",17238.62673,9913.929446,22301.25858,0.554825054,,0.13
+Safrole,Personal Care Products,Spices,"Herbal products, Tobacco product inhalation",0,,,,,0.21
+Benzyl alcohol,Personal Care Products,Cosmetics and Fragrances,"Food additive, Medications",0,,,,,0.09
+4-Chloro-3-methylphenol,Personal Care Products,Creams and Shampoos,Industrial use,0,,,,,0.45
+Bis(2-ethylhexyl)phthalate,Personal Care Products,Food packaging,,0,,,,,0.1
+Di-n-octylphthalate,Personal Care Products,Environmental contamination,,0,,,,,0.54
+Benzyl butyl phthalate,Personal Care Products,Food packaging,Consumer products,570.1460936,338.3825766,702.0295497,0.755455273,,0.4
+Bis(2-ethoxyethyl)phthalate,Personal Care Products,Food packaging,,0,,,,,0.09
+Bis(2-methoxyethyl)phthalate,Personal Care Products,Consumer products,"films, fabrics, food packaging",0,,,,,0.09
+Bis(2-n-butoxyethyl)phthalate,Personal Care Products,Consumer products,"food packaging, cosmetics, personal care items",16079.96142,6306.47273,16028.14906,0.721823791,,0.1
+Bis(4-methyl-2-pentyl)phthalate,Personal Care Products,Consumer products,"Shampoos, perfumes",0,,,,,0.32
+Diethylphthalate,Personal Care Products,Consumer products,"Cosmetics, toys, food packaging",18203.64957,15520.48687,30296.27333,0.345336822,,0.1
+Di-n-butylphthalate,Personal Care Products,Food packaging,"paints, glues, personal care items",0,,,,,0.13
+Di-n-nonylphthalate,Personal Care Products,Consumer products,,0,,,,,0.12
+Phthalic acid diisobutyl ester,Personal Care Products,Consumer products,,0,,,,,0.09

@@ -36,8 +36,8 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
             return { category, detectedCount, totalCount, chemicals, statusInfo };
           })
           .sort((a, b) => {
-            // Sort by classification priority: Pay Attention > Monitor Only > Optimal
-            const priorityOrder = { 'Pay Attention': 0, 'Monitor Only': 1, 'Optimal': 2 };
+            // Sort by classification priority: Pay Attention > Monitor Only > Low Exposure
+            const priorityOrder = { 'Pay Attention': 0, 'Monitor Only': 1, 'Low Exposure': 2 };
             const aPriority = priorityOrder[a.statusInfo.text as keyof typeof priorityOrder] ?? 3;
             const bPriority = priorityOrder[b.statusInfo.text as keyof typeof priorityOrder] ?? 3;
             
@@ -50,22 +50,24 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
           })
           .map(({ category, detectedCount, statusInfo }) => {
             return (
-              <div key={category} className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <div className="flex items-center space-x-3 flex-1">
-                  <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
-                    <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-medium text-gray-900">{category}</div>
-                    <div className="text-xs text-gray-500">
-                      {detectedCount} exposures
+              <Link key={category} href={`/category/${encodeURIComponent(category)}`} className="block">
+                <div className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
+                  <div className="flex items-center space-x-3 flex-1">
+                    <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">
+                      <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-medium text-gray-900">{category}</div>
+                      <div className="text-xs text-gray-500">
+                        {detectedCount} exposures
+                      </div>
                     </div>
                   </div>
+                  <div className={`w-4 h-4 rounded-full ${statusInfo.color}`}></div>
                 </div>
-                <div className={`w-4 h-4 rounded-full ${statusInfo.color}`}></div>
-              </div>
+              </Link>
             );
           })}
       </div>
@@ -82,7 +84,7 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-            <span className="text-gray-600">Optimal</span>
+            <span className="text-gray-600">Low Exposure</span>
           </div>
         </div>
       </div>

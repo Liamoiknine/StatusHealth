@@ -7,6 +7,8 @@ export interface LongitudinalDataPoint {
   percentile?: number;
   testId: number;
   detected: boolean;
+  rangeLow?: number;
+  rangeHigh?: number;
 }
 
 export interface LongitudinalResponse {
@@ -51,11 +53,13 @@ export async function GET(request: Request) {
       
       if (chemical) {
         longitudinalData.push({
-          date: chemical.date || testDate,
+          date: (chemical.date && chemical.date.trim() !== '') ? chemical.date : testDate,
           value: chemical.value,
           percentile: chemical.percentile,
           testId: testId,
-          detected: chemical.value > 0
+          detected: chemical.value > 0,
+          rangeLow: chemical.rangeLow,
+          rangeHigh: chemical.rangeHigh
         });
       } else {
         // Chemical not found in this test - add a point with 0 value
@@ -64,7 +68,9 @@ export async function GET(request: Request) {
           value: 0,
           percentile: undefined,
           testId: testId,
-          detected: false
+          detected: false,
+          rangeLow: undefined,
+          rangeHigh: undefined
         });
       }
     }

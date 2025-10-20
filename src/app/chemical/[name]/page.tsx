@@ -98,15 +98,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                 </div>
                 
                 <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Percentile:</span>
-                  <span className={`text-2xl font-bold ${getPercentileColor(chemical.percentile)}`}>
-                    {formatPercentile(chemical.percentile)}
+                  <span className="text-lg font-medium text-gray-700">Measured Value:</span>
+                  <span className="text-lg text-gray-900">
+                    {chemical.value > 0 ? chemical.value.toLocaleString() : 'Not Detected'}
                   </span>
-                </div>
-
-                <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Actual Value:</span>
-                  <span className="text-lg text-gray-900">{chemical.value.toLocaleString()}</span>
                 </div>
 
                 {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
@@ -117,7 +112,29 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                     </span>
                   </div>
                 )}
+
+                <div className="flex justify-between items-center py-4 border-b border-gray-200">
+                  <span className="text-lg font-medium text-gray-700">Percentile:</span>
+                  <span className={`text-2xl font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                    {formatPercentile(chemical.percentile, chemical.value)}
+                  </span>
+                </div>
+
+                {chemical.population !== undefined && (
+                  <div className="flex justify-between items-center py-4 border-b border-gray-200">
+                    <span className="text-lg font-medium text-gray-700">% Population Exposed:</span>
+                    <span className="text-lg text-gray-900">
+                      {(chemical.population * 100).toFixed(1)}%
+                    </span>
+                  </div>
+                )}
               </div>
+
+              {chemical.population !== undefined && (
+                <div className="mt-4 text-xs text-gray-500 italic">
+                  *Percentiles based on the exposed population
+                </div>
+              )}
               
               <div className="mt-8 p-4 bg-gray-50 rounded-lg">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Additional Information</h2>

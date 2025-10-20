@@ -67,9 +67,9 @@ export default function CategoriesPage() {
                           <h2 className="text-xl font-bold text-gray-900 mb-2">{category}</h2>
                           <p className="text-sm text-gray-600 mb-3">Detected {detectedCount}/{totalCount} exposures</p>
                           <div className="text-xs text-gray-500 space-y-1">
-                            <div>Pay Attention: {totalCount > 0 ? Math.round((chemicals.filter(c => (c.percentile || 0) > 0.6).length / totalCount) * 100) : 0}%</div>
-                            <div>Monitor Only: {totalCount > 0 ? Math.round((chemicals.filter(c => { const p = c.percentile || 0; return p > 0.1 && p <= 0.6; }).length / totalCount) * 100) : 0}%</div>
-                            <div>Optimal: {totalCount > 0 ? Math.round((chemicals.filter(c => (c.percentile || 0) <= 0.1).length / totalCount) * 100) : 0}%</div>
+                            <div>Pay Attention: {totalCount > 0 ? Math.round((chemicals.filter(c => c.value > 0 && (c.percentile || 0) > 0.6).length / totalCount) * 100) : 0}%</div>
+                            <div>Monitor Only: {totalCount > 0 ? Math.round((chemicals.filter(c => { const p = c.percentile || 0; return c.value > 0 && p > 0.3 && p <= 0.6; }).length / totalCount) * 100) : 0}%</div>
+                            <div>Low Exposure: {totalCount > 0 ? Math.round((chemicals.filter(c => c.value > 0 && (c.percentile || 0) <= 0.3).length / totalCount) * 100) : 0}%</div>
                           </div>
                         </div>
                         <div className={`px-3 py-1 rounded-full ${status.bgColor}`}>
@@ -82,8 +82,8 @@ export default function CategoriesPage() {
                             <h3 className="text-sm font-semibold text-gray-900 truncate flex-1">
                               {chemical.compound}
                             </h3>
-                            <span className={`text-sm font-bold ml-3 ${getPercentileColor(chemical.percentile)}`}>
-                              {formatPercentile(chemical.percentile)}
+                            <span className={`text-sm font-bold ml-3 ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                              {formatPercentile(chemical.percentile, chemical.value)}
                             </span>
                           </div>
                         ))}

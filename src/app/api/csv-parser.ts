@@ -12,6 +12,7 @@ export interface ChemicalData {
   rangeHigh?: number;
   percentile?: number;
   date: string;
+  population?: number;
 }
 
 export interface TestMetadata {
@@ -51,7 +52,10 @@ export async function parseChemicalsCSV(testId: number = 1): Promise<ChemicalDat
               percentile: typedRow.percentile && typedRow.percentile.trim() !== '' 
                 ? parseFloat(typedRow.percentile) || undefined
                 : undefined,
-              date: typedRow.date || ''
+              date: typedRow.date || '',
+              population: typedRow.population && typedRow.population.trim() !== '' 
+                ? parseFloat(typedRow.population) || undefined
+                : undefined
             };
           });
           // Sort by percentile (highest first), treating undefined as 0
@@ -95,7 +99,8 @@ export async function getAvailableTests(): Promise<TestMetadata[]> {
         const lines = csvText.split('\n');
         if (lines.length > 1) {
           const firstDataRow = lines[1].split(',');
-          const date = firstDataRow[firstDataRow.length - 1]?.trim() || '';
+          // Date is at index 8 (9th column), not the last column
+          const date = firstDataRow[8]?.trim() || '';
           testsWithDates.push({
             id: test.id,
             filename: test.filename,

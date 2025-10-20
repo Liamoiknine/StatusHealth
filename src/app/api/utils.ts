@@ -3,24 +3,33 @@ import { ChemicalData } from './csv-parser';
 // Utility functions for chemical data processing
 
 // Percentile-based color for individual chemicals
-export function getPercentileColor(percentile?: number): string {
-  if (!percentile || percentile <= 0.1) return 'text-green-600';  // Optimal (0-10%)
+export function getPercentileColor(percentile?: number, value?: number): string {
+  if (value === 0) return 'text-gray-500';                       // Not Detected
+  if (!percentile || percentile <= 0.3) return 'text-green-600'; // Low Exposure (0-30%)
   if (percentile > 0.6) return 'text-red-600';                   // Pay Attention (>60%)
-  return 'text-yellow-400';                                       // Monitor Only (10-60%)
+  return 'text-yellow-400';                                       // Monitor Only (30-60%)
 }
 
 // Format percentile for display (converts 0.532 to "53%")
-export function formatPercentile(percentile?: number): string {
+export function formatPercentile(percentile?: number, value?: number): string {
+  if (value === 0) return 'N/D';  // Not Detected
   if (!percentile || percentile === 0) return '0%';
   return `${Math.round(percentile * 100)}%`;
 }
 
 // Get status info for individual chemicals based on percentile
-export function getChemicalStatusInfo(percentile?: number) {
-  if (!percentile || percentile <= 0.1) {
+export function getChemicalStatusInfo(percentile?: number, value?: number) {
+  if (value === 0) {
+    return {
+      color: 'bg-gray-400',
+      text: 'Not Detected',
+      bgColor: 'bg-gray-50',
+      textColor: 'text-gray-600'
+    };
+  } else if (!percentile || percentile <= 0.3) {
     return {
       color: 'bg-green-600',
-      text: 'Optimal',
+      text: 'Low Exposure',
       bgColor: 'bg-green-50',
       textColor: 'text-green-700'
     };
@@ -75,14 +84,15 @@ export function getCategoryStats(categoryGroups: Record<string, ChemicalData[]>)
 
 // SIMPLIFIED: Category classification based on individual chemical classifications
 export function getCategoryStatusInfo(chemicals: ChemicalData[]) {
-  // Count chemicals by their individual classifications
-  const payAttentionCount = chemicals.filter(c => (c.percentile || 0) > 0.6).length;
-  const monitorOnlyCount = chemicals.filter(c => {
+  // Count chemicals by their individual classifications (only detected chemicals)
+  const detectedChemicals = chemicals.filter(c => c.value > 0);
+  const payAttentionCount = detectedChemicals.filter(c => (c.percentile || 0) > 0.6).length;
+  const monitorOnlyCount = detectedChemicals.filter(c => {
     const p = c.percentile || 0;
-    return p > 0.1 && p <= 0.6;
+    return p > 0.3 && p <= 0.6;
   }).length;
   
-  // Simple mutually exclusive logic with more Optimal-friendly thresholds
+  // Simple mutually exclusive logic with more Low Exposure-friendly thresholds
   if (payAttentionCount >= 3) {
     // If 3+ chemicals are Pay Attention, category is Pay Attention
     return {
@@ -100,10 +110,10 @@ export function getCategoryStatusInfo(chemicals: ChemicalData[]) {
       textColor: 'text-yellow-700'
     };
   } else {
-    // If <3 Monitor Only and no Pay Attention, category is Optimal
+    // If <3 Monitor Only and no Pay Attention, category is Low Exposure
     return {
       color: 'bg-green-400',
-      text: 'Optimal',
+      text: 'Low Exposure',
       bgColor: 'bg-green-50',
       textColor: 'text-green-700'
     };
