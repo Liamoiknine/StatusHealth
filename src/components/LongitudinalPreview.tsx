@@ -88,7 +88,7 @@ export default function LongitudinalPreview({ selectedTest }: LongitudinalPrevie
             : 0;
 
           const currentTestData = {
-            date: getTestDate(selectedTest),
+            date: currentChemicals[0]?.date || '',
             detectedCount: currentDetected.length,
             totalCount: currentChemicals.length,
             avgValue: currentAvgValue
@@ -103,7 +103,7 @@ export default function LongitudinalPreview({ selectedTest }: LongitudinalPrevie
               : 0;
 
             previousTestData = {
-              date: getTestDate(selectedTest - 1),
+              date: previousChemicals[0]?.date || '',
               detectedCount: previousDetected.length,
               totalCount: previousChemicals.length,
               avgValue: previousAvgValue
@@ -278,9 +278,4 @@ function CategoryTrendItem({ data }: { data: CategoryTrendData }) {
       </div>
     </div>
   );
-}
-
-function getTestDate(testId: number): string {
-  const dates = ['10/18/24', '1/22/25', '6/13/25', '9/28/25'];
-  return dates[testId - 1] || '';
 }

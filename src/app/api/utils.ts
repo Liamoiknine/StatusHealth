@@ -2,6 +2,41 @@ import { ChemicalData } from './csv-parser';
 
 // Utility functions for chemical data processing
 
+export type ExposureFilterType = 'all' | 'pay-attention' | 'monitor-only' | 'low-exposure' | 'not-detected';
+
+// Filter chemicals by exposure level
+export function filterChemicalsByExposure(
+  chemicals: ChemicalData[],
+  filter: ExposureFilterType
+): ChemicalData[] {
+  return chemicals.filter(chemical => {
+    const percentile = chemical.percentile || 0;
+    const value = chemical.value;
+    switch (filter) {
+      case 'not-detected':
+        return value === 0;
+      case 'low-exposure':
+        return value > 0 && percentile <= 0.3;
+      case 'monitor-only':
+        return value > 0 && percentile > 0.3 && percentile <= 0.6;
+      case 'pay-attention':
+        return value > 0 && percentile > 0.6;
+      case 'all':
+      default:
+        return true;
+    }
+  });
+}
+
+// Sort chemicals by percentile (highest first)
+export function sortChemicalsByPercentile(chemicals: ChemicalData[]): ChemicalData[] {
+  return [...chemicals].sort((a, b) => {
+    const aPercentile = a.percentile || 0;
+    const bPercentile = b.percentile || 0;
+    return bPercentile - aPercentile;
+  });
+}
+
 // Percentile-based color for individual chemicals
 export function getPercentileColor(percentile?: number, value?: number): string {
   if (value === 0) return 'text-gray-500';                       // Not Detected
@@ -71,12 +106,7 @@ export function getCategoryStats(categoryGroups: Record<string, ChemicalData[]>)
         category,
         detectedCount,
         totalCount,
-        chemicals: chemicals.sort((a, b) => {
-          // Sort by percentile (highest first), treating undefined as 0
-          const aPercentile = a.percentile || 0;
-          const bPercentile = b.percentile || 0;
-          return bPercentile - aPercentile;
-        })
+        chemicals: sortChemicalsByPercentile(chemicals)
       };
     })
     .sort((a, b) => b.detectedCount - a.detectedCount);
@@ -119,4 +149,3 @@ export function getCategoryStatusInfo(chemicals: ChemicalData[]) {
     };
   }
 }
-

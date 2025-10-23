@@ -44,10 +44,9 @@ export default function HomePage() {
   const categoryGroups = groupChemicalsByCategory(chemicals);
   const categoriesWithStats = getCategoryStats(categoryGroups);
   
-  // Get top 3 chemicals from each category for the exposure report
   const topChemicalsByCategory = categoriesWithStats.map(({ category, chemicals, detectedCount, totalCount }) => ({
     category,
-    chemicals: chemicals, // Use ALL chemicals for classification, not just top 3
+    chemicals,
     detectedCount,
     totalCount
   }));

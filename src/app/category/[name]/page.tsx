@@ -2,19 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
-import { groupChemicalsByCategory, getCategoryStats, getPercentileColor, formatPercentile, getChemicalStatusInfo } from '@/app/api/utils';
+import { groupChemicalsByCategory, getCategoryStats, getPercentileColor, formatPercentile, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import CategoriesSidebar from '@/components/CategoriesSidebar';
+import ExposureFilterButtons from '@/components/ExposureFilterButtons';
 import { ChemicalData } from '@/app/api/csv-parser';
-
 
 export default function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
   const { selectedTest } = useTest();
   const [categoryName, setCategoryName] = useState<string>('');
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [exposureFilter, setExposureFilter] = useState<'all' | 'pay-attention' | 'monitor-only' | 'low-exposure' | 'not-detected'>('pay-attention');
+  const [exposureFilter, setExposureFilter] = useState<ExposureFilterType>('pay-attention');
 
   useEffect(() => {
     async function loadData() {
@@ -50,32 +50,12 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
   const categoryGroups = groupChemicalsByCategory(chemicals);
   const categoriesWithStats = getCategoryStats(categoryGroups);
   
-  // Filter chemicals by exposure level
-  const categoryChemicals = chemicals
-    .filter(chemical => chemical.exposureCategory === categoryName)
-    .filter(chemical => {
-      const percentile = chemical.percentile || 0;
-      const value = chemical.value;
-      switch (exposureFilter) {
-        case 'not-detected':
-          return value === 0;
-        case 'low-exposure':
-          return value > 0 && percentile <= 0.3;
-        case 'monitor-only':
-          return value > 0 && percentile > 0.3 && percentile <= 0.6;
-        case 'pay-attention':
-          return value > 0 && percentile > 0.6;
-        case 'all':
-        default:
-          return true;
-      }
-    })
-    .sort((a, b) => {
-      // Sort by percentile (highest first), treating undefined as 0
-      const aPercentile = a.percentile || 0;
-      const bPercentile = b.percentile || 0;
-      return bPercentile - aPercentile;
-    });
+  const categoryChemicals = sortChemicalsByPercentile(
+    filterChemicalsByExposure(
+      chemicals.filter(chemical => chemical.exposureCategory === categoryName),
+      exposureFilter
+    )
+  );
   
   const detectedCount = categoryChemicals.filter(c => c.value > 0).length;
   const totalCount = categoryChemicals.length;
@@ -143,59 +123,10 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
             <div className="mb-8">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">Chemicals in this Category</h2>
-                <div className="flex items-center space-x-1">
-                  <span className="text-sm text-gray-600 mr-3">Filter by exposure level:</span>
-                  <button
-                    onClick={() => setExposureFilter('pay-attention')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      exposureFilter === 'pay-attention'
-                        ? 'bg-red-100 text-red-700 border border-red-200'
-                        : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
-                    }`}
-                  >
-                    Pay Attention
-                  </button>
-                  <button
-                    onClick={() => setExposureFilter('monitor-only')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      exposureFilter === 'monitor-only'
-                        ? 'bg-yellow-100 text-yellow-700 border border-yellow-200'
-                        : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
-                    }`}
-                  >
-                    Monitor Only
-                  </button>
-                  <button
-                    onClick={() => setExposureFilter('low-exposure')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      exposureFilter === 'low-exposure'
-                        ? 'bg-green-100 text-green-700 border border-green-200'
-                        : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
-                    }`}
-                  >
-                    Low Exposure
-                  </button>
-                  <button
-                    onClick={() => setExposureFilter('not-detected')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      exposureFilter === 'not-detected'
-                        ? 'bg-gray-100 text-gray-700 border border-gray-300'
-                        : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
-                    }`}
-                  >
-                    Not Detected
-                  </button>
-                  <button
-                    onClick={() => setExposureFilter('all')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      exposureFilter === 'all'
-                        ? 'bg-blue-100 text-blue-700 border border-blue-200'
-                        : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
-                    }`}
-                  >
-                    All Chemicals
-                  </button>
-                </div>
+                <ExposureFilterButtons 
+                  currentFilter={exposureFilter}
+                  onFilterChange={setExposureFilter}
+                />
               </div>
               <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                 <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
@@ -225,7 +156,7 @@ export default function CategoryPage({ params }: { params: Promise<{ name: strin
                             </div>
                             <div className="col-span-2 text-center">
                               <span className="text-sm text-gray-700">
-                                {chemical.value > 0 ? chemical.value.toLocaleString() : 'Not Detected'}
+                                {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
                               </span>
                             </div>
                             <div className="col-span-2 text-center">

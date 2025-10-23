@@ -4,25 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTest } from '@/contexts/TestContext';
+import { formatTestDate } from '@/lib/date-utils';
 
 export default function Navbar() {
   const pathname = usePathname();
   const { selectedTest, availableTests, setSelectedTest, isLoading } = useTest();
-
-  const formatDate = (dateStr: string) => {
-    if (!dateStr) return '';
-    try {
-      const [month, day, year] = dateStr.split('/');
-      const date = new Date(parseInt(year) + 2000, parseInt(month) - 1, parseInt(day));
-      return date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      });
-    } catch {
-      return dateStr;
-    }
-  };
 
   return (
     <nav className="bg-white border-b border-gray-200">
@@ -61,7 +47,7 @@ export default function Navbar() {
               >
                 {availableTests.map(test => (
                   <option key={test.id} value={test.id}>
-                    {formatDate(test.date)}
+                    {formatTestDate(test.date)}
                   </option>
                 ))}
               </select>

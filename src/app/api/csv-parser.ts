@@ -58,12 +58,6 @@ export async function parseChemicalsCSV(testId: number = 1): Promise<ChemicalDat
                 : undefined
             };
           });
-          // Sort by percentile (highest first), treating undefined as 0
-          data.sort((a, b) => {
-            const aPercentile = a.percentile || 0;
-            const bPercentile = b.percentile || 0;
-            return bPercentile - aPercentile;
-          });
           resolve(data);
         },
         error: (error: Error) => {

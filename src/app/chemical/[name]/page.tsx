@@ -100,15 +100,15 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                 <div className="flex justify-between items-center py-4 border-b border-gray-200">
                   <span className="text-lg font-medium text-gray-700">Measured Value:</span>
                   <span className="text-lg text-gray-900">
-                    {chemical.value > 0 ? chemical.value.toLocaleString() : 'Not Detected'}
+                    {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
                   </span>
                 </div>
 
                 {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
                   <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                    <span className="text-lg font-medium text-gray-700">Normal Range:</span>
+                    <span className="text-lg font-medium text-gray-700">Exposure Range:</span>
                     <span className="text-lg text-gray-900">
-                      {chemical.rangeLow.toLocaleString()} - {chemical.rangeHigh.toLocaleString()}
+                      {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
                     </span>
                   </div>
                 )}
