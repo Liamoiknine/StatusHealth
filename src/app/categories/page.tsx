@@ -2,16 +2,41 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import CategoriesSidebar from '@/components/CategoriesSidebar';
+import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
-import { groupChemicalsByCategory, getCategoryStats, getPercentileColor, formatPercentile, getCategoryStatusInfo } from '@/app/api/utils';
+import { groupChemicalsByCategory, getCategoryStats, getCategoryStatusInfo, getPercentileColor, formatPercentile, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
+import ExposureFilterButtons from '@/components/ExposureFilterButtons';
 import { ChemicalData } from '@/app/api/csv-parser';
 
 export default function CategoriesPage() {
   const { selectedTest } = useTest();
+  const searchParams = useSearchParams();
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState<string | null | 'all-exposures'>('all-exposures');
+  const [categoryFilters, setCategoryFilters] = useState<Record<string, ExposureFilterType>>({});
+  const [allExposuresFilter, setAllExposuresFilter] = useState<ExposureFilterType>('all');
+  const [viewMode, setViewMode] = useState<'overview' | 'chemicals'>('overview');
+  const [expandedChemical, setExpandedChemical] = useState<string | null>(null);
+  
+  // Get the current filter for the selected category, defaulting to 'all' if not set
+  const getCurrentCategoryFilter = (category: string): ExposureFilterType => {
+    return categoryFilters[category] || 'all';
+  };
+  
+  // Update filter for a specific category
+  const updateCategoryFilter = (category: string, filter: ExposureFilterType) => {
+    setCategoryFilters(prev => ({
+      ...prev,
+      [category]: filter
+    }));
+  };
+  
+  // Get current exposure filter based on selected category
+  const exposureFilter = selectedCategory && selectedCategory !== 'all-exposures'
+    ? getCurrentCategoryFilter(selectedCategory)
+    : 'all';
 
   useEffect(() => {
     async function loadChemicals() {
@@ -29,12 +54,29 @@ export default function CategoriesPage() {
     loadChemicals();
   }, [selectedTest]);
 
+  // Read category query parameter and set as selected category on mount
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      const decodedCategory = decodeURIComponent(categoryParam);
+      setSelectedCategory(decodedCategory);
+    }
+  }, [searchParams]);
+
+  // Reset view mode to overview when category changes
+  useEffect(() => {
+    if (selectedCategory && selectedCategory !== 'all-exposures') {
+      setViewMode('overview');
+      setExpandedChemical(null); // Reset expanded chemical when category changes
+    }
+  }, [selectedCategory]);
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading test data...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading test data...</p>
         </div>
       </div>
     );
@@ -43,60 +85,452 @@ export default function CategoriesPage() {
   const categoryGroups = groupChemicalsByCategory(chemicals);
   const categoriesWithStats = getCategoryStats(categoryGroups);
 
+  // Get selected category chemicals and stats
+  const selectedCategoryChemicals = selectedCategory && selectedCategory !== 'all-exposures'
+    ? sortChemicalsByPercentile(
+        filterChemicalsByExposure(
+          chemicals.filter(chemical => chemical.exposureCategory === selectedCategory),
+          exposureFilter
+        )
+      )
+    : [];
+  
+  // Get all exposures chemicals and stats
+  const allExposuresChemicals = selectedCategory === 'all-exposures'
+    ? sortChemicalsByPercentile(
+        filterChemicalsByExposure(chemicals, allExposuresFilter)
+      )
+    : [];
+  
+  const detectedCount = selectedCategoryChemicals.filter(c => c.value > 0).length;
+  const totalCount = selectedCategoryChemicals.length;
+  const allExposuresDetectedCount = allExposuresChemicals.filter(c => c.value > 0).length;
+  const allExposuresTotalCount = allExposuresChemicals.length;
+  const uniqueCategories = new Set(allExposuresChemicals.map(c => c.exposureCategory)).size;
+
+  const info = {
+    description: selectedCategory ? `Detailed information about ${selectedCategory} and their potential health impacts.` : '',
+    sources: ['Various environmental and consumer sources'],
+    healthImpact: 'Health impact varies by specific chemical and exposure level.'
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <div className="flex">
-        <CategoriesSidebar categories={categoriesWithStats} />
+    <div className="min-h-screen bg-[#0f1729]">
+      <div className="container mx-auto px-8 py-8">
+        <div className="flex gap-8 items-start">
+          {/* Main Content Area - Left */}
+          <div className="flex-1">
+            {!selectedCategory ? (
+              <div>
+                <h1 className="text-3xl font-bold text-white">Health Categories</h1>
+                <p className="text-gray-400 mt-2">Detailed view of all health categories and their chemical exposures</p>
+              </div>
+            ) : selectedCategory === 'all-exposures' ? (
+              <div>
+                <div className="mb-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h1 className="text-3xl font-bold text-white mb-2">All Chemical Exposures</h1>
+                      <p className="text-gray-400">Viewing all chemicals across all categories</p>
+                      <p className="text-sm text-gray-500 mt-1">Detected {allExposuresDetectedCount}/{allExposuresTotalCount} exposures</p>
+                    </div>
+                    <div className="bg-[#1a2540] border border-gray-700 px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-white">
+                        {chemicals.length} total chemicals
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
-        <div className="flex-1">
-          <div className="container mx-auto px-8 py-8">
-            <div className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900">Health Categories</h1>
-              <p className="text-gray-600 mt-2">Detailed view of all health categories and their chemical exposures</p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-              {categoriesWithStats.map(({ category, chemicals, detectedCount, totalCount }) => {
-                const status = getCategoryStatusInfo(chemicals);
-                
-                return (
-                  <Link key={category} href={`/category/${encodeURIComponent(category)}`} className="block">
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h2 className="text-xl font-bold text-gray-900 mb-2">{category}</h2>
-                          <p className="text-sm text-gray-600 mb-3">Detected {detectedCount}/{totalCount} exposures</p>
-                          <div className="text-xs text-gray-500 space-y-1">
-                            <div>Pay Attention: {totalCount > 0 ? Math.round((chemicals.filter(c => c.value > 0 && (c.percentile || 0) > 0.6).length / totalCount) * 100) : 0}%</div>
-                            <div>Monitor Only: {totalCount > 0 ? Math.round((chemicals.filter(c => { const p = c.percentile || 0; return c.value > 0 && p > 0.3 && p <= 0.6; }).length / totalCount) * 100) : 0}%</div>
-                            <div>Low Exposure: {totalCount > 0 ? Math.round((chemicals.filter(c => c.value > 0 && (c.percentile || 0) <= 0.3).length / totalCount) * 100) : 0}%</div>
-                          </div>
-                        </div>
-                        <div className={`px-3 py-1 rounded-full ${status.bgColor}`}>
-                          <span className={`text-xs font-medium ${status.textColor}`}>{status.text}</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        {chemicals.slice(0, 3).map((chemical, index) => (
-                          <div key={index} className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg">
-                            <h3 className="text-sm font-semibold text-gray-900 truncate flex-1">
-                              {chemical.compound}
-                            </h3>
-                            <span className={`text-sm font-bold ml-3 ${getPercentileColor(chemical.percentile, chemical.value)}`}>
-                              {formatPercentile(chemical.percentile, chemical.value)}
-                            </span>
-                          </div>
-                        ))}
+                <div className="mb-8">
+                  <div className="flex items-center justify-end mb-6">
+                    <ExposureFilterButtons 
+                      currentFilter={allExposuresFilter}
+                      onFilterChange={setAllExposuresFilter}
+                    />
+                  </div>
+                  <div className="bg-[#1a2540] border border-gray-700 rounded-lg overflow-hidden">
+                    <div className="px-6 py-4 bg-[#0f1729] border-b border-gray-800">
+                      <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-300">
+                        <div className="col-span-3 min-w-0 truncate">Chemical Name</div>
+                        <div className="col-span-2 min-w-0 truncate">Category</div>
+                        <div className="col-span-2 text-center min-w-0 truncate">Measured Value</div>
+                        <div className="col-span-1 text-center min-w-0">%ile</div>
+                        <div className="col-span-2 min-w-0 truncate">Source</div>
+                        <div className="col-span-2 min-w-0 truncate">Status</div>
                       </div>
                     </div>
-                  </Link>
-                );
-              })}
-            </div>
-            
-            <div className="text-sm text-gray-500 text-center">
-              Showing {chemicals.length} chemical entries across {categoriesWithStats.length} categories
-            </div>
+                    <div className="divide-y divide-gray-800">
+                      {allExposuresChemicals.map((chemical, index) => {
+                        const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
+                        const isExpanded = expandedChemical === chemical.compound;
+                        
+                        return (
+                          <div key={index}>
+                            {/* Clickable Row */}
+                            <div
+                              onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
+                              className="px-6 py-4 hover:bg-[#0f1729] transition-colors cursor-pointer"
+                            >
+                              <div className="grid grid-cols-12 gap-4 items-center">
+                                <div className="col-span-3 flex items-center gap-2">
+                                  <svg 
+                                    className={`w-4 h-4 text-gray-500 transition-transform flex-shrink-0 ${isExpanded ? 'rotate-90' : ''}`}
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                  <span className="text-sm font-semibold text-white truncate">
+                                    {chemical.compound}
+                                  </span>
+                                </div>
+                                <div className="col-span-2 min-w-0">
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedCategory(chemical.exposureCategory);
+                                    }}
+                                    className="text-sm text-teal-400 hover:text-teal-300 hover:underline truncate block transition-colors text-left w-full max-w-full"
+                                  >
+                                    {chemical.exposureCategory}
+                                  </button>
+                                </div>
+                                <div className="col-span-2 text-center">
+                                  <span className="text-sm text-gray-300">
+                                    {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
+                                  </span>
+                                </div>
+                                <div className="col-span-1 text-center">
+                                  <span className={`text-sm font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                                    {formatPercentile(chemical.percentile, chemical.value)}
+                                  </span>
+                                </div>
+                                <div className="col-span-2">
+                                  <p className="text-sm text-gray-400 truncate">
+                                    {chemical.primarySource}
+                                  </p>
+                                </div>
+                                <div className="col-span-2">
+                                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                                    {statusInfo.text}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            {/* Expanded Content */}
+                            {isExpanded && (
+                              <div 
+                                onClick={() => setExpandedChemical(null)}
+                                className="px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer"
+                              >
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                  <div>
+                                    <h4 className="text-xs font-medium text-gray-400 mb-1">Primary Source</h4>
+                                    <p className="text-sm text-white">{chemical.primarySource}</p>
+                                  </div>
+                                  {chemical.secondarySources && (
+                                    <div>
+                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Secondary Sources</h4>
+                                      <p className="text-sm text-white">{chemical.secondarySources}</p>
+                                    </div>
+                                  )}
+                                  {chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined && (
+                                    <div>
+                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Exposure Range</h4>
+                                      <p className="text-sm text-white">
+                                        {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
+                                      </p>
+                                    </div>
+                                  )}
+                                  {chemical.population !== undefined && (
+                                    <div>
+                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Population Exposed</h4>
+                                      <p className="text-sm text-white">{(chemical.population * 100).toFixed(1)}%</p>
+                                    </div>
+                                  )}
+                                </div>
+                                
+                                <Link
+                                  href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
+                                >
+                                  View Full Page
+                                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                </Link>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="text-sm text-gray-500 text-center">
+                  Showing {allExposuresChemicals.length} chemicals across {uniqueCategories} categories
+                  {allExposuresFilter !== 'all' && (
+                    <span className="ml-2">
+                      (filtered by {allExposuresFilter.replace('-', ' ')})
+                    </span>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div>
+                <div className="mb-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h1 className="text-3xl font-bold text-white mb-2">{selectedCategory}</h1>
+                      <p className="text-gray-400">Detected {detectedCount}/{totalCount} exposures</p>
+                    </div>
+                    <div className="bg-[#1a2540] border border-gray-700 px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-white">
+                        {totalCount} chemicals
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* View Toggle */}
+                  <div className="flex items-center gap-2 mb-6">
+                    <button
+                      onClick={() => setViewMode('overview')}
+                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        viewMode === 'overview'
+                          ? 'bg-teal-600 text-white'
+                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                      }`}
+                    >
+                      Overview
+                    </button>
+                    <button
+                      onClick={() => setViewMode('chemicals')}
+                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        viewMode === 'chemicals'
+                          ? 'bg-teal-600 text-white'
+                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                      }`}
+                    >
+                      Chemical List
+                    </button>
+                  </div>
+                </div>
+
+                {/* Overview Section */}
+                {viewMode === 'overview' && (
+                  <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6 mb-8">
+                    <p className="text-gray-300 mb-6 leading-relaxed">{info.description}</p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-3">Common Sources</h3>
+                        <ul className="space-y-2">
+                          {info.sources.map((source, index) => (
+                            <li key={index} className="flex items-center text-gray-300">
+                              <svg className="w-4 h-4 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+                              </svg>
+                              {source}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-3">Health Impact</h3>
+                        <p className="text-gray-300 leading-relaxed">{info.healthImpact}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Chemical List Section */}
+                {viewMode === 'chemicals' && (
+                  <div className="mb-8">
+                    <div className="flex items-center justify-end mb-6">
+                      <ExposureFilterButtons 
+                        currentFilter={exposureFilter}
+                        onFilterChange={(filter) => {
+                          if (selectedCategory && selectedCategory !== 'all-exposures') {
+                            updateCategoryFilter(selectedCategory, filter);
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className="bg-[#1a2540] border border-gray-700 rounded-lg overflow-hidden">
+                      <div className="px-6 py-4 bg-[#0f1729] border-b border-gray-800">
+                        <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-300">
+                          <div className="col-span-4">Chemical Name</div>
+                          <div className="col-span-2 text-center">Measured Value</div>
+                          <div className="col-span-2 text-center">Percentile</div>
+                          <div className="col-span-2">Primary Source</div>
+                          <div className="col-span-2">Status</div>
+                        </div>
+                      </div>
+                      <div className="divide-y divide-gray-800">
+                        {selectedCategoryChemicals.map((chemical, index) => {
+                          const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
+                          const isExpanded = expandedChemical === chemical.compound;
+                          
+                          return (
+                            <div key={index}>
+                              {/* Clickable Row */}
+                              <div
+                                onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
+                                className="px-6 py-4 hover:bg-[#0f1729] transition-colors cursor-pointer"
+                              >
+                                <div className="grid grid-cols-12 gap-4 items-center">
+                                  <div className="col-span-4 flex items-center gap-2">
+                                    <svg 
+                                      className={`w-4 h-4 text-gray-500 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
+                                      fill="none" 
+                                      stroke="currentColor" 
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <h3 className="text-sm font-semibold text-white truncate">
+                                      {chemical.compound}
+                                    </h3>
+                                  </div>
+                                  <div className="col-span-2 text-center">
+                                    <span className="text-sm text-gray-300">
+                                      {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
+                                    </span>
+                                  </div>
+                                  <div className="col-span-2 text-center">
+                                    <span className={`text-lg font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                                      {formatPercentile(chemical.percentile, chemical.value)}
+                                    </span>
+                                  </div>
+                                  <div className="col-span-2">
+                                    <p className="text-sm text-gray-400 truncate">
+                                      {chemical.primarySource}
+                                    </p>
+                                  </div>
+                                  <div className="col-span-2">
+                                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                                      {statusInfo.text}
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              {/* Expanded Content */}
+                              {isExpanded && (
+                                <div 
+                                  onClick={() => setExpandedChemical(null)}
+                                  className="px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer"
+                                >
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div>
+                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Primary Source</h4>
+                                      <p className="text-sm text-white">{chemical.primarySource}</p>
+                                    </div>
+                                    {chemical.secondarySources && (
+                                      <div>
+                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Secondary Sources</h4>
+                                        <p className="text-sm text-white">{chemical.secondarySources}</p>
+                                      </div>
+                                    )}
+                                    {chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined && (
+                                      <div>
+                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Exposure Range</h4>
+                                        <p className="text-sm text-white">
+                                          {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
+                                        </p>
+                                      </div>
+                                    )}
+                                    {chemical.population !== undefined && (
+                                      <div>
+                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Population Exposed</h4>
+                                        <p className="text-sm text-white">{(chemical.population * 100).toFixed(1)}%</p>
+                                      </div>
+                                    )}
+                                  </div>
+                                  
+                                  <Link
+                                    href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
+                                  >
+                                    View Full Page
+                                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                  </Link>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    
+                    <div className="text-sm text-gray-500 text-center mt-4">
+                      Showing {selectedCategoryChemicals.length} chemicals in {selectedCategory}
+                      {exposureFilter !== 'all' && (
+                        <span className="ml-2">
+                          (filtered by {exposureFilter.replace('-', ' ')})
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Categories List - Right Side */}
+          <div className="w-80 space-y-3">
+            {/* View All Exposures Card */}
+            <button
+              onClick={() => setSelectedCategory('all-exposures')}
+              className="block w-full text-left"
+            >
+              <div className={`bg-teal-600 hover:bg-teal-700 border border-teal-500 rounded-lg p-4 transition-all duration-300 cursor-pointer ${
+                selectedCategory === 'all-exposures' ? '-translate-x-4' : ''
+              }`}>
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-sm font-bold text-white truncate flex-1 mr-2">View All Exposures</h2>
+                  <svg className="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                  </svg>
+                </div>
+                <p className="text-xs text-teal-100">All chemicals across categories</p>
+              </div>
+            </button>
+
+            {/* Category Cards */}
+            {categoriesWithStats.map(({ category, chemicals, detectedCount, totalCount }) => {
+              const status = getCategoryStatusInfo(chemicals);
+              const isActive = selectedCategory === category;
+              
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className="block w-full text-left"
+                >
+                  <div className={`bg-[#1a2540] border border-gray-700 rounded-lg p-4 hover:border-teal-600 hover:shadow-lg hover:shadow-teal-900/20 transition-all duration-300 cursor-pointer ${
+                    isActive ? '-translate-x-4' : ''
+                  }`}>
+                    <div className="flex items-center justify-between mb-2">
+                      <h2 className="text-sm font-bold text-white truncate flex-1 mr-2">{category}</h2>
+                      <div className={`px-2 py-0.5 rounded-full text-xs font-medium flex-shrink-0 ${status.bgColor} ${status.textColor}`}>
+                        {status.text}
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-400">Detected {detectedCount}/{totalCount}</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

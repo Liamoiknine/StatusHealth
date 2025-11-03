@@ -1,0 +1,636 @@
+[
+  {
+    "compound_name": "Isophorone",
+    "cas_rn": "78-59-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Isophorone is a cyclic ketone solvent used in certain paints, inks, adhesives, and pesticide formulations. It has a camphor-like odor and is primarily encountered in industrial settings (e.g., printing or metal coatings), but small amounts can be present in indoor air or drinking water near those sources. Exposure"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure occurs mainly by inhalation of vapors or dermal contact; people who work with isophorone (inks, lacquers, glues) are at highest risk. If detected"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "If detected in blood, it likely indicates very recent exposure (within the past few days) because isophorone does not persist or bioaccumulate, and no routine biomonitoring test exists for it. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute exposure to high levels can irritate the eyes, nose, and throat and cause dizziness. Long-term"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Long-term inhalation of high concentrations has caused central nervous system effects in animals, and limited evidence of developmental toxicity at high doses. There is no human data on carcinogenicity, but EPA classifies isophorone as a possible human carcinogen (Group C). Regulatory"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "Regulatory: Isophorone is regulated as a hazardous air pollutant in the U.S., and OSHA has set a workplace limit of 25 ppm to protect workers. Environmental levels are typically very low, and it is not monitored in national biomonitoring surveys due to its short half-life."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "1,4-Dichlorobenzene",
+    "cas_rn": "106-46-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "1,4-Dichlorobenzene (p-dichlorobenzene) is a chlorinated aromatic compound used mainly as a solid fumigant for moth control and as a deodorizer in products like mothballs and toilet bowl air fresheners. In household settings, it volatilizes into indoor air; breathing contaminated indoor air is the primary exposure route for the general public. Low levels have also been detected in drinking water and ambient air. If found"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "If found in blood, it usually indicates recent inhalation exposure (e.g., in a home with mothball use), since 1,4-dichlorobenzene is metabolized to 2,5-dichlorophenol and excreted and does not accumulate long-term. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute exposure can cause irritation of the skin, eyes, and throat. Chronic"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Chronic inhalation has been linked to effects on the liver and central nervous system in humans (e.g., dizziness, liver enzyme changes). In animal"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "In animal studies, high doses caused liver and kidney tumors, and EPA considers it a Group C possible human carcinogen. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Products containing 1,4-dichlorobenzene are regulated as pesticides (e.g., moth repellents) with label warnings to limit indoor use. The U.S. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "The U.S. EPA"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "EPA has set reference concentration (RfC) guidelines for chronic inhalation exposure, and its metabolite (2,5-dichlorophenol) is measured in CDC\u2019s biomonitoring programs to track population exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "2,6-Dichlorophenol",
+    "cas_rn": "87-65-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "2,6-Dichlorophenol is a chlorinated phenolic compound that is primarily used as a chemical intermediate in the manufacture of other chemicals, such as certain herbicides and pharmaceuticals. It is not produced for direct consumer use, though it may appear as a trace byproduct or impurity from industrial processes (for example, in the production of higher chlorinated phenols). Human exposure"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to 2,6-dichlorophenol is uncommon and would most likely occur occupationally (inhalation or skin contact in chemical manufacturing settings) or from environmental contamination of water or soil near industrial sites. If detected"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "If detected in blood, it suggests recent exposure to a chlorinated substance (since dichlorophenols are rapidly metabolized and excreted) or possibly the metabolism of another chemical that yields 2,6-dichlorophenol as a byproduct. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, chlorophenols as a class can cause irritation and have been studied for potential effects on the liver and nervous system; however, data specific to 2,6-dichlorophenol in humans are very limited. High exposures to chlorophenols have caused systemic toxicity in animals (e.g., blood and CNS effects). Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory: 2,6-Dichlorophenol itself is not a focus of consumer product regulation, but it is indirectly controlled via limits on related chemicals (like herbicide contaminants) and environmental discharge regulations. It has been identified in environmental monitoring programs for industrial pollutants, and safety guidelines exist for workers to minimize inhalation or skin exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Lufenuron",
+    "cas_rn": "103055-07-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Lufenuron is a benzoylurea insecticide that inhibits chitin synthesis in insects. It is used in agriculture on a variety of crops to control caterpillars and other larvae, and it is also a veterinary medicine given to pets (oral flea control). In household contexts, exposure can occur if people handle treated pet tablets or come into contact with pet bedding after treatment, and through dietary intake of residues on treated food crops (though typical dietary levels are very low). If lufenuron is found in human blood, it likely reflects recent or ongoing exposure (for example, regularly consuming trace residues in food or administering pet treatments), as lufenuron is lipophilic and can persist in body fat with a slow elimination half-life. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, lufenuron has low acute toxicity in mammals; it does not target the nervous system like many insecticides. High-dose animal studies have shown effects such as convulsions and body weight changes only after prolonged exposure to very high doses. The main organs affected in chronic studies were the liver and possibly the nervous system at those high levels, but no significant health effects are expected at normal exposure levels. Regulatory"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "Regulatory context: Lufenuron is approved globally for pest control with established maximum residue limits in food. The FAO/WHO Joint Meeting on Pesticide Residues (JMPR) has evaluated its safety, and it is regulated by agencies like the U.S. EPA"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "EPA and EU authorities which consider it low-risk to humans when used according to guidelines."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Carbaryl (Sevin)",
+    "cas_rn": "63-25-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Carbaryl is a broad-spectrum carbamate insecticide widely used on agricultural crops (corn, soybeans, fruits, nuts, vegetables) and formerly in home gardens and lawns under the trade name Sevin. Human exposure"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure can occur during mixing and application (via skin contact or inhalation of spray/dust) and indirectly through spray drift or residues on food; carbaryl has been detected at low levels in surface water and produce. In the body"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "In the body, carbaryl is rapidly metabolized to compounds like 1-naphthol (excreted in urine), so finding carbaryl itself in blood would imply a very recent exposure event. Its primary mode of action is inhibition of acetylcholinesterase, an enzyme needed for nervous system function. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute exposure can lead to cholinesterase inhibition symptoms such as nausea, sweating, blurred vision, muscle weakness, and at high doses, convulsions or respiratory failure. These effects are typically reversible once exposure ceases, since the enzyme activity recovers. Chronic"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Chronic low-level exposure may cause persistent headaches, memory loss, and anorexia due to sustained enzyme inhibition over time. Animal studies have shown liver and kidney changes at high chronic doses but no strong evidence of cancer; accordingly, EPA has classified carbaryl as not classifiable as to human carcinogenicity (Group D). Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory: Carbaryl is a restricted-use pesticide in some jurisdictions, and many residential uses have been phased out due to health concerns. The U.S. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "The U.S. EPA"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "EPA maintains a reference dose (RfD) for daily intake, and some countries (e.g., in the EU) have banned carbaryl for outdoor use. Biomonitoring programs often track its urinary metabolite (1-naphthol) to assess population exposure levels."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Carbetamide",
+    "cas_rn": "16118-49-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Carbetamide is a selective carbamate herbicide (carbanilate class) used to control annual grasses and weeds in certain crops, such as winter oilseed rape (canola) and some vegetables. It is not commonly used in home gardens, so general population exposure would mainly come from trace residues in food or via environmental contamination of water near treated fields. If carbetamide is detected in blood, it likely indicates recent environmental or dietary exposure, as this compound is moderately persistent but not known to bioaccumulate significantly in humans (it tends to be metabolized and excreted within days). Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, carbetamide has moderate mammalian toxicity; unlike carbamate insecticides, it does not inhibit cholinesterase. High doses in animal studies have been associated with reproductive and developmental effects (e.g., reduced fetal growth), prompting hazard flags for those endpoints. It has also been identified as a potential carcinogen in long-term studies (increased tumors in one or more species at high doses). Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Carbetamide\u2019s approval has been re-evaluated in the EU, and its use has been restricted or not renewed in some countries due to environmental concerns and toxicological profile. Where it is approved, strict application guidelines and maximum residue limits (MRLs) in food are set to protect consumers. The compound is monitored in environmental waters, especially in agricultural regions, to ensure levels remain below safety thresholds."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Diethofencarb",
+    "cas_rn": "87130-20-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Diethofencarb is a carbamate fungicide used to combat fungal diseases (notably Botrytis cinerea) on fruits (such as grapes, strawberries), ornamental plants, and some vegetable crops. It is often applied post-harvest or in the field, and is usually not present in consumer products for home use. Thus, typical human exposure is via minute dietary residues on treated produce or through occupational handling during spraying. The EPA has noted that dietary exposure (food) is the primary pathway of concern for diethofencarb, with little to no residential (indoor) use expected. If diethofencarb appears in blood, it would suggest recent ingestion of residues or short-term occupational exposure, since it is not persistent in the human body and is eliminated relatively quickly through metabolism. Diethofencarb has low acute toxicity in laboratory animals (it is not a cholinesterase inhibitor and showed low toxicity by oral, dermal, and inhalation routes). However, high-dose animal studies indicated potential reproductive or developmental effects (e.g., reduced fetal weight or skeletal variations at maternally toxic doses), which is why it carries a hazard warning for those endpoints. Regulators have set Acceptable Daily Intake (ADI) levels based on these studies, and the compound underwent an EU peer review in 2010 that led to the non-renewal of its approval for use in Europe. Currently, diethofencarb is approved in some countries for limited uses (e.g., on bananas for import) under strict residue limits that ensure consumer exposure remains below health concern thresholds."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Methiocarb",
+    "cas_rn": "2032-65-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Methiocarb is a carbamate pesticide used primarily as a molluscicide (snail and slug bait) and also as an insecticide/acaricide on ornamentals and turf. In the past, it was formulated as blue pellet baits for garden slug control and used as a bird repellent on seed crops. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure to methiocarb in households can occur if children or pets accidentally ingest bait pellets or if a person handles the bait without gloves (dermal absorption). However, its use has been restricted in many regions; for example, the EU banned methiocarb slug pellets in 2014 due to risks to birds consuming the bait. If methiocarb or its metabolites are detected in blood, it indicates very recent exposure, as this compound is rapidly broken down in the body (within hours) by cholinesterase enzymes. Methiocarb, like other N-methyl carbamates, inhibits acetylcholinesterase, leading to acute symptoms such as sweating, salivation, nausea, muscle tremors, and in severe poisoning cases, convulsions and respiratory distress. These cholinergic effects are typically reversible once the exposure stops and the enzyme recovers. Chronic"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Chronic or repeated low-level exposure may result in cumulative enzyme inhibition and associated fatigue or neurological effects, but methiocarb does not appear to cause significant long-term health issues at environmental exposure levels. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Methiocarb is classified as a Restricted Use Pesticide (RUP) in the U.S. due to its high acute toxicity to humans (oral LD\u2085\u2080 ~20 mg/kg in some tests) and to birds. Its registration for outdoor use has been phased out in several countries to protect wildlife. Current labels (where still allowed) mandate use of bait stations and protective measures to minimize human and pet exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Methomyl",
+    "cas_rn": "16752-77-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Methomyl is a highly toxic carbamate insecticide used on vegetables, fruits, and field crops, and also formulated as a fly bait (e.g., for housefly control). It is a fast-acting acetylcholinesterase inhibitor. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure is mostly occupational, during mixing or spraying on farms, as methomyl products are Restricted Use Pesticides due to their acute toxicity (EPA Toxicity Category I). Non-occupational exposure is rare, though isolated incidents have occurred from misuse (e.g., illegal use in bait for pests). If methomyl is detected in blood, it signifies a very recent exposure (within hours), as it is rapidly metabolized and excreted; moreover, significant cholinesterase inhibition would likely be present concurrently. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute poisoning can cause symptoms typical of cholinesterase inhibitors: sweating, salivation, nausea, vomiting, muscle twitching, pinpoint pupils, and at higher doses, breathing difficulty, convulsions, and potentially fatal respiratory failure. These symptoms can onset within minutes to hours of exposure. Chronic"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Chronic low-level exposure primarily carries the risk of cumulative enzyme inhibition; repeated exposures over time can lead to persistent flu-like symptoms (weakness, loss of appetite, headache) until the enzyme activity recovers. Methomyl has not shown evidence of causing cancer, birth defects, or genetic mutations in animal studies. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory: Methomyl is banned or severely restricted in many countries (the EU and others have withdrawn approvals due to its toxicity). In the U.S., it remains registered for certain crop uses but only certified applicators can use it, and strict precautions are required (buffer zones, re-entry intervals, etc.). Food residues are regulated with low tolerance levels, and EPA\u2019s assessments indicate the general population\u2019s exposure via diet is very low."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Triflumizole",
+    "cas_rn": "68694-11-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Triflumizole is a systemic conazole fungicide used on top fruits, grapes, cucurbits, and other crops to control powdery mildew, scab, and similar fungal diseases. It is applied during the growing season, including on apples, pears, melons, and vegetables like broccoli and squash. General public exposure occurs mainly through residues on food, as triflumizole is not typically used in homes. Any presence in blood would indicate recent dietary intake or less likely occupational exposure (e.g., among farm or greenhouse workers), because triflumizole is metabolized and eliminated from the body within days. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, triflumizole has low acute toxicity (it is neither a skin irritant nor a potent acute toxin by oral or inhalation routes). High-dose animal studies have shown that it can affect liver metabolism (common to azole fungicides) and cause developmental variations at maternally toxic doses. Specifically, increased liver weights and some skeletal variations in offspring were noted at high levels, though no teratogenic (birth defect) effects at lower doses. It has not been found to be genotoxic, and rodent cancer studies did not show strong carcinogenic effects; accordingly, regulators have not flagged triflumizole as a human carcinogen. Regulatory"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Regulatory context: Triflumizole underwent an EU pesticide risk assessment and was approved in 2009, but that approval expired, and it is no longer approved in the EU as of recent years. In the U.S. and other countries where it remains registered, strict pre-harvest intervals and maximum residue limits are in place to ensure consumer dietary exposures stay below the acceptable daily intake. Residue monitoring by agencies (like EFSA and FDA) helps verify that triflumizole levels in food are within safety limits."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Cyprodinil",
+    "cas_rn": "121552-61-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Cyprodinil is an anilinopyrimidine fungicide used on a range of crops including grapes, berries, pome fruits (apples, pears), stone fruits, and vegetables to control fungal diseases like gray mold (Botrytis) and scab. It is often applied in combination with another fungicide (e.g., fludioxonil) post-harvest or late in the growing season. The primary human exposure route is through dietary intake of trace residues on treated produce. Occupational exposure (by inhalation or dermal contact) can occur for farm workers during mixing and spraying, but residential exposure is minimal since cyprodinil is not used in homes. If cyprodinil were found in blood, it would likely reflect recent ingestion of residues or short-term high-level exposure, as this fungicide is readily metabolized and eliminated. Studies indicate that cyprodinil has low acute toxicity; it is not very toxic by oral, dermal, or inhalation routes (LD\u2085\u2080 values are high, indicating low potency). It can cause slight eye irritation, but no significant neurological symptoms at low exposures. At high doses in animal tests, some transient effects were noted (e.g., in acute neurotoxicity studies, rodents showed hunched posture and reduced activity at very high doses). Chronic"
+      },
+      {
+        "header": "Health and Toxicology",
+        "content": "Chronic studies have not shown carcinogenic effects in rodents, and cyprodinil is not considered genotoxic. However, it has been shown to activate certain cellular receptors (aryl hydrocarbon receptor) and was evaluated for endocrine disruption potential; current evidence for endocrine effects is inconclusive. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Cyprodinil is approved for use in the U.S., EU, and many other countries with established tolerances for residues in food. Regulators (like EFSA and EPA) have determined that chronic dietary exposure is safe at expected levels, with a reasonable certainty of no harm to consumers. EPA"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "EPA has not identified cyprodinil as a human carcinogen, and the EU peer review (2009) concluded no carcinogenic or reproductive hazards at realistic exposure levels."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Fenoxycarb",
+    "cas_rn": "79127-80-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Fenoxycarb is a non-neurotoxic carbamate insect growth regulator (juvenile hormone analog) used to disrupt the maturation of insect pests. It has been used as a long-acting fire ant bait and for control of fleas, mosquitoes, cockroaches, and scale insects on crops and in storage facilities. In agricultural settings, fenoxycarb was applied to fruit trees, grapevines, olives, and cotton to target moths and scale insects. Household exposure can occur via ant or roach bait stations (where fenoxycarb is combined with food attractant) or through pet flea collars/shampoos that historically contained fenoxycarb. If fenoxycarb is detected in blood, it would reflect a very recent exposure, as it is quickly broken down and excreted. In rats, about 90% of an oral dose was eliminated (mostly in feces) within 4 days, leaving no significant residues in organs. Fenoxycarb is practically non-toxic to mammals in acute terms: oral LD\u2085\u2080 in rats is >10,000 mg/kg, indicating very low acute toxicity. It does not inhibit acetylcholinesterase; instead, its toxicological profile shows that high, repeated doses in animals can affect the liver (liver enlargement in chronic studies). No evidence of mutagenicity has been found, and no developmental or reproductive harm was observed at doses up to 300 mg/kg/day in test species. There is limited data on carcinogenicity; fenoxycarb has not been formally classified as to human cancer risk, but chronic studies in rodents have not shown clear carcinogenic effects. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory: Due to its low human toxicity, fenoxycarb was a General Use Pesticide (EPA toxicity class IV) in the U.S., and products carried a \u201cCaution\u201d signal word. However, the EU withdrew fenoxycarb\u2019s approval for use in plant protection (around 2013) because of environmental concerns (high toxicity to aquatic organisms and bees). Currently, its use is largely restricted to specialty baits and pet products in certain markets, with labeling to minimize human and environmental exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Pyriproxyfen",
+    "cas_rn": "95737-68-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Pyriproxyfen is a pyridine-based insect growth regulator that mimics juvenile hormone. It was introduced in 1996 to protect cotton crops from whiteflies and is now also used on other crops and in public health for mosquito control. In households, pyriproxyfen is commonly found in flea and tick products for pets (spot-on treatments, collars) and in some indoor ant/roach sprays (usually combined with adulticides). Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure can occur by applying veterinary products (getting the liquid on skin) or contacting treated pets, and by inhaling aerosol sprays during home pest control. Very low levels of pyriproxyfen residues may be present on treated foods (it is registered for use on some fruits/vegetables and is exempt from U.S. tolerance requirements due to low toxicity). If pyriproxyfen is found in blood, it indicates recent exposure via inhalation or dermal absorption, as this compound is quickly metabolized and eliminated (primarily in feces, with 87\u201399% excreted within 48 hours in animal studies). Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, pyriproxyfen has low acute toxicity; it is very low in toxicity if swallowed, inhaled, or applied to skin, and is only slightly irritating to eyes or skin. It is not known to cause neurotoxic signs since it targets insect development rather than nervous system function. High-dose animal tests over long durations have shown some liver enlargement and mild changes in thyroid hormone levels, but no significant incidence of tumors. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "EPA found no convincing evidence of endocrine disruption by pyriproxyfen and has not identified it as carcinogenic in humans (EPA classified it as \u201cnot likely to be carcinogenic to humans\u201d based on available data). Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Pyriproxyfen is approved globally for use on crops, stored grain, and in veterinary and household products. The U.S. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "The U.S. EPA"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "EPA has established tolerances for certain foods (e.g., a tolerance in meat, eggs due to its use in animal environments) but overall dietary exposure is considered negligible. Pyriproxyfen gained public attention during the 2015\u20132016 Zika outbreak when it was used in mosquito control water treatments; health authorities have stated that no link was found between pyriproxyfen use and human developmental effects. Standard precautions (such as avoiding direct contact with wet insecticide and washing hands after pet treatment) are recommended to minimize any exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Hydramethylnon",
+    "cas_rn": "67485-29-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Hydramethylnon is an amidinohydrazone insecticide commonly used in bait formulations for ants, termites, and cockroaches. It is the active ingredient in many household ant and roach bait stations (e.g., Combat\u00ae and Maxforce\u00ae baits) and works as a slow-acting stomach poison. Exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Exposure for the general public is typically very low, because hydramethylnon is confined within bait granules or stations. Accidental exposure could occur if a bait is ingested (e.g., by a child or pet) or through frequent handling of bait without proper hygiene, but such cases are uncommon. If hydramethylnon were detected in human blood, it would signal a recent significant exposure (such as ingestion), since this chemical is not usually bioavailable in noticeable amounts from normal bait use and is largely excreted unmetabolized. In rats, about 85\u201398% of an oral dose was excreted unchanged in feces within a few days. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, hydramethylnon has low acute toxicity in mammals (oral LD\u2085\u2080 ~1100 mg/kg in rats, indicating low to moderate toxicity). It does not cause immediate cholinergic symptoms; instead, it disrupts cellular energy production in insects by inhibiting mitochondrial electron transport. High exposures in humans might lead to nonspecific symptoms like nausea or decreased appetite, but there are no typical poisoning syndromes at household exposure levels. In long-term animal studies, very high doses of hydramethylnon caused weight loss, decreased food intake, and testicular degeneration in rodents, suggesting potential male reproductive toxicity at those extreme doses. Some studies also found an increase in certain tumors (e.g., liver or reproductive tract) in rats and mice at the highest tested doses. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "EPA has classified hydramethylnon as a Group C possible human carcinogen out of caution. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory: Hydramethylnon is registered for indoor and outdoor bait uses. Because it poses little risk when used in enclosed baits, it is approved for consumer use with a \u201cCaution\u201d label. The State of California, however, lists hydramethylnon as known to cause reproductive toxicity (male) under Proposition 65. Overall, when used properly in baits, the exposure to people is very low and considered safe by regulatory standards."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Dinotefuran",
+    "cas_rn": "165252-70-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Dinotefuran is a neonicotinoid insecticide used to control a variety of pests (aphids, whiteflies, cockroaches, fleas, etc.) in agriculture and urban settings. It is an active ingredient in some household pest control products (e.g., indoor sprays, termite treatments) and in veterinary flea treatments (certain topical spot-ons for pets). People can be exposed by applying dinotefuran-based sprays in the home (inhalation or skin contact) or by handling recently treated pets. Dietary exposure from food is possible but generally low, as dinotefuran is used on fruits and vegetables with regulated pre-harvest intervals, and it is water-soluble and not very persistent. If dinotefuran is found in blood, it points to a recent exposure (within the last day or two) because neonicotinoids are rapidly absorbed and eliminated (half-lives on the order of hours). Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, dinotefuran is moderately toxic to mammals; its mechanism is to agonize nicotinic acetylcholine receptors, which in insects causes paralysis. In humans or other mammals, high acute exposures can cause symptoms like lightheadedness, muscle weakness, or tremors, but dinotefuran has a relatively high LD\u2085\u2080 (e.g., >2000 mg/kg in rats, low acute toxicity classification). No chronic health effects have been clearly linked to dinotefuran in studies; long-term animal feeding studies did not show carcinogenicity or significant organ toxicity at non-lethal doses. Some developmental toxicity (e.g., reduced pup weights) was observed at high doses, but only at levels also toxic to the mother. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Dinotefuran was approved in the mid-2000s and is considered a \u201creduced risk\u201d insecticide for certain uses. It is not one of the neonicotinoids that were broadly banned in the EU (those bans focused on pollinator exposure for imidacloprid, clothianidin, and thiamethoxam), though dinotefuran\u2019s outdoor uses are under scrutiny in some regions. In the U.S., dinotefuran is registered for residential and agricultural use with label requirements to mitigate risks (e.g., not spraying when pollinators are active). The EPA and other agencies have set tolerances for residues in food, and monitoring indicates typical levels are below those limits."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Imidacloprid",
+    "cas_rn": "138261-41-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Imidacloprid is a widely used neonicotinoid insecticide employed in agriculture (on crops like corn, cotton, fruits, and vegetables) as well as in pet flea treatments and home pest control products. It is commonly found in flea drops for pets, termite treatments, and lawn insect granules. The general population can be exposed via residues on food (though imidacloprid is applied pre-harvest under regulated conditions) and via handling treated pets or using home insect sprays. Imidacloprid in blood would indicate a recent exposure (within a day), as it is quickly metabolized and excreted (half-life in humans is estimated on the order of hours). At typical exposure levels, it does not accumulate. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute toxicity of imidacloprid to mammals is considered moderate (oral LD\u2085\u2080 in rats ~300\u2013500 mg/kg). Most cases of human exposure (e.g., accidental ingestion or over-application) result in mild symptoms such as dizziness, vomiting, or headache. Imidacloprid acts on nicotinic acetylcholine receptors; very high doses could theoretically cause neurological symptoms (tremors, lethargy), but serious poisonings in humans are rare. Chronic"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Chronic studies in animals have shown some effects on the thyroid and liver at high doses (related to liver enzyme induction), but no consistent evidence of carcinogenicity. Imidacloprid has been scrutinized for potential developmental neurotoxicity; some animal studies suggest possible effects on brain development or behavior at high prenatal doses, but regulatory agencies have generally concluded that at expected human exposure levels it is unlikely to pose a risk. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Imidacloprid\u2019s extensive use has led to regulatory measures particularly to protect pollinators (bees). The EU banned most outdoor uses of imidacloprid in 2018 due to bee toxicity, although it is still allowed for pet and indoor use. In the U.S., imidacloprid is registered with EPA-set tolerances in food, and product labels include warnings to avoid human contact (e.g., with wet pet fur after topical treatment). Biomonitoring programs (like CDC\u2019s NHANES) have occasionally measured metabolites of imidacloprid (such as 6-chloronicotinic acid) in urine to assess exposure trends in the population."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Nitenpyram",
+    "cas_rn": "150824-47-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Nitenpyram is a neonicotinoid insecticide used primarily in veterinary medicine as an oral flea treatment for pets (e.g., tablets that rapidly kill fleas on dogs and cats). It is not used on crops or in household sprays, so human exposure opportunities are limited. A person could be exposed by handling the tablets (dermal exposure) or via contact with a pet shortly after the pet has been treated, but nitenpyram is very short-lived. If nitenpyram were found in human blood, it would imply a very recent and direct exposure (possibly ingestion or extensive contact), because this chemical is quickly absorbed and eliminated \u2013 in dogs, the half-life is only a few hours, and it is likely similar in humans. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, nitenpyram targets insect nicotinic acetylcholine receptors and is highly selective for insects. It has low acute toxicity to mammals; for instance, the oral LD\u2085\u2080 in rats is quite high (indicating low toxicity). In pets, it is well-tolerated even at doses that kill fleas. Human health effects from incidental exposure are expected to be minimal \u2013 perhaps slight headache or nausea if a large amount were ingested, but no serious systemic effects at the small doses used for pet treatment. There are no known chronic health concerns for nitenpyram; it has not been associated with cancer, reproductive, or neurological issues in studies, likely due to its rapid clearance and specific mode of action. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Nitenpyram is approved as a veterinary drug (e.g., FDA-approved in the U.S. for use in dogs and cats) and is not registered as a pesticide for food or general environmental use. Therefore, it is not subject to food tolerance regulations. Its regulation focuses on ensuring safety and efficacy in animals; human safety measures mainly involve labeling advice (such as washing hands after administering the pill to a pet)."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Ethiprole",
+    "cas_rn": "181587-01-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Ethiprole is a phenylpyrazole insecticide in the same chemical family as fipronil. It has been used in some countries for controlling pests on rice, coffee, and in urban pest control, although it is not widely registered in the United States or EU. Ethiprole\u2019s uses include seed treatments and foliar applications targeting insects like planthoppers and beetles. General population exposure in regions where ethiprole is used could occur via residues on imported foods or via drift in communities near treated rice paddies. If ethiprole is detected in blood, it likely signifies recent dietary or environmental exposure, as this compound, like fipronil, can partition into fatty tissues but is mostly metabolized and eliminated over days to weeks. Ethiprole\u2019s toxicity profile is similar to fipronil: it disrupts insect GABA-gated chloride channels, causing neuroexcitation. In mammals, high doses can lead to neurological signs (tremors, convulsions), but ethiprole is less acutely toxic than fipronil (in rats, oral LD\u2085\u2080 is in the hundreds of mg/kg, indicating moderate toxicity). Animal studies on ethiprole have shown effects on the liver and thyroid at chronic high exposures \u2013 these are believed to be secondary to liver enzyme induction (a common mechanism for phenylpyrazoles). There is limited published information on ethiprole\u2019s carcinogenicity; no clear evidence of cancer in rodents has been made public, but given fipronil\u2019s classification (possible human carcinogen due to thyroid tumors in rats), ethiprole is often treated with similar caution. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Ethiprole has seen use in Asia and Latin America; for example, it has been used as a replacement for fipronil in rice pest management in some countries. It is not approved in the EU or U.S. currently, partly due to regulatory concerns over environmental persistence and potential toxicity. In regions where it is registered, maximum residue limits are set for crops (e.g., rice) to ensure dietary exposures remain low. International bodies like JMPR have evaluated ethiprole and established an Acceptable Daily Intake. Overall, the lack of widespread approval means most biomonitoring programs do not include ethiprole, and exposure for the general U.S./EU population is likely negligible."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Fipronil",
+    "cas_rn": "120068-37-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Fipronil is a broad-use phenylpyrazole insecticide well known for its use in veterinary flea and tick products (e.g., Frontline\u00ae topical treatments) and in cockroach and ant baits. It has also been used agriculturally on crops like corn and rice (though many such uses are now restricted). Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure to fipronil can occur through handling treated pets (dermal exposure to the spot-on solution) or by using pest bait products in the home. There have been incidents of food contamination (notably the 2017 egg contamination incident in Europe) which indicate that dietary exposure is possible if fipronil is misused around food-producing animals. If fipronil is found in blood, it suggests a relatively recent exposure; fipronil is lipophilic and can be sequestered in fatty tissue, but its metabolites (like fipronil-sulfone) can be detected in serum following significant exposure. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute toxicity of fipronil in humans typically involves neurologic symptoms, as it antagonizes GABA receptors in the nervous system. Symptoms of significant exposure might include headache, nausea, dizziness, or in extreme cases, seizures. Fipronil is moderately toxic if ingested (oral LD\u2085\u2080 ~97 mg/kg in rats) and has caused accidental poisonings (e.g., ingestion of baits or improper applications). Chronic"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Chronic animal studies have shown that fipronil can cause benign thyroid tumors in rats via a secondary hormonal mechanism (due to liver enzyme induction increasing thyroid hormone clearance) and it also affected the liver. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "EPA classifies fipronil as a Group C possible human carcinogen based on thyroid tumors in rodents. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Fipronil\u2019s agricultural uses have been heavily restricted in the EU (essentially banned for field use due to environmental concerns, particularly impacts on bees and persistence). It remains allowed for veterinary use and indoor pest baits in many places. In the U.S., it is registered for pest control (e.g., termite treatments, bait gels) and pet products, but not for use on food crops. There are strict limits on residues in animal products; for instance, after the illegal use on laying hens that led to egg contamination, authorities now monitor for fipronil residues in eggs and poultry. Consumers are advised to avoid directly contacting wet fipronil on pets and to keep treated pets away from aquariums (fipronil is highly toxic to fish and aquatic invertebrates)."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Metaflumizone",
+    "cas_rn": "139968-49-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Metaflumizone is an insecticide in the semicarbazone class that acts as a sodium channel blocker in insect nerve cells, causing paralysis. It has been used primarily in veterinary products for flea control (for example, it was one of the active ingredients in certain spot-on treatments for cats and dogs) and to a lesser extent in agriculture for chewing pests on crops. Household exposure to metaflumizone would most likely come from handling a recently treated pet or accidental skin contact with the topical solution during application. Environmental or dietary exposures are very low, as metaflumizone is not widely used on food crops and is not volatile. If metaflumizone appears in blood, it suggests a recent exposure via dermal absorption, since ingestion opportunities are rare. Metaflumizone has low acute mammalian toxicity; in lab animal tests, it showed relatively high LD\u2085\u2080 values (indicating low poison potential). It is generally well tolerated by pets and humans, with large safety margins. Potential acute effects at excessive doses might include lethargy or ataxia (related to its mode of action on nerve function), but such cases are uncommon. Chronic"
+      },
+      {
+        "header": "Health and Toxicology",
+        "content": "Chronic toxicity studies in animals showed no significant systemic damage; no clear evidence of carcinogenicity or reproductive toxicity was found, although some test animals at high doses had mild liver changes (likely due to metabolic processing of the compound). Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Metaflumizone was introduced in the mid-2000s and approved for use in companion animals by regulatory agencies like the EPA and EMA (European Medicines Agency). It is not used in human medicine or in household sprays. Veterinary formulations are regulated to ensure residues remain low; for example, if a pet is treated, the small amount of metaflumizone that might transfer to furniture or humans is considered negligible. As a result, biomonitoring of metaflumizone in humans is not routinely conducted, and no specific exposure limits (like occupational limits) have been set beyond general pesticide handling guidelines. The product labels instruct users to wash hands after use and avoid contact with the treated area on pets until dry, which mitigates most human exposure."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Spinetoram (J & L)",
+    "cas_rn": "187166-40-1 / 187166-15-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Spinetoram is a mixture of chemically modified spinosyn compounds (spinosyn J and L) derived from a soil bacterium. It is a broad-spectrum insecticide used on many fruits and vegetables (for example, apples, berries, leafy greens) to control caterpillars, thrips, and other pests, and it is also used in some pet flea treatments (certain topical medications for cats). Exposure"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure to spinetoram for the general population primarily comes through diet, via residues on treated produce, though these residues are typically low and below regulatory limits. There is also potential minor exposure from handling recently treated pets or using spinetoram-based home garden products. If spinetoram or its metabolites were found in blood, it would indicate recent ingestion or contact, as these compounds are metabolized relatively quickly and are not known to bioaccumulate. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, spinetoram has low mammalian toxicity. Its mode of action is to hyperactivate insect nicotinic and GABA receptors, but mammals are far less sensitive. In acute tests, spinetoram\u2019s toxicity is low (oral LD\u2085\u2080 in rats > 5000 mg/kg) and it does not cause significant irritation or sensitization. Subchronic and chronic animal studies showed some liver enlargement at high doses (adaptive response due to metabolism) but no serious pathology. It was not mutagenic in lab tests. A slight increase in certain benign tumors was observed in one high-dose mouse study, but overall evidence of carcinogenicity is weak; regulatory agencies have not classified spinetoram as carcinogenic. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Spinetoram is considered a reduced-risk pesticide and has been approved in the U.S., EU, and elsewhere. Maximum residue limits are established for food commodities (often in the low ppm range) to ensure dietary exposure stays within the safe intake (an Acceptable Daily Intake was set based on animal studies with a generous safety margin). Because it degrades quickly, residues in the environment and in human bodies are short-lived. In the U.S., the EPA requires reentry intervals for farm workers after spinetoram spraying and personal protective equipment during mixing/application to minimize occupational exposure, though the risk profile is favorable. Spinetoram is included in some rotation programs for organic-ish production (spinosyns are derived from natural products), and its safety profile in humans has been corroborated by the lack of adverse effects reported in the general population."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Prometon",
+    "cas_rn": "1610-18-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Prometon is a herbicide in the s-triazine family (chemically related to atrazine and simazine) used mainly for non-selective weed control on industrial sites, rights-of-way, and sometimes around buildings for total vegetation kill. It was often an ingredient in \u201cbare ground\u201d weed killers for fence lines and gravel lots. Residential use of prometon is limited (it is not commonly sold for home gardens), but legacy use may have contaminated soils and groundwater in some areas. People can be exposed to prometon by drinking contaminated well water (prometon has been detected in groundwater in agricultural regions), by dermal contact with treated soils, or inhalation of dust from treated areas. Detection of prometon in blood would suggest ongoing or very recent exposure, likely through drinking water, since its use is not widespread today. Prometon is moderately persistent in the environment and can linger in groundwater, but within the human body it would be metabolized and excreted over a period of days. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, prometon\u2019s profile is similar to other triazine herbicides: low acute toxicity (oral LD\u2085\u2080 in rats on the order of thousands of mg/kg) and not an irritant. High doses in animal studies can affect the liver and cause weight changes; chronic exposure to certain triazines has been associated with endocrine effects in rodents (e.g., atrazine causing hormonal disruptions). There is no strong evidence linking prometon to cancer in humans; the EPA has not classified it as to human carcinogenicity due to insufficient data, though by analogy to atrazine (which is a possible human carcinogen via hormonal modes in rats), some caution is warranted. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Prometon is not approved for use in the EU. In the U.S., it was formerly an ingredient in general use herbicides, but many such products have been phased out. It is listed as a priority contaminant for monitoring in water; the EPA has a lifetime health advisory for combined triazines in drinking water (3 \u00b5g/L for atrazine and similar compounds). Prometon itself does not have a federal maximum contaminant level (MCL) in drinking water, but state agencies have set guidance levels (often a few micrograms per liter) to guard against chronic exposure. Current usage of prometon is limited, and human biomonitoring (such as NHANES) does not routinely measure it, reflecting its reduced prominence."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Mesotrione",
+    "cas_rn": "104206-82-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Mesotrione is a selective herbicide (belonging to the triketone class) commonly used in agriculture, especially on corn (maize), to control broadleaf weeds and some grasses. It works by inhibiting a plant enzyme (HPPD) which causes bleaching of weed foliage. Non-agricultural use of mesotrione includes some lawn and turf products, but these are mostly professional formulations. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure to mesotrione is expected to be low; possible routes are dietary (minute residues on corn or other treated crops) and perhaps via drinking water in areas of heavy use (mesotrione is relatively water-soluble but also breaks down fairly quickly). If mesotrione were found in blood, it would reflect recent exposure, likely through ingestion, as it is not typically encountered indoors or in consumer products. It is rapidly metabolized and excreted (primarily in urine) in animal studies, with a short plasma half-life. Toxicologically"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Toxicologically, mesotrione has low acute toxicity (oral LD\u2085\u2080 in rats > 5000 mg/kg). It is not a cholinesterase inhibitor or neurotoxin; instead, high doses in animals mainly caused temporary effects like eye discoloration (related to its mechanism affecting pigment synthesis) and some weight changes. In chronic studies, there were no significant increases in tumors, and regulatory agencies have not found mesotrione to be carcinogenic. There were some minor effects on the kidneys and liver at the highest doses tested in rodents, but with large safety margins relative to human exposure. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Mesotrione was first registered in the early 2000s and was seen as an environmentally friendlier herbicide (due to its low use rates and selectivity). The U.S. EPA"
+      },
+      {
+        "header": "Regulatory and Monitoring",
+        "content": "The U.S. EPA"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "EPA and other regulators set tolerances for mesotrione residues in corn grain and other commodities; these tolerances are on the order of 0.01\u20130.1 ppm and monitoring indicates compliance. Mesotrione is not listed in standard human biomonitoring surveys, likely because exposure is very low and not of public health concern at those levels. Users of mesotrione (farmers, turf managers) are instructed to wear protective gear to avoid unnecessary contact, although its toxicity to humans is low. One notable consideration is environmental: like other HPPD-inhibitors, mesotrione can run off into water, so buffer zones and groundwater monitoring are part of its regulatory management."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Siduron",
+    "cas_rn": "1982-49-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Siduron (also known as \"siduron\" or by the trade name Tupersan) is a pre-emergent herbicide used primarily on turfgrass (lawns, golf courses) to inhibit crabgrass and other weed seedlings. It selectively affects germinating grasses without harming established lawn grass. Household use of siduron has been mostly through lawn care products, though its popularity has waned with newer herbicides. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure can occur when people apply siduron-containing granules to lawns (dermal and inhalation exposure to dust) or when children and pets play on treated lawns before the product has settled. Siduron is not typically found as a residue on food since its use is ornamental/turf rather than on crops. Detection of siduron in blood would be unusual and imply recent significant exposure (e.g., inhaling a lot of dust during application or accidental ingestion), given that siduron is not persistent in the body and is usually not measured in biomonitoring surveys. Toxicologically"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Toxicologically, siduron has low to moderate acute toxicity. Its oral LD\u2085\u2080 in rats is on the order of a few thousand mg/kg, meaning it\u2019s relatively low in acute toxicity. It is not a cholinesterase inhibitor or highly reactive chemical. High doses in animal studies have shown some liver and blood chemistry changes, but no major organ-specific toxicity at typical exposure levels. There is no strong evidence of carcinogenicity or reproductive toxicity; the EPA has not classified siduron for carcinogenic potential, likely due to insufficient or negative data. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: Siduron has been registered for turf use for decades. In the U.S., it is a General Use Pesticide, and products are available to both professionals and homeowners, usually in granular form to minimize dust. The EPA has set tolerances for siduron in raw agricultural commodities (a legacy of minor use on turf grown for animal feed, perhaps), but generally siduron is not found in food. Its use has diminished, and it is not approved in the EU (it was not supported for re-registration during EU pesticide review, possibly due to lack of interest from manufacturers rather than specific hazards). For users, standard precautions like wearing gloves and avoiding breathing dust are recommended. Environmental regulations consider siduron moderately persistent in soil and water, so care is advised to prevent runoff into waterways."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Phenol",
+    "cas_rn": "108-95-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Phenol is an aromatic organic compound that appears as a colorless crystalline solid (commonly in solution form) with a distinct sweet, tar-like odor. It has many industrial uses, including as a precursor to phenolic resins and plastics, and historically as a disinfectant (\"carbolic acid\") in some household cleaners and throat sprays. Phenol is also produced by the combustion of organic matter; for example, cigarette smoke and automobile exhaust contain phenol, so it is a ubiquitous environmental pollutant at low levels. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure to phenol can occur via inhalation of air containing phenol vapor (for instance, in occupational settings or from smoke), dermal absorption from direct contact with phenol-containing products, or ingestion of contaminated food/water. If phenol is detected in blood, it indicates very recent exposure because phenol is rapidly metabolized (primarily to phenyl sulfate and phenyl glucuronide) and excreted in urine within hours. Acute"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Acute exposure to concentrated phenol can be very hazardous: phenol is corrosive and can cause severe burns on contact with skin or eyes, and inhaling high levels can irritate the respiratory tract and lungs (with risk of pulmonary edema). Systemically, large phenol exposures can lead to symptoms such as headache, dizziness, weakness, irregular heartbeat, convulsions, and in extreme cases collapse of the central nervous system. Phenol can also induce methemoglobinemia (reducing blood oxygen transport) at high doses, causing cyanosis (blue-tinged skin). Chronic"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Chronic or repeated exposure to lower levels of phenol may result in effects on the liver, kidneys, and nervous system (e.g., nausea, fatigue, anorexia), but phenol is not classified as a confirmed human carcinogen. It has shown mutagenic properties in some tests, so it is handled as a potential occupational carcinogen with extreme caution. Regulatory"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Regulatory context: Phenol is on numerous hazardous substance lists (OSHA, NIOSH, EPA) due to its toxicity. Workplace exposure limits are set at 5 ppm (19 mg/m\u00b3) as an 8-hour TWA (skin notation, meaning it can be absorbed through skin). The general public\u2019s exposure is normally far below dangerous levels; for example, the EPA has set a drinking water health advisory of 0.3 mg/L for phenol to protect against non-cancer effects. Phenol is also monitored in the environment, and biomonitoring studies measure total phenol in urine as an indicator of exposure to phenol and other aromatic substances."
+      }
+    ],
+    "sources": []
+  },
+  {
+    "compound_name": "Piperonyl butoxide",
+    "cas_rn": "51-03-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Uses",
+        "content": "Piperonyl butoxide (PBO) is a pesticide synergist commonly added to insecticide formulations (especially with natural pyrethrins or synthetic pyrethroids) to enhance their effectiveness. PBO itself is not intended to kill insects; instead, it inhibits certain detoxifying enzymes in insects, allowing the accompanying insecticide to work better. It is found in many household bug sprays, foggers, flea shampoos, and pet flea/tick products. Human exposure"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Human exposure to PBO can occur by breathing in spray mist, getting it on the skin during application, or touching treated pets or surfaces shortly after use. PBO is also approved for use on various food crops pre-harvest and in food storage, so trace residues might be present on some foods, although it\u2019s exempt from tolerance requirements due to low toxicity. If PBO is detected in blood, it implies a recent exposure (e.g., within a day or two) through inhalation or dermal absorption, as PBO is rapidly broken down and excreted from the human body. Studies in rats show 87\u201399% of a dose is eliminated in urine and feces within 48 hours. PBO has low acute toxicity; it is classified as low to very low in toxicity if swallowed, inhaled, or absorbed through skin. It may cause mild eye or skin irritation in pure form but does not typically cause systemic symptoms by itself. In practice, people are usually exposed to PBO alongside an insecticide, and poisonings (which are rare) are mainly attributed to the insecticide component. High-dose animal studies of PBO have noted some health effects: rats and mice fed extremely high levels over many months showed increased liver weights and, in some cases, an increase in liver tumors. PBO has thus been classified by U.S. EPA"
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "EPA as a possible human carcinogen (due to liver tumor findings in rodents). However, IARC rates it as \"not classifiable\" as to carcinogenicity in humans, and the actual risk from typical exposures is considered very low. Long-term"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Long-term studies also indicate no significant reproductive or developmental harms except at high doses that caused maternal toxicity. Regulatory"
+      },
+      {
+        "header": "Overview and Uses",
+        "content": "Regulatory context: PBO has been re-evaluated by EPA in recent years and remains approved as a synergist in over 1500 products. To limit exposure, product labels advise minimizing inhalation and skin contact (e.g., vacating treated areas until sprays dry, washing skin if contact occurs). The EPA does not require setting food residue tolerances for PBO because of its wide safety margin, but it continues to monitor new research (including incident reports) to ensure its use does not pose undue health risks."
+      }
+    ],
+    "sources": []
+  }
+]

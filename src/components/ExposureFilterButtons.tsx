@@ -16,7 +16,6 @@ export default function ExposureFilterButtons({ currentFilter, onFilterChange }:
 
   return (
     <div className="flex items-center space-x-1">
-      <span className="text-sm text-gray-600 mr-3">Filter by exposure level:</span>
       {filters.map((filter) => (
         <button
           key={filter.value}

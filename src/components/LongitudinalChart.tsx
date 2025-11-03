@@ -36,10 +36,10 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (loading) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
+      <div className="bg-[#1a2540] border border-gray-700 rounded-lg shadow-sm p-6">
+        <h2 className="text-xl font-semibold text-white mb-4">Exposure Over Time</h2>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500"></div>
         </div>
       </div>
     );
@@ -47,9 +47,9 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (error) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
-        <div className="text-center text-red-600">
+      <div className="bg-[#1a2540] border border-gray-700 rounded-lg shadow-sm p-6">
+        <h2 className="text-xl font-semibold text-white mb-4">Exposure Over Time</h2>
+        <div className="text-center text-red-400">
           <p>Error loading data: {error}</p>
         </div>
       </div>
@@ -58,9 +58,9 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (!data || !data.hasData) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
-        <div className="text-center text-gray-500">
+      <div className="bg-[#1a2540] border border-gray-700 rounded-lg shadow-sm p-6">
+        <h2 className="text-xl font-semibold text-white mb-4">Exposure Over Time</h2>
+        <div className="text-center text-gray-400">
           <p>No exposure data available for this chemical across all tests.</p>
         </div>
       </div>
@@ -248,8 +248,8 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-      <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
+    <div className="bg-[#1a2540] border border-gray-700 rounded-lg shadow-sm p-6">
+      <h2 className="text-xl font-semibold text-white mb-4">Exposure Over Time</h2>
       
       <div className="overflow-x-auto">
         <svg width={width} height={height} className="mx-auto">
@@ -263,7 +263,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                 y1={y}
                 x2={padding.left + chartWidth}
                 y2={y}
-                stroke="#e5e7eb"
+                stroke="#374151"
                 strokeWidth="1"
               />
             );
@@ -279,7 +279,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                 x={padding.left - 10}
                 y={y + 4}
                 textAnchor="end"
-                className="text-xs fill-gray-600"
+                className="text-xs fill-gray-300"
               >
                 {formatValue(value)}
               </text>
@@ -295,7 +295,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                 x={x}
                 y={height - padding.bottom + 15}
                 textAnchor="middle"
-                className="text-xs fill-gray-600"
+                className="text-xs fill-gray-300"
               >
                 {formatDate(new Date(point.date.replace(/\r/g, '')))}
               </text>
@@ -305,7 +305,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
           {/* Shaded area for 25th-75th percentile range */}
           <path
             d={createRangePath()}
-            fill="#93c5fd"
+            fill="#5eead4"
             fillOpacity="0.3"
             stroke="none"
           />
@@ -314,7 +314,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
           <path
             d={createPath()}
             fill="none"
-            stroke="#3b82f6"
+            stroke="#14b8a6"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -332,8 +332,8 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                   cx={x}
                   cy={y}
                   r={point.detected ? "4" : "3"}
-                  fill={point.detected ? "#3b82f6" : "#ef4444"}
-                  stroke="white"
+                  fill={point.detected ? "#14b8a6" : "#ef4444"}
+                  stroke="#1a2540"
                   strokeWidth="2"
                 />
                 
@@ -360,7 +360,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
             y1={padding.top}
             x2={padding.left}
             y2={padding.top + chartHeight}
-            stroke="#374151"
+            stroke="#6b7280"
             strokeWidth="2"
           />
           <line
@@ -368,7 +368,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
             y1={padding.top + chartHeight}
             x2={padding.left + chartWidth}
             y2={padding.top + chartHeight}
-            stroke="#374151"
+            stroke="#6b7280"
             strokeWidth="2"
           />
         </svg>
@@ -377,39 +377,39 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
       {/* Legend */}
       <div className="flex justify-center space-x-6 mt-4 text-sm">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-          <span className="text-gray-600">Your Results</span>
+          <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
+          <span className="text-gray-300">Your Results</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <span className="text-gray-600">Not Detected</span>
+          <span className="text-gray-300">Not Detected</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-6 h-3 bg-blue-300 opacity-30 rounded"></div>
-          <span className="text-gray-600">25th-75th Percentile</span>
+          <div className="w-6 h-3 bg-teal-400 opacity-30 rounded"></div>
+          <span className="text-gray-300">25th-75th Percentile</span>
         </div>
       </div>
 
       {/* Summary stats */}
       <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
-        <div className="bg-gray-50 p-3 rounded">
-          <div className="font-medium text-gray-900">Peak Exposure</div>
-          <div className="text-gray-600">
+        <div className="bg-[#0f1729] border border-gray-800 p-3 rounded">
+          <div className="font-medium text-white">Peak Exposure</div>
+          <div className="text-gray-300">
             {points.filter(p => p.detected).length > 0 ? formatValue(Math.max(...points.filter(p => p.detected).map(p => p.value))) : 'N/A'}
           </div>
         </div>
-        <div className="bg-gray-50 p-3 rounded">
-          <div className="font-medium text-gray-900">Detection Rate</div>
-          <div className="text-gray-600">
+        <div className="bg-[#0f1729] border border-gray-800 p-3 rounded">
+          <div className="font-medium text-white">Detection Rate</div>
+          <div className="text-gray-300">
             {points.length > 0 ? Math.round((points.filter(p => p.detected).length / points.length) * 100) : 0}%
           </div>
         </div>
       </div>
 
       {/* Interpretation */}
-      <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Interpretation</h3>
-        <div className="text-sm text-gray-700 leading-relaxed">
+      <div className="mt-6 p-4 bg-[#0f1729] border border-gray-800 rounded-lg">
+        <h3 className="text-lg font-semibold text-white mb-3">Data Interpretation</h3>
+        <div className="text-sm text-gray-300 leading-relaxed">
           {generateInterpretation(points)}
         </div>
       </div>

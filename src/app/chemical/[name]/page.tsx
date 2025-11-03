@@ -7,12 +7,17 @@ import { getPercentileColor, formatPercentile } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import LongitudinalChart from '@/components/LongitudinalChart';
+import { findHouseholdChemical, cleanSummaryText, HouseholdChemicalData } from '@/data/household-data';
+import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from '@/data/household-data-structured';
+import ChemicalDescriptionSections from '@/components/ChemicalDescriptionSections';
 
 export default function ChemicalPage({ params }: { params: Promise<{ name: string }> }) {
   const { selectedTest } = useTest();
   const [chemicalName, setChemicalName] = useState<string>('');
   const [chemical, setChemical] = useState<ChemicalData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [householdData, setHouseholdData] = useState<HouseholdChemicalData | null>(null);
+  const [householdDataStructured, setHouseholdDataStructured] = useState<HouseholdChemicalDataStructured | null>(null);
 
   useEffect(() => {
     async function loadData() {
@@ -25,6 +30,21 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         const chemicals = await parseChemicalsCSV(selectedTest);
         const foundChemical = chemicals.find(c => c.compound === decodedName);
         setChemical(foundChemical || null);
+
+        // Try to load structured data first (for all chemicals)
+        const structuredChemical = findHouseholdChemicalStructured(decodedName);
+        if (structuredChemical) {
+          setHouseholdDataStructured(structuredChemical);
+        }
+
+        // Also check if this is a Household products chemical (fallback to old format)
+        if (foundChemical) {
+          const categoryLower = foundChemical.exposureCategory.toLowerCase();
+          if (categoryLower.includes('household') || categoryLower.includes('product')) {
+            const householdChemical = findHouseholdChemical(decodedName);
+            setHouseholdData(householdChemical);
+          }
+        }
       } catch (error) {
         console.error('Error loading data:', error);
       } finally {
@@ -37,10 +57,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading test data...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading test data...</p>
         </div>
       </div>
     );
@@ -48,13 +68,13 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
   if (!chemical) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#0f1729]">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">Chemical Not Found</h1>
-          <p className="text-gray-600 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
+          <h1 className="text-3xl font-bold text-white mb-8">Chemical Not Found</h1>
+          <p className="text-gray-400 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
           <Link 
             href="/categories" 
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors"
           >
             Back to Categories
           </Link>
@@ -63,102 +83,227 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
     );
   }
 
+  const getStatusInfo = () => {
+    const color = getPercentileColor(chemical.percentile, chemical.value);
+    if (chemical.value === 0) return { label: 'Not Detected', color: 'gray' };
+    if (!chemical.percentile || chemical.percentile <= 0.3) return { label: 'Low Exposure', color: 'green' };
+    if (chemical.percentile > 0.6) return { label: 'High Exposure', color: 'red' };
+    return { label: 'Moderate Exposure', color: 'yellow' };
+  };
+
+  const statusInfo = getStatusInfo();
+
   return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-7xl mx-auto">
-          <Link 
-            href={`/category/${encodeURIComponent(chemical.exposureCategory)}`} 
-            className="inline-block text-blue-600 hover:text-blue-800 mb-8 transition-colors"
-          >
-            ← Back to {chemical.exposureCategory}
-          </Link>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Chemical Information Card */}
-            <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-6">
-                {chemical.compound}
-              </h1>
-              
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Chemical Name:</span>
-                  <span className="text-lg text-gray-900">{chemical.compound}</span>
-                </div>
-                
-                <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Exposure Category:</span>
+    <div className="min-h-screen bg-[#0f1729]">
+      <div className="container mx-auto px-8 py-8 max-w-7xl">
+        {/* Back Button */}
+        <Link 
+          href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`} 
+          className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors group"
+        >
+          <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Categories
+        </Link>
+
+        {/* Hero Section */}
+        <div className="mb-6">
+          <div className="bg-gradient-to-r from-[#1a2540] via-[#1e2a47] to-[#1a2540] border border-gray-700 rounded-xl p-5 shadow-lg relative overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex-1">
+                  <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {chemical.compound}
+                  </h1>
                   <Link 
                     href={`/category/${encodeURIComponent(chemical.exposureCategory)}`}
-                    className="text-lg text-blue-600 hover:text-blue-800"
+                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors group text-sm"
                   >
+                    <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
                     {chemical.exposureCategory}
                   </Link>
                 </div>
                 
-                <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Measured Value:</span>
-                  <span className="text-lg text-gray-900">
-                    {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
-                  </span>
+                {/* Status Badge */}
+                <div className={`px-3 py-1.5 rounded-full border ${
+                  statusInfo.color === 'red' ? 'bg-red-500/20 border-red-500/50 text-red-400' :
+                  statusInfo.color === 'yellow' ? 'bg-yellow-500/20 border-yellow-500/50 text-yellow-400' :
+                  statusInfo.color === 'green' ? 'bg-green-500/20 border-green-500/50 text-green-400' :
+                  'bg-gray-500/20 border-gray-500/50 text-gray-400'
+                }`}>
+                  <span className="text-xs font-semibold">{statusInfo.label}</span>
                 </div>
-
-                {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
-                  <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                    <span className="text-lg font-medium text-gray-700">Exposure Range:</span>
-                    <span className="text-lg text-gray-900">
-                      {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
-                    </span>
-                  </div>
-                )}
-
-                <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                  <span className="text-lg font-medium text-gray-700">Percentile:</span>
-                  <span className={`text-2xl font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
-                    {formatPercentile(chemical.percentile, chemical.value)}
-                  </span>
-                </div>
-
-                {chemical.population !== undefined && (
-                  <div className="flex justify-between items-center py-4 border-b border-gray-200">
-                    <span className="text-lg font-medium text-gray-700">% Population Exposed:</span>
-                    <span className="text-lg text-gray-900">
-                      {(chemical.population * 100).toFixed(1)}%
-                    </span>
-                  </div>
-                )}
               </div>
 
-              {chemical.population !== undefined && (
-                <div className="mt-4 text-xs text-gray-500 italic">
-                  *Percentiles based on the exposed population
-                </div>
-              )}
-              
-              <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Additional Information</h2>
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="text-md font-medium text-gray-800 mb-1">Primary Source:</h3>
-                    <p className="text-gray-600">{chemical.primarySource}</p>
-                  </div>
-                  {chemical.secondarySources && (
-                    <div>
-                      <h3 className="text-md font-medium text-gray-800 mb-1">Secondary Sources:</h3>
-                      <p className="text-gray-600">{chemical.secondarySources}</p>
+              {/* Key Metrics Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                {/* Percentile Card */}
+                <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="p-2 bg-teal-500/10 rounded-lg group-hover:bg-teal-500/20 transition-colors">
+                      <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
                     </div>
+                    <span className={`text-xl font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                      {formatPercentile(chemical.percentile, chemical.value)}
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-400">Population Percentile</p>
+                  {chemical.population !== undefined && (
+                    <p className="text-xs text-gray-500 mt-0.5">Based on exposed population</p>
                   )}
                 </div>
+
+                {/* Measured Value Card */}
+                <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="p-2 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
+                      <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <span className="text-xl font-bold text-white">
+                      {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}` : 'N/D'}
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-400">Measured Value</p>
+                  {chemical.value > 0 && (
+                    <p className="text-xs text-gray-500 mt-0.5">ng/mL</p>
+                  )}
+                </div>
+
+                {/* Population Exposed Card */}
+                {chemical.population !== undefined && (
+                  <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
+                        <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                      </div>
+                      <span className="text-xl font-bold text-purple-400">
+                        {(chemical.population * 100).toFixed(1)}%
+                      </span>
+                    </div>
+                    <p className="text-xs text-gray-400">Population Exposed</p>
+                  </div>
+                )}
               </div>
-            </div>
-            
-            {/* Longitudinal Chart */}
-            <div>
-              <LongitudinalChart chemicalName={chemical.compound} />
             </div>
           </div>
         </div>
+
+        {/* Structured Detailed Information (New Format) */}
+        {householdDataStructured && (
+          <div className="mb-8">
+            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
+              <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Detailed Information
+              </h2>
+              
+              {householdDataStructured.cas_rn && (
+                <div className="mb-6">
+                  <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800 mb-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-300">CAS Registry Number</span>
+                      <span className="text-sm font-semibold text-white">{householdDataStructured.cas_rn}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <ChemicalDescriptionSections data={householdDataStructured} />
+            </div>
+          </div>
+        )}
+
+        {/* Household Products Detailed Information (Old Format - Fallback) */}
+        {!householdDataStructured && householdData && (
+          <div className="mb-8">
+            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
+              <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Detailed Information
+              </h2>
+              
+              {householdData.cas_rn && (
+                <div className="mb-6">
+                  <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800 mb-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-300">CAS Registry Number</span>
+                      <span className="text-sm font-semibold text-white">{householdData.cas_rn}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {householdData.summary_paragraph && (
+                <div className="bg-[#0f1729] rounded-lg p-6 border border-gray-800">
+                  <h3 className="text-lg font-semibold text-white mb-4">Summary</h3>
+                  <div className="prose prose-invert max-w-none">
+                    <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
+                      {cleanSummaryText(householdData.summary_paragraph)}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Longitudinal Chart - Full Width */}
+        <div className="mb-8">
+          <LongitudinalChart chemicalName={chemical.compound} />
+        </div>
+
+        {/* Exposure Range Card - Full Width */}
+        {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
+          <div className="mb-8">
+            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
+              <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                </svg>
+                Exposure Range
+              </h2>
+              <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400">Range</span>
+                  <span className="text-lg font-semibold text-white">
+                    {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
+                  </span>
+                </div>
+                <div className="mt-3 h-2 bg-gray-800 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full transition-all duration-300"
+                    style={{ 
+                      width: chemical.rangeHigh - chemical.rangeLow > 0 
+                        ? `${Math.min(100, Math.max(0, ((chemical.value - chemical.rangeLow) / (chemical.rangeHigh - chemical.rangeLow)) * 100))}%`
+                        : '0%',
+                      minWidth: chemical.value > 0 && chemical.rangeHigh - chemical.rangeLow > 0 ? '2%' : '0%'
+                    }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
