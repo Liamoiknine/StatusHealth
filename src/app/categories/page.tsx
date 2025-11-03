@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
@@ -9,7 +9,7 @@ import { useTest } from '@/contexts/TestContext';
 import ExposureFilterButtons from '@/components/ExposureFilterButtons';
 import { ChemicalData } from '@/app/api/csv-parser';
 
-export default function CategoriesPage() {
+function CategoriesPageContent() {
   const { selectedTest } = useTest();
   const searchParams = useSearchParams();
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
@@ -535,5 +535,20 @@ export default function CategoriesPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CategoriesPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <p className="text-gray-400">Loading categories...</p>
+        </div>
+      </div>
+    }>
+      <CategoriesPageContent />
+    </Suspense>
   );
 }
