@@ -249,168 +249,176 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
 
   return (
     <div className="bg-[#1a2540] border border-gray-700 rounded-lg shadow-sm p-6">
-      <h2 className="text-xl font-semibold text-white mb-4">Exposure Over Time</h2>
+      <h2 className="text-xl font-semibold text-white mb-6">Exposure Over Time</h2>
       
-      <div className="overflow-x-auto">
-        <svg width={width} height={height} className="mx-auto">
-          {/* Grid lines */}
-          {[0, 0.25, 0.5, 0.75, 1].map(ratio => {
-            const y = padding.top + chartHeight - (ratio * chartHeight);
-            return (
-              <line
-                key={ratio}
-                x1={padding.left}
-                y1={y}
-                x2={padding.left + chartWidth}
-                y2={y}
-                stroke="#374151"
-                strokeWidth="1"
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-6">
+        {/* Left: Chart */}
+        <div>
+          <div className="overflow-x-auto">
+            <svg width={width} height={height} className="mx-auto">
+              {/* Grid lines */}
+              {[0, 0.25, 0.5, 0.75, 1].map(ratio => {
+                const y = padding.top + chartHeight - (ratio * chartHeight);
+                return (
+                  <line
+                    key={ratio}
+                    x1={padding.left}
+                    y1={y}
+                    x2={padding.left + chartWidth}
+                    y2={y}
+                    stroke="#374151"
+                    strokeWidth="1"
+                  />
+                );
+              })}
+
+              {/* Y-axis labels */}
+              {[0, 0.25, 0.5, 0.75, 1].map(ratio => {
+                const value = minValue + (maxValue - minValue) * ratio;
+                const y = padding.top + chartHeight - (ratio * chartHeight);
+                return (
+                  <text
+                    key={ratio}
+                    x={padding.left - 10}
+                    y={y + 4}
+                    textAnchor="end"
+                    className="text-xs fill-gray-300"
+                  >
+                    {formatValue(value)}
+                  </text>
+                );
+              })}
+
+              {/* X-axis labels */}
+              {points.map((point, index) => {
+                const x = getX(new Date(point.date.replace(/\r/g, '')));
+                return (
+                  <text
+                    key={index}
+                    x={x}
+                    y={height - padding.bottom + 15}
+                    textAnchor="middle"
+                    className="text-xs fill-gray-300"
+                  >
+                    {formatDate(new Date(point.date.replace(/\r/g, '')))}
+                  </text>
+                );
+              })}
+
+              {/* Shaded area for 25th-75th percentile range */}
+              <path
+                d={createRangePath()}
+                fill="#5eead4"
+                fillOpacity="0.3"
+                stroke="none"
               />
-            );
-          })}
 
-          {/* Y-axis labels */}
-          {[0, 0.25, 0.5, 0.75, 1].map(ratio => {
-            const value = minValue + (maxValue - minValue) * ratio;
-            const y = padding.top + chartHeight - (ratio * chartHeight);
-            return (
-              <text
-                key={ratio}
-                x={padding.left - 10}
-                y={y + 4}
-                textAnchor="end"
-                className="text-xs fill-gray-300"
-              >
-                {formatValue(value)}
-              </text>
-            );
-          })}
+              {/* Line chart */}
+              <path
+                d={createPath()}
+                fill="none"
+                stroke="#14b8a6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
 
-          {/* X-axis labels */}
-          {points.map((point, index) => {
-            const x = getX(new Date(point.date.replace(/\r/g, '')));
-            return (
-              <text
-                key={index}
-                x={x}
-                y={height - padding.bottom + 15}
-                textAnchor="middle"
-                className="text-xs fill-gray-300"
-              >
-                {formatDate(new Date(point.date.replace(/\r/g, '')))}
-              </text>
-            );
-          })}
-
-          {/* Shaded area for 25th-75th percentile range */}
-          <path
-            d={createRangePath()}
-            fill="#5eead4"
-            fillOpacity="0.3"
-            stroke="none"
-          />
-
-          {/* Line chart */}
-          <path
-            d={createPath()}
-            fill="none"
-            stroke="#14b8a6"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Data points */}
-          {points.map((point, index) => {
-            const x = getX(new Date(point.date.replace(/\r/g, '')));
-            const y = point.detected ? getY(point.value) : padding.top + chartHeight;
-            
-            return (
-              <g key={index}>
-                {/* Point */}
-                <circle
-                  cx={x}
-                  cy={y}
-                  r={point.detected ? "4" : "3"}
-                  fill={point.detected ? "#14b8a6" : "#ef4444"}
-                  stroke="#1a2540"
-                  strokeWidth="2"
-                />
+              {/* Data points */}
+              {points.map((point, index) => {
+                const x = getX(new Date(point.date.replace(/\r/g, '')));
+                const y = point.detected ? getY(point.value) : padding.top + chartHeight;
                 
-                {/* Tooltip trigger area */}
-                <circle
-                  cx={x}
-                  cy={y}
-                  r="8"
-                  fill="transparent"
-                  className="cursor-pointer"
-                >
-                  <title>
-                    {formatDate(new Date(point.date.replace(/\r/g, '')))}: {point.detected ? formatValue(point.value) : 'Not detected'}
-                    {point.percentile && ` (${(point.percentile * 100).toFixed(1)}th percentile)`}
-                  </title>
-                </circle>
-              </g>
-            );
-          })}
+                return (
+                  <g key={index}>
+                    {/* Point */}
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r={point.detected ? "4" : "3"}
+                      fill={point.detected ? "#14b8a6" : "#ef4444"}
+                      stroke="#1a2540"
+                      strokeWidth="2"
+                    />
+                    
+                    {/* Tooltip trigger area */}
+                    <circle
+                      cx={x}
+                      cy={y}
+                      r="8"
+                      fill="transparent"
+                      className="cursor-pointer"
+                    >
+                      <title>
+                        {formatDate(new Date(point.date.replace(/\r/g, '')))}: {point.detected ? formatValue(point.value) : 'Not detected'}
+                        {point.percentile && ` (${(point.percentile * 100).toFixed(1)}th percentile)`}
+                      </title>
+                    </circle>
+                  </g>
+                );
+              })}
 
-          {/* Axes */}
-          <line
-            x1={padding.left}
-            y1={padding.top}
-            x2={padding.left}
-            y2={padding.top + chartHeight}
-            stroke="#6b7280"
-            strokeWidth="2"
-          />
-          <line
-            x1={padding.left}
-            y1={padding.top + chartHeight}
-            x2={padding.left + chartWidth}
-            y2={padding.top + chartHeight}
-            stroke="#6b7280"
-            strokeWidth="2"
-          />
-        </svg>
-      </div>
+              {/* Axes */}
+              <line
+                x1={padding.left}
+                y1={padding.top}
+                x2={padding.left}
+                y2={padding.top + chartHeight}
+                stroke="#6b7280"
+                strokeWidth="2"
+              />
+              <line
+                x1={padding.left}
+                y1={padding.top + chartHeight}
+                x2={padding.left + chartWidth}
+                y2={padding.top + chartHeight}
+                stroke="#6b7280"
+                strokeWidth="2"
+              />
+            </svg>
+          </div>
 
-      {/* Legend */}
-      <div className="flex justify-center space-x-6 mt-4 text-sm">
-        <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
-          <span className="text-gray-300">Your Results</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <span className="text-gray-300">Not Detected</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <div className="w-6 h-3 bg-teal-400 opacity-30 rounded"></div>
-          <span className="text-gray-300">25th-75th Percentile</span>
-        </div>
-      </div>
-
-      {/* Summary stats */}
-      <div className="mt-6 grid grid-cols-2 gap-4 text-sm">
-        <div className="bg-[#0f1729] border border-gray-800 p-3 rounded">
-          <div className="font-medium text-white">Peak Exposure</div>
-          <div className="text-gray-300">
-            {points.filter(p => p.detected).length > 0 ? formatValue(Math.max(...points.filter(p => p.detected).map(p => p.value))) : 'N/A'}
+          {/* Legend */}
+          <div className="flex justify-center space-x-6 mt-4 text-sm">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
+              <span className="text-gray-300">Your Results</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-gray-300">Not Detected</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-6 h-3 bg-teal-400 opacity-30 rounded"></div>
+              <span className="text-gray-300">25th-75th Percentile</span>
+            </div>
           </div>
         </div>
-        <div className="bg-[#0f1729] border border-gray-800 p-3 rounded">
-          <div className="font-medium text-white">Detection Rate</div>
-          <div className="text-gray-300">
-            {points.length > 0 ? Math.round((points.filter(p => p.detected).length / points.length) * 100) : 0}%
-          </div>
-        </div>
-      </div>
 
-      {/* Interpretation */}
-      <div className="mt-6 p-4 bg-[#0f1729] border border-gray-800 rounded-lg">
-        <h3 className="text-lg font-semibold text-white mb-3">Data Interpretation</h3>
-        <div className="text-sm text-gray-300 leading-relaxed">
-          {generateInterpretation(points)}
+        {/* Right: Stats and Interpretation */}
+        <div className="space-y-4">
+          {/* Summary stats */}
+          <div className="space-y-3">
+            <div className="bg-[#0f1729] border border-gray-800 p-4 rounded-lg">
+              <div className="text-xs font-medium text-gray-400 mb-1">Peak Exposure</div>
+              <div className="text-lg font-semibold text-white">
+                {points.filter(p => p.detected).length > 0 ? formatValue(Math.max(...points.filter(p => p.detected).map(p => p.value))) : 'N/A'}
+              </div>
+            </div>
+            <div className="bg-[#0f1729] border border-gray-800 p-4 rounded-lg">
+              <div className="text-xs font-medium text-gray-400 mb-1">Detection Rate</div>
+              <div className="text-lg font-semibold text-white">
+                {points.length > 0 ? Math.round((points.filter(p => p.detected).length / points.length) * 100) : 0}%
+              </div>
+            </div>
+          </div>
+
+          {/* Interpretation */}
+          <div className="p-4 bg-[#0f1729] border border-gray-800 rounded-lg">
+            <h3 className="text-sm font-semibold text-white mb-2">Data Interpretation</h3>
+            <div className="text-xs text-gray-300 leading-relaxed">
+              {generateInterpretation(points)}
+            </div>
+          </div>
         </div>
       </div>
     </div>

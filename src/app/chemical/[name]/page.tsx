@@ -96,17 +96,6 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
   return (
     <div className="min-h-screen bg-[#0f1729]">
       <div className="container mx-auto px-8 py-8 max-w-7xl">
-        {/* Back Button */}
-        <Link 
-          href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`} 
-          className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors group"
-        >
-          <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to Categories
-        </Link>
-
         {/* Hero Section */}
         <div className="mb-6">
           <div className="bg-gradient-to-r from-[#1a2540] via-[#1e2a47] to-[#1a2540] border border-gray-700 rounded-xl p-5 shadow-lg relative overflow-hidden">
@@ -203,6 +192,31 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
           </div>
         </div>
 
+        {/* Exposure Range */}
+        {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
+          <div className="mb-8">
+            <div className="relative max-w-[99%] mx-auto">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs text-gray-400">Exposure Range</span>
+                <span className="text-xs text-gray-400">
+                  {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
+                </span>
+              </div>
+              <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full transition-all duration-300"
+                  style={{ 
+                    width: chemical.rangeHigh - chemical.rangeLow > 0 
+                      ? `${Math.min(100, Math.max(0, ((chemical.value - chemical.rangeLow) / (chemical.rangeHigh - chemical.rangeLow)) * 100))}%`
+                      : '0%',
+                    minWidth: chemical.value > 0 && chemical.rangeHigh - chemical.rangeLow > 0 ? '2%' : '0%'
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Structured Detailed Information (New Format) */}
         {householdDataStructured && (
           <div className="mb-8">
@@ -270,39 +284,6 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         <div className="mb-8">
           <LongitudinalChart chemicalName={chemical.compound} />
         </div>
-
-        {/* Exposure Range Card - Full Width */}
-        {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
-          <div className="mb-8">
-            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
-              <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                </svg>
-                Exposure Range
-              </h2>
-              <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Range</span>
-                  <span className="text-lg font-semibold text-white">
-                    {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
-                  </span>
-                </div>
-                <div className="mt-3 h-2 bg-gray-800 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full transition-all duration-300"
-                    style={{ 
-                      width: chemical.rangeHigh - chemical.rangeLow > 0 
-                        ? `${Math.min(100, Math.max(0, ((chemical.value - chemical.rangeLow) / (chemical.rangeHigh - chemical.rangeLow)) * 100))}%`
-                        : '0%',
-                      minWidth: chemical.value > 0 && chemical.rangeHigh - chemical.rangeLow > 0 ? '2%' : '0%'
-                    }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
       </div>
     </div>

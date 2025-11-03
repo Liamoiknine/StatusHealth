@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { groupChemicalsByCategory, getCategoryStats, getCategoryStatusInfo, getPercentileColor, formatPercentile, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
@@ -12,6 +12,7 @@ import { ChemicalData } from '@/app/api/csv-parser';
 function CategoriesPageContent() {
   const { selectedTest } = useTest();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null | 'all-exposures'>('all-exposures');
@@ -54,22 +55,103 @@ function CategoriesPageContent() {
     loadChemicals();
   }, [selectedTest]);
 
-  // Read category query parameter and set as selected category on mount
+  // Read all state from URL query parameters on mount
   useEffect(() => {
     const categoryParam = searchParams.get('category');
+    let restoredCategory = 'all-exposures';
     if (categoryParam) {
-      const decodedCategory = decodeURIComponent(categoryParam);
-      setSelectedCategory(decodedCategory);
+      restoredCategory = decodeURIComponent(categoryParam);
+      setSelectedCategory(restoredCategory);
+    }
+    
+    // Restore viewMode from URL
+    const viewModeParam = searchParams.get('view');
+    if (viewModeParam === 'overview' || viewModeParam === 'chemicals') {
+      setViewMode(viewModeParam);
+    }
+    
+    // Restore expandedChemical from URL
+    const expandedParam = searchParams.get('expanded');
+    if (expandedParam) {
+      setExpandedChemical(decodeURIComponent(expandedParam));
+    }
+    
+    // Restore filters from URL
+    const filterParam = searchParams.get('filter');
+    if (filterParam && restoredCategory !== 'all-exposures') {
+      const validFilters: ExposureFilterType[] = ['all', 'pay-attention', 'monitor-only', 'low-exposure', 'not-detected'];
+      if (validFilters.includes(filterParam as ExposureFilterType)) {
+        setCategoryFilters({ [restoredCategory]: filterParam as ExposureFilterType });
+      }
+    }
+    
+    const allExposuresFilterParam = searchParams.get('allExposuresFilter');
+    if (allExposuresFilterParam) {
+      const validFilters: ExposureFilterType[] = ['all', 'pay-attention', 'monitor-only', 'low-exposure', 'not-detected'];
+      if (validFilters.includes(allExposuresFilterParam as ExposureFilterType)) {
+        setAllExposuresFilter(allExposuresFilterParam as ExposureFilterType);
+      }
     }
   }, [searchParams]);
 
-  // Reset view mode to overview when category changes
+  // Helper function to build current URL with state
+  const buildStateUrl = () => {
+    const params = new URLSearchParams();
+    
+    if (selectedCategory && selectedCategory !== 'all-exposures') {
+      params.set('category', selectedCategory);
+    }
+    
+    if (viewMode && selectedCategory && selectedCategory !== 'all-exposures') {
+      params.set('view', viewMode);
+    }
+    
+    if (expandedChemical && selectedCategory && selectedCategory !== 'all-exposures') {
+      params.set('expanded', expandedChemical);
+    }
+    
+    const currentFilter = selectedCategory && selectedCategory !== 'all-exposures'
+      ? getCurrentCategoryFilter(selectedCategory)
+      : allExposuresFilter;
+    
+    if (currentFilter !== 'all') {
+      if (selectedCategory && selectedCategory !== 'all-exposures') {
+        params.set('filter', currentFilter);
+      } else {
+        params.set('allExposuresFilter', currentFilter);
+      }
+    }
+    
+    return params.toString() ? `/categories?${params.toString()}` : '/categories';
+  };
+
+  // Update URL when state changes (using replace for state updates, but preserve history for navigation)
+  useEffect(() => {
+    // Skip URL update on initial mount to avoid conflicts
+    if (!chemicals.length) return;
+    
+    const newUrl = buildStateUrl();
+    const currentUrl = window.location.pathname + window.location.search;
+    
+    // Only update if URL actually changed to avoid infinite loops
+    if (newUrl !== currentUrl) {
+      router.replace(newUrl, { scroll: false });
+    }
+  }, [selectedCategory, viewMode, expandedChemical, categoryFilters, allExposuresFilter, router, chemicals.length]);
+
+  // Reset view mode to overview when category changes (but preserve if coming from URL)
   useEffect(() => {
     if (selectedCategory && selectedCategory !== 'all-exposures') {
-      setViewMode('overview');
-      setExpandedChemical(null); // Reset expanded chemical when category changes
+      const viewModeParam = searchParams.get('view');
+      if (!viewModeParam) {
+        setViewMode('overview');
+      }
+      const expandedParam = searchParams.get('expanded');
+      if (!expandedParam) {
+        setExpandedChemical(null);
+      }
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, searchParams]);
 
   if (loading) {
     return (
@@ -222,9 +304,9 @@ function CategoriesPageContent() {
                             
                             {/* Expanded Content */}
                             {isExpanded && (
-                              <div 
-                                onClick={() => setExpandedChemical(null)}
-                                className="px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer"
+                              <Link
+                                href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                                className="block px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer hover:bg-[#1a2540] transition-colors"
                               >
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                   <div>
@@ -253,17 +335,13 @@ function CategoriesPageContent() {
                                   )}
                                 </div>
                                 
-                                <Link
-                                  href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                                  onClick={(e) => e.stopPropagation()}
-                                  className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
-                                >
+                                <div className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
                                   View Full Page
                                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                   </svg>
-                                </Link>
-                              </div>
+                                </div>
+                              </Link>
                             )}
                           </div>
                         );
@@ -423,9 +501,9 @@ function CategoriesPageContent() {
                               
                               {/* Expanded Content */}
                               {isExpanded && (
-                                <div 
-                                  onClick={() => setExpandedChemical(null)}
-                                  className="px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer"
+                                <Link
+                                  href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                                  className="block px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer hover:bg-[#1a2540] transition-colors"
                                 >
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                     <div>
@@ -454,17 +532,13 @@ function CategoriesPageContent() {
                                     )}
                                   </div>
                                   
-                                  <Link
-                                    href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
-                                  >
+                                  <div className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
                                     View Full Page
                                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                  </Link>
-                                </div>
+                                  </div>
+                                </Link>
                               )}
                             </div>
                           );
