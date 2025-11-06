@@ -109,7 +109,7 @@ export default function AllExposuresPage() {
                       </div>
                       <div className="col-span-2">
                         <Link
-                          href={`/category/${encodeURIComponent(chemical.exposureCategory)}`}
+                          href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`}
                           className="text-sm text-teal-400 hover:text-teal-300 hover:underline truncate block transition-colors"
                         >
                           {chemical.exposureCategory}

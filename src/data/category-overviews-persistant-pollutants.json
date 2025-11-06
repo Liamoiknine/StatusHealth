@@ -1,0 +1,44 @@
+{
+  "category_name": "Persistent Pollutants",
+  "summary_sections": [
+    {
+      "header": "Overview and Common Uses",
+      "content": "Persistent pollutants are synthetic compounds that resist degradation, persist in the environment and bio-accumulate in living organisms. They originate from pesticide use, industrial processes, consumer goods and by-products of combustion or chemical manufacture.",
+      "sources": [
+        "https://www.unep.org/topics/chemicals-and-pollution-action/pollution-and-health/persistent-organic-pollutants-pops/why",
+        "https://www.who.int/news-room/questions-and-answers/item/food-safety-persistent-organic-pollutants-(pops)"
+      ]
+    },
+    {
+      "header": "Exposure Pathways",
+      "content": "Human exposure to persistent pollutants occurs primarily through ingestion of contaminated food (especially animal fats), drinking water, inhalation of air or dust laden with residues, and maternal transfer during pregnancy or breastfeeding.",
+      "bullets": [
+        "Ingestion of food with bio-accumulated residues of persistent pollutants",
+        "Consumption of contaminated water or sediments",
+        "Inhalation of airborne dust or vapours from persistent compounds",
+        "Maternal transfer to fetus or infant via placenta or breast milk"
+      ],
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6888492/",
+        "https://www.epa.gov/international-cooperation/persistent-organic-pollutants-global-issue-global-response"
+      ]
+    },
+    {
+      "header": "Health and Toxicological Information",
+      "content": "Scientific evidence links persistent pollutants with adverse effects including carcinogenicity, endocrine disruption, immunotoxicity, developmental and reproductive harms. Because of their bio-accumulative and long-half-life nature, even low-level exposure can contribute cumulatively over time.",
+      "sources": [
+        "https://www.who.int/teams/environment-climate-change-and-health/chemical-safety-and-health/health-impacts/chemicals/dioxins",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5634885/"
+      ]
+    },
+    {
+      "header": "Regulatory and Monitoring Context",
+      "content": "Global treaties and regulatory frameworks target persistent pollutants for elimination or restriction. The Stockholm Convention on Persistent Organic Pollutants identifies numerous compounds for global action, underpinned by monitoring programmes that track population and environmental levels over time.",
+      "sources": [
+        "https://chm.pops.int/TheConvention/Overview/tabid/3351/Default.aspx",
+        "https://www.unep.org/topics/chemicals-and-pollution-action/pollution-and-health/persistent-organic-pollutants-pops/global-monitoring-persistent-organic"
+      ]
+    }
+  ],
+  "sources": []
+}

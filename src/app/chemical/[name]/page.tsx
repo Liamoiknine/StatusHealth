@@ -7,7 +7,6 @@ import { getPercentileColor, formatPercentile } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import LongitudinalChart from '@/components/LongitudinalChart';
-import { findHouseholdChemical, cleanSummaryText, HouseholdChemicalData } from '@/data/household-data';
 import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from '@/data/household-data-structured';
 import ChemicalDescriptionSections from '@/components/ChemicalDescriptionSections';
 
@@ -16,7 +15,6 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
   const [chemicalName, setChemicalName] = useState<string>('');
   const [chemical, setChemical] = useState<ChemicalData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [householdData, setHouseholdData] = useState<HouseholdChemicalData | null>(null);
   const [householdDataStructured, setHouseholdDataStructured] = useState<HouseholdChemicalDataStructured | null>(null);
 
   useEffect(() => {
@@ -31,19 +29,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         const foundChemical = chemicals.find(c => c.compound === decodedName);
         setChemical(foundChemical || null);
 
-        // Try to load structured data first (for all chemicals)
+        // Load structured data
         const structuredChemical = findHouseholdChemicalStructured(decodedName);
         if (structuredChemical) {
           setHouseholdDataStructured(structuredChemical);
-        }
-
-        // Also check if this is a Household products chemical (fallback to old format)
-        if (foundChemical) {
-          const categoryLower = foundChemical.exposureCategory.toLowerCase();
-          if (categoryLower.includes('household') || categoryLower.includes('product')) {
-            const householdChemical = findHouseholdChemical(decodedName);
-            setHouseholdData(householdChemical);
-          }
         }
       } catch (error) {
         console.error('Error loading data:', error);
@@ -112,7 +101,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                     {chemical.compound}
                   </h1>
                   <Link 
-                    href={`/category/${encodeURIComponent(chemical.exposureCategory)}`}
+                    href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`}
                     className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors group text-sm"
                   >
                     <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,7 +206,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
           </div>
         )}
 
-        {/* Structured Detailed Information (New Format) */}
+        {/* Detailed Information */}
         {householdDataStructured && (
           <div className="mb-8">
             <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
@@ -240,42 +229,6 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
               )}
 
               <ChemicalDescriptionSections data={householdDataStructured} />
-            </div>
-          </div>
-        )}
-
-        {/* Household Products Detailed Information (Old Format - Fallback) */}
-        {!householdDataStructured && householdData && (
-          <div className="mb-8">
-            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
-              <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Detailed Information
-              </h2>
-              
-              {householdData.cas_rn && (
-                <div className="mb-6">
-                  <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800 mb-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-300">CAS Registry Number</span>
-                      <span className="text-sm font-semibold text-white">{householdData.cas_rn}</span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {householdData.summary_paragraph && (
-                <div className="bg-[#0f1729] rounded-lg p-6 border border-gray-800">
-                  <h3 className="text-lg font-semibold text-white mb-4">Summary</h3>
-                  <div className="prose prose-invert max-w-none">
-                    <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
-                      {cleanSummaryText(householdData.summary_paragraph)}
-                    </p>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         )}

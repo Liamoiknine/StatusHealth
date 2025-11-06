@@ -1,0 +1,45 @@
+{
+    "category_name": "Containers & Coatings",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "This category includes chemicals applied in container linings, coatings, surface treatments and packaging materials. Many are persistent and used for their resistance to moisture, oil, stains or chemical corrosion in products such as food-contact packaging, industrial drums and nonstick surfaces.",
+        "sources": [
+          "https://pfas-1.itrcweb.org/2-5-pfas-uses/",
+          "https://www.epa.gov/pfas/our-current-understanding-human-health-and-environmental-risks-pfas"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure pathways include ingestion of food or beverages stored in treated containers, inhalation of vapours or dust from coated surfaces, dermal contact with treated materials, and transfer from packaging or coatings into water or food.",
+        "bullets": [
+          "Ingestion of food or drink stored in coated containers",
+          "Inhalation of volatile or semi-volatile emissions from coatings",
+          "Dermal contact with coating surfaces or packaging",
+          "Migration from packaging into food, drink or indoor dust"
+        ],
+        "sources": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6380916/",
+          "https://www.niehs.nih.gov/health/topics/agents/pfc/index.cfm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Long-term and low-level exposure to coating-related chemicals such as per- and poly-fluoroalkyl substances (PFAS) and bisphenols has been associated with altered cholesterol metabolism, immune function interference, hormone disruption and increased cancer risk in humans, although specific dose–response relationships depend on compound and context.",
+        "sources": [
+          "https://www.cancer.org/cancer/risk-prevention/chemicals/teflon-and-perfluorooctanoic-acid-pfoa.html",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6380916/"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Regulatory frameworks cover use of chemicals in packaging and coatings under food-contact material rules, chemical substance control laws and persistent organic pollutant treaties. Monitoring of serum or urine concentrations and packaging migration studies inform exposure assessments and guide regulatory limits.",
+        "sources": [
+          "https://www.epa.gov/pfas",
+          "https://www.federalregister.gov/documents/2025/09/23/2025-18431/procedures-for-chemical-risk-evaluation-under-the-toxic-substances-control-act-tsca"
+        ]
+      }
+    ],
+    "sources": []
+  }
+  

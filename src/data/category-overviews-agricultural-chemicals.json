@@ -1,0 +1,41 @@
+{
+  "category_name": "Agricultural Chemicals",
+  "summary_sections": [
+    {
+      "header": "Overview and Common Uses",
+      "content": "Agricultural chemicals are synthetic substances used in crop production to control pests, fungi, weeds, and regulate plant growth. These compounds are documented in regulatory and chemical-toxicity databases and are tracked for their role in food safety and environmental persistence.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/pesticide-residues-in-food"
+      ]
+    },
+    {
+      "header": "Exposure Pathways",
+      "content": "Human exposure occurs through ingestion of residues on treated food, inhalation of spray drift or dust, dermal contact during application or fieldwork, and consumption of water or produce grown in treated areas.",
+      "bullets": [
+        "Ingestion of food containing pesticide residues",
+        "Inhalation of airborne drift or fine spray droplets",
+        "Dermal contact during application, harvesting or equipment cleaning",
+        "Consumption of water or produce from treated soil"
+      ],
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/pesticide-residues-in-food"
+      ]
+    },
+    {
+      "header": "Health and Toxicological Information",
+      "content": "Toxicological and biomonitoring data indicate potential effects on neurological, endocrine, hepatic, and reproductive systems at high or sustained exposure levels. For the general population, residue and biomarker levels are typically well below known effect thresholds.",
+      "sources": [
+        "https://www.efsa.europa.eu/en/news/pesticides-food-latest-data-published"
+      ]
+    },
+    {
+      "header": "Regulatory and Monitoring Context",
+      "content": "Pesticide use and residue levels are regulated through national and international frameworks. In the United States the Environmental Protection Agency (EPA) sets tolerances under the Federal Food, Drug, and Cosmetic Act. Monitoring data show that the majority of food samples are within the permitted limits.",
+      "sources": [
+        "https://www.epa.gov/pesticide-tolerances/setting-tolerances-pesticide-residues-foods",
+        "https://www.usda.gov/sites/default/files/documents/OPMP-Pesticide-Tolerances-Factsheet.pdf"
+      ]
+    }
+  ],
+  "sources": []
+}

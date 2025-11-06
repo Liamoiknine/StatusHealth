@@ -7,6 +7,8 @@ import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { groupChemicalsByCategory, getCategoryStats, getCategoryStatusInfo, getPercentileColor, formatPercentile, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
 import ExposureFilterButtons from '@/components/ExposureFilterButtons';
+import CategoryOverview from '@/components/CategoryOverview';
+import { findCategoryOverview } from '@/data/category-overviews';
 import { ChemicalData } from '@/app/api/csv-parser';
 
 function CategoriesPageContent() {
@@ -189,12 +191,6 @@ function CategoriesPageContent() {
   const allExposuresDetectedCount = allExposuresChemicals.filter(c => c.value > 0).length;
   const allExposuresTotalCount = allExposuresChemicals.length;
   const uniqueCategories = new Set(allExposuresChemicals.map(c => c.exposureCategory)).size;
-
-  const info = {
-    description: selectedCategory ? `Detailed information about ${selectedCategory} and their potential health impacts.` : '',
-    sources: ['Various environmental and consumer sources'],
-    healthImpact: 'Health impact varies by specific chemical and exposure level.'
-  };
 
   return (
     <div className="min-h-screen bg-[#0f1729]">
@@ -400,32 +396,12 @@ function CategoriesPageContent() {
                 </div>
 
                 {/* Overview Section */}
-                {viewMode === 'overview' && (
-                  <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6 mb-8">
-                    <p className="text-gray-300 mb-6 leading-relaxed">{info.description}</p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-3">Common Sources</h3>
-                        <ul className="space-y-2">
-                          {info.sources.map((source, index) => (
-                            <li key={index} className="flex items-center text-gray-300">
-                              <svg className="w-4 h-4 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
-                              </svg>
-                              {source}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-3">Health Impact</h3>
-                        <p className="text-gray-300 leading-relaxed">{info.healthImpact}</p>
-                      </div>
-                    </div>
-                  </div>
-                )}
+                {viewMode === 'overview' && selectedCategory && selectedCategory !== 'all-exposures' && (() => {
+                  const categoryOverview = findCategoryOverview(selectedCategory);
+                  return categoryOverview ? (
+                    <CategoryOverview data={categoryOverview} />
+                  ) : null;
+                })()}
 
                 {/* Chemical List Section */}
                 {viewMode === 'chemicals' && (

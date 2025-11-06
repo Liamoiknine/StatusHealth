@@ -50,7 +50,7 @@ export default function ExposureReportCard({ categories }: ExposureReportCardPro
           })
           .map(({ category, detectedCount, statusInfo }) => {
             return (
-              <Link key={category} href={`/category/${encodeURIComponent(category)}`} className="block">
+              <Link key={category} href={`/categories?category=${encodeURIComponent(category)}`} className="block">
                 <div className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                   <div className="flex items-center space-x-3 flex-1">
                     <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center">

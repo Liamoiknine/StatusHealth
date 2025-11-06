@@ -1,0 +1,44 @@
+{
+  "category_name": "Industrial Chemicals",
+  "summary_sections": [
+    {
+      "header": "Overview and Common Uses",
+      "content": "Industrial chemicals cover a broad array of synthetic substances used in manufacturing, processing, coatings, solvents, plastics, and other large-scale industrial applications. Many are persistent, semi-volatile, bioaccumulative, and historically used in electrical equipment, sealants, building materials, or chemical intermediates.",
+      "sources": [
+        "https://www.epa.gov/pcbs/learn-about-polychlorinated-biphenyls",
+        "https://www.sciencedirect.com/science/article/pii/S0160412021002889"
+      ]
+    },
+    {
+      "header": "Exposure Pathways",
+      "content": "Human exposure arises from inhalation of polluted air or industrial vapours, dermal contact with contaminated surfaces or via ingestion of contaminated food, water or dust in proximity to manufacturing or disposal sites.",
+      "bullets": [
+        "Inhalation of industrial emissions or contaminated air",
+        "Dermal contact with surfaces or soils near industrial activity",
+        "Ingestion of food, water or dust contaminated from industrial use or disposal",
+        "Bio-accumulation through food chain from persistent environmental releases"
+      ],
+      "sources": [
+        "https://www.epa.gov/ecobox/epa-ecobox-tools-exposure-pathways-exposure-pathways-era",
+        "https://www.ncbi.nlm.nih.gov/books/NBK361696/"
+      ]
+    },
+    {
+      "header": "Health and Toxicological Information",
+      "content": "Toxicological evidence indicates that some industrial chemicals are carcinogenic, immunotoxic, neurotoxic or endocrine-active, especially with chronic, high-level or occupational exposure. For example, polychlorinated biphenyls (PCBs) are classified as carcinogenic to humans and have documented multi-system effects.",
+      "sources": [
+        "https://www.iarc.who.int/news-events/iarc-monographs-volume-107-polychlorinated-biphenyls-and-polybrominated-biphenyls/",
+        "https://www.epa.gov/pcbs/learn-about-polychlorinated-biphenyls"
+      ]
+    },
+    {
+      "header": "Regulatory and Monitoring Context",
+      "content": "Regulation of industrial chemicals occurs under multiple frameworks including the U.S. Toxic Substances Control Act (TSCA), Clean Air Act (CAA) and international agreements. Monitoring programs and strategic road-maps specifically address persistent industrial contaminants such as PCBs and per- and polyfluoroalkyl substances (PFAS).",
+      "sources": [
+        "https://eelp.law.harvard.edu/pfas-and-the-epa-strategic-roadmap-progress-and-challenges/",
+        "https://www.federalregister.gov/documents/2025/09/23/2025-18431/procedures-for-chemical-risk-evaluation-under-the-toxic-substances-control-act-tsca"
+      ]
+    }
+  ],
+  "sources": []
+}

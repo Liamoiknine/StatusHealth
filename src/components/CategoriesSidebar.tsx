@@ -37,7 +37,7 @@ export default function CategoriesSidebar({ categories, currentCategory }: Categ
             return (
               <Link
                 key={category}
-                href={`/category/${encodeURIComponent(category)}`}
+                href={`/categories?category=${encodeURIComponent(category)}`}
                 className="block"
               >
                 <div className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
