@@ -1,4 +1,4 @@
-import householdDataFinalJson from './household-data_final.json';
+import householdDataFinalJson from '../chemicals/household-products.json';
 
 export interface SummarySection {
   header: string;

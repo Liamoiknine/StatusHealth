@@ -1,6 +1,6 @@
 'use client';
 
-import { HouseholdChemicalDataStructured, groupSectionsByHeader } from '@/data/household-data-structured';
+import { HouseholdChemicalDataStructured, groupSectionsByHeader } from '@/data/structured/household-products';
 
 interface ChemicalDescriptionSectionsProps {
   data: HouseholdChemicalDataStructured;

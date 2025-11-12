@@ -1,9 +1,9 @@
-import categoryOverviewsAgriculturalChemicals from './category-overviews-agricultural-chemicals.json';
-import categoryOverviewsContainersAndCoatings from './category-overviews-containers-and-coatings.json';
-import categoryOverviewsHouseholdProducts from './category-overviews-household-products.json';
-import categoryOverviewsIndustrialChemicals from './category-overviews-industrial-chemicals.json';
-import categoryOverviewsPersistentPollutants from './category-overviews-persistant-pollutants.json';
-import categoryOverviewsPersonalCareProducts from './cateogory-overviews-personal-care-products.json';
+import categoryOverviewsAgriculturalChemicals from './agricultural-chemicals.json';
+import categoryOverviewsContainersAndCoatings from './containers-and-coatings.json';
+import categoryOverviewsHouseholdProducts from './household-products.json';
+import categoryOverviewsIndustrialChemicals from './industrial-chemicals.json';
+import categoryOverviewsPersistentPollutants from './persistent-pollutants.json';
+import categoryOverviewsPersonalCareProducts from './personal-care-products.json';
 
 export interface CategoryOverviewSection {
   header: string;

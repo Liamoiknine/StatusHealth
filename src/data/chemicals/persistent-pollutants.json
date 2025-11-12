@@ -1,0 +1,1499 @@
+[
+  {
+    "compound_name": "Phenacetin",
+    "cas_rn": "62-44-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Phenacetin is an acetanilide class analgesic and antipyretic drug that was widely used in pain-relief medications from its introduction in the late 19th century until the early 1980s. It was commonly found in over-the-counter combination headache and fever remedies. Due to findings of serious health effects, including kidney damage and cancer in heavy users, phenacetin was withdrawn from medical use in many countries by the early 1980s (banned in the United States in 1983):contentReference[oaicite:0]{index=0}. Today, it has no approved therapeutic use and any presence in consumer products is usually as an adulterant. Small-scale uses persist in research laboratories as a reference chemical and, in the past, it was used as a stabilizer in certain hair dyes (to stabilize hydrogen peroxide):contentReference[oaicite:1]{index=1}.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK304337",
+          "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/phenacetin.html"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Since phenacetin is no longer an approved drug, human exposure today is uncommon. The main exposure pathway historically was oral ingestion via phenacetin-containing painkillers. In the modern context, exposure could occur through accidental or illicit sources – for example, phenacetin has been identified as a cutting agent in illicit drugs like cocaine:contentReference[oaicite:2]{index=2}. Occupational exposure is rare but could occur in chemical laboratories handling phenacetin. Dermal or inhalation exposure was not typical for consumers, but handling bulk powder (in manufacturing or lab settings) could lead to those routes. Notably, environmental exposure is expected to be negligible because phenacetin use has ceased and it biodegrades; it is not considered an environmental contaminant in air, water, or food:contentReference[oaicite:3]{index=3}.",
+        "bullets": [
+          "Ingestion of phenacetin in adulterated medications or illicit drugs (the principal current risk factor).",
+          "Occupational contact (dermal/inhalation) for individuals handling phenacetin in research or forensic labs.",
+          "Legacy use: residues from old analgesic preparations (now largely phased out) are not a significant ongoing source."
+        ],
+        "sources": [
+          "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/phenacetin.html",
+          "https://www.cfsre.org/blogs/phenacetin-a-toxic-adulterant-found-in-illicit-street-drugs"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of phenacetin or its metabolites in blood indicates recent ingestion, as the compound is readily metabolized (notably to acetaminophen). Its presence is associated with analgesic nephropathy and an elevated risk of certain cancers after chronic abuse. Phenacetin is classified by the International Agency for Research on Cancer (IARC) as carcinogenic to humans:contentReference[oaicite:4]{index=4}, based on evidence linking long-term phenacetin use (often in combination analgesics) to cancers of the renal pelvis and bladder. Toxicologically, acute high doses can cause methemoglobinemia (impaired oxygen transport in blood), hemolytic anemia, and liver and kidney damage:contentReference[oaicite:5]{index=5}:contentReference[oaicite:6]{index=6}. Chronic use led to kidney papillary necrosis and was implicated in “analgesic nephropathy,” a progressive kidney disease:contentReference[oaicite:7]{index=7}:contentReference[oaicite:8]{index=8}. Because phenacetin is a prodrug partially metabolized to acetaminophen, some of its analgesic effect – and toxicity – is related to that metabolite. Importantly, the withdrawal of phenacetin from the market led to a decline in associated renal cancers:contentReference[oaicite:9]{index=9}. In summary, a blood detection of phenacetin strongly suggests an illicit or non-medical exposure and carries concerns of renal and urothelial toxicity and carcinogenic risk if exposure were repeated.",
+        "sources": [
+          "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/phenacetin.html",
+          "https://nj.gov/health/eoh/rtkweb/documents/fs/1483.pdf",
+          "https://www.ncbi.nlm.nih.gov/books/NBK304337"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Phenacetin has been banned or strictly regulated as a drug in most countries for several decades. In the United States, the Food and Drug Administration (FDA) ordered its removal from over-the-counter drugs in 1983:contentReference[oaicite:10]{index=10}. Canada classified phenacetin as a prescription drug but found no modern medicinal products containing it, and it invoked Significant New Activity provisions to require notification if any new use is proposed:contentReference[oaicite:11]{index=11}:contentReference[oaicite:12]{index=12}. Phenacetin is listed as a hazardous substance by agencies (e.g., on the U.S. Hazardous Substance List and by IARC as a Group 1 carcinogen):contentReference[oaicite:13]{index=13}:contentReference[oaicite:14]{index=14}. There is no allowable level for phenacetin in foods or pharmaceuticals today, and it is not included in routine environmental monitoring programs (e.g., it is not part of CDC’s biomonitoring surveys) due to its discontinued use. Regulatory actions focus on preventing its re-introduction: for example, in Canada any significant new use would require risk assessment:contentReference[oaicite:15]{index=15}. Internationally, phenacetin is addressed in the WHO’s list of substances known to cause cancer (via IARC) and by national authorities ensuring it is not present in medications. Monitoring in forensic contexts does occur – for instance, drug enforcement labs monitor phenacetin as an adulterant in illicit drugs. Overall, phenacetin’s legacy status means it is effectively controlled worldwide, with usage essentially eliminated in legitimate commerce.",
+        "sources": [
+          "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/phenacetin.html",
+          "https://nj.gov/health/eoh/rtkweb/documents/fs/1483.pdf",
+          "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/phenacetin.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK304337",
+      "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/phenacetin.html",
+      "https://www.cfsre.org/blogs/phenacetin-a-toxic-adulterant-found-in-illicit-street-drugs",
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/1483.pdf",
+      "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/phenacetin.pdf"
+    ]
+  },
+  {
+    "compound_name": "2,4,6-Trichlorophenol",
+    "cas_rn": "88-06-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2,4,6-Trichlorophenol (2,4,6-TCP) is a chlorinated phenolic compound that was historically used as a pesticide and preservative. It appeared as a by-product in the manufacture of other chlorophenols and was used in formulations as a fungicide, bactericide, wood preservative, and anti-mildew agent:contentReference[oaicite:16]{index=16}. For example, it was applied to treat wood, leather, and glue to prevent mold and decay:contentReference[oaicite:17]{index=17}. It was also employed as an antiseptic in some applications. However, production and use of 2,4,6-TCP have been discontinued in the United States since the 1980s due to toxicity and environmental concerns:contentReference[oaicite:18]{index=18}. It is now mainly encountered as an environmental contaminant or as an intermediate formed from the breakdown of other chlorinated compounds (such as pentachlorophenol or certain herbicides). In summary, while 2,4,6-trichlorophenol had specialized preservative and pesticidal uses in the mid-20th century, it is no longer produced for commercial use in most regions:contentReference[oaicite:19]{index=19}.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/2-4-6-trichlorophenol.pdf",
+          "https://markerdb.ca/conditions/6643"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Current human exposure to 2,4,6-trichlorophenol primarily occurs via environmental routes, as direct use has ceased. One major pathway is through drinking water or soil contaminated by past industrial releases or the degradation of other chlorophenolic compounds. 2,4,6-TCP can form as a disinfection by-product when chlorinating phenol-containing water, and trace levels have been detected in treated drinking water and effluents:contentReference[oaicite:20]{index=20}:contentReference[oaicite:21]{index=21}. Another pathway is inhalation of air near hazardous waste sites or processing facilities where chlorophenols were present; although ambient air levels are usually very low (generally <0.001 ppb):contentReference[oaicite:22]{index=22}. Dietary exposure could occur from bioaccumulation in the food chain, but this is not a significant route given its limited persistence in organisms (it does not biomagnify significantly). In occupational settings, past exposures affected workers in wood treatment or pesticide manufacturing (via inhalation or skin contact), but those uses have been phased out. General population monitoring indicates low-level exposure is not uncommon: in biomonitoring studies, 2,4,6-TCP or its conjugates have been measured in urine as a metabolite of other chemicals and as a direct environmental contaminant:contentReference[oaicite:23]{index=23}:contentReference[oaicite:24]{index=24}. In summary, the main exposure routes today are environmental – ingestion of contaminated water or food and inhalation of contaminated air or dust – typically at very low levels.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/2-4-6-trichlorophenol.pdf",
+          "https://markerdb.ca/conditions/6643",
+          "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/trichlorophenol.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "2,4,6-Trichlorophenol is considered toxic, and finding it in human blood signifies exposure to a potentially harmful environmental pollutant. It does not tend to accumulate long-term in the body (being metabolized and excreted), so blood detection suggests relatively recent exposure. Acute high-level exposure (such as in industrial accidents) can irritate the respiratory tract and eyes and, in one limited human study, was associated with respiratory issues (chronic bronchitis and wheezing) upon long-term inhalation:contentReference[oaicite:25]{index=25}. Animal studies have shown more pronounced effects: orally exposed rodents developed liver and hematopoietic (blood-forming) system effects. Importantly, 2,4,6-TCP has demonstrated carcinogenic effects in animal experiments – causing liver tumors and lymphomas/leukemias in rats and mice:contentReference[oaicite:26]{index=26}:contentReference[oaicite:27]{index=27}. Based on this evidence, the U.S. EPA classifies it as a Group B2 probable human carcinogen:contentReference[oaicite:28]{index=28} and the National Toxicology Program lists it as \"reasonably anticipated to be a human carcinogen\":contentReference[oaicite:29]{index=29}. Additionally, the compound can disrupt immune function and reproduction in animal studies at sub-chronic doses:contentReference[oaicite:30]{index=30}:contentReference[oaicite:31]{index=31}. In humans, chronic low-dose exposure has not been definitively linked to specific diseases due to limited data, but as a chlorophenol it is generally regarded as a health concern. Most notably, metabolites of 2,4,6-TCP (such as tetrachlorocatechol) can contribute to oxidative stress. In summary, while direct human studies are scarce, the toxicological profile of 2,4,6-trichlorophenol includes potential carcinogenicity, organ toxicity (liver, immune system), and irritation at higher doses, warranting caution if detected.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/2-4-6-trichlorophenol.pdf",
+          "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/trichlorophenol.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2,4,6-Trichlorophenol is a regulated environmental contaminant. While it is no longer produced as a commercial product, it is subject to clean-up and monitoring standards. In the United States, 2,4,6-TCP is listed as a priority pollutant. The EPA set a non-enforceable lifetime health advisory of 30 µg/L for drinking water, but no federal Maximum Contaminant Level (MCL) has been officially promulgated (a previous planned MCL of 0.03 mg/L was stayed):contentReference[oaicite:32]{index=32}. Nevertheless, the Clean Water Act designates 2,4,6-trichlorophenol as a hazardous substance and toxic pollutant, meaning releases must be reported and controlled:contentReference[oaicite:33]{index=33}. It is also classified under the Clean Air Act as a hazardous air pollutant. Internationally, no specific treaty bans 2,4,6-TCP, but it falls under general regulations for chlorinated organics. The compound is included in the National Toxicology Program’s Report on Carcinogens (listed since 1983):contentReference[oaicite:34]{index=34}. Some jurisdictions (for example, certain U.S. states and countries) have set their own drinking water limits or soil cleanup standards for 2,4,6-TCP to protect public health (often in the low parts-per-billion range). Monitoring occurs mainly through environmental surveys: it has been measured in groundwater and in human urine as a biomarker of exposure (e.g., the U.S. CDC’s NHANES found low-level urinary detections in a portion of the population):contentReference[oaicite:35]{index=35}. In summary, regulatory efforts focus on remediation and limiting any releases, and 2,4,6-TCP is tracked as part of broader programs overseeing persistent chlorinated chemicals.",
+        "sources": [
+          "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/trichlorophenol.pdf",
+          "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/trichlorophenol.pdf#page=2",
+          "https://www.epa.gov/sites/default/files/2016-09/documents/2-4-6-trichlorophenol.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.epa.gov/sites/default/files/2016-09/documents/2-4-6-trichlorophenol.pdf",
+      "https://markerdb.ca/conditions/6643",
+      "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/trichlorophenol.pdf"
+    ]
+  },
+  {
+    "compound_name": "4,6-Dinitro-2-methylphenol (Dinitro-o-cresol)",
+    "cas_rn": "534-52-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "4,6-Dinitro-2-methylphenol, also known as dinitro-o-cresol or DNOC, is an organic nitrophenol compound that was used historically as a pesticide. It belongs to the dinitrophenol class of chemicals. DNOC was introduced in the early 20th century (around the 1930s) and saw use as an insecticide and acaricide (mite killer), particularly as a dormant spray on fruit trees and as a contact herbicide for crops:contentReference[oaicite:36]{index=36}. For example, DNOC formulations were sprayed in orchards to thin fruit blossoms and control insects like locusts:contentReference[oaicite:37]{index=37}. It was also applied to control broadleaf weeds in cereals and to desiccate potatoes and legume crops before harvest:contentReference[oaicite:38]{index=38}. However, DNOC is extremely toxic to humans and wildlife, and concerns over its safety led to the cancellation of its pesticide registrations. In the United States, all DNOC pesticide uses were cancelled by 1991:contentReference[oaicite:39]{index=39}:contentReference[oaicite:40]{index=40}. Today, it is considered an obsolete pesticide. Any current occurrence of DNOC is typically as a contaminant or breakdown product from past use (it can persist in some soils/waters). There are no common consumer or household uses of DNOC now; its previous agricultural uses have been phased out worldwide under international agreements (DNOC and its salts are listed in the Rotterdam Convention Annex III, signaling a ban or severe restriction in many countries):contentReference[oaicite:41]{index=41}.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-6-dinitro-o-cresol.pdf",
+          "https://solutions.covestro.com/-/media/covestro/solution-center/product-statements/2020/global/statement_on_rotterdam_convention_on_the_prior_informed_consent_pic_procedure.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Due to the discontinued use of DNOC as a pesticide, general population exposure is now rare. Potential exposure pathways today are largely occupational or environmental remnants of past usage. Workers in the past could be exposed via dermal contact or inhalation during the manufacturing, formulation, or application of DNOC-based pesticides:contentReference[oaicite:42]{index=42}. In the environment, DNOC residues may still be found in some agricultural soils or water bodies near former application sites, but it degrades over time (it is not highly persistent in soil, though it is somewhat persistent in water):contentReference[oaicite:43]{index=43}:contentReference[oaicite:44]{index=44}. Presently, the main human exposure would be accidental – for instance, contact with old stockpiles of DNOC or improper disposal sites. Incidental ingestion of contaminated well water or produce in areas where DNOC was heavily used could occur, but such scenarios are expected to be very localized. DNOC can also form salts (sodium or ammonium DNOC) which are water-soluble, potentially leaching into groundwater; this was a concern in past contamination events. However, given regulatory bans, these pathways have greatly diminished. In summary, unless one is involved in cleanup of old DNOC contamination or handling laboratory samples of DNOC, the average person’s exposure pathways are effectively negligible today.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-6-dinitro-o-cresol.pdf",
+          "https://www.canada.ca/en/environment-climate-change/services/canadian-environmental-protection-act-registry/publications/dinitro-o-cresol-final-content.html"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "4,6-Dinitro-2-methylphenol (DNOC) is highly toxic to humans. It acts as a cellular metabolic uncoupler – much like its chemical relative 2,4-dinitrophenol – causing a sharp increase in metabolic rate. Acute exposure, even at low doses, can produce symptoms of poisoning: profuse sweating, fever, rapid breathing and heart rate, thirst, fatigue, nausea, and potentially collapse and coma:contentReference[oaicite:45]{index=45}:contentReference[oaicite:46]{index=46}. DNOC has been associated with fatalities; it can cause hyperthermia (dangerously high body temperature) and metabolic acidosis. Chronic exposure (repeated or prolonged) also leads to systemic effects: individuals repeatedly exposed in the past reported headaches, dizziness, weakness, cataract formation in the eyes, and skin yellowing (yellow staining of hands and hair):contentReference[oaicite:47]{index=47}:contentReference[oaicite:48]{index=48}. Notably, workers chronically ingesting DNOC (or via skin) developed cataracts and even blindness in severe cases:contentReference[oaicite:49]{index=49}. DNOC is an inhibitor of acetylcholinesterase as well, which can contribute to neurotoxicity (though its main mechanism of acute toxicity is through uncoupling oxidative phosphorylation, causing energy release as heat). It is not classified as a known human carcinogen (insufficient data on carcinogenicity; EPA has not classified DNOC for carcinogenic potential due to lack of human data:contentReference[oaicite:50]{index=50}). Because DNOC is rapidly metabolized and does not accumulate, detection in blood indicates a recent exposure that could pose an acute risk. In essence, the presence of DNOC in blood is a medical concern: it implies exposure to an extremely toxic pesticide that can lead to life-threatening symptoms if the dose is significant. Immediate medical evaluation and supportive care (cooling, hydration, and symptomatic treatment) are critical in suspected DNOC poisoning.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-6-dinitro-o-cresol.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "DNOC and its salts have been banned or severely restricted in most countries for decades due to their acute toxicity. In the United States, the Environmental Protection Agency (EPA) cancelled all pesticide registrations for DNOC by 1991:contentReference[oaicite:51]{index=51}. It is one of the pesticides listed in Annex III of the Rotterdam Convention, meaning that its export/import is subject to the Prior Informed Consent procedure – effectively, many countries have prohibited its use:contentReference[oaicite:52]{index=52}. DNOC is also categorized by the World Health Organization (WHO) as a Class I hazardous pesticide (extremely or highly hazardous) due to its low LD50 (oral LD50 in rats around 10 mg/kg). There are no allowable residue levels set for DNOC in food (since it is not permitted for use); any detection typically triggers a violation. Environmental clean-up standards exist in some jurisdictions for DNOC in soil and water, and it may be included in the list of analytes for hazardous waste site investigations. For example, DNOC can appear on certain national lists of priority pollutants. Monitoring is not part of routine human biomonitoring programs (e.g., DNOC is not measured in the U.S. NHANES survey), reflecting its phased-out status. Instead, oversight occurs via environmental monitoring when old pesticide dump sites are assessed. Globally, DNOC’s regulatory status is “banned for use in agriculture” in the EU and many other regions. In summary, regulatory context for DNOC is one of prohibition and control of any existing stockpiles, with international agreements (like Rotterdam) helping to prevent its re-introduction into commerce.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-6-dinitro-o-cresol.pdf",
+          "https://solutions.covestro.com/-/media/covestro/solution-center/product-statements/2020/global/statement_on_rotterdam_convention_on_the_prior_informed_consent_pic_procedure.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-6-dinitro-o-cresol.pdf",
+      "https://solutions.covestro.com/-/media/covestro/solution-center/product-statements/2020/global/statement_on_rotterdam_convention_on_the_prior_informed_consent_pic_procedure.pdf",
+      "https://www.canada.ca/en/environment-climate-change/services/canadian-environmental-protection-act-registry/publications/dinitro-o-cresol-final-content.html"
+    ]
+  },
+  {
+    "compound_name": "Dinoseb",
+    "cas_rn": "88-85-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dinoseb (2-sec-butyl-4,6-dinitrophenol) is a dinitrophenol herbicide and plant desiccant that was widely used from the 1940s until its ban in the 1980s. It was applied to control weeds in crops like vegetables, soybeans, grapes, and potatoes, and also used as a pre-harvest vine desiccant (e.g., on potato foliage) oehha.ca.gov . Dinoseb was valued for its broad herbicidal activity, but it is extremely toxic to humans and wildlife. By the mid-1980s, concerns about its teratogenicity and acute toxicity led to dinoseb’s registration being canceled in the U.S. (1986) and subsequently in other countries oehha.ca.gov .",
+        "sources": [
+          "oehha.ca.gov"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Currently, dinoseb exposure is very rare given the bans. Historically, people could be exposed via:",
+        "bullets": [
+          "Diet: consumption of crops that had been sprayed with dinoseb (in the past, low-level residues on foods could contribute to intake, though dinoseb’s use on food crops was often subject to residue tolerances).",
+          "Occupational: inhalation and dermal absorption by applicators mixing or spraying dinoseb (it readily penetrates skin, and numerous poisoning cases occurred among workers lacking proper protective gear) oehha.ca.gov .",
+          "Environment: drinking well water contaminated by dinoseb runoff or leaching (dinoseb is moderately persistent and was found in groundwater, prompting a U.S. drinking water limit of 7 μg/L) oehha.ca.gov ."
+        ],
+        "sources": [
+          "oehha.ca.gov",
+          "oehha.ca.gov"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Dinoseb is highly toxic, functioning similarly to DNOC by uncoupling energy metabolism. Acute dinoseb poisoning causes symptoms such as sweating, fever, rapid breathing, nausea, vomiting, and headache; severe cases progress to convulsions and potentially fatal respiratory failure wwwn.cdc.gov . Dinoseb has also been identified as a developmental and reproductive toxin: it is listed as causing male reproductive damage (testicular effects) under California’s Prop 65 oehha.ca.gov oehha.ca.gov , and was linked to birth defects (when pregnant rats were exposed). It is not classified as a carcinogen. Because of its mechanism, any substantial exposure overwhelms the body's ability to regulate temperature, making dinoseb particularly dangerous. There are no specific antidotes; treatment is supportive (cooling, hydration). Biomonitoring is not routine, but cases of exposure can be confirmed by detecting dinoseb in blood or measuring elevated body temperature and metabolic rate in the absence of infection.",
+        "sources": [
+          "wwwn.cdc.gov",
+          "oehha.ca.gov",
+          "oehha.ca.gov"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Dinoseb is banned for agricultural use in the U.S., Canada, EU, and most other countries (the U.S. EPA canceled dinoseb in 1986 and set a strict drinking water standard to address contamination) oehha.ca.gov . It is listed by PAN International as a Highly Hazardous Pesticide (HHP). Environmental monitoring for dinoseb now is limited to cleanup sites – for example, checking groundwater at former storage facilities. Any stocks of dinoseb are subject to strict disposal regulations. The legacy of dinoseb’s ban is seen as a public health success, as poisoning incidents dramatically declined after its phase-out.",
+        "sources": [
+          "oehha.ca.gov"
+        ]
+      }
+    ],
+    "sources": [
+      "oehha.ca.gov",
+      "oehha.ca.gov",
+      "oehha.ca.gov",
+      "wwwn.cdc.gov",
+      "oehha.ca.gov",
+      "oehha.ca.gov"
+    ]
+  },
+  {
+    "compound_name": "Aramite",
+    "cas_rn": "140-57-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Aramite is an organosulfur acaricide (miticide) that was introduced in the 1950s for controlling mites on crops. It was used on fruit trees, strawberries, ornamentals, and other plants to kill spider mites and other pest mites sitem.herts.ac.uk sitem.herts.ac.uk . Aramite was typically applied as a foliar spray. It is a colorless to pale liquid in pure form nj.gov . Due to health risks, including evidence that it caused cancer in laboratory animals, Aramite was withdrawn from the market by the early 1970s and is no longer in use.",
+        "sources": [
+          "sitem.herts.ac.uk",
+          "nj.gov"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Since Aramite is no longer used, current exposure is negligible. Historically, exposure occurred via:",
+        "bullets": [
+          "Inhalation and dermal contact for workers spraying Aramite (e.g., in orchards) – spray mists could be breathed in, and skin could absorb Aramite on contact nj.gov .",
+          "Touching foliage or fruit shortly after treatment (residues could transfer to skin).",
+          "Environmental residues were limited (Aramite did not persist or bioaccumulate significantly), so exposure of the public through food or water was minimal even during its use period."
+        ],
+        "sources": [
+          "nj.gov"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Aramite can be absorbed via inhalation and skin, and it was found to be carcinogenic in animal studies (causing tumors in rodents) nj.gov nj.gov . It is classified as a probable human carcinogen. Short-term exposure to Aramite vapors or spray caused irritation of eyes and skin, and at high doses could induce dizziness or nausea in workers nj.gov . Chronic exposure (in the era of its use) raised concern for cancer risk, which ultimately led to its ban. There is no evidence Aramite causes acute systemic toxicity aside from irritation – its primary hazard is the long-term cancer risk. No specific biomarkers are in use now, given its discontinued status.",
+        "sources": [
+          "nj.gov",
+          "nj.gov",
+          "nj.gov"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Aramite was listed on hazardous substance lists (e.g., cited by IARC and US EPA) and designated as a Special Health Hazard Substance (carcinogen) in places like New Jersey nj.gov . All product registrations for Aramite were canceled decades ago. It is not monitored in the environment today except possibly as part of historical pesticide cleanup. Essentially, Aramite is a legacy pesticide: its past use is noted in regulatory history as an example of an early pesticide removed for carcinogenicity. No current regulatory limits are needed since it is not in commerce.",
+        "sources": [
+          "nj.gov"
+        ]
+      }
+    ],
+    "sources": [
+      "sitem.herts.ac.uk",
+      "nj.gov",
+      "nj.gov",
+      "nj.gov",
+      "nj.gov",
+      "nj.gov"
+    ]
+  },
+  {
+    "compound_name": "Pyridaben",
+    "cas_rn": "96489-71-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Pyridaben is a broad-spectrum acaricide/insecticide of the pyridazinone class. It is used to control mites and certain insects (e.g., whiteflies, aphids, thrips) on crops including fruit trees (citrus, pome fruits, stone fruits), ornamentals, and some vegetables pubchem.ncbi.nlm.nih.gov . Pyridaben acts by inhibiting pests’ mitochondrial electron transport (Complex I). Introduced in the 1990s, it is applied as a contact poison; it is not systemic in plants but has residual activity on leaf surfaces. It has become an important tool for mite management in orchards and greenhouses, often under trade names like \"Nexter.\"",
+        "sources": [
+          "pubchem.ncbi.nlm.nih.gov"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "General population exposure to pyridaben is mainly through food residues, while workers may be exposed during application:",
+        "bullets": [
+          "Ingestion of trace pyridaben residues on treated fruits and vegetables (it is used on crops like apples, pears, citrus, strawberries, etc., and residues are regulated by MRLs) federalregister.gov .",
+          "Occupational inhalation or dermal exposure for farmers and applicators when mixing or spraying pyridaben (e.g., in orchards). Use of personal protective equipment and drift reduction measures (like limits on spraying in high winds) mitigates this downloads.regulations.gov .",
+          "Bystander exposure from spray drift is possible but generally low; buffer zones around treated fields are employed to protect neighboring properties."
+        ],
+        "sources": [
+          "federalregister.gov",
+          "downloads.regulations.gov"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Pyridaben is moderately toxic to mammals. Acute exposure may cause slight neurological signs (tremors, incoordination in lab animals at high doses) and reduced appetite or body weight federalregister.gov federalregister.gov . It is not a cholinesterase inhibitor, and it does not have the high acute toxicity of organophosphates or carbamates. Long-term toxicology studies have shown no carcinogenic or mutagenic effects – EPA has classified pyridaben as \"not likely to be carcinogenic to humans\" federalregister.gov federalregister.gov . Some studies noted developmental effects (lower offspring weight in rats) at doses that did not harm the mothers federalregister.gov , indicating infants and children might be slightly more sensitive. Overall, detection of pyridaben in blood would imply recent exposure (likely dietary); it is metabolized and excreted relatively quickly and is not known to bioaccumulate.",
+        "sources": [
+          "federalregister.gov",
+          "federalregister.gov",
+          "federalregister.gov"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Pyridaben is approved for use in many countries. In the U.S., the EPA maintains tolerances for pyridaben residues on various crops and, after risk assessment, determined it poses no unreasonable dietary risk (and no cancer risk) federalregister.gov . In the EU, pyridaben is authorized as an active substance (current approval valid until 2026) sitem.herts.ac.uk . It is not listed under international conventions (not a POP or PIC chemical). Monitoring focuses on food safety – e.g., government residue testing programs include pyridaben to ensure MRL compliance. Additionally, because pyridaben is very toxic to fish and bees, regulatory use instructions include environmental precautions (e.g., label warnings to keep out of water bodies and restrictions on use during crop bloom).",
+        "sources": [
+          "federalregister.gov",
+          "sitem.herts.ac.uk"
+        ]
+      }
+    ],
+    "sources": [
+      "pubchem.ncbi.nlm.nih.gov",
+      "federalregister.gov",
+      "downloads.regulations.gov",
+      "federalregister.gov",
+      "federalregister.gov",
+      "federalregister.gov",
+      "sitem.herts.ac.uk"
+    ]
+  },
+  {
+    "compound_name": "Propham",
+    "cas_rn": "122-42-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Propham (isopropyl N‑phenylcarbamate) is a phenylcarbamate herbicide and plant growth regulator historically used pre‑emergence and for sprout control on stored potatoes in some markets (distinct from chlorpropham).",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Propham",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/550.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "General-population exposure occurs primarily by diet; occupational exposure during handling or application is possible.",
+        "bullets": [
+          "Ingestion of residues on treated crops",
+          "Dermal contact and inhalation during mixing or application",
+          "Household dust transfer from treated storage areas (where applicable)"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Propham",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/550.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "As a non-persistent carbamate, blood detection suggests recent exposure. Toxicology focuses on cholinesterase-related signs at higher exposures and general systemic endpoints evaluated in animal studies.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Propham",
+          "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Propham appears as ‘not approved’ in the EU Pesticides Database; MRLs and tolerances vary by jurisdiction and have been periodically revised in residue programs.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Propham",
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Propham",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/550.htm",
+      "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+    ]
+  },
+  {
+    "compound_name": "3-Hydroxycarbofuran",
+    "cas_rn": "16655-82-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "3‑Hydroxycarbofuran is a primary oxidative metabolite of the carbamate insecticide carbofuran. It is not an applied pesticide but is measured as a biomarker/metabolite in biological or environmental samples.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/3-Hydroxycarbofuran",
+          "https://pubmed.ncbi.nlm.nih.gov/7990167/"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Presence in humans reflects exposure to carbofuran (or to other carbamates that form this metabolite).",
+        "bullets": [
+          "Dietary ingestion of carbofuran residues with subsequent metabolism",
+          "Occupational inhalation or dermal exposure to carbofuran during application",
+          "Potential transfer via contaminated dust or water near treated fields"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/3-Hydroxycarbofuran",
+          "https://pubmed.ncbi.nlm.nih.gov/7990167/"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure because carbamate metabolites are cleared relatively quickly. 3‑Hydroxycarbofuran inhibits acetylcholinesterase (AChE) comparably to carbofuran in toxicological assessments; studied endpoints include acute cholinergic signs and neurobehavioral effects. Population biomonitoring has measured related carbofuran metabolites (e.g., carbofuranphenol) in urine in NHANES sub-studies.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/3-Hydroxycarbofuran",
+          "https://pubmed.ncbi.nlm.nih.gov/7990167/",
+          "https://www.atsdr.cdc.gov/interaction-profiles/media/pdfs/ipga.pdf",
+          "https://medbox.iiab.me/modules/en-cdc/www.cdc.gov/biomonitoring/Carbofuran_BiomonitoringSummary.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Regulatory actions typically target carbofuran, the parent pesticide (e.g., U.S. EPA revoked all food tolerances in 2009); metabolite measurements such as 3‑hydroxycarbofuran may be used in forensic or research biomonitoring.",
+        "sources": [
+          "https://www.federalregister.gov/documents/2009/05/15/E9-11396/carbofuran-final-tolerance-revocations",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/3-Hydroxycarbofuran"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/3-Hydroxycarbofuran",
+      "https://pubmed.ncbi.nlm.nih.gov/7990167/",
+      "https://www.atsdr.cdc.gov/interaction-profiles/media/pdfs/ipga.pdf",
+      "https://medbox.iiab.me/modules/en-cdc/www.cdc.gov/biomonitoring/Carbofuran_BiomonitoringSummary.html",
+      "https://www.federalregister.gov/documents/2009/05/15/E9-11396/carbofuran-final-tolerance-revocations"
+    ]
+  },
+  {
+    "compound_name": "Aldicarb",
+    "cas_rn": "116-06-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Aldicarb is an oxime carbamate insecticide/nematicide. It is a potent acetylcholinesterase inhibitor used historically on several crops; most uses have been cancelled or restricted in multiple regions.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb",
+          "https://www.inchem.org/documents/ehc/ehc/ehc121.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Primary exposures are occupational or dietary where permitted uses exist.",
+        "bullets": [
+          "Dietary ingestion of residues (where tolerances/uses exist)",
+          "Dermal and inhalation exposure during handling/application",
+          "Drinking water exposure where leaching has occurred"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb",
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure. Biomarkers include inhibition of erythrocyte acetylcholinesterase (AChE) and plasma butyrylcholinesterase (BuChE); metabolites include aldicarb sulfoxide and aldicarb sulfone. Toxicological endpoints primarily involve the nervous system via cholinesterase inhibition.",
+        "sources": [
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, most aldicarb registrations were voluntarily cancelled beginning in 2010–2012; subsequent limited proposals or state-level actions have been contested. The EU lists aldicarb as not approved. Drinking-water and dietary assessments often consider the sum of aldicarb, aldicarb sulfoxide, and aldicarb sulfone.",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/FR-2010-10-07/pdf/2010-25128.pdf",
+          "https://www.federalregister.gov/documents/2012/05/09/2012-11072/aldicarb-cancellation-order-for-amendments-to-terminate-uses",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb",
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0161-0033/content.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb",
+      "https://www.inchem.org/documents/ehc/ehc/ehc121.htm",
+      "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf",
+      "https://www.govinfo.gov/content/pkg/FR-2010-10-07/pdf/2010-25128.pdf",
+      "https://www.federalregister.gov/documents/2012/05/09/2012-11072/aldicarb-cancellation-order-for-amendments-to-terminate-uses",
+      "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0161-0033/content.pdf"
+    ]
+  },
+  {
+    "compound_name": "Aldicarb sulfoxide",
+    "cas_rn": "1646-87-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Aldicarb sulfoxide is the primary oxidative metabolite of aldicarb; it is not directly used as a pesticide but is integral to exposure and residue evaluations.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfoxide",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/691.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure arises via metabolism of aldicarb after ingestion, inhalation, or dermal contact with aldicarb.",
+        "bullets": [
+          "Dietary intake of aldicarb leading to in vivo formation of sulfoxide",
+          "Occupational exposure to aldicarb with metabolic conversion",
+          "Environmental degradation and potential indirect exposure"
+        ],
+        "sources": [
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfoxide"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure to aldicarb-related residues. The sulfoxide is more potent than aldicarb itself as an acetylcholinesterase inhibitor according to WHO drinking-water assessments; cholinesterase inhibition is the key biomarker.",
+        "sources": [
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf",
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb-chemical-fact-sheet.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Residue and drinking-water assessments commonly sum aldicarb with its sulfoxide and sulfone. Monitoring may include the sulfoxide in analytical methods.",
+        "sources": [
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0161-0033/content.pdf",
+          "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfoxide",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/691.htm",
+      "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb.pdf",
+      "https://cdn.who.int/media/docs/default-source/wash-documents/wash-chemicals/aldicarb-chemical-fact-sheet.pdf",
+      "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0161-0033/content.pdf"
+    ]
+  },
+  {
+    "compound_name": "Carbofuran",
+    "cas_rn": "1563-66-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Carbofuran is an N‑methyl carbamate insecticide/nematicide. It inhibits acetylcholinesterase and was widely used on various crops; uses have been curtailed in multiple regions.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Carbofuran"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposures occur primarily via diet and occupational settings.",
+        "bullets": [
+          "Dietary ingestion of residues on treated commodities",
+          "Dermal and inhalation exposure during application",
+          "Potential drinking water exposure near treated fields"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Carbofuran",
+          "https://www.cdc.gov/exposurereport/data_tables.html"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Biomarkers include decreased erythrocyte AChE and plasma BuChE; urinary metabolites such as carbofuranphenol and 3‑hydroxycarbofuran are used in biomonitoring. Toxicological endpoints focus on acute cholinergic effects and neurological outcomes at higher exposures.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Carbofuran",
+          "https://medbox.iiab.me/modules/en-cdc/www.cdc.gov/biomonitoring/Carbofuran_BiomonitoringSummary.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "U.S. EPA revoked all carbofuran food tolerances in 2009; EU lists the substance as not approved. Carbofuran and metabolites appear in targeted monitoring programs and forensic analyses.",
+        "sources": [
+          "https://www.federalregister.gov/documents/2009/05/15/E9-11396/carbofuran-final-tolerance-revocations",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Carbofuran"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Carbofuran",
+      "https://www.cdc.gov/exposurereport/data_tables.html",
+      "https://medbox.iiab.me/modules/en-cdc/www.cdc.gov/biomonitoring/Carbofuran_BiomonitoringSummary.html",
+      "https://www.federalregister.gov/documents/2009/05/15/E9-11396/carbofuran-final-tolerance-revocations"
+    ]
+  },
+  {
+    "compound_name": "Thiamethoxam",
+    "cas_rn": "153719-23-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Thiamethoxam is a neonicotinoid insecticide of the thianicotinyl class, used on a variety of crops (including as a seed treatment). It targets nicotinic acetylcholine receptors in insects.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Thiamethoxam",
+          "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/Specs/Thiamethoxam2014.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "General-population exposure is mainly dietary; occupational exposure can occur in seed treatment and application.",
+        "bullets": [
+          "Dietary ingestion of residues on treated commodities",
+          "Dermal and inhalation exposure during planting/handling of treated seed",
+          "Environmental drift and dust during sowing of treated seed"
+        ],
+        "sources": [
+          "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/Specs/Thiamethoxam2014.pdf",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Thiamethoxam"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection suggests recent exposure. Toxicological evaluations emphasize nicotinic receptor interaction; studied endpoints include neurobehavioral and developmental outcomes in animal studies. Detection alone does not imply risk.",
+        "sources": [
+          "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/Specs/Thiamethoxam2014.pdf",
+          "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the EU, all outdoor uses of thiamethoxam were prohibited in May 2018 following EFSA bee risk assessments. EU and national programs set and adjust MRLs; other jurisdictions maintain specific registrations and residue limits.",
+        "sources": [
+          "https://www.efsa.europa.eu/en/press/news/180228",
+          "https://food.ec.europa.eu/plants/pesticides/approval-active-substances-safeners-and-synergists/renewal-approval/neonicotinoids_en",
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Thiamethoxam",
+      "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/Specs/Thiamethoxam2014.pdf",
+      "https://www.efsa.europa.eu/en/press/news/180228",
+      "https://food.ec.europa.eu/plants/pesticides/approval-active-substances-safeners-and-synergists/renewal-approval/neonicotinoids_en",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en",
+      "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html"
+    ]
+  },
+  {
+    "compound_name": "Mevinphos",
+    "cas_rn": "7786-34-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Mevinphos is an organophosphate (OP) insecticide mixture (alpha and beta isomers) that inhibits acetylcholinesterase.",
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/pdf/0250fact.pdf",
+          "https://www.govinfo.gov/content/pkg/FR-1994-08-01/html/94-18751.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure may occur through occupational use and via residues where historically used.",
+        "bullets": [
+          "Dermal and inhalation exposure during application",
+          "Dietary ingestion of residues on produce",
+          "Contact with contaminated dust near treated fields"
+        ],
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/pdf/0250fact.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Biomarkers include reduced erythrocyte AChE and plasma BuChE. Endpoints studied primarily involve acute cholinergic effects and neurotoxicity typical of OPs.",
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/pdf/0250fact.pdf",
+          "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/OPD_I.htm"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "All U.S. mevinphos registrations were cancelled in 1994; the EU lists it as not approved. NHANES has measured non‑specific OP metabolites (dialkyl phosphates) in urine for population monitoring.",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/FR-1994-08-01/html/94-18751.htm",
+          "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/OPD_I.htm",
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+        ]
+      }
+    ],
+    "sources": [
+      "https://archive.epa.gov/pesticides/reregistration/web/pdf/0250fact.pdf",
+      "https://www.govinfo.gov/content/pkg/FR-1994-08-01/html/94-18751.htm",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/OPD_I.htm",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+    ]
+  },
+  {
+    "compound_name": "Cycluron",
+    "cas_rn": "2163-69-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Cycluron is a phenylurea herbicide used historically for weed control; it is structurally related to other substituted ureas.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Cycluron",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/176.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposures occur via residues and occupational contact.",
+        "bullets": [
+          "Ingestion of residues on treated crops",
+          "Dermal and inhalation exposure during application",
+          "Environmental transport to dust and runoff"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Cycluron",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/176.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection would indicate recent exposure. Evaluated endpoints include hepatic and general systemic effects in animal studies.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Cycluron",
+          "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Cycluron is not approved in the EU; MRLs and approvals vary globally and are often absent for legacy herbicides.",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/176.htm",
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Cycluron",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/176.htm",
+      "https://www.cdc.gov/environmental-exposure-report/php/about-the-data/index.html",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+    ]
+  },
+  {
+    "compound_name": "Rotenone",
+    "cas_rn": "83-79-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Rotenone is a naturally derived rotenoid historically used as an insecticide and as a piscicide for fish management; it inhibits mitochondrial complex I. \nEuropean Food Safety Authority",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Rotenone"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential pathways include dietary ingestion of residues from historical uses, dermal contact or inhalation during application, and, in management operations, incidental ingestion or inhalation near treated waters. \nEuropean Food Safety Authority",
+        "bullets": [
+          "Dietary ingestion from treated produce (historical)",
+          "Dermal and inhalation exposure during application",
+          "Incidental exposure near treated surface waters (piscicide use)"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Rotenone"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure. Research focuses on neurotoxicity and mitochondrial inhibition endpoints; epidemiologic and experimental studies have examined neurological outcomes without establishing causal risk at environmental levels. \nEuropean Food Safety Authority",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Rotenone"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Use patterns are regulated under EPA and EU frameworks, with restrictions that vary by jurisdiction; assessments consider dietary exposure and ecological effects from piscicide applications. \nPubChem",
+        "sources": [
+          "https://www.epa.gov/pesticides/registration-review-and-other-review-programs-predating-pesticide-registration"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Rotenone",
+      "https://www.epa.gov/pesticides/registration-review-and-other-review-programs-predating-pesticide-registration"
+    ]
+  },
+  {
+    "compound_name": "Alanycarb",
+    "cas_rn": "83130-01-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Alanycarb is an obsolete carbamate insecticide and nematicide; it belongs to the N‑methyl carbamate class that inhibits acetylcholinesterase. \nPubChem\n+1",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Alanycarb",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/18.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure for the general population is expected to be low today; historically, dietary ingestion and occupational dermal/inhalation routes were relevant. sitem.herts.ac.uk",
+        "bullets": [
+          "Dietary ingestion of residues from treated produce (historical use)",
+          "Dermal and inhalation exposure during mixing/loading and application",
+          "Contact with contaminated soil or dust at legacy sites"
+        ],
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/18.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Toxicology centers on reversible cholinesterase inhibition and associated neurological signs common to carbamate insecticides. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Alanycarb"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Alanycarb is not in current use in many jurisdictions and is not approved in the EU under present legislation; risk assessments for carbamates use EPA and EFSA frameworks. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/18.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Alanycarb",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/18.htm"
+    ]
+  },
+  {
+    "compound_name": "Aldicarb sulfone",
+    "cas_rn": "1646-88-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Aldicarb sulfone is an oxidation product (metabolite) of aldicarb; it retains anticholinesterase activity and is relevant in residue and biomonitoring studies. sitem.herts.ac.uk",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfone"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure arises from environmental transformation of aldicarb and from metabolism in exposed organisms; dietary ingestion of residues and occupational exposure during aldicarb use are the main routes. \nPubChem",
+        "bullets": [
+          "Dietary ingestion where aldicarb residues oxidize to sulfone",
+          "Metabolic formation following aldicarb exposure",
+          "Occupational routes linked to parent compound handling"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure to aldicarb and/or its oxidized products. Toxicology highlights reversible cholinesterase inhibition. sitem.herts.ac.uk",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfone"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Regulatory residue definitions for aldicarb may include the sum of aldicarb, aldicarb sulfoxide, and aldicarb sulfone (expressed as aldicarb) in some jurisdictions. EU and EPA reviews consider these metabolites in risk assessment. \nEFSA Journal",
+        "sources": [
+          "https://efsa.onlinelibrary.wiley.com/doi/pdf/10.2903/sp.efsa.2022.EN-7407"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb-sulfone",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Aldicarb",
+      "https://efsa.onlinelibrary.wiley.com/doi/pdf/10.2903/sp.efsa.2022.EN-7407"
+    ]
+  },
+  {
+    "compound_name": "Bendiocarb",
+    "cas_rn": "22781-23-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bendiocarb is an N‑methyl carbamate insecticide used in public health (indoor residual spraying) and formerly in various structural/industrial contexts; it inhibits acetylcholinesterase. \nWHO Extranet",
+        "sources": [
+          "https://extranet.who.int/prequal/sites/default/files/doc_parts/WHOVC-SP_Bendiocarb_2023.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure may occur via indoor residual spraying (inhalation and dermal contact), occupational handling, and incidental ingestion of contaminated dust. Dietary exposure is possible from treated commodities where uses are authorized. \nWHO Extranet",
+        "bullets": [
+          "Inhalation/dermal contact during indoor residual spraying",
+          "Occupational exposure during mixing/loading",
+          "Incidental ingestion of household dust",
+          "Dietary exposure from treated commodities where permitted"
+        ],
+        "sources": [
+          "https://extranet.who.int/prequal/vector-control-products/ficam"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection would indicate recent exposure. Toxicology focuses on reversible cholinesterase inhibition with neurological signs at sufficient doses; available fact sheets summarize acute and subchronic findings. \nNational Pesticide Information Center\n+1",
+        "sources": [
+          "https://npic.orst.edu/factsheets/bendiogen.pdf",
+          "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100XZA6.TXT"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EPA reregistration actions around 2000–2001 led to cancellations of certain product uses in the U.S.; WHO prequalification lists formulations for vector control. EU approvals have varied by product and time. \nGovInfo\n+1",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/FR-2000-02-02/pdf/00-2283.pdf",
+          "https://extranet.who.int/prequal/vector-control-products/ficam"
+        ]
+      }
+    ],
+    "sources": [
+      "https://extranet.who.int/prequal/sites/default/files/doc_parts/WHOVC-SP_Bendiocarb_2023.pdf",
+      "https://extranet.who.int/prequal/vector-control-products/ficam",
+      "https://npic.orst.edu/factsheets/bendiogen.pdf",
+      "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100XZA6.TXT",
+      "https://www.govinfo.gov/content/pkg/FR-2000-02-02/pdf/00-2283.pdf"
+    ]
+  },
+  {
+    "compound_name": "Butoxycarboxim (Butocarboxim)",
+    "cas_rn": "34681-23-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Butoxycarboxim (also referred to as butocarboxim) is an oxime carbamate insecticide/acaricide with historical agricultural uses; like other carbamates, it inhibits acetylcholinesterase. sitem.herts.ac.uk +1",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/102.htm",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Butoxycarboxim"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure may occur through dietary ingestion of residues and occupational dermal/inhalation routes during mixing and application. Environmental persistence and mobility depend on local conditions. sitem.herts.ac.uk",
+        "bullets": [
+          "Dietary ingestion from residues on treated crops",
+          "Dermal and inhalation exposure during application",
+          "Incidental ingestion of contaminated dust or soil"
+        ],
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/103.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure. Toxicological assessments focus on reversible cholinesterase inhibition and general systemic endpoints common to carbamate insecticides. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Butoxycarboxim"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Regulatory status varies by region; detailed property profiles are available in the PPDB. Current EU approvals for this specific active substance are not listed as approved under Regulation (EC) No 1107/2009. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/atoz.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/102.htm",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Butoxycarboxim",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/103.htm",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/atoz.htm"
+    ]
+  },
+  {
+    "compound_name": "Dioxacarb",
+    "cas_rn": "6988-21-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dioxacarb (2‑(1,3‑dioxolan‑2‑yl)phenyl methylcarbamate) is a carbamate insecticide formerly used for structural and agricultural pest control. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dioxacarb"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure occurs via dietary ingestion of residues, and via dermal/inhalation routes during application in occupational or residential settings. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from treated commodities",
+          "Dermal and inhalation during mixing/application",
+          "Incidental ingestion of dust in indoor applications"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dioxacarb"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood would indicate recent exposure. Toxicology centers on reversible cholinesterase inhibition common to N‑methyl carbamates. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dioxacarb"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Dioxacarb is listed as not approved in the EU; U.S. status is historical/limited with legacy products no longer widely available. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dioxacarb"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Dioxacarb"
+    ]
+  },
+  {
+    "compound_name": "Ethiofencarb",
+    "cas_rn": "29973-13-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Ethiofencarb is a systemic carbamate insecticide used primarily against aphids on fruits and vegetables; it inhibits acetylcholinesterase. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Ethiofencarb"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "General population exposure is mainly dietary; occupational exposure can occur via dermal contact and inhalation during application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from residues on produce",
+          "Dermal contact during mixing/loading and spraying",
+          "Inhalation of aerosols during application"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Ethiofencarb"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Toxicology emphasizes reversible cholinesterase inhibition typical of carbamates. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Ethiofencarb"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EU status notes non‑approval under current legislation for many carbamates; regulatory reviews evaluate dietary exposure and operator safety. \nFAOLEX",
+        "sources": [
+          "https://faolex.fao.org/docs/pdf/eur186214.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Ethiofencarb",
+      "https://faolex.fao.org/docs/pdf/eur186214.pdf"
+    ]
+  },
+  {
+    "compound_name": "Mexacarbate (Zectran)",
+    "cas_rn": "315-18-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Mexacarbate (trade name Zectran) is a carbamate insecticide formerly used on a variety of crops; it is an acetylcholinesterase inhibitor. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Mexacarbate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure occurs via dietary ingestion of residues and via occupational dermal and inhalation routes during application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from treated commodities (historical)",
+          "Dermal and inhalation exposure during application",
+          "Incidental ingestion of dust/soil near treated areas"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Mexacarbate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection suggests recent exposure. Toxicological endpoints are consistent with cholinesterase inhibition seen with carbamates. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Mexacarbate"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Mexacarbate is obsolete or not approved in many jurisdictions, including the EU; modern monitoring focuses on currently used alternatives. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Mexacarbate"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Mexacarbate"
+    ]
+  },
+  {
+    "compound_name": "Promecarb",
+    "cas_rn": "2631-37-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Promecarb is a carbamate herbicide used for selective weed control; it belongs to the phenylcarbamate subclass. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Promecarb"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "General exposure occurs mainly through dietary residues; occupational exposure includes dermal and inhalation routes during application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion of residues from treated cereals/vegetables",
+          "Dermal and inhalation exposure for mixers/loaders/applicators"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Promecarb"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "If present in blood, this indicates recent exposure. Toxicology for phenylcarbamates includes cholinesterase inhibition and general systemic endpoints. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Promecarb"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EU approvals for many older carbamates have lapsed; national programs evaluate residues relative to MRLs where authorized. \nFAOLEX",
+        "sources": [
+          "https://faolex.fao.org/docs/pdf/eur186214.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Promecarb",
+      "https://faolex.fao.org/docs/pdf/eur186214.pdf"
+    ]
+  },
+  {
+    "compound_name": "Fuberidazole",
+    "cas_rn": "3878-19-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Fuberidazole is a benzimidazole fungicide used historically for seed treatment and crop protection. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Fuberidazole"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure may occur via dietary residues on treated commodities and occupational dermal/inhalation routes during seed treatment or application. sitem.herts.ac.uk",
+        "bullets": [
+          "Dietary ingestion of residues from treated cereals",
+          "Dermal/inhalation exposure during handling of treated seed",
+          "Contact with contaminated dust in storage/processing areas"
+        ],
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/365.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection would reflect recent exposure. Evaluations note genotoxicity concerns in experimental systems; endpoints include general systemic and reproductive/developmental testing. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/365.htm"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EU databases list fuberidazole as not approved; recent EU MRL decisions have reduced limits for selected cereals to limit of determination. \nFood Safety\n+1",
+        "sources": [
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en",
+          "https://agrinfo.eu/book-of-reports/maximum-residue-levels-for-fuberidazole/"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Fuberidazole",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/365.htm",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en",
+      "https://agrinfo.eu/book-of-reports/maximum-residue-levels-for-fuberidazole/"
+    ]
+  },
+  {
+    "compound_name": "Prochloraz",
+    "cas_rn": "67747-09-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Prochloraz is an imidazole fungicide used on fruits and vegetables; it inhibits sterol biosynthesis in fungi (CYP51/ergosterol pathway). sitem.herts.ac.uk",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Prochloraz"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Population exposure is predominantly dietary via residues; occupational exposure can occur via dermal and inhalation routes during application. sitem.herts.ac.uk",
+        "bullets": [
+          "Dietary ingestion from treated produce",
+          "Dermal and inhalation exposure for applicators",
+          "Incidental ingestion of contaminated dust in workplaces"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Prochloraz"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "If detected in blood, it indicates recent exposure. Toxicology studies include hepatic enzymatic responses and endocrine-related endpoints in fish and other organisms. \nEFSA Journal",
+        "sources": [
+          "https://efsa.onlinelibrary.wiley.com/doi/pdf/10.2903/j.efsa.2011.2323"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EU approval expired on 31 December 2021 (no renewal application submitted), and EFSA’s 2023 targeted risk assessment supported reductions of MRLs to limits of determination for some commodities. \nEFSA Journal\n+1",
+        "sources": [
+          "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.8231",
+          "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2024.8753"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Prochloraz",
+      "https://efsa.onlinelibrary.wiley.com/doi/pdf/10.2903/j.efsa.2011.2323",
+      "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.8231",
+      "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2024.8753"
+    ]
+  },
+  {
+    "compound_name": "Etaconazole",
+    "cas_rn": "60207-93-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Etaconazole is a triazole fungicide (now obsolete) that inhibits fungal sterol biosynthesis; it has been used to control powdery mildews and similar diseases. \nPubChem\n+1",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Etaconazole",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1196.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure pathways include dietary ingestion from treated produce and occupational dermal/inhalation exposure during handling and application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion of residues on treated crops",
+          "Dermal and inhalation exposure during application",
+          "Incidental ingestion of contaminated dust"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Etaconazole"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Toxicology studies of azoles evaluate hepatic enzyme induction and endocrine-relevant endpoints in experimental systems. \nPMC",
+        "sources": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7290820/"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Etaconazole is not listed among currently approved EU active substances; modern monitoring emphasizes other triazoles with current approvals and MRLs. \nFood Safety",
+        "sources": [
+          "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Etaconazole",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1196.htm",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7290820/",
+      "https://food.ec.europa.eu/plants/pesticides/eu-pesticides-database_en"
+    ]
+  },
+  {
+    "compound_name": "Monocrotophos",
+    "cas_rn": "6923-22-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Monocrotophos is an organophosphate insecticide; it inhibits acetylcholinesterase and has been used on cotton and other crops, though many countries have banned or severely restricted it. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Monocrotophos"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure pathways include dietary ingestion of residues and occupational dermal/inhalation routes during agricultural application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from treated commodities",
+          "Dermal and inhalation exposure during application",
+          "Incidental ingestion of contaminated soil/dust"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Monocrotophos"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Toxicology focuses on cholinesterase inhibition and acute neurotoxicity typical of organophosphates. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Monocrotophos"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Monocrotophos is banned or not approved in multiple regions, including the EU; international PIC procedures capture notifications of national bans/severe restrictions. pic.int",
+        "sources": [
+          "https://www.pic.int/Portals/5/en/Circular/Circ33-EN.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Monocrotophos",
+      "https://www.pic.int/Portals/5/en/Circular/Circ33-EN.pdf"
+    ]
+  },
+  {
+    "compound_name": "Omethoate",
+    "cas_rn": "1113-02-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Omethoate is an organophosphate insecticide and a metabolite of dimethoate; it acts as an acetylcholinesterase inhibitor. \nPubChem",
+        "sources": [
+          "https://www.echemportal.org/echemportal/substance-search?query_term=1113-02-6"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure can result from use of dimethoate/omethoate on crops (dietary route) and from occupational handling leading to dermal and inhalation exposure. \nPubChem",
+        "bullets": [
+          "Dietary ingestion of residues on treated produce",
+          "Dermal and inhalation exposure in agricultural application",
+          "Incidental ingestion of contaminated dust/soil"
+        ],
+        "sources": [
+          "https://www.echemportal.org/echemportal/substance-search?query_term=1113-02-6"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Presence in blood indicates recent exposure. Omethoate toxicology emphasizes cholinesterase inhibition and acute neurotoxicity endpoints. \nPubChem",
+        "sources": [
+          "https://www.echemportal.org/echemportal/substance-search?query_term=1113-02-6"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "EU risk management has addressed dimethoate and related metabolites; national and EU residue programs monitor for compliance with MRLs. \nEUR-Lex",
+        "sources": [
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32019R1090"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.echemportal.org/echemportal/substance-search?query_term=1113-02-6",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32019R1090"
+    ]
+  },
+  {
+    "compound_name": "Kresoxim‑methyl",
+    "cas_rn": "143390-89-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Kresoxim‑methyl is a strobilurin (QoI) fungicide used on fruit and other crops; it inhibits mitochondrial respiration at the cytochrome bc1 complex in fungi. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Kresoxim-Methyl"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure is primarily dietary via residues on treated produce; occupational dermal and inhalation exposure can occur during mixing and spraying. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from treated fruit and crops",
+          "Dermal/inhalation exposure during application",
+          "Incidental ingestion of contaminated dust in workplaces"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Kresoxim-Methyl"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Toxicology focuses on general systemic endpoints rather than specific neurotoxicity; mammalian complex III is less sensitive than fungal targets. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Kresoxim-Methyl"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Kresoxim‑methyl is under EPA registration review (case 7026), with interim/proposed decisions available; it is listed as an approved active substance in EU databases (status subject to periodic renewal). \nRegulations\n+2 Regulations.gov +2",
+        "sources": [
+          "https://www.regulations.gov/docket/EPA-HQ-OPP-2012-0861/document",
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0861-0032/content.pdf",
+          "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/active-substances/details/257"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Kresoxim-Methyl",
+      "https://www.regulations.gov/docket/EPA-HQ-OPP-2012-0861/document",
+      "https://downloads.regulations.gov/EPA-HQ-OPP-2012-0861-0032/content.pdf",
+      "https://ec.europa.eu/food/plant/pesticides/eu-pesticides-database/start/screen/active-substances/details/257"
+    ]
+  },
+  {
+    "compound_name": "Methoprotryne",
+    "cas_rn": "841-06-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Methoprotryne is a triazine herbicide used for post‑emergence control of grasses in cereals; it inhibits photosystem II. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1549.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure is mainly dietary via residues on treated cereals; occupational exposure includes dermal and inhalation during mixing and spraying. sitem.herts.ac.uk",
+        "bullets": [
+          "Dietary ingestion from treated cereals",
+          "Dermal and inhalation exposure during application"
+        ],
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1549.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection would indicate recent exposure. Toxicology of triazines emphasizes general systemic endpoints; methoprotryne is assessed alongside related PSII inhibitors. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1549.htm"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Regulatory information is cataloged in PPDB; approvals vary by jurisdiction and time, with EU data indicating limited or obsolete status. sitem.herts.ac.uk",
+        "sources": [
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1549.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/1549.htm"
+    ]
+  },
+  {
+    "compound_name": "Isoproturon",
+    "cas_rn": "34123-59-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Isoproturon is a phenylurea herbicide used on cereals to control annual grasses and broadleaf weeds; it inhibits photosynthesis at photosystem II. \nPubChem",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure occurs via dietary ingestion of residues and occupational dermal/inhalation pathways during application. \nPubChem",
+        "bullets": [
+          "Dietary ingestion from treated cereals",
+          "Dermal and inhalation exposure for applicators"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection would indicate recent exposure. Toxicology emphasizes general systemic endpoints; metabolites (mono‑ and didemethyl isoproturon) are often considered in fate studies. \nPubChem\n+1",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon-monodemethyl",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon-didemethyl"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "The EU did not renew approval of isoproturon (Commission Implementing Regulation (EU) 2016/872), leading to withdrawal of authorisations. \nEUR-Lex\n+1",
+        "sources": [
+          "https://eur-lex.europa.eu/eli/reg_impl/2016/872/oj/eng",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32016R0872"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon-monodemethyl",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Isoproturon-didemethyl",
+      "https://eur-lex.europa.eu/eli/reg_impl/2016/872/oj/eng",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32016R0872"
+    ]
+  },
+  {
+    "compound_name": "11‑chloro eicosafluoro‑3‑oxaundecane‑1‑sulfonic acid (6:2 Cl‑PFESA; 11Cl‑PF3OUdS, potassium salt CAS shown)",
+    "cas_rn": "83329-89-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "11‑Chloro‑eicosafluoro‑3‑oxaundecane‑1‑sulfonic acid is a chlorinated polyfluoroalkyl ether sulfonic acid (Cl‑PFESA). Its potassium salt is a major component of the Chinese PFOS replacement mixture F‑53B used as a mist suppressant in metal plating. \nPubChem\n+1",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/50851128",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7560397/"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure can occur via ingestion of contaminated drinking water and food, and via occupational inhalation/dermal contact in electroplating facilities. Environmental persistence and bioaccumulation have been reported for Cl‑PFESAs. \nScienceDirect\n+1",
+        "bullets": [
+          "Ingestion of contaminated drinking water and food",
+          "Occupational inhalation and dermal contact in metal plating",
+          "Transplacental and lactational transfer reported for PFAS classes in general biomonitoring literature"
+        ],
+        "sources": [
+          "https://www.sciencedirect.com/science/article/pii/S0160412022000344",
+          "https://www.sciencedirect.com/science/article/pii/S016041202031998X"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates exposure due to the long biological half‑life typical of PFAS. Research on 6:2 Cl‑PFESA has examined serum levels in general populations and associations with hepatic and other biomarkers; mechanistic and epidemiologic evidence is still developing. \nScienceDirect",
+        "sources": [
+          "https://www.sciencedirect.com/science/article/pii/S0160412022000344"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Cl‑PFESAs are not among legacy PFAS globally regulated under the Stockholm Convention, but they are included in regional monitoring and risk evaluations (e.g., UK and EU assessments). Analytical standards and listings (e.g., SRS, product standards) support occurrence monitoring. \nGOV.UK\n+1",
+        "sources": [
+          "https://assets.publishing.service.gov.uk/media/6421a7c6fe97a8001379ecf8/9._Environmental_risk_evaluation_report_Potassium_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate.pdf",
+          "https://www.accustandard.com/prod0065583.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/50851128",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7560397/",
+      "https://www.sciencedirect.com/science/article/pii/S0160412022000344",
+      "https://www.sciencedirect.com/science/article/pii/S016041202031998X",
+      "https://assets.publishing.service.gov.uk/media/6421a7c6fe97a8001379ecf8/9._Environmental_risk_evaluation_report_Potassium_9-chlorohexadecafluoro-3-oxanonane-1-sulfonate.pdf",
+      "https://www.accustandard.com/prod0065583.html"
+    ]
+  }
+]

@@ -7,7 +7,10 @@ import { getPercentileColor, formatPercentile } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import LongitudinalChart from '@/components/LongitudinalChart';
-import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from '@/data/household-data-structured';
+import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from '@/data/structured/household-products';
+import { findPersonalCareProductsChemicalStructured } from '@/data/structured/personal-care-products';
+import { findPersistantPollutantsChemicalStructured } from '@/data/structured/persistent-pollutants';
+import { findContainersAndCoatingsChemicalStructured } from '@/data/structured/containers-and-coatings';
 import ChemicalDescriptionSections from '@/components/ChemicalDescriptionSections';
 
 export default function ChemicalPage({ params }: { params: Promise<{ name: string }> }) {
@@ -29,8 +32,24 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         const foundChemical = chemicals.find(c => c.compound === decodedName);
         setChemical(foundChemical || null);
 
-        // Load structured data
-        const structuredChemical = findHouseholdChemicalStructured(decodedName);
+        // Load structured data based on the chemical's category - only use category-specific data source
+        let structuredChemical: HouseholdChemicalDataStructured | null = null;
+        
+        if (foundChemical?.exposureCategory) {
+          const category = foundChemical.exposureCategory;
+          
+          // Map category to its specific data source
+          if (category === 'Household Products') {
+            structuredChemical = findHouseholdChemicalStructured(decodedName);
+          } else if (category === 'Personal Care Products') {
+            structuredChemical = findPersonalCareProductsChemicalStructured(decodedName);
+          } else if (category === 'Persistent Pollutants') {
+            structuredChemical = findPersistantPollutantsChemicalStructured(decodedName);
+          } else if (category === 'Containers & Coatings') {
+            structuredChemical = findContainersAndCoatingsChemicalStructured(decodedName);
+          }
+        }
+        
         if (structuredChemical) {
           setHouseholdDataStructured(structuredChemical);
         }

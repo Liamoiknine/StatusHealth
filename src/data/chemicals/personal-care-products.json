@@ -1,0 +1,820 @@
+[
+  {
+    "compound_name": "Dipentylphthalate (DPP)",
+    "cas_rn": "131-18-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dipentylphthalate is a phthalate diester used as a plasticizer to add flexibility to polymers such as poly(vinyl chloride) (PVC) and related materials.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dipentyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure in households can occur from contact with flexible plastics and coated materials, migration into food from packaging, and indoor dust.",
+        "bullets": [
+          "Ingestion of food in contact with plasticized materials",
+          "Incidental ingestion of indoor dust containing phthalates",
+          "Dermal contact with flexible vinyl/PVC items",
+          "Inhalation of indoor air containing semi-volatile phthalates"
+        ],
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of DPP in blood suggests recent exposure; phthalates are rapidly hydrolyzed and are commonly assessed via urinary monoester metabolites rather than parent compounds. Toxicology studies of phthalates have focused on reproductive and developmental endpoints in experimental systems.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the European Union (EU), dipentylphthalate is listed on the REACH Authorisation List (Annex XIV). Population biomonitoring programs such as the CDC’s National Health and Nutrition Examination Survey (NHANES) measure phthalate metabolites in urine.",
+        "sources": [
+          "https://reachonline.eu/reach/en/annex-xiv.html",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Dipentyl-phthalate",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://reachonline.eu/reach/en/annex-xiv.html",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Acetophenone",
+    "cas_rn": "98-86-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Acetophenone is an aromatic ketone used as a fragrance ingredient, flavoring agent, and specialty solvent in plastics and resins.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Acetophenone",
+          "https://www.epa.gov/sites/default/files/2016-09/documents/acetophenone.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Household exposure can arise from scented consumer products, food flavorings, and solvent-containing products.",
+        "bullets": [
+          "Inhalation of indoor air from fragranced or solvent-based products",
+          "Dermal contact during use of cosmetics or cleaners",
+          "Ingestion from use as a flavoring substance"
+        ],
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/acetophenone.pdf",
+          "https://apps.who.int/food-additives-contaminants-jecfa-database/chemical.aspx?chemID=732"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure because acetophenone is metabolized and eliminated. Studies have examined irritation and central-nervous-system–related endpoints at higher exposures; evaluations for use as a flavoring have been conducted.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/acetophenone.pdf",
+          "https://www.inchem.org/documents/jecfa/jeceval/jec_16.htm"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the EU, substance information is maintained by the European Chemicals Agency (ECHA). In the U.S., acetophenone is listed under 21 CFR 172.515 for flavoring substances, and the Joint FAO/WHO Expert Committee on Food Additives (JECFA) has evaluated it as a flavoring.",
+        "sources": [
+          "https://echa.europa.eu/substance-information/-/substanceinfo/100.002.462",
+          "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=ACETOPHENONE&set=FoodSubstances",
+          "https://www.inchem.org/documents/jecfa/jeceval/jec_16.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Acetophenone",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/acetophenone.pdf",
+      "https://apps.who.int/food-additives-contaminants-jecfa-database/chemical.aspx?chemID=732",
+      "https://echa.europa.eu/substance-information/-/substanceinfo/100.002.462",
+      "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=ACETOPHENONE&set=FoodSubstances",
+      "https://www.inchem.org/documents/jecfa/jeceval/jec_16.htm"
+    ]
+  },
+  {
+    "compound_name": "Isosafrole (cis & trans)",
+    "cas_rn": "120-58-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Isosafrole is a benzodioxole–type phenylpropene that occurs in trace amounts in some essential oils and is used as an intermediate in fragrance manufacturing. It exists as cis (α) and trans (β) geometric isomers.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isosafrole"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Consumer exposure is expected to be low; potential pathways include incidental dermal or inhalation exposure from fragrance intermediates or essential oils.",
+        "bullets": [
+          "Inhalation of vapors from essential-oil–based products",
+          "Dermal contact during handling of fragrance materials"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Isosafrole"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood implies recent exposure due to metabolism and elimination. Animal studies of safrole/isomers have focused on hepatic endpoints.",
+        "sources": [
+          "https://www.inchem.org/documents/iarc/vol10/safrole.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the U.S., safrole, isosafrole, and dihydrosafrole are prohibited as added food ingredients (21 CFR 189.180). Isosafrole is also controlled internationally as a drug-precursor chemical.",
+        "sources": [
+          "https://www.law.cornell.edu/cfr/text/21/189.180",
+          "https://www.incb.org/documents/PRECURSORS/RED_LIST/2020/Red_List_2020_E.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Isosafrole",
+      "https://www.inchem.org/documents/iarc/vol10/safrole.html",
+      "https://www.law.cornell.edu/cfr/text/21/189.180",
+      "https://www.incb.org/documents/PRECURSORS/RED_LIST/2020/Red_List_2020_E.pdf"
+    ]
+  },
+  {
+    "compound_name": "Safrole",
+    "cas_rn": "94-59-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Safrole is a naturally occurring phenylpropene found in sassafras oil and other plant-derived essential oils; it has been used historically as a flavor or fragrance component.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Safrole"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Modern consumer exposure is mainly via trace amounts occurring naturally in certain botanicals and essential oils; direct addition to foods is prohibited in the U.S.",
+        "bullets": [
+          "Ingestion from natural constituents of some spices/essential oils",
+          "Inhalation or dermal exposure from essential-oil–containing products"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Safrole",
+          "https://www.law.cornell.edu/cfr/text/21/189.180"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood reflects recent exposure. Safrole has been evaluated for carcinogenicity; the International Agency for Research on Cancer (IARC) classifies safrole as Group 2B (possibly carcinogenic to humans).",
+        "sources": [
+          "https://monographs.iarc.who.int/wp-content/uploads/2018/09/ClassificationsAlphaOrder.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "The U.S. Food and Drug Administration (FDA) prohibits added safrole and related derivatives in foods (21 CFR 189.180).",
+        "sources": [
+          "https://www.law.cornell.edu/cfr/text/21/189.180"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Safrole",
+      "https://www.law.cornell.edu/cfr/text/21/189.180",
+      "https://monographs.iarc.who.int/wp-content/uploads/2018/09/ClassificationsAlphaOrder.pdf"
+    ]
+  },
+  {
+    "compound_name": "Benzyl alcohol",
+    "cas_rn": "100-51-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Benzyl alcohol is an aromatic alcohol used broadly as a solvent, preservative, and fragrance ingredient in cosmetics, personal care products, and pharmaceuticals, and as a flavoring in foods.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Benzyl-Alcohol",
+          "https://echa.europa.eu/substance-information/-/substanceinfo/100.002.600"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Household exposure can occur from use of preserved cosmetics and topical medicines, fragranced products, and foods where permitted.",
+        "bullets": [
+          "Dermal exposure from cosmetics and topical formulations",
+          "Inhalation of vapors from fragranced/cleaning products",
+          "Ingestion when used as a flavoring substance"
+        ],
+        "sources": [
+          "https://echa.europa.eu/substance-information/-/substanceinfo/100.002.600",
+          "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/276/"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure; benzyl alcohol is rapidly oxidized to benzoic acid and excreted chiefly as hippuric acid. Reported endpoints in evaluations include irritation/sensitization and systemic tolerance at typical use levels.",
+        "sources": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7008871/",
+          "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/276/"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the EU, benzyl alcohol is one of the fragrance allergens requiring labeling above defined concentrations in cosmetics; as a preservative, concentration limits apply. As a food additive (E 1519), it has specifications published by JECFA.",
+        "sources": [
+          "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_102.pdf",
+          "https://www.reach-clp-biozid-helpdesk.de/SharedDocs/Downloads/DE/REACH/Verfahren/RMOA-Conclusions/REACH-RMOA-Benzyl-alcohol.pdf?blob=publicationFile&v=1",
+          "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/276/"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Benzyl-Alcohol",
+      "https://echa.europa.eu/substance-information/-/substanceinfo/100.002.600",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7008871/",
+      "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/276/",
+      "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_102.pdf",
+      "https://www.reach-clp-biozid-helpdesk.de/SharedDocs/Downloads/DE/REACH/Verfahren/RMOA-Conclusions/REACH-RMOA-Benzyl-alcohol.pdf?blob=publicationFile&v=1"
+    ]
+  },
+  {
+    "compound_name": "4-Chloro-3-methylphenol (Chlorocresol; PCMC)",
+    "cas_rn": "59-50-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "4-Chloro-3-methylphenol is a chlorinated phenolic compound used as a preservative and disinfectant in certain medicinal and cosmetic preparations and in some industrial applications.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/4-Chloro-3-methylphenol",
+          "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/6/2/4/?documentUUID=76247b65-d814-44f9-8b1b-1f9c47751d6b"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Primary exposure is via topical products; incidental inhalation or oral exposure may occur depending on product type and use.",
+        "bullets": [
+          "Dermal exposure from preserved creams/ointments",
+          "Inhalation during use of disinfectant-containing products",
+          "Accidental ingestion (e.g., hand-to-mouth transfer)"
+        ],
+        "sources": [
+          "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/7/6/1",
+          "https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-phenol-4-chloro-3-methyl-chlorocresol.html"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood would indicate recent exposure. Evaluations of chlorocresol have focused on local irritation and skin-sensitization potential, as well as repeat-dose toxicity in experimental studies.",
+        "sources": [
+          "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/7/6/1",
+          "https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-phenol-4-chloro-3-methyl-chlorocresol.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Substance data and classifications are maintained by ECHA under REACH. National assessments (e.g., Canada, 2021) describe product categories and concentrations where it has been used.",
+        "sources": [
+          "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/7/6/1",
+          "https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-phenol-4-chloro-3-methyl-chlorocresol.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/4-Chloro-3-methylphenol",
+      "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/6/2/4/?documentUUID=76247b65-d814-44f9-8b1b-1f9c47751d6b",
+      "https://echa.europa.eu/registration-dossier/-/registered-dossier/10359/7/6/1",
+      "https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/screening-assessment-phenol-4-chloro-3-methyl-chlorocresol.html"
+    ]
+  },
+  {
+    "compound_name": "Bis(2-ethylhexyl)phthalate (DEHP)",
+    "cas_rn": "117-81-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DEHP is a high-production phthalate plasticizer widely used to impart flexibility to PVC (e.g., flooring, upholstery, tubing) and other polymers.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Di_2-ethylhexyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Typical exposure in homes arises from contact with flexible PVC items, migration into foods, indoor dust, and indoor air.",
+        "bullets": [
+          "Ingestion of contaminated food or dust",
+          "Inhalation of indoor air containing semi-volatile phthalates",
+          "Dermal contact with vinyl consumer products"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Di_2-ethylhexyl-phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection implies recent exposure; DEHP is monitored via urinary metabolites such as MEHP, MEHHP, MEOHP, and MECPP. Toxicology studies frequently assess reproductive and developmental endpoints.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+          "https://www.epa.gov/system/files/documents/2023-08/biomonitoring-methods_phthalates.2023.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "DEHP is on the EU REACH Authorisation List (Annex XIV). In the U.S., the Consumer Product Safety Improvement Act (CPSIA) and the 2017 CPSC final rule permanently restrict DEHP at >0.1% in children’s toys and child care articles. NHANES reports population levels of DEHP metabolites.",
+        "sources": [
+          "https://reachonline.eu/reach/en/annex-xiv.html",
+          "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Di_2-ethylhexyl-phthalate",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://www.epa.gov/system/files/documents/2023-08/biomonitoring-methods_phthalates.2023.pdf",
+      "https://reachonline.eu/reach/en/annex-xiv.html",
+      "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Di-n-octylphthalate (DnOP)",
+    "cas_rn": "117-84-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DnOP is a phthalate plasticizer used to provide flexibility to PVC and similar materials.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/di-N-Octyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential household exposure includes contact with flexible vinyl products, indoor dust ingestion, and indoor air inhalation.",
+        "bullets": [
+          "Ingestion of food/dust due to migration from materials",
+          "Dermal contact with plasticized items",
+          "Inhalation of indoor air"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/di-N-Octyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection suggests recent exposure. Biomonitoring often uses urinary metabolites; mono(3-carboxypropyl) phthalate (MCPP) is a non-specific metabolite used in population surveys for certain phthalates including DnOP.",
+        "sources": [
+          "https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/PHTHTE-J-MET-508.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp95.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "U.S. CPSC’s 2017 final rule made the ban on DINP permanent and added additional phthalates but did not include DnOP among the newly banned phthalates; earlier interim CPSIA restrictions targeted DnOP in certain toys. DnOP health information is summarized by ATSDR; phthalate metabolites are tracked in NHANES.",
+        "sources": [
+          "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+          "https://www.federalregister.gov/documents/2017/10/27/2017-23267/prohibition-of-childrens-toys-and-child-care-articles-containing-specified-phthalates",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp95.pdf",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/di-N-Octyl-Phthalate",
+      "https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/PHTHTE-J-MET-508.pdf",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp95.pdf",
+      "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+      "https://www.federalregister.gov/documents/2017/10/27/2017-23267/prohibition-of-childrens-toys-and-child-care-articles-containing-specified-phthalates",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Benzyl butyl phthalate (BBP)",
+    "cas_rn": "85-68-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "BBP is a phthalate plasticizer, historically used in vinyl floor tile, adhesives, sealants, and other flexible PVC applications.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Butyl-Benzyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure occurs from flexible PVC products, dust ingestion, and indoor air.",
+        "bullets": [
+          "Ingestion of indoor dust and food contacting plasticized materials",
+          "Inhalation of indoor air",
+          "Dermal contact with vinyl items"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Butyl-Benzyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood implies recent exposure. Urinary mono-benzyl phthalate (MBzP) is a commonly used biomarker in population biomonitoring.",
+        "sources": [
+          "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "BBP is on the EU REACH Authorisation List (Annex XIV). In the U.S., BBP is permanently restricted at >0.1% in children’s toys and child care articles under CPSIA and the 2017 CPSC rule; NHANES tracks MBzP in urine.",
+        "sources": [
+          "https://reachonline.eu/reach/en/annex-xiv.html",
+          "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Butyl-Benzyl-Phthalate",
+      "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf",
+      "https://reachonline.eu/reach/en/annex-xiv.html",
+      "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Bis(2-ethoxyethyl)phthalate (BEEP; DEEP)",
+    "cas_rn": "605-54-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bis(2-ethoxyethyl)phthalate is a glycol-ether phthalate plasticizer used to impart flexibility in certain polymers and coatings.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/69060"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential household exposure includes contact with plasticized articles, indoor dust ingestion, and inhalation of semi-volatile emissions.",
+        "bullets": [
+          "Dermal contact with flexible materials or coatings",
+          "Ingestion of dust or residues from treated surfaces",
+          "Inhalation of semi-volatile emissions indoors"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/69060"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure; as with other phthalates, biomonitoring typically uses urinary monoester metabolites rather than the parent compound.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Substance information is maintained in ECHA/EU databases. U.S. population monitoring of phthalates focuses on urinary metabolites (NHANES).",
+        "sources": [
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/69060",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Bis(2-methoxyethyl)phthalate (DMEP)",
+    "cas_rn": "117-82-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bis(2-methoxyethyl)phthalate is a glycol-ether phthalate plasticizer historically used in plastics and coatings; use has been phased down in many regions.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dimethoxyethyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure derives from contact with plasticized materials and indoor environments where semi-volatile plasticizers partition to dust and air.",
+        "bullets": [
+          "Dermal contact with flexible materials",
+          "Ingestion of dust",
+          "Inhalation of indoor air"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dimethoxyethyl-phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure; biomonitoring commonly targets urinary monoester metabolites for phthalates rather than parent compounds.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the EU, DMEP is on the REACH Authorisation List (Annex XIV). Population biomonitoring frameworks (e.g., NHANES) focus on urinary phthalate metabolites.",
+        "sources": [
+          "https://reachonline.eu/reach/en/annex-xiv.html",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Dimethoxyethyl-phthalate",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://reachonline.eu/reach/en/annex-xiv.html",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Bis(2-n-butoxyethyl)phthalate (DBEP)",
+    "cas_rn": "117-83-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bis(2-n-butoxyethyl)phthalate is a glycol-ether phthalate plasticizer used in certain polymer and coating applications.",
+        "sources": [
+          "https://webbook.nist.gov/cgi/cbook.cgi?ID=117-83-9",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Bis_2-butoxyethyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Household exposure may involve contact with plasticized materials, indoor dust ingestion, and inhalation of semi-volatile emissions.",
+        "bullets": [
+          "Dermal contact during use/handling of flexible materials",
+          "Ingestion of settled dust containing plasticizers",
+          "Inhalation of indoor air"
+        ],
+        "sources": [
+          "https://webbook.nist.gov/cgi/cbook.cgi?ID=117-83-9"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. As with other phthalates, biomonitoring often targets urinary monoester metabolites; routine national surveys focus on common phthalates and their metabolites.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Substance information and classification are maintained by ECHA; broader phthalate monitoring is conducted by programs such as NHANES.",
+        "sources": [
+          "https://echa.europa.eu/mt/substance-information/-/substanceinfo/100.003.831",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://webbook.nist.gov/cgi/cbook.cgi?ID=117-83-9",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Bis_2-butoxyethyl_-phthalate",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://echa.europa.eu/mt/substance-information/-/substanceinfo/100.003.831",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Bis(4-methyl-2-pentyl)phthalate (Diisohexyl phthalate)",
+    "cas_rn": "84-63-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bis(4-methyl-2-pentyl)phthalate is a branched C6-alcohol phthalate plasticizer (often referred to as diisohexyl phthalate) used to increase flexibility of polymers.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Bis_4-methyl-2-pentyl_-phthalate",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Diisohexyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential exposure occurs from contact with flexible plastics and indoor environments where plasticizers partition to dust and air.",
+        "bullets": [
+          "Dermal contact with plasticized consumer products",
+          "Ingestion of indoor dust",
+          "Inhalation of semi-volatile emissions"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Bis_4-methyl-2-pentyl_-phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood implies recent exposure; biomonitoring generally relies on urinary monoester metabolites for phthalates.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Phthalate exposure is tracked at the population level via urinary metabolites (e.g., NHANES in the U.S.); substance records are maintained by ECHA.",
+        "sources": [
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+          "https://echa.europa.eu/hot-topics/phthalates"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Bis_4-methyl-2-pentyl_-phthalate",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Diisohexyl-phthalate",
+      "https://www.epa.gov/sites/default/files/2017-08/documents/phthalates_updates_live_file_508_0.pdf",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+      "https://echa.europa.eu/hot-topics/phthalates"
+    ]
+  },
+  {
+    "compound_name": "Diethylphthalate (DEP)",
+    "cas_rn": "84-66-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DEP is a low–molecular-weight phthalate used as a plasticizer and commonly as a solvent and fixative in fragrances and personal care products.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Diethyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Major exposure routes are dermal (from cosmetics and fragrances), inhalation of indoor air, and ingestion from migration into food.",
+        "bullets": [
+          "Dermal contact from personal care products",
+          "Inhalation of indoor air",
+          "Ingestion from packaging migration"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Diethyl-Phthalate",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp73.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "In biomonitoring, DEP exposure is commonly assessed via urinary mono-ethyl phthalate (MEP). Blood detection indicates recent exposure due to rapid metabolism.",
+        "sources": [
+          "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp73.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "DEP and its metabolites are included in NHANES biomonitoring. Substance records are maintained by ECHA.",
+        "sources": [
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+          "https://echa.europa.eu/hot-topics/phthalates"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Diethyl-Phthalate",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp73.pdf",
+      "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+      "https://echa.europa.eu/hot-topics/phthalates"
+    ]
+  },
+  {
+    "compound_name": "Di-n-butylphthalate (DBP; DnBP)",
+    "cas_rn": "84-74-2",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DBP is a phthalate plasticizer used in flexible PVC, adhesives, sealants, and historically in some nail polish formulations.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dibutyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Household exposure arises from treated materials, indoor dust, and personal care products.",
+        "bullets": [
+          "Dermal contact with products containing DBP",
+          "Ingestion of indoor dust or food contacting plasticized materials",
+          "Inhalation of indoor air"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dibutyl-Phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure. Urinary biomarkers include mono-n-butyl phthalate (MnBP/MBP) and related metabolites used in population studies.",
+        "sources": [
+          "https://www.epa.gov/system/files/documents/2023-08/biomonitoring-methods_phthalates.2023.pdf",
+          "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "DBP is on the EU REACH Authorisation List (Annex XIV). In the U.S., DBP is permanently restricted at >0.1% in children’s toys and child care articles under CPSIA and the 2017 CPSC rule; NHANES tracks DBP metabolites.",
+        "sources": [
+          "https://chem.echa.europa.eu/obligation-lists/authorisationList",
+          "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Dibutyl-Phthalate",
+      "https://www.epa.gov/system/files/documents/2023-08/biomonitoring-methods_phthalates.2023.pdf",
+      "https://www.cdc.gov/exposurereport/report/pdf/Phthalate%20and%20Phthalate%20Alternative%20Metabolites%20NHANES-p.pdf",
+      "https://chem.echa.europa.eu/obligation-lists/authorisationList",
+      "https://www.cpsc.gov/Newsroom/News-Releases/2018/CPSC-Prohibits-Certain-Phthalates-in-Childrens-Toys-and-Child-Care-Products",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  },
+  {
+    "compound_name": "Di-n-nonylphthalate (DnNP; Dinonyl phthalate)",
+    "cas_rn": "84-76-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DnNP is a phthalate plasticizer (mixture of n-nonyl isomers) used in certain flexible PVC and related applications.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dinonyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential residential exposure arises from contact with plasticized materials and indoor environments.",
+        "bullets": [
+          "Dermal contact with flexible plastics",
+          "Ingestion of indoor dust",
+          "Inhalation of semi-volatile emissions"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Dinonyl-phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection in blood indicates recent exposure; population biomonitoring generally targets urinary monoester metabolites for phthalates. Toxicity reviews summarize endpoints assessed for DnNP.",
+        "sources": [
+          "https://www.industrialchemicals.gov.au/sites/default/files/Dinonyl%20phthalate%20DNP.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Phthalate exposure in the U.S. is tracked by NHANES through urinary metabolites; substance information for phthalates is managed by ECHA in the EU.",
+        "sources": [
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+          "https://echa.europa.eu/hot-topics/phthalates"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Dinonyl-phthalate",
+      "https://www.industrialchemicals.gov.au/sites/default/files/Dinonyl%20phthalate%20DNP.pdf",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html",
+      "https://echa.europa.eu/hot-topics/phthalates"
+    ]
+  },
+  {
+    "compound_name": "Phthalic acid diisobutyl ester (Diisobutyl phthalate; DIBP)",
+    "cas_rn": "84-69-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "DIBP is a phthalate plasticizer used in flexible polymers and coatings and has been used as a substitute for some other lower–molecular-weight phthalates.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Diisobutyl-phthalate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure may occur via contact with flexible materials, indoor dust, and indoor air.",
+        "bullets": [
+          "Dermal contact from plasticized consumer products",
+          "Ingestion of dust",
+          "Inhalation of semi-volatile emissions"
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Diisobutyl-phthalate"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Blood detection indicates recent exposure. Biomonitoring commonly measures mono-isobutyl phthalate (MiBP) in urine as a DIBP biomarker.",
+        "sources": [
+          "https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/PHTHTE-J-MET-508.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "DIBP is on the EU REACH Authorisation List (Annex XIV). In the U.S., the 2017 CPSC final rule permanently restricts DIBP at >0.1% in children’s toys and child care articles. NHANES tracks MiBP in urine.",
+        "sources": [
+          "https://chem.echa.europa.eu/100.001.412/obligations/authorisationList/details",
+          "https://www.federalregister.gov/documents/2017/10/27/2017-23267/prohibition-of-childrens-toys-and-child-care-articles-containing-specified-phthalates",
+          "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Diisobutyl-phthalate",
+      "https://wwwn.cdc.gov/nchs/data/nhanes/public/2017/labmethods/PHTHTE-J-MET-508.pdf",
+      "https://chem.echa.europa.eu/100.001.412/obligations/authorisationList/details",
+      "https://www.federalregister.gov/documents/2017/10/27/2017-23267/prohibition-of-childrens-toys-and-child-care-articles-containing-specified-phthalates",
+      "https://www.cdc.gov/biomonitoring/resources/national-exposure-report.html"
+    ]
+  }
+]
