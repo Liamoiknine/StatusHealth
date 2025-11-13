@@ -58,29 +58,29 @@ export function getChemicalStatusInfo(percentile?: number, value?: number) {
     return {
       color: 'bg-gray-400',
       text: 'Not Detected',
-      bgColor: 'bg-gray-50',
-      textColor: 'text-gray-600'
+      bgColor: 'bg-transparent border border-white',
+      textColor: 'text-white'
     };
   } else if (!percentile || percentile <= 0.3) {
     return {
       color: 'bg-green-600',
       text: 'Low Exposure',
-      bgColor: 'bg-green-50',
-      textColor: 'text-green-700'
+      bgColor: 'bg-transparent border border-green-500',
+      textColor: 'text-green-500'
     };
   } else if (percentile > 0.6) {
     return {
       color: 'bg-red-500',
       text: 'Pay Attention',
-      bgColor: 'bg-red-50',
-      textColor: 'text-red-700'
+      bgColor: 'bg-transparent border border-red-500',
+      textColor: 'text-red-500'
     };
   } else {
     return {
       color: 'bg-yellow-400',
       text: 'Monitor Only',
-      bgColor: 'bg-yellow-50',
-      textColor: 'text-yellow-700'
+      bgColor: 'bg-transparent border border-yellow-500',
+      textColor: 'text-yellow-500'
     };
   }
 }
@@ -128,24 +128,168 @@ export function getCategoryStatusInfo(chemicals: ChemicalData[]) {
     return {
       color: 'bg-red-500',
       text: 'Pay Attention',
-      bgColor: 'bg-red-50',
-      textColor: 'text-red-700'
+      bgColor: 'bg-transparent border border-red-500',
+      textColor: 'text-red-500'
     };
   } else if (monitorOnlyCount >= 3 || payAttentionCount >= 1) {
     // If 3+ Monitor Only OR 1+ Pay Attention, category is Monitor Only
     return {
       color: 'bg-yellow-400',
       text: 'Monitor Only',
-      bgColor: 'bg-yellow-50',
-      textColor: 'text-yellow-700'
+      bgColor: 'bg-transparent border border-yellow-500',
+      textColor: 'text-yellow-500'
     };
   } else {
     // If <3 Monitor Only and no Pay Attention, category is Low Exposure
     return {
       color: 'bg-green-400',
       text: 'Low Exposure',
-      bgColor: 'bg-green-50',
-      textColor: 'text-green-700'
+      bgColor: 'bg-transparent border border-green-500',
+      textColor: 'text-green-500'
     };
   }
+}
+
+// Get percentile distribution counts by range
+export function getPercentileDistribution(chemicals: ChemicalData[]) {
+  const distribution = {
+    notDetected: 0,
+    lowExposure: 0,      // 0-30%
+    monitorOnly: 0,     // 30-60%
+    payAttention: 0     // 60-100%
+  };
+
+  chemicals.forEach(chemical => {
+    if (chemical.value === 0) {
+      distribution.notDetected++;
+    } else {
+      const percentile = chemical.percentile || 0;
+      if (percentile <= 0.3) {
+        distribution.lowExposure++;
+      } else if (percentile <= 0.6) {
+        distribution.monitorOnly++;
+      } else {
+        distribution.payAttention++;
+      }
+    }
+  });
+
+  return distribution;
+}
+
+// Get source distribution grouped by primarySource
+export function getSourceDistribution(chemicals: ChemicalData[]) {
+  const sourceMap = new Map<string, number>();
+  
+  chemicals.forEach(chemical => {
+    const source = chemical.primarySource || 'Unknown';
+    sourceMap.set(source, (sourceMap.get(source) || 0) + 1);
+  });
+
+  // Convert to array and sort by count
+  return Array.from(sourceMap.entries())
+    .map(([source, count]) => ({ source, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+// Calculate category insights
+export interface CategoryInsight {
+  type: 'averagePercentile' | 'highestPercentile' | 'detectionRate' | 'mostCommonSource' | 'categoryComparison';
+  label: string;
+  value: string | number;
+  subValue?: string;
+  meaningful: boolean;
+}
+
+export function calculateCategoryInsights(
+  chemicals: ChemicalData[],
+  allCategories?: ChemicalData[]
+): CategoryInsight[] {
+  const insights: CategoryInsight[] = [];
+  const detectedChemicals = chemicals.filter(c => c.value > 0);
+  const totalCount = chemicals.length;
+  const detectedCount = detectedChemicals.length;
+
+  // Average percentile (only if meaningful)
+  if (detectedCount > 0) {
+    const avgPercentile = detectedChemicals.reduce((sum, c) => sum + (c.percentile || 0), 0) / detectedCount;
+    insights.push({
+      type: 'averagePercentile',
+      label: 'Average Percentile',
+      value: Math.round(avgPercentile * 100),
+      subValue: 'of detected chemicals',
+      meaningful: true
+    });
+  }
+
+  // Highest percentile chemical
+  if (detectedCount > 0) {
+    const highest = detectedChemicals.reduce((max, c) => {
+      const p = c.percentile || 0;
+      return p > (max.percentile || 0) ? c : max;
+    }, detectedChemicals[0]);
+    insights.push({
+      type: 'highestPercentile',
+      label: 'Highest Exposure',
+      value: highest.compound,
+      subValue: `${formatPercentile(highest.percentile, highest.value)} percentile`,
+      meaningful: true
+    });
+  }
+
+  // Detection rate
+  insights.push({
+    type: 'detectionRate',
+    label: 'Detection Rate',
+    value: totalCount > 0 ? Math.round((detectedCount / totalCount) * 100) : 0,
+    subValue: `${detectedCount} of ${totalCount} chemicals`,
+    meaningful: totalCount > 0
+  });
+
+  // Most common source
+  const sourceDist = getSourceDistribution(chemicals);
+  if (sourceDist.length > 0) {
+    const topSource = sourceDist[0];
+    insights.push({
+      type: 'mostCommonSource',
+      label: 'Most Common Source',
+      value: topSource.source,
+      subValue: `${topSource.count} chemical${topSource.count !== 1 ? 's' : ''}`,
+      meaningful: true
+    });
+  }
+
+  // Category comparison (if allCategories provided)
+  if (allCategories && detectedCount > 0) {
+    const categoryGroups = groupChemicalsByCategory(allCategories);
+    const categoryStats = getCategoryStats(categoryGroups);
+    const currentCategoryAvg = detectedChemicals.reduce((sum, c) => sum + (c.percentile || 0), 0) / detectedCount;
+    
+    // Compare to average of all other categories
+    let otherCategoriesAvg = 0;
+    let otherCategoriesCount = 0;
+    
+    categoryStats.forEach(({ category, chemicals: catChemicals }) => {
+      const catDetected = catChemicals.filter(c => c.value > 0);
+      if (catDetected.length > 0) {
+        const catAvg = catDetected.reduce((sum, c) => sum + (c.percentile || 0), 0) / catDetected.length;
+        otherCategoriesAvg += catAvg;
+        otherCategoriesCount++;
+      }
+    });
+
+    if (otherCategoriesCount > 0) {
+      otherCategoriesAvg /= otherCategoriesCount;
+      const diff = ((currentCategoryAvg - otherCategoriesAvg) / otherCategoriesAvg) * 100;
+      insights.push({
+        type: 'categoryComparison',
+        label: 'vs. Other Categories',
+        value: diff > 0 ? `+${Math.round(diff)}%` : `${Math.round(diff)}%`,
+        subValue: diff > 0 ? 'higher than average' : 'lower than average',
+        meaningful: Math.abs(diff) > 5 // Only show if meaningful difference
+      });
+    }
+  }
+
+  return insights.filter(insight => insight.meaningful);
 }

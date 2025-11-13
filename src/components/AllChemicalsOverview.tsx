@@ -18,33 +18,49 @@ interface AllChemicalsOverviewProps {
 // Category icons mapping
 const categoryIcons: Record<string, ReactElement> = {
   'Agricultural Chemicals': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
     </svg>
   ),
   'Containers & Coatings': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/>
+      <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7"/>
+      <path d="M3 7h18"/>
+      <path d="M7 7v10"/>
+      <path d="M17 7v10"/>
     </svg>
   ),
   'Household Products': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <path d="M9 22V12h6v10"/>
     </svg>
   ),
   'Industrial Chemicals': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
     </svg>
   ),
   'Persistent Pollutants': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M12 2v2"/>
+      <path d="M12 20v2"/>
+      <path d="M4 12H2"/>
+      <path d="M22 12h-2"/>
+      <path d="m15.536 15.536 1.414 1.414"/>
+      <path d="m7.05 7.05-1.414-1.414"/>
+      <path d="m15.536 8.464 1.414-1.414"/>
+      <path d="m7.05 16.95-1.414 1.414"/>
+      <circle cx="12" cy="12" r="4"/>
     </svg>
   ),
   'Personal Care Products': (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+      <path d="M8 12h8"/>
+      <path d="M12 8v8"/>
     </svg>
   ),
 };
@@ -52,23 +68,30 @@ const categoryIcons: Record<string, ReactElement> = {
 // Exposure pathway icons
 const pathwayIcons: Record<string, ReactElement> = {
   'Ingestion': (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M12 3V2"/>
+      <path d="m15.4 17.4 3.2-2.8a2 2 0 1 1 2.8 2.9l-3.6 3.3c-.7.8-1.7 1.2-2.8 1.2h-4c-1.1 0-2.1-.4-2.8-1.2l-1.302-1.464A1 1 0 0 0 6.151 19H5"/>
+      <path d="M2 14h12a2 2 0 0 1 0 4h-2"/>
+      <path d="M4 10h16"/>
+      <path d="M5 10a7 7 0 0 1 14 0"/>
+      <path d="M5 14v6a1 1 0 0 1-1 1H2"/>
     </svg>
   ),
   'Inhalation': (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
     </svg>
   ),
   'Dermal Contact': (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M12 4.354a4 4 0 1 1 0 5.292M15 21H3v-1a6 6 0 0 1 12 0v1zm0 0h6v-1a6 6 0 0 0-9-5.197M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
     </svg>
   ),
   'Maternal Transfer': (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+      <path d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/>
     </svg>
   ),
 };
@@ -113,13 +136,36 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
     
     // Scroll to section if we're expanding it
     if (!wasExpanded && ref?.current) {
+      // Wait for expansion animation to complete, then scroll
       setTimeout(() => {
-        ref.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start',
-          inline: 'nearest'
+        if (!ref.current) return;
+        
+        const element = ref.current;
+        const rect = element.getBoundingClientRect();
+        const elementTop = rect.top + window.pageYOffset;
+        const elementHeight = rect.height;
+        const windowHeight = window.innerHeight;
+        
+        // Calculate target position based on actual expanded dimensions
+        const spaceNeeded = elementHeight + 40;
+        let targetScrollPosition: number;
+        
+        if (spaceNeeded <= windowHeight) {
+          // Section fits in viewport - center it vertically
+          targetScrollPosition = elementTop - (windowHeight - elementHeight) / 2;
+        } else {
+          // Section is taller than viewport - position at top with small offset
+          targetScrollPosition = elementTop - 20;
+        }
+        
+        targetScrollPosition = Math.max(0, targetScrollPosition);
+        
+        // Scroll to calculated position
+        window.scrollTo({
+          top: targetScrollPosition,
+          behavior: 'smooth'
         });
-      }, 50); // Small delay to allow animation to start
+      }, 320); // Wait for 300ms animation + small buffer to ensure accurate measurement
     }
   };
 
@@ -258,7 +304,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
       )}
 
       {/* Collapsible Sections */}
-      <div className="space-y-4">
+      <div className="space-y-4 mb-12">
         {/* Interpreting Results */}
         {interpretingResults && (
           <div ref={interpretingResultsRef} className="bg-[#1a2540] border border-gray-700 rounded-lg overflow-hidden">

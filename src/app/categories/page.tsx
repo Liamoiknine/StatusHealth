@@ -9,6 +9,7 @@ import { useTest } from '@/contexts/TestContext';
 import ExposureFilterButtons from '@/components/ExposureFilterButtons';
 import CategoryOverview from '@/components/CategoryOverview';
 import AllChemicalsOverview from '@/components/AllChemicalsOverview';
+import CategoryOverviewDashboard from '@/components/CategoryOverviewDashboard';
 import { findCategoryOverview, getAllChemicalsOverview } from '@/data/category-overviews';
 import { ChemicalData } from '@/app/api/csv-parser';
 
@@ -21,7 +22,7 @@ function CategoriesPageContent() {
   const [selectedCategory, setSelectedCategory] = useState<string | null | 'all-exposures'>('all-exposures');
   const [categoryFilters, setCategoryFilters] = useState<Record<string, ExposureFilterType>>({});
   const [allExposuresFilter, setAllExposuresFilter] = useState<ExposureFilterType>('all');
-  const [viewMode, setViewMode] = useState<'overview' | 'chemicals'>('overview');
+  const [viewMode, setViewMode] = useState<'overview' | 'details' | 'chemicals'>('overview');
   const [expandedChemical, setExpandedChemical] = useState<string | null>(null);
   
   // Get the current filter for the selected category, defaulting to 'all' if not set
@@ -69,7 +70,7 @@ function CategoriesPageContent() {
     
     // Restore viewMode from URL
     const viewModeParam = searchParams.get('view');
-    if (viewModeParam === 'overview' || viewModeParam === 'chemicals') {
+    if (viewModeParam === 'overview' || viewModeParam === 'details' || viewModeParam === 'chemicals') {
       setViewMode(viewModeParam);
     }
     
@@ -437,6 +438,16 @@ function CategoriesPageContent() {
                       Overview
                     </button>
                     <button
+                      onClick={() => setViewMode('details')}
+                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        viewMode === 'details'
+                          ? 'bg-teal-600 text-white'
+                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                      }`}
+                    >
+                      Details
+                    </button>
+                    <button
                       onClick={() => setViewMode('chemicals')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'chemicals'
@@ -450,7 +461,16 @@ function CategoriesPageContent() {
                 </div>
 
                 {/* Overview Section */}
-                {viewMode === 'overview' && selectedCategory && selectedCategory !== 'all-exposures' && (() => {
+                {viewMode === 'overview' && selectedCategory && selectedCategory !== 'all-exposures' && (
+                  <CategoryOverviewDashboard
+                    categoryName={selectedCategory}
+                    chemicals={chemicals.filter(chemical => chemical.exposureCategory === selectedCategory)}
+                    allCategories={chemicals}
+                  />
+                )}
+
+                {/* Details Section */}
+                {viewMode === 'details' && selectedCategory && selectedCategory !== 'all-exposures' && (() => {
                   const categoryOverview = findCategoryOverview(selectedCategory);
                   return categoryOverview ? (
                     <CategoryOverview data={categoryOverview} />
