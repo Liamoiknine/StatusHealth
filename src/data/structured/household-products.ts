@@ -4,6 +4,7 @@ export interface SummarySection {
   header: string;
   content: string;
   bullets?: string[];
+  sources?: string[];
 }
 
 export interface HouseholdChemicalDataStructured {
@@ -70,12 +71,13 @@ export interface GroupedSection {
   header: string;
   content: string; // Combined content from all sections with the same header
   bullets?: string[]; // Combined bullets if any
+  sources?: string[]; // Combined sources if any
 }
 
 export function groupSectionsByHeader(
   sections: SummarySection[]
 ): GroupedSection[] {
-  const grouped: Record<string, { contents: string[]; bullets: string[] }> = {};
+  const grouped: Record<string, { contents: string[]; bullets: string[]; sources: string[] }> = {};
 
   // Group sections by header
   sections.forEach((section) => {
@@ -83,7 +85,7 @@ export function groupSectionsByHeader(
     const content = cleanSectionContent(section.content);
     
     if (!grouped[header]) {
-      grouped[header] = { contents: [], bullets: [] };
+      grouped[header] = { contents: [], bullets: [], sources: [] };
     }
     
     if (content) {
@@ -94,6 +96,11 @@ export function groupSectionsByHeader(
     if (section.bullets && Array.isArray(section.bullets)) {
       grouped[header].bullets.push(...section.bullets);
     }
+
+    // Collect sources if present
+    if (section.sources && Array.isArray(section.sources)) {
+      grouped[header].sources.push(...section.sources);
+    }
   });
 
   // Combine content for each header
@@ -102,6 +109,7 @@ export function groupSectionsByHeader(
       header,
       content: data.contents.join(' ').trim(),
       bullets: data.bullets.length > 0 ? data.bullets : undefined,
+      sources: data.sources.length > 0 ? [...new Set(data.sources)] : undefined, // Remove duplicates
     }))
     .filter((section) => section.content.length > 0 || (section.bullets && section.bullets.length > 0));
 

@@ -11,6 +11,8 @@ import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from
 import { findPersonalCareProductsChemicalStructured } from '@/data/structured/personal-care-products';
 import { findPersistantPollutantsChemicalStructured } from '@/data/structured/persistent-pollutants';
 import { findContainersAndCoatingsChemicalStructured } from '@/data/structured/containers-and-coatings';
+import { findIndustrialChemicalsChemicalStructured } from '@/data/structured/industrial-chemicals';
+import { findAgriculturalChemicalsChemicalStructured } from '@/data/structured/agricultural-chemicals';
 import ChemicalDescriptionSections from '@/components/ChemicalDescriptionSections';
 
 export default function ChemicalPage({ params }: { params: Promise<{ name: string }> }) {
@@ -47,6 +49,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
             structuredChemical = findPersistantPollutantsChemicalStructured(decodedName);
           } else if (category === 'Containers & Coatings') {
             structuredChemical = findContainersAndCoatingsChemicalStructured(decodedName);
+          } else if (category === 'Industrial Chemicals') {
+            structuredChemical = findIndustrialChemicalsChemicalStructured(decodedName);
+          } else if (category === 'Agricultural Chemicals') {
+            structuredChemical = findAgriculturalChemicalsChemicalStructured(decodedName);
           }
         }
         
@@ -62,6 +68,12 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
     
     loadData();
   }, [params, selectedTest]);
+
+  // Scroll to top when chemical name changes or page loads
+  useEffect(() => {
+    // Scroll to top when navigating to this page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [chemicalName]);
 
   if (loading) {
     return (

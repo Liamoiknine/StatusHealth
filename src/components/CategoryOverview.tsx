@@ -39,6 +39,32 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
     }
   };
 
+  // Parse markdown-style formatting in text
+  // Currently supports: **bold**
+  const parseMarkdown = (text: string): string => {
+    if (!text) return '';
+    
+    // Escape HTML first to prevent XSS
+    const escapeHtml = (str: string) => {
+      const map: Record<string, string> = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;',
+      };
+      return str.replace(/[&<>"']/g, (m) => map[m]);
+    };
+    
+    // Escape HTML, then parse markdown
+    let parsed = escapeHtml(text);
+    
+    // Parse **bold** text
+    parsed = parsed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>');
+    
+    return parsed;
+  };
+
   // Sort sections: known headers first in order, then others alphabetically
   const sortedSections = [...data.summary_sections].sort((a, b) => {
     const indexA = sectionOrder.indexOf(a.header);
@@ -85,9 +111,12 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
               {section.header}
             </h3>
             <div className="prose prose-invert max-w-none">
-              <p className="text-gray-300 leading-relaxed whitespace-pre-wrap mb-4">
-                {section.content}
-              </p>
+              <p 
+                className="text-gray-300 leading-relaxed whitespace-pre-wrap mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: parseMarkdown(section.content)
+                }}
+              />
               {section.bullets && section.bullets.length > 0 && (
                 <ul className="list-none space-y-2 mb-4">
                   {section.bullets.map((bullet, bulletIndex) => (
@@ -105,7 +134,12 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                           d="M9 12l2 2 4-4" 
                         />
                       </svg>
-                      <span className="leading-relaxed">{bullet}</span>
+                      <span 
+                        className="leading-relaxed"
+                        dangerouslySetInnerHTML={{
+                          __html: parseMarkdown(bullet)
+                        }}
+                      />
                     </li>
                   ))}
                 </ul>

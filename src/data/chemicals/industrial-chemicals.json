@@ -1,0 +1,706 @@
+[
+  {
+    "compound_name": "1,2-Dichlorobenzene",
+    "cas_rn": "95-50-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "1,2-Dichlorobenzene (orthodichlorobenzene, often abbreviated ODCB) is a chlorinated aromatic hydrocarbon with a sweet, pleasant odor. It is a colorless to pale yellow liquid at room temperature. 1,2-Dichlorobenzene is used as a solvent and chemical intermediate. Common historical and industrial uses include: a solvent for waxes, resins, and oils; a degreasing agent and paint remover; and a key feedstock in manufacturing agrochemicals and other organic compounds. For instance, it has been used to produce herbicides and in the synthesis of 1,2-dichloro-4-nitrobenzene (an intermediate for dyes). Ortho-dichlorobenzene was at times used in the past as an insecticide fumigant for termite control and as an ingredient in some deodorant blocks for waste containers. It is also a minor component in some heat-transfer fluids. In consumer contexts, 1,2-dichlorobenzene is not commonly sold directly, but it may be present in certain specialty products (like industrial-strength degreasers or older formulations of some pesticides). It is one of three dichlorobenzene isomers; compared to 1,4-dichlorobenzene (the paradichlorobenzene used in mothballs and deodorizers), 1,2-DCB has fewer direct consumer uses. Most people encounter it, if at all, as a trace environmental pollutant rather than through a household product.",
+        "sources": [
+          "https://oehha.ca.gov/chemicals/12-dichlorobenzene",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/1_2-dichlorobenzene"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Routes of exposure to 1,2-dichlorobenzene include:",
+        "bullets": [
+          "Inhalation of contaminated air: 1,2-DCB can volatilize into air. People near industrial facilities that use or produce it might inhale low levels. Indoor air exposure is possible if using products containing 1,2-DCB as a solvent (e.g., during paint stripping or heavy-duty cleaning). However, it is less volatile than its 1,4-isomer, so evaporation is slower.",
+          "Drinking water ingestion: If groundwater is contaminated by 1,2-dichlorobenzene (for example, near chemical plants or hazardous waste sites where it was disposed), it can leach into wells. 1,2-DCB has been found in some drinking water sources, typically at low concentrations. Water treatment (air stripping, carbon filtration) can remove it. The general population's water exposure is usually minimal, as it’s not a ubiquitous contaminant.",
+          "Occupational dermal and inhalation exposure: Workers in chemical manufacturing (production of chlorobenzenes, pesticides, etc.) may have the highest exposure. They could inhale vapors or have skin contact during handling. Workers using it as a solvent (e.g., in degreasing or paint removal) could also be exposed without proper ventilation/PPE.",
+          "Food consumption: Because 1,2-dichlorobenzene can partition into fats, bioaccumulation in the food chain is possible but limited. Trace amounts have occasionally been detected in fish from polluted waters. Overall, diet is not a major exposure route for the public, since significant contamination events are rare.",
+          "Ambient environmental exposure: 1,2-DCB has been detected in some urban air and surface waters at very low levels from diffuse chemical releases. Breathing city air or touching water containing parts-per-billion levels constitutes a minor background exposure for many people."
+        ],
+        "sources": [
+          "https://oehha.ca.gov/chemicals/12-dichlorobenzene",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp10.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "1,2-Dichlorobenzene is moderately toxic, primarily affecting the liver and kidneys at higher doses. Acute exposure to high concentrations (for example, inhaling high vapor levels in an occupational accident) can cause irritation of the eyes and respiratory tract, as well as central nervous system effects like dizziness or headache. It may also cause nausea or vomiting if ingested. In animal studies, short-term inhalation of 1,2-DCB caused liver enlargement and enzyme changes, while oral gavage led to liver and kidney injury at high doses. Chronic exposure studies in rodents have shown that 1,2-dichlorobenzene can produce histopathological changes in the liver and kidney (e.g., cellular degeneration). No conclusive evidence of carcinogenicity in humans exists for 1,2-DCB. Rodent cancer bioassays were somewhat equivocal – male mice showed increased liver tumors at very high doses, but overall the data are not strong enough for a clear classification. The U.S. EPA has classified 1,2-dichlorobenzene as Group D (not classifiable as to human carcinogenicity) due to inadequate evidence. It is largely metabolized to dichlorophenols and excreted in urine. If detected in blood, 1,2-DCB would indicate recent significant exposure because it doesn’t accumulate (biological half-life on the order of a day). One notable effect observed in dogs and rats at prolonged moderate exposures was damage to the lining of the nose (nasal turbinate degeneration), suggesting repeated inhalation can irritate mucous membranes. Another potential effect noted in some animal studies is adrenal gland weight changes, though the significance is unclear. Reproductive or developmental toxicity data are limited, but high maternal exposures led to some fetal weight reduction in animals (likely secondary to maternal toxicity). In summary, health concerns for 1,2-DCB revolve around its hepatotoxic and nephrotoxic potential at elevated exposures, general irritant properties, and a low-level possibility of being a weak carcinogen (though not confirmed).",
+        "sources": [
+          "https://oehha.ca.gov/chemicals/12-dichlorobenzene",
+          "https://www.epa.gov/sites/default/files/2014-03/documents/ffrrofactsheet_contaminant_12-dichlorobenzene_january2014_final.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "1,2-Dichlorobenzene is regulated by various environmental and health agencies to limit exposure. In the U.S., the EPA has set a drinking water Maximum Contaminant Level (MCL) for combined dichlorobenzenes at 0.6 mg/L (600 ppb) for the 1,2-isomer. The California Public Health Goal (PHG) for 1,2-DCB in drinking water is 600 ppb as well, based on avoiding liver effects. Occupational exposure limits include an OSHA PEL of 50 ppm (highest allowed 8-hr average) and an ACGIH TLV of 25 ppm, reflecting efforts to prevent chronic health effects. 1,2-Dichlorobenzene is listed as a hazardous air pollutant under the U.S. Clean Air Act, meaning emissions are regulated from industries. It’s also on the Clean Water Act’s list of priority toxic pollutants, so industrial wastewater discharges must meet strict limits. ATSDR includes it in its toxic substances database and has established Minimal Risk Levels (MRLs) for chronic exposure (for instance, an oral MRL of 0.1 mg/kg/day based on liver effects). Many contaminated site investigations (Superfund sites) test for 1,2-DCB since it’s relatively common in solvent contamination scenarios; any cleanup will have target levels often in low parts-per-billion in groundwater. Internationally, organizations like WHO have drinking water guidelines for dichlorobenzenes (WHO’s guideline for 1,2-DCB in drinking water is 1 mg/L, primarily based on taste/odor considerations since it imparts odor at ~1 mg/L). The EU includes dichlorobenzenes in its water quality directives with low allowable concentrations. Environmental monitoring is performed in air (as part of volatile organic compound monitoring in urban areas) and in water (the U.S. EPA’s national surveys of water sometimes detect 1,2-DCB at low frequencies). In terms of consumer products, 1,2-DCB usage has declined, but any products using it as a solvent would require hazard labeling (flammable, harmful). Summarily, regulatory measures ensure that 1,2-DCB levels in air, water, and workplace are kept low: water standards in the low ppb range, air standards in the low ppm range, and proactive remediation and reporting for any significant spills or releases.",
+        "sources": [
+          "https://oehha.ca.gov/chemicals/12-dichlorobenzene",
+          "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+        ]
+      }
+    ],
+    "sources": [
+      "https://oehha.ca.gov/chemicals/12-dichlorobenzene",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/1_2-dichlorobenzene",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp10.pdf",
+      "https://www.epa.gov/sites/default/files/2014-03/documents/ffrrofactsheet_contaminant_12-dichlorobenzene_january2014_final.pdf",
+      "https://www.epa.gov/ground-water-and-drinking-water/national-primary-drinking-water-regulations"
+    ]
+  },
+  {
+    "compound_name": "2-Methylphenol (o-Cresol)",
+    "cas_rn": "95-48-7",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Methylphenol, also known as ortho-cresol (o-cresol), is one of the three isomeric cresols (methylphenols). In pure form it is a colorless solid (melting just above room temperature) with a medicinal phenolic odor. Cresols are both naturally occurring and manufactured chemicals. Ortho-cresol is produced in large quantities (often as part of mixed cresol streams) and is used as an industrial intermediate. Common uses of o-cresol and mixed cresols include serving as solvents and feedstocks to make other chemicals (e.g. phenolic resins), as disinfectants and deodorizers in some cleaning products, and in the manufacture of wood preservatives and pesticides. Cresols are components of coal tar and crude oil, and small amounts of o-cresol are found in some foods and in smoke from wood and tobacco. Historically, mixtures of cresols (\"cresylic acid\") were used in antiseptic formulations, although safer alternatives have largely replaced them. Overall, o-cresol’s presence in consumer products today is limited, but it remains important in chemical industry (for example, in synthesizing herbicides and dyes).",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Cresols (including o-cresol) are ubiquitous at low levels, so exposure can occur from various sources:",
+        "bullets": [
+          "**Inhalation of air** – Breathing air is the primary exposure route. Cresols volatilize into air from sources like automobile exhaust, cigarette smoke, and burning wood or trash. Indoor air may contain trace cresols from tobacco smoke or certain cleaning agents.",
+          "**Oral ingestion** – Cresols have been detected at low concentrations in some foods (e.g., tomatoes, asparagus, smoked foods) and beverages (coffee, black tea, some whiskeys). Accidental ingestion of products containing cresols (e.g., old-fashioned disinfectants) can lead to acute exposure.",
+          "**Dermal contact** – Direct skin contact with liquids that contain cresols (such as certain disinfectant solutions or creosote for wood) can result in absorption through the skin. Occupationally, workers handling cresol mixtures (or contaminated soils at coal tar sites) might experience dermal exposure.",
+          "**Occupational exposure** – Workers in industries that manufacture or use cresols (chemical plants, oil refineries, wood preservation facilities) can be exposed via combined inhalation and skin routes if proper controls are not in place. In such settings, chronically higher air levels (on the order of micrograms per cubic meter) have been documented."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Cresols are caustic, reactive phenols, and their toxicity is characterized by strong irritant effects and systemic organ damage at high doses. If o-cresol is detected in blood, it likely indicates recent exposure, as cresols are rapidly metabolized – once absorbed, they are converted to sulfate and glucuronide metabolites and excreted in urine, mostly within 24 hours. Acute exposure to cresols can cause burning irritation of the eyes, skin, and respiratory tract. In humans, inhaling o-cresol around 6 mg/m³ causes notable nose and throat irritation. Oral ingestion of concentrated cresol products leads to corrosion of the gastrointestinal tract, potential systemic poisoning, and can be fatal. Dermal exposure to high-concentration cresols can result in severe chemical burns and systemic absorption that, in extreme cases, has caused organ failure (e.g., a documented fatality in an infant from skin exposure). Systemically, cresols affect multiple organs: high or repeated exposures have been linked to kidney damage (e.g., kidney cysts) and respiratory tract effects (nasal lesions, lung congestion) in animal studies. Neurological symptoms such as muscle tremors or loss of coordination have been observed in animals given cresols, indicating potential neurotoxic effects at sufficient doses. Regarding carcinogenicity, the U.S. EPA considers cresols as possibly carcinogenic to humans (Group C – based on animal liver and thyroid tumors at high doses), though the International Agency for Research on Cancer (IARC) currently has not classified cresols due to inadequate data. Overall, o-cresol’s presence in blood or urine signifies a need to investigate and eliminate ongoing exposure because of these potent irritant and systemic effects.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Ortho-cresol (along with m- and p-cresol) is recognized as a hazardous substance by multiple regulatory programs. In the United States, cresols are listed on the EPA’s Priority List of Hazardous Substances (due to their frequency at contaminated sites and toxicity). The Occupational Safety and Health Administration (OSHA) has set permissible exposure limits (for mixed cresols) of 5 ppm (22 mg/m³) as an 8-hour time-weighted average, and the American Conference of Governmental Industrial Hygienists (ACGIH) recommends a threshold limit value of 2 ppm (as inhalable vapor and aerosol). Cresols carry a skin notation in occupational settings, reflecting that skin absorption contributes to exposure. In environmental regulation, o-cresol is one of the substances monitored in groundwater and hazardous waste – it is often included in analytical scans for phenolic compounds. The Agency for Toxic Substances and Disease Registry (ATSDR) has derived chronic oral Minimal Risk Levels for cresols (0.1 mg/kg/day) based on respiratory tract effects in animals. Ortho-cresol (as part of “total cresols”) is also regulated in wastewater effluent guidelines. Internationally, certain countries restrict cresols in consumer products; for example, the EU has set limits for cresols in cosmetics (due to their irritancy). Cresol exposure in populations can be assessed via biomarkers; p-cresol sulfate in urine can arise from gut microbiome activity and diet, but elevated free cresol levels in blood or urine suggest an environmental or occupational source requiring attention.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://wwwn.cdc.gov/TSP//substances//ToxSubstance.aspx?toxid=196",
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=944&toxid=196",
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=944&toxid=196(PublicHealthStatementforCresols",
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
+      "https://haz-map.com/Agents/296(Haz-Map:Anilineentry,forTLVdataonskinnotation"
+    ]
+  },
+  {
+    "compound_name": "3-Methylphenol (m-Cresol)",
+    "cas_rn": "108-39-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "3-Methylphenol (meta-cresol) is another of the cresol isomers. Like o-cresol, m-cresol is a colorless to yellowish solid or liquid (depending on purity and temperature) with a phenolic odor. m-Cresol is typically produced as part of mixed cresol fractions from coal tar or petroleum refining. It is used similarly to o-cresol as an industrial chemical: meta-cresol serves as a precursor to chemical products such as resins (e.g., cresol-formaldehyde resins), pesticides (certain herbicides and fungicides), and fragrances/pharmaceuticals (for example, m-cresol is used in making thymol and some vitamin E derivatives). In consumer contexts, m-cresol’s direct use is limited. Historically, mixtures of cresols (including m-cresol) were used in creosote wood preservatives and disinfectants (for instance, older Lysol formulations contained mixed cresols as active ingredients). Today, pure m-cresol may be found in small quantities as a stabilizer in some insulin injections and other pharmaceuticals (where it acts as a preservative). It also arises naturally: m-cresol is present in smoke from burning wood, tobacco, and in crude oil. It has been identified as a flavor compound in some foods (in trace amounts) due to natural processes or smoking of food.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Exposure routes for m-cresol are the same as for o-cresol (and cresols in general):",
+        "bullets": [
+          "By breathing contaminated air – Inhaling smoke or exhaust releases (from cigarettes, fireplaces, vehicle engines) containing m-cresol and other cresols is a primary pathway. Meta-cresol vapor can also be emitted from certain industrial processes (e.g., tar distillation).",
+          "By ingesting contaminated food or water – Trace m-cresol can be ingested through foods like smoked meats or spices, as well as drinking water impacted by creosote or coal tar site runoff (though typically at very low concentrations). In general, the diet is a minor route compared to inhalation for cresols.",
+          "By dermal contact – Handling materials treated with cresolic preservatives (e.g., old railroad ties or telephone poles with creosote) can result in skin exposure to cresols including m-cresol. Some disinfectant cleaners containing cresols can also pose dermal exposure risk if used without gloves. Workplace skin contact is also a concern where m-cresol is used as a chemical intermediate.",
+          "In occupational settings – Workers manufacturing cresols or using them in chemical synthesis might inhale m-cresol vapors or aerosol, or have skin contact. The primary exposure for workers tends to be dermal absorption when protective measures are insufficient. Good ventilation and personal protective equipment are used to minimize inhalation and skin uptake in such environments."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Meta-cresol exhibits toxic effects similar to o-cresol, as all cresols share a common mechanism of cellular damage (protein denaturation and membrane destruction due to their phenolic nature). m-Cresol is rapidly absorbed via inhalation, ingestion, or skin and quickly metabolized, so its detection in blood signifies a recent exposure episode. Acute exposure causes irritation and caustic injury: inhaling m-cresol can irritate the lungs and throat, while direct skin or eye contact can lead to burns. Ingestion of concentrated m-cresol (e.g., accidental swallowing of a cresol-based disinfectant) would cause severe burning of mouth and throat and systemic poisoning, paralleling the effects noted for o-cresol. Systemically, one hallmark of cresol toxicity is its effect on the nervous system – high doses cause tremors or convulsions in animals, indicating neurotoxicity. Another key effect is damage to the kidneys and liver on repeated exposure; studies of animals exposed to m-/p-cresol mixtures showed kidney cysts and liver enlargement at high doses. Methemoglobinemia (a blood effect where hemoglobin is impaired) has been reported with some phenolic compounds, though for cresols the primary concern remains tissue damage and organ toxicity rather than blood oxidation (aniline is more strongly associated with methemoglobin issues). m-Cresol is not conclusively linked to cancer in humans; chronic animal studies on cresols have shown some increase in tumors (like skin papillomas when applied repeatedly, or adrenal tumors in rats), but results have been inconsistent. Consequently, health agencies treat cresols as possible carcinogens (with caution due to positive animal studies but no clear human data). Importantly, m-cresol in pharmaceutical use (e.g., as a preservative in injections) is at very low concentrations, which are considered safe for humans. Any significant elevation of m-cresol in a person’s blood, however, would warrant evaluating exposure sources given the potential for corrosive injury and organ toxicity.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Meta-cresol is generally regulated in conjunction with the other cresol isomers. The U.S. EPA lists “cresols” as a hazardous air pollutant category and as a priority pollutant in waste and groundwater. For example, m-cresol is specifically included in the Clean Water Act Priority Pollutant List (as part of “cresols” or separately as 2,4-dimethylphenol which is a di-methyl phenol). Workplace regulations mirror those for o-cresol: ACGIH’s TLV of 2 ppm and OSHA’s PEL of 5 ppm apply to all cresol isomers (skin notation). Environmental cleanup standards (Superfund sites) consider cresols due to their toxicity; ATSDR’s Priority Substance List ranks cresols for potential concern at contaminated sites. No specific separate exposure standard exists uniquely for m-cresol beyond the mixed cresol limits. In California, cresols are on Proposition 65’s list of chemicals “known to cause cancer or reproductive toxicity” (listed for possible carcinogenicity by authoritative bodies), although listing was based on limited evidence. Water quality criteria in some jurisdictions set combined cresol limits to protect aquatic life. Monitoring wise, m-cresol can be measured in blood or urine (often through total cresol or phenol assays), but such biomonitoring is not routine in the general population except in special exposure investigations. If needed, OSHA and NIOSH have methods to sample workplace air for cresols (e.g., using XAD resin tubes with analysis by GC). In summary, regulatory oversight of m-cresol occurs as part of broader cresol and phenol regulations in industrial emissions, workplace safety, and hazardous waste site remediation.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=944&toxid=196",
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
+      "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "Haz-Map",
+      "ATSDRToxicologicalProfileforCresols(1992)–forchroniceffects"
+    ]
+  },
+  {
+    "compound_name": "4-Methylphenol (p-Cresol)",
+    "cas_rn": "106-44-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "4-Methylphenol, or para-cresol (p-cresol), is the third cresol isomer. It is a colorless to pale yellow solid with a tar-like odor. p-Cresol is produced industrially (often alongside o- and m-cresols) and has similar applications to the other cresols. It is used as a chemical intermediate: one notable derivative is butylated hydroxytoluene (BHT), a common antioxidant, which can be made starting from p-cresol. p-Cresol is also used in producing certain pharmaceuticals and dyes. Like other cresols, it has antiseptic properties; historically, p-cresol was a major component in some coal tar disinfectants and in sheep dip solutions (for parasite control). In current consumer products, pure p-cresol is uncommon due to its irritancy, but mixed cresols containing p-cresol might be present in some industrial cleaning solutions and degreasers. p-Cresol arises naturally from the breakdown of organic matter; notably, it is produced in the gut by bacterial fermentation of the amino acid tyrosine and thus is a normal constituent in human feces and urine (as a metabolite conjugate). It is also found in the environment: tobacco smoke and wood smoke contain p-cresol, and it is a component of creosote. Thus, while p-cresol is not a household chemical one would intentionally use, small amounts are encountered through these natural and incidental sources. Its main intentional uses remain in chemical manufacturing and specialized antiseptic applications.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Para-cresol exposure occurs via similar routes to o- and m-cresol:",
+        "bullets": [
+          "**Air inhalation** – Breathing indoor or outdoor air containing p-cresol. Indoors, cigarette smoke is a significant source of p-cresol in the air; outdoors, emissions from vehicle exhaust, wood burning, or industrial releases can contribute. p-Cresol tends to adhere to particles in smoke which can then be inhaled.",
+          "**Dietary ingestion** – p-Cresol can be ingested through food and water, albeit usually in very low amounts. Foods that are smoked, grilled, or otherwise exposed to smoke may contain a few micrograms of cresols. Drinking water rarely contains significant p-cresol unless contaminated by phenolic waste or creosote; water treatment generally removes phenols due to odor concerns.",
+          "**Dermal contact** – Direct skin exposure to materials containing p-cresol (for example, creosote-treated wood or coal tar ointments) allows p-cresol to penetrate the skin. This route is relevant in occupational scenarios such as wood preservation or in medicinal use of coal tar (though modern practice uses refined products). Proper skin protection can prevent significant absorption.",
+          "**Occupational exposure** – Workers in industries that manufacture or use cresols may inhale vapors or have skin contact with p-cresol. Additionally, healthcare or lab workers handling pure cresol (used to sanitize equipment or as a standard in labs) could be exposed if safety precautions fail. In any case, combined inhalation and dermal exposure is the main risk in the workplace."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "The toxic profile of p-cresol is essentially the same as that of o- and m-cresols. All cresols are corrosive and can cause severe irritation or burns to tissue. High acute exposure to p-cresol vapor can result in coughing, airway irritation, and potentially pulmonary edema (fluid in lungs) if severe. Skin contact with p-cresol can rapidly cause redness, pain, and chemical burns; moreover, p-cresol readily absorbs through skin, potentially leading to systemic poisoning. Symptoms of systemic cresol poisoning include headache, dizziness, nausea, and in serious cases loss of consciousness due to effects on the central nervous system. Chronic or repeated exposure to lower levels of p-cresol can damage the liver, kidneys, and respiratory tract (e.g., chronic bronchial irritation). In animal studies, repeated oral exposure to p-cresol caused lesions in the forestomach and increased liver and kidney weights, indicating organ stress. Like other cresols, p-cresol is metabolized quickly; it converts to conjugated forms (p-cresol sulfate and p-cresol glucuronide) that appear in urine. Detection of free p-cresol in blood is unusual (in part because the body conjugates it efficiently), but an elevated level would imply significant recent exposure. In terms of carcinogenicity, p-cresol is considered a possible carcinogen. Some evidence suggests that p-cresol can act as a tumor promoter on the skin in the presence of other carcinogens, but it has not been shown to initiate tumors on its own. Regulatory agencies often cite an older mouse skin study where mixtures containing p-cresol led to skin tumor promotion, keeping the classification as “possibly carcinogenic” (IARC has not given a separate evaluation to p-cresol alone). Additionally, p-cresol has been studied for its role in human health as a gut microbiome metabolite; at high concentrations internally (such as in severe kidney disease, where p-cresol sulfate accumulates), it can have toxic effects on the cardiovascular and immune system. However, those endogenous effects are beyond typical environmental exposure scenarios. Overall, toxicologically, p-cresol is a hazardous substance requiring careful handling to avoid corrosive injury and systemic toxicity.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Para-cresol is regulated together with the other cresol isomers by various agencies. OSHA and ACGIH workplace limits for “cresol” (all isomers) apply a 5 ppm PEL and 2 ppm TLV with a skin notation, as previously noted. p-Cresol is specifically listed on the U.S. EPA’s List of Toxic Pollutants (as part of “phenolic compounds” and implicitly under cresols) and is subject to reporting under the Toxics Release Inventory (TRI) program. For example, facilities that manufacture or process p-cresol above threshold amounts must report environmental releases. It is also identified as a priority pollutant under the Clean Water Act due to its presence in some industrial effluents (note: 4-methylphenol itself might be grouped under “phenols”). The EPA has a Drinking Water Health Advisory for phenolic compounds, and individually, p-cresol’s odor and taste threshold in water is extremely low (on the order of parts per billion), which effectively drives treatment goals to near-elimination in potable water. In the EU, cresols (including p-cresol) are regulated in cosmetics (prohibited except in tiny allowed concentrations in some rinse-off products) and classified as harmful and corrosive substances. As a naturally occurring bodily metabolite, p-cresol is sometimes monitored in medical contexts (such as assessing gut microbial activity or renal failure markers in blood or urine), but from an environmental health perspective it’s not part of routine population exposure monitoring like NHANES. However, p-cresol’s role as a key marker in certain pollution (like creosote contamination) means it is often measured at Superfund sites or in indoor air studies of smoke. The presence of p-cresol in indoor air (as an indicator of secondhand smoke or building fire residues) can be used by environmental health investigators. Summarily, p-cresol is recognized as a hazardous substance; regulations focus on controlling occupational exposure and preventing significant environmental releases, and its inclusion on chemical hazard lists ensures that its use and disposal are managed to protect public health.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=944&toxid=196",
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
+      "https://haz-map.com/Agents/296",
+      "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    ]
+  },
+  {
+    "compound_name": "Aniline",
+    "cas_rn": "62-53-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Aniline is an aromatic amine (chemical formula C₆H₅NH₂) that appears as a colorless to slightly brown oily liquid with a characteristic amine (rotten fish) odor. It has been produced since the 19th century and was historically known as \"aniline oil.\" Aniline is an important industrial feedstock. Its primary uses are in the manufacture of dyes (especially indigo and other azo dyes) and pigments – the term \"aniline dye\" reflects its central role in early synthetic dye chemistry. It is also used to produce rubber processing chemicals (e.g., vulcanization accelerators for tires), polyurethane foam (as aniline is used to make MDI, a component of polyurethane), agricultural chemicals (certain herbicides and fungicides are synthesized from aniline precursors), pharmaceuticals (aniline was once used to make acetaminophen/paracetamol), and other chemicals like isocyanates and resins. There are no significant direct consumer applications of aniline itself – one would not typically find a bottle of aniline in a household. However, trace amounts of aniline can be present in consumer products indirectly: for example, small residual aniline may be found in new polyurethane foam (e.g., furniture padding) or in some inks or paints due to its use in their production. Aniline is also present in the environment as a pollutant; it can be emitted in combustion of plastics or detected in tobacco smoke (in low concentrations). In sum, aniline’s presence in human blood would most likely come from occupational exposure (e.g., working in a dye or chemical plant) or environmental exposure from industrial pollution, rather than use of a household product containing aniline.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Key exposure routes for aniline include:",
+        "bullets": [
+          "**Inhalation** – Breathing air contaminated with aniline vapors is a major exposure route in occupational settings. Aniline can volatilize; workers in aniline production or those using aniline-based products (like in rubber manufacture) might inhale it if ventilation is poor. The general population could inhale minute amounts from car exhaust or smoke (aniline has been detected in cigarette smoke).",
+          "**Dermal absorption** – Aniline readily passes through skin. Skin contact with aniline (liquid or high-concentration vapor) can lead to significant uptake. In chemical plants, spills or handling aniline without proper gloves can result in absorption through the skin, which is often the most common route of occupational exposure.",
+          "**Ingestion** – Ingestion is a less common route but possible if aniline contaminates drinking water or food near industrial sites. Accidental swallowing could occur if workers don’t wash hands before eating or if aniline leaks into groundwater (it is somewhat water-soluble). However, aniline’s unpleasant taste and odor usually deter significant ingestion. In non-occupational settings, ingestion is unlikely except in cases of environmental contamination.",
+          "Once absorbed (by any route), aniline distributes in the body and is metabolized. Notably, aniline can be converted in the body to p-aminophenol and other metabolites that contribute to its toxicity. Because aniline is often encountered with skin contact, safety guidelines emphasize preventing dermal exposure (OSHA and ACGIH assign a \"skin\" notation)."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Aniline is toxic to humans, with the most characteristic effect being the formation of methemoglobin in blood. When aniline is absorbed, it can oxidize the iron in hemoglobin, producing methemoglobin that cannot carry oxygen efficiently. Acute aniline poisoning often presents with cyanosis (bluish skin/lips), headache, dizziness, fatigue, and at high doses, loss of consciousness, due to hypoxia from methemoglobinemia. The condition can be life-threatening if not treated (typically with methylene blue antidote). Chronic exposure to aniline at lower levels may cause persistent anemia (due to hemolysis and oxidative stress on red blood cells), weakness, and spleen enlargement. Aniline is also a known irritant; liquid aniline in the eyes or on skin causes irritation or burns. Over time, repeated aniline exposure can affect the liver and immune system, though these effects are less defined than the blood-related toxicity. Regarding carcinogenicity, aniline is classified as a probable human carcinogen (IARC Group 2A). Long-term studies in rats showed that aniline exposure led to spleen tumors (splenic fibrosarcomas and sarcomas). Human epidemiological evidence is limited, but some studies of dye workers (exposed to aniline and related chemicals) have suggested an excess of bladder cancer, although benzidine and other aromatic amines are stronger bladder carcinogens than aniline. Nevertheless, regulatory agencies assume aniline poses a cancer risk to humans with chronic exposure. In terms of biomarkers, besides methemoglobin levels, one can measure p-aminophenol in urine (a metabolite) to gauge recent aniline exposure. Aniline has a relatively short half-life in humans (blood half-life on the order of a few hours), so its presence in blood indicates ongoing or very recent exposure. Clinically, individuals with significant aniline exposure might show chocolate-brown colored blood (due to methemoglobin) and require immediate treatment. Overall, the primary health concern of aniline is its acute effect on blood oxygen carrying (which can be rapidly dangerous), with secondary concerns of chronic organ effects and cancer potential upon prolonged exposure.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Aniline is a regulated substance due to its toxicity. In workplaces, OSHA has set a permissible exposure limit (PEL) of 5 ppm (19 mg/m³) for aniline in air, and ACGIH’s threshold limit value (TLV) is 2 ppm, both with a \"skin\" notation indicating the importance of preventing skin exposure. NIOSH considers aniline a potential occupational carcinogen and recommends keeping exposure as low as feasible. The EPA classifies aniline as a hazardous air pollutant and it appears on the Clean Water Act priority pollutant list (due to its presence in some industrial wastewaters). Aniline releases (spills, emissions) above certain amounts must be reported under environmental laws (CERCLA and EPCRA). For example, aniline has a reportable quantity (RQ) of 5000 pounds under CERCLA. The manufacturing and use of aniline in the dye and chemical industry are subject to industrial hygiene monitoring; workers undergo periodic health checks (particularly methemoglobin blood tests) to ensure exposures are within safe limits. Aniline is included in the EPA’s Toxics Release Inventory (TRI) program, so facilities must report annual aniline emissions or disposals. Internationally, the EU’s REACH program lists aniline as a substance of very high concern (SVHC) candidate due to its carcinogenic and mutagenic properties, and it is banned in certain applications (for instance, in textile dyes that can release aniline or similar amines on cleavage). Aniline was historically a key precursor for many brightly-colored dyes, and many aniline-derived dyes have been banned in consumer goods (like benzidine-based dyes) because of concerns over releasing aromatic amines like aniline. Monitoring of aniline in the general population is not routine (unlike, say, lead or mercury), but targeted studies (such as in areas around chemical plants or among smokers) sometimes measure aniline in blood or urine. The CDC’s NHANES program does not currently list aniline as a measured analyte, likely because typical population levels are very low. However, biomonitoring for methemoglobin or related biomarkers could be done in cases of suspected exposure. In summary, robust regulatory measures exist to control aniline exposure: permissible exposure limits protect workers, environmental regulations control emissions, and product safety laws restrict aniline’s presence in consumer items that could lead to human exposure.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://haz-map.com/Agents/296",
+      "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423",
+      "NIOSHPocketGuidetoChemicalHazards–Aniline",
+      "IARCMonographsVolume127(2021)–Aniline,summarizingcarcinogenicitydata"
+    ]
+  },
+  {
+    "compound_name": "Azobenzene",
+    "cas_rn": "103-33-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Azobenzene is an organic molecule consisting of two phenyl rings linked by a N=N azo bond. It is a bright orange-red crystalline solid. Historically, azobenzene itself was used as an intermediate in the manufacture of certain azo dyes and pigments. It can be made by the reduction of nitrobenzene under specific conditions. While many azo compounds are used as dyes, azobenzene is not a dye on its own (it lacks the solubilizing groups needed for textile affinity) but has been a starting material for making dyes or for research in photoresponsive materials. In modern times, azobenzene is well-known in materials science for its photoisomerization property: it can switch between trans- and cis- forms under UV/visible light, which has led to niche applications in molecular switches and liquid crystalline polymers (for example, being incorporated into light-responsive coatings or holographic storage materials). Direct consumer or household uses of azobenzene are virtually non-existent; it is primarily a chemical industry and research compound. It was once examined as a possible insecticide ingredient (under the name “Azofume” due to its effect on insects at high concentrations), but it never became a common pesticide. In summary, azobenzene’s main roles are as a chemical intermediate for dyes and as a specialty chemical in scientific research and advanced materials, rather than as a commercial end-product for general consumers.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Azobenzene",
+          "https://oehha.ca.gov/air/chemicals/azobenzene"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "For the general public, exposure to azobenzene is exceedingly rare. Potential pathways include:",
+        "bullets": [
+          "Occupational exposure: Workers in chemical manufacturing where azobenzene is produced or used could inhale azobenzene dust or vapor or have skin contact. This might occur in dye manufacturing plants or research laboratories handling azobenzene. Proper ventilation and protective equipment typically keep such exposures low.",
+          "Laboratory exposure: Scientists or students working with azobenzene in academic or industrial research might be exposed if handling it without gloves or if generating aerosols during experiments. However, amounts used in labs are small and safety protocols mitigate significant exposure.",
+          "Environmental contamination (theoretical): Azobenzene is not a major industrial pollutant, but if a chemical plant improperly disposed of waste containing azobenzene, local soil or water could have trace contamination. Azobenzene degrades in the environment (especially under sunlight, due to its photoactive nature) and binds to soil, so widespread environmental presence is unlikely.",
+          "Byproducts in dye usage: Some older azo dyes could potentially break down to form azobenzene or related compounds. If someone worked with or incinerated certain azo dyes, trace azobenzene might be released. This would be a minor and infrequent pathway.",
+          "No dietary or consumer product exposure: Azobenzene is not used in foods, drugs, or common consumer products, so one would not ingest or touch it under normal circumstances. Even azo dyes in foods (like sunset yellow or tartrazine) are different compounds that do not produce azobenzene in the body."
+        ],
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Azobenzene"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Toxicologically, azobenzene has some hazards but has not been as extensively studied as more common chemicals. It can be absorbed through the skin and lungs due to its moderate volatility and lipophilicity. Acute exposure to azobenzene in high concentrations may cause irritation of the skin, eyes, and respiratory tract. In animal studies, azobenzene has shown systemic toxicity: it can cause liver damage and hemolysis (destruction of red blood cells). Notably, early bioassays indicated that azobenzene could be carcinogenic in rodents; for example, chronic feeding studies in rats associated azobenzene with liver tumors. It is classified by IARC as possibly carcinogenic to humans (Group 2B) based on sufficient animal evidence. Azobenzene can be metabolized to aromatic amines (like aniline) in the body, which themselves are known toxins. It also can interconvert between isomers under light, but within the body this is less relevant than metabolic breakdown. If azobenzene were detected in human blood, it would likely indicate occupational exposure; it is not naturally present. Chronic low-level exposure might result in symptoms similar to aniline exposure (methemoglobinemia, etc.), given metabolic conversion. There is limited data on reproductive or developmental effects, but given its structural similarity to other aromatic azo compounds, caution is warranted. Overall, the main health concern with azobenzene is its potential carcinogenicity (notably liver cancer in animal models) and its ability to cause organ toxicity at relatively low doses in prolonged exposures. In practice, very few people are chronically exposed to azobenzene today, so it’s a relatively controlled risk.",
+        "sources": [
+          "https://monographs.iarc.fr/wp-content/uploads/2018/06/mono008.pdf",
+          "https://oehha.ca.gov/air/chemicals/azobenzene"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Azobenzene is a regulated substance mainly with respect to workplace safety and chemical manufacturing. It does not have consumer product regulations since it’s not used in consumer products directly. OSHA would treat azobenzene under general hazardous chemical regulations (there isn’t a specific PEL for azobenzene; it would fall under limits for similar chemicals like aromatic amines). Some jurisdictions classify azobenzene as a carcinogen or a hazardous air pollutant. For instance, California’s OEHHA has identified azobenzene on its list of Toxic Air Contaminants due to carcinogenicity findings. Environmental releases of azobenzene are tracked under EPA’s Toxic Release Inventory only if large quantities were used, which is uncommon. If azobenzene is present at a contaminated site (say, a legacy dye plant), cleanup would proceed under Superfund guidelines with azobenzene having health-based soil or water cleanup goals. Internationally, under EU REACH, any manufacturer or importer of azobenzene above 1 tonne/year would need to register it and include hazard information (though current usage volumes are likely low). Azobenzene is flagged for carcinogenic potential, so handling requires labeling as a carcinogen (per GHS standards). In terms of monitoring, there are no standard biomonitoring programs for azobenzene in human tissues given the small exposed population. Occupational health programs in facilities dealing with azobenzene may perform regular health check-ups and possibly urinary aniline tests (a proxy metabolite) to ensure workers are not over-exposed. Similarly, environmental monitoring for azobenzene would be very targeted – like checking air in a plant or emissions – rather than broad-scale. In summary, regulatory attention on azobenzene exists primarily to mitigate occupational exposure and to prevent any significant environmental release, acknowledging its potential health hazards.",
+        "sources": [
+          "https://oehha.ca.gov/air/chemicals/azobenzene",
+          "https://www.osha.gov/dts/chemicalsampling/toc/toc_chemsamp.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Azobenzene",
+      "https://oehha.ca.gov/air/chemicals/azobenzene",
+      "https://monographs.iarc.fr/wp-content/uploads/2018/06/mono008.pdf",
+      "https://www.osha.gov/dts/chemicalsampling/toc/toc_chemsamp.html"
+    ]
+  },
+  {
+    "compound_name": "Benzidine",
+    "cas_rn": "92-87-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Benzidine is a diaromatic amine (formula C₁₂H₁₂N₂) that was once a high-volume industrial chemical primarily used in the production of dyes. It is a crystalline solid (typically off-white) that can darken on exposure to air and light. Historically, benzidine was used to manufacture a large number of benzidine-based azo dyes, which imparted colors (yellow, orange, red) to textiles, leather, and paper. It also found limited use in analytical chemistry (for instance, in a test for blood stains, owing to a color change reaction – the “benzidine test” for blood was an early forensic tool). However, **benzidine is no longer produced or used in the U.S. or most other countries** due to its well-established health hazards. Production largely ceased by the late 1970s in the U.S. and was banned in the EU and many other regions. Any current use would be very specialized or in closed systems. Some benzidine-based dyes are still manufactured in certain countries, but many have been replaced with safer alternatives. If benzidine is detected in human blood today, it likely indicates exposure to older stocks, contaminated environmental sites (e.g., legacy waste from dye factories), or possibly metabolic formation from certain azo dyes that can cleave to form benzidine inside the body. In summary, benzidine itself has no consumer or household use today; its relevance is primarily historical and regulatory, tied to its past use in dye manufacture.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "While current exposures are rare, potential benzidine exposure routes include:",
+        "bullets": [
+          "**Occupational (historical)** – In the past, workers in dye manufacturing plants could inhale benzidine dust or absorb it through skin contact, as it was often handled as a solid or in solution. Those processes are largely discontinued. Today, occupational exposure could occur during remediation of old industrial sites or in illicit small-scale production; inhalation and dermal contact would be the main routes.",
+          "**Environmental** – Benzidine can contaminate soil and groundwater at former dye manufacturing sites. People living near such contaminated sites could be exposed via ingestion of contaminated well water or by incidental ingestion/inhalation of contaminated soil/dust. The general population could also be exposed if benzidine leaches from older materials or products (for instance, certain imported textiles dyed with benzidine-based dyes might release minute amounts of benzidine upon degradation or when metabolized in the body).",
+          "**Metabolic (from dyes)** – A unique pathway is that some azo dyes derived from benzidine can break down (either in the environment or in the human body after ingestion) to yield benzidine. For example, if a person wears or handles materials colored with certain benzidine-based dyes, the dye could be absorbed and enzymatically reduced to benzidine in the body. Similarly, ingestion of foods with illegal dyes or pica behavior (eating colored paper, etc.) might introduce such dyes. This pathway is indirect but documented – benzidine has been found as a metabolite in urine after exposure to some azo dyes.",
+          "In summary, direct benzidine exposure nowadays is extremely limited. Most people will not encounter benzidine itself unless they are involved in environmental clean-up or possibly through contact with banned dyes. If it does occur, **dermal absorption and inhalation** are key pathways given benzidine’s chemical form and use patterns (it can penetrate skin, and fine particles can be inhaled). Ingestion is relevant mainly for water contamination scenarios."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Benzidine is a well-known human carcinogen. Occupational epidemiology in dye workers first established that benzidine exposure led to a high risk of bladder cancer – benzidine is strongly associated with bladder tumors in humans. It is classified by IARC as Group 1 (carcinogenic to humans) and has been on the U.S. OSHA list of confirmed human carcinogens for decades. In addition to bladder cancer, studies in benzidine-exposed workers have noted increased risk of pancreatic cancer and possibly urinary tract cancers. Animal studies confirmed benzidine causes tumors in multiple organs (e.g., liver and mammary tumors in rodents). Mechanistically, benzidine is metabolically activated (in the bladder, it’s converted to reactive forms that bind DNA). Aside from cancer, benzidine’s acute toxicity is less prominent but still noteworthy: high exposure can cause methemoglobinemia (similar to aniline, since benzidine is also an aromatic amine), leading to cyanosis. It can also cause headaches, dizziness, and skin lesions or dermatitis upon contact. Chronic non-cancer effects may include liver injury or hematologic changes (like anemia), but these are overshadowed by its carcinogenic risk. Benzidine is relatively well-absorbed via all routes (GI, lung, skin). Once in the body, it undergoes enzymatic transformations (N-acetylation, for example) and can be detected via its metabolites in urine. In fact, the presence of benzidine or its breakdown products in urine has been used as a biomarker in past occupational health studies. Any detection of benzidine in blood implies recent exposure, given that it’s usually metabolized and excreted fairly quickly (half-life on the order of hours). The key toxicological takeaway is that benzidine exposure, even at low levels, poses a significant long-term cancer hazard; regulatory agencies consider there to be essentially no safe level of exposure. Non-cancer toxicity (acute poisoning) is less commonly observed because exposure situations typically involved low chronic doses that manifested primarily as cancers later on.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Benzidine is one of the most tightly regulated industrial chemicals due to its carcinogenicity. In the United States, OSHA set the benzidine workplace exposure limit to the lowest detectable level and implemented a special standard (29 CFR 1910.1010) effectively banning its non-laboratory use. Benzidine was listed as a \"Category A\" (known human) carcinogen by OSHA and NIOSH. Since 1974, OSHA has had a specific benzidine standard requiring any handling to occur in a designated area with rigorous controls. Most benzidine production was voluntarily phased out by industry, and EPA formally banned its commercial production and use in the late 1970s. The EPA also includes benzidine on its Priority Pollutants list for water; the Safe Drinking Water Act has a Maximum Contaminant Level Goal of zero for benzidine, and a very low practical quantitation limit (on the order of 0.1 ppb) given its potency. Benzidine and its salts were added to the U.S. CERCLA hazardous substances list (with a reportable quantity of 1 pound, reflecting its high hazard). Internationally, benzidine is on the list of carcinogenic substances banned or severely restricted by many countries. In the EU, it’s classified as Carc. 1A and has been banned for decades; REACH prohibits its use and import. Many benzidine-based azo dyes were also banned in the EU (notably in textiles that have skin contact) because they can release benzidine on reductive cleavage. For monitoring, the CDC does not monitor benzidine in the general population since exposures are expected to be near zero. However, specific worker surveillance programs in the mid-20th century did test urine for benzidine and its metabolites. EPA’s National Priorities List (Superfund) includes several benzidine-contaminated sites requiring clean-up – at those, monitoring of groundwater and soil for benzidine continues until remediation goals (often in the low ppb range) are met. On California’s Proposition 65 list, benzidine was one of the earliest entries (listed in 1987) and has an exceedingly low “No Significant Risk Level” established (for example, 0.001 µg/day), essentially barring any deliberate addition of benzidine to products. In summary, benzidine is essentially treated as a banned substance in commerce, and regulatory efforts focus on preventing legacy exposures and curbing any remaining unauthorized uses. The consensus is that any non-zero exposure to benzidine is unacceptable from a public health standpoint.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://oehha.ca.gov/chemicals/benzidine",
+      "IARCMonographsSuppl.7(1987)–Benzidinesummary",
+      "OSHA1910.1010–Benzidinestandard",
+      "EPATechnicalFactSheetonBenzidine–regulatorylimitsandprioritypollutantstatus"
+    ]
+  },
+  {
+    "compound_name": "Benzo[a]pyrene",
+    "cas_rn": "50-32-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Benzo[a]pyrene (BaP) is a polycyclic aromatic hydrocarbon (PAH) composed of five fused benzene rings. It is not manufactured for consumer use, except as a laboratory research chemical, and has no commercial applications. Instead, BaP is predominantly formed as a byproduct of incomplete combustion of organic matter. It is a natural component of coal tar and is present in soot, tobacco smoke, vehicle exhaust, charred foods, and smoke from burning organic materials. Highest occupational BaP levels historically occurred in industries like aluminum smelting, coke ovens, or roofing with coal tar pitch. In everyday contexts, BaP can be found in small quantities in grilled or smoked foods and polluted urban air.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Humans are ubiquitously exposed to BaP through environmental and dietary sources. Key exposure pathways include:",
+        "bullets": [
+          "**Inhalation** – Breathing air containing BaP from cigarette smoke, wood smoke, vehicle exhaust, or industrial emissions is a primary route. Indoor sources (e.g., secondhand smoke, cooking fumes) and outdoor polluted air contribute to BaP intake.",
+          "**Ingestion** – Consuming charred or smoked foods (like grilled meats) and ingesting BaP that has settled on crops or in water can introduce BaP via the digestive tract. BaP adheres to airborne particulates that can deposit on soil and food crops.",
+          "**Dermal contact** – Skin contact with soot, tar, or contaminated soil (e.g., handling creosote-treated wood or charcoal) can allow BaP absorption through the skin. BaP in smoke particulate can also deposit on skin and be absorbed.",
+          "In occupational settings, **inhalation and dermal** exposure to BaP can be significant for workers in coke production, paving, or chimney cleaning, where PAH-rich tar and soot are present."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Benzo[a]pyrene is well studied for its toxicological properties as a representative PAH. It does not accumulate long-term in the body; BaP is metabolized to reactive intermediates (such as benzo[a]pyrene diol epoxides) and excreted, so detection of BaP or its metabolites in blood or urine generally indicates recent exposure. BaP’s metabolites can bind to DNA, and BaP is a known mutagen. BaP exposure is primarily associated with carcinogenicity in experimental studies – it has produced tumors in multiple animal models (e.g., skin, lung) and is classified as a known human carcinogen (International Agency for Research on Cancer Group 1). However, direct epidemiological links to BaP alone are difficult since it co-occurs with other PAHs. Non-cancer effects of high BaP exposure can include respiratory irritation and oxidative stress. BaP is often used as a biomarker compound for PAH exposure overall; for example, 1-hydroxypyrene in urine is a common biomarker of PAH exposure (since pyrene often co-occurs with BaP). Major biological targets studied for BaP toxicity include the respiratory system (inhalation of soot), skin (with chronic dermal exposure potentially causing lesions), and the immune and developmental systems (in animal studies). Notably, BaP is a potent aryl hydrocarbon receptor (AhR) agonist, which can alter expression of metabolizing enzymes and contribute to its toxic profile.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Because of its toxicity, BaP is tightly regulated and monitored. The U.S. Environmental Protection Agency (EPA) includes BaP among the 16 PAHs classified as priority pollutants under the Clean Water Act. EPA has set limits for BaP in drinking water (a Maximum Contaminant Level of 0.2 µg/L in the U.S.). Internationally, BaP is often used as an indicator PAH: for instance, the EU previously regulated BaP in food oils and now regulates the sum of several PAHs including BaP due to food safety concerns. BaP is listed as a known carcinogen by numerous agencies (e.g., California Proposition 65 since 1987). Workplace air standards exist for PAH mixtures (coal tar pitch volatiles), and BaP contributes to those. The World Health Organization (WHO) and national agencies (like Canada’s OEHHA) have derived unit risk factors for BaP inhalation and oral exposure. In biomonitoring, the U.S. CDC tracks PAH exposure through urinary metabolites (e.g., 1-hydroxypyrene) in the National Health and Nutrition Examination Survey (NHANES). Overall, BaP’s presence in the environment is widely measured, and efforts to reduce BaP emissions (from diesel engines, smoking, etc.) form part of air quality and public health policies.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://haz-map.com/Agents/8146",
+      "https://oehha.ca.gov/chemicals/benzoapyrene",
+      "https://www.ncbi.nlm.nih.gov/books/NBK304410/(IARCMonographs-Group1listings",
+      "https://www.atsdr.cdc.gov/csem/pah/docs/pah.pdf(ATSDRcasestudyonPAHs,forexposureinfo",
+      "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-N/part-423/appendix-Appendix%20A%20to%20Part%20423"
+    ]
+  },
+  {
+    "compound_name": "Dibenzofuran",
+    "cas_rn": "132-64-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dibenzofuran is a polycyclic aromatic compound consisting of two benzene rings joined by a furan (oxygen-containing) ring. It appears as a white crystalline solid and is a persistent environmental pollutant rather than a deliberately manufactured consumer product. There are no significant commercial uses for dibenzofuran itself. Historically, it has been encountered as an impurity in coal tar and as a minor constituent in certain heat-transfer fluids. Dibenzofuran can also be formed during combustion processes (for example, in coal-fired power plants or waste incineration) and is found in the tar fraction of coal gasification. Some of its derivatives (especially polychlorinated dibenzofurans, PCDFs) have been of concern as toxic contaminants (e.g., in PCB transformer fires or as impurities in some herbicides), but the parent compound dibenzofuran is less toxic and was not itself targeted for specific industrial applications. It has been used in research contexts to study degradation of aromatic compounds by bacteria. In summary, there are no typical household or consumer uses for dibenzofuran; any presence in human blood would likely be due to environmental exposure to combustion byproducts or contaminated sites, rather than use of a product containing dibenzofuran.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Major exposure routes for dibenzofuran include:",
+        "bullets": [
+          "**Inhalation of contaminated air** – This is the primary pathway. Dibenzofuran is released into air via combustion of coal, wood, or waste. Occupational settings like coal tar processing, coal gasification, or coke oven operations can generate dibenzofuran in workplace air. The general public may inhale dibenzofuran in polluted air near incinerators or coal-burning facilities.",
+          "**Ingestion of contaminated food or water** – Dibenzofuran can deposit on soil and water bodies from air emissions. It has been detected at low levels in some groundwater near creosote-contaminated sites and in soil or sediments. Humans might ingest it by eating food grown in contaminated soil or fish from contaminated water, though at trace concentrations. Overall, ingestion is a less significant route compared to inhalation, but not zero.",
+          "**Dermal contact** – Direct skin contact with soot, tar, or contaminated soils containing dibenzofuran can occur, especially for workers at hazardous waste sites or in industries handling coal tar. Dibenzofuran is somewhat lipophilic and can adhere to skin oils, but absorption through intact skin is limited. Nonetheless, contact with creosote or tar (which contain dibenzofuran) could allow some uptake through the skin.",
+          "It should be noted that polychlorinated dibenzofurans (toxic dioxin-like compounds) often co-occur with dibenzofuran. Therefore, exposure to dibenzofuran might indicate concurrent exposure to related toxic substances, although the pathways are the same (breathing smoke or dust, ingesting contaminated media, or skin contact with contaminated materials)."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Relatively little specific toxicological data exists for dibenzofuran in humans or laboratory animals, especially compared to its chlorinated analogues. Dibenzofuran is considered less acutely toxic than dioxins or PCBs. No acute poisoning cases in humans have been directly attributed to dibenzofuran alone. In occupational studies, workers chronically exposed to coal tar (containing dibenzofuran among many components) have shown respiratory issues and skin irritation, but it’s hard to single out dibenzofuran’s contribution. High doses in animals (from limited studies) can cause weight loss and liver enzyme changes, but definitive chronic effects were not well characterized. Importantly, the U.S. EPA has classified dibenzofuran as Group D – not classifiable as to human carcinogenicity – due to inadequate evidence. This means there isn’t clear evidence that dibenzofuran causes cancer in animals or humans. That said, certain polychlorinated dibenzofurans are known carcinogens and share the core structure, but the parent compound is less biologically active. If dibenzofuran is detected in blood, it likely indicates recent environmental exposure (e.g., inhaling smoke or dust from a contaminated site) because it does not accumulate significantly in human tissues (in contrast to chlorinated dioxins which do accumulate). Dibenzofuran is moderately persistent in the environment; in the body, it would be metabolized via cytochrome P450 enzymes to more water-soluble metabolites and excreted. No known unique biomarkers for dibenzofuran exposure are used clinically. Overall, health concerns for dibenzofuran itself center on general irritant effects (as part of soot/tar exposure) and the possibility of systemic effects at high doses, but the lack of observed toxicity data suggests it is of lower concern than many other aromatic pollutants. Its presence alongside more toxic compounds often complicates risk assessment, so in practice, monitoring and mitigating dibenzofuran exposure also reduces exposure to co-contaminants.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Dibenzofuran is monitored and regulated mainly in the context of environmental pollution control. The EPA has identified dibenzofuran as a \"pollutant of concern\" in its Great Waters Program due to persistence, bioaccumulation potential, and toxicity to wildlife. However, unlike chlorinated dioxins/furans, it is not subject to strict toxin-specific regulations. For example, there are no specific EPA ambient air quality standards for dibenzofuran, but facilities that emit coal tar pitch volatiles or PAHs (categories that include dibenzofuran) are regulated, which indirectly controls dibenzofuran. OSHA does not have a separate PEL for dibenzofuran vapor, and it is not on the OSHA list of specifically regulated carcinogens. At contaminated sites (Superfund sites), dibenzofuran is often included in the suite of semi-volatile organic compounds tested. Clean-up guidelines might reference risk-based concentrations; for instance, some states have soil cleanup target levels for dibenzofuran to protect groundwater and human health. The EPA’s Integrated Risk Information System (IRIS) provides a provisional oral reference dose and inhalation reference concentration for dibenzofuran based on limited data (these values are used to gauge risk from chronic exposure). Internationally, agencies focus on polychlorinated dibenzofurans (the highly toxic dioxin-like compounds), while unsubstituted dibenzofuran gets comparatively less attention. Nonetheless, its listing as a Hazardous Air Pollutant (as part of \"polycyclic organic matter\") means large emitters must report and control it. In summary, dibenzofuran’s regulatory profile is as an environmental pollutant to monitor, especially at sites of incomplete combustion or creosote contamination, and actions to control soot, tar, and industrial emissions address it. Public health monitoring would not normally measure dibenzofuran in human blood outside of specialized exposure studies, but its inclusion in national reports (like the EPA’s National Air Toxics Assessment) underscores the need to minimize its release.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://www.epa.gov/sites/default/files/2016-09/documents/dibenzofuran.pdf",
+      "EPAIRIS(DibenzofuranQuickView)–ClassificationGroupD",
+      "ATSDR1995GreatLakes“Pollutantofconcern”list–mentionsDibenzofuran"
+    ]
+  },
+  {
+    "compound_name": "Diphenylamine",
+    "cas_rn": "122-39-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Diphenylamine (DPA) is an aromatic amine with the formula (C₆H₅)₂NH. It is a colorless to tan solid (leaflet or crystalline form) that emits a mild pleasant odor. DPA is used in a variety of industrial applications. One major use is as an antioxidant in certain products: for example, DPA is added to some lubricants and to rubber mixtures to prevent degradation (particularly in automobile tires). It has also been used in the manufacture of dyes and photographic chemicals. Another significant application is in agriculture – diphenylamine is used post-harvest on apples and pears to prevent a storage disorder called “superficial scald.” Fruits are often dipped in or coated with DPA (in ppm levels) before cold storage to preserve their skin quality. Diphenylamine had historical uses in explosives as well; it’s been used as a stabilizer for nitrocellulose explosives and in gunpowder formulations to prevent decomposition. In consumer contexts, direct DPA use is limited, but residues can be present on treated apples (regulated by law to safe levels) and in trace amounts in rubber goods or oils that used DPA as a stabilizer. Diphenylamine was also formerly used in some veterinary medicine preparations. Overall, while not a household chemical per se, DPA can be encountered through treated produce or contact with materials containing it (e.g., tires or industrial oils). Its detection in blood could result from dietary intake of treated fruit or occupational exposure in industries using DPA.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Potential diphenylamine exposure routes include:",
+        "bullets": [
+          "**Dietary ingestion** – The general population’s primary exposure is likely through eating apples or other fruit that have been treated with diphenylamine post-harvest. Regulatory agencies set maximum residue limits (for instance, in the U.S. it's 10 ppm on apples). Washing and peeling reduce residues, but some DPA can be ingested. This use is seasonal and controlled, so exposures are low. Drinking water is not commonly a DPA source, unless near a manufacturing plant or disposal site.",
+          "**Occupational inhalation and dermal** – Workers in factories producing or using DPA (e.g., rubber manufacturing, lubricant blending, fruit packing houses where DPA dips are applied) may inhale DPA dust or aerosol and have skin contact with it. DPA has low vapor pressure but can form dust when handled as a powder. Dermal exposure can occur when handling DPA formulations or treated fruit without gloves. Absorption through skin is possible for aromatic amines, though specific data for DPA is limited.",
+          "**Environmental** – Diphenylamine has been found as a pollutant at some hazardous waste sites, likely from its use in munitions or as a chemical waste from manufacturing. In such localized scenarios, people could be exposed via contaminated soil or groundwater (ingestion, dermal contact, or inhalation of dust). DPA in the environment degrades moderately fast (it can break down in soil and water to aniline and other products), but near point sources, exposure could occur.",
+          "Overall, current typical exposure to DPA for the general public is quite low and mainly oral (dietary). Occupational exposure (inhalation/dermal) historically occurred in industries like tire manufacturing (as DPA is used in rubber antioxidants), but now protective measures and possibly alternative chemicals limit that. Blood detection of DPA might reflect recent substantial exposure (e.g., in an industrial incident or high dietary intake beyond normal)."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Diphenylamine’s acute toxicity is considered moderate. It can irritate the skin, eyes, and respiratory tract upon contact. High oral doses in animals cause methemoglobinemia and kidney damage (specifically, DPA has been associated with the development of cystic kidneys in rodents). In humans, excessive exposure could similarly cause symptoms of hemoglobin oxidation (cyanosis, fatigue), although cases are rare. Chronic exposure studies in animals have shown that diphenylamine can affect the bladder (in dogs, it caused lesions in the bladder at high doses) and the liver. It is not classed as a confirmed human carcinogen; however, some older rodent studies suggested an increase in bladder tumors in female mice at high chronic dietary doses of DPA. Regulatory agencies regard this evidence as limited or equivocal (for example, EPA has not classified DPA as to human carcinogenicity due to insufficient data). There is no strong evidence of DPA causing cancer in humans. Reproductively, DPA has been observed to cause developmental toxicity in rodents at maternally toxic doses (e.g., reduced fetal weight), but it’s not a known human teratogen. The primary health concern for workplace DPA exposure historically was its effect on the kidneys and bladder, and potential blood changes. DPA is metabolized partly to aniline and p-aminodiphenylamine in the body, which could contribute to methemoglobin formation. If DPA is found in blood, it likely indicates ongoing exposure, as DPA doesn’t bioaccumulate and would be excreted (mainly via urine) within days. In essence, while not as acutely hazardous as some aromatic amines, diphenylamine can cause organ damage (kidney, liver, blood) at high doses and has raised long-term toxicity questions. Standard toxicology evaluations have set oral reference doses to protect against these chronic effects (for instance, EPA’s provisional RfD for DPA is 0.02 mg/kg/day based on kidney effects). Adherence to regulated residue limits in food ensures that typical exposure levels are far below those causing observable effects.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Diphenylamine is regulated in several domains. In agriculture, DPA is registered as a post-harvest pesticide. Regulatory agencies like the U.S. EPA and EU have established Maximum Residue Limits (MRLs) for DPA on apples/pears (e.g., 10 ppm in the U.S., 5 ppm in the EU as of current standards). These limits are enforced through food monitoring, and, in fact, the EU suspended use of DPA on apples in 2012 due to concerns about nitrosamine impurities, thus imported apples must meet very low DPA residue standards. In the workplace, DPA is on advisory occupational hazard lists (OSHA and ACGIH list it on their hazardous substance lists). The New Jersey hazardous substance fact sheet notes DPA can affect the kidneys and bladder and includes recommendations for protective measures. There isn’t a specific OSHA PEL for diphenylamine, but a NIOSH/OSHA guideline of 10 mg/m³ (inhalable dust) has been used as an exposure limit. DPA is also listed by the EPA on the Toxic Substances Control Act (TSCA) Inventory; any significant new use might require notification. Environmental cleanup values exist because DPA appears on some state cleanup lists: for instance, if soil or groundwater is contaminated, risk-based screening levels guide remediation (often a few ppm in soil). On an international level, diphenylamine is not classified as a carcinogen or mutagen under GHS; it is classified as hazardous (for toxicity to target organs). The European Chemicals Agency (ECHA) classifies DPA as harmful if swallowed and very toxic to aquatic life (since DPA has been observed to have some aquatic toxicity, environmental discharge is regulated). Monitoring: the USDA and FDA include DPA in their pesticide residue testing programs for produce, and results have shown compliance with limits in recent years. Occupational monitoring would involve measuring DPA levels in air or perhaps metabolites (like aniline) in urine of workers, but given the limited hazard relative to more toxic chemicals, routine biomonitoring for DPA is not common. Summarily, DPA’s use is permitted but closely regulated in specific contexts (like fruit storage), and protections are in place to keep exposure low. The compound is on hazard lists (e.g., U.S. EPA’s list of toxic pollutants in some contexts), ensuring that industries using DPA follow environmental and safety regulations. As an example, industries must report significant DPA releases to EPA’s TRI if thresholds are exceeded. The current regulatory consensus is that when used as intended (e.g., at regulated levels on fruit, or as a bound antioxidant in rubber), DPA does not pose significant risk to the public, but occupational handlers and contaminated sites must be managed to prevent excessive exposure.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
+      "WashingtonStateUniversityTreeFruitextension–DPAuseinscaldcontrol",
+      "EPA2014:DiphenylaminecancellationinEUandresiduemonitoringresults",
+      "40CFRPart423AppendixA"
+    ]
+  },
+  {
+    "compound_name": "Ethyl methanesulfonate",
+    "cas_rn": "62-50-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Ethyl methanesulfonate (EMS) is a chemical mutagen belonging to the alkylating agents class. It is a colorless liquid with a faint pleasant odor. EMS is not a household or consumer-use chemical; its primary use is in research and biotechnology. In laboratory settings, EMS is extensively used to induce random genetic mutations in organisms (such as fruit flies, plants, worms, and cell cultures) for experimental purposes. For example, EMS mutagenesis is a common technique in plant breeding and in genetic screens because EMS introduces point mutations in DNA. Outside of research, EMS has essentially no commercial applications due to its potent DNA-damaging properties. It has occasionally been encountered as a trace impurity in certain chemical syntheses or pharmaceuticals (where residual solvents like ethyl sulfate can react to form EMS), which has prompted regulatory scrutiny in drug manufacturing. However, EMS is not intentionally present in consumer products. Therefore, any detection of EMS in human blood would likely be from an occupational exposure in a laboratory or an incident (such as accidental release or contamination), rather than everyday consumer activities.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Ethyl methanesulfonate exposure is uncommon and primarily concerns specialized workplaces:",
+        "bullets": [
+          "**Occupational (inhalation and dermal)** – Laboratory personnel or factory workers who handle EMS (for mutagenesis experiments or chemical synthesis) could be exposed by breathing EMS vapors or aerosol, or by skin contact if spills occur. EMS is reasonably volatile and can be inhaled if not handled in a fume hood. Skin absorption is also a serious concern, as EMS can readily penetrate skin and is toxic through dermal uptake. Strict controls (gloves, lab coat, fume hood) are used because EMS should be treated as a carcinogen and teratogen.",
+          "**Accidental ingestion** – In a lab, accidental hand-to-mouth contact or poorly handled contaminated food/drink could lead to ingestion. This is highly unlikely in a controlled lab, but any ingestion would be dangerous given EMS’s potency.",
+          "**Environmental** – EMS is not stable in the environment for long; it hydrolyzes in water to ethanol and methanesulfonic acid. As a result, general population exposure via air, water, or soil is expected to be negligible. There are no known cases of EMS contamination in environmental media at levels of concern. Thus, non-occupational exposure pathways are essentially absent under normal conditions.",
+          "In summary, exposure to EMS is almost exclusively occupational and usually intentional (as part of experimental procedures). The small number of people working with EMS do so under safety protocols. EMS is not in consumer items, so the public’s exposure is virtually zero."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Ethyl methanesulfonate is a highly reactive alkylating agent that can transfer ethyl groups to DNA bases, causing mutations (like base substitutions). Health-wise, this means EMS is a potent genotoxic chemical. Animal studies have shown that EMS exposure can induce tumors; for example, chronic exposure in rats caused increased incidence of lung and kidney cancers, and EMS is therefore regarded as a possible human carcinogen. It also has teratogenic effects (can cause birth defects) in animal experiments. Acute toxicity: EMS can irritate eyes, skin, and respiratory tract on contact. Short-term inhalation may cause symptoms such as cough or sore throat, while skin contact can lead to redness or burns. At higher exposures, systemic effects like nausea, vomiting, and central nervous system depression (drowsiness) have been reported. There is evidence from animal tests that EMS can cause heritable genetic damage (mutations passed to offspring), making it a concern for reproductive health. In humans, no large-scale epidemiological data exist (given the small exposed population), but it is prudent to assume EMS could increase cancer or reproductive risk in exposed workers. If EMS were found in blood, it would indicate a very recent exposure because EMS is rapidly acting and also can hydrolyze in the body. The presence of EMS itself in blood would be rare; more likely, one would detect biomarkers of DNA or protein alkylation. There are no routine medical tests for EMS exposure specifically, but genetic assays (like the Ames test or chromosomal aberration tests) readily demonstrate its mutagenic potential. Clinically, any significant EMS exposure would be handled as an emergency, with measures to decontaminate and supportive care. In summary, EMS is recognized as a dangerous chemical – mutagenic, carcinogenic (inferred), and toxic via multiple routes – which is why it is handled with extreme caution in lab environments.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Ethyl methanesulfonate is subject to stringent control due to its hazardous nature. Although not produced in large quantities, it appears on various regulatory lists. For instance, EMS is listed by the U.S. National Toxicology Program (NTP) as a substance “reasonably anticipated to be a human carcinogen,” and by IARC as a Group 2A (probably carcinogenic) or similar category (based on sufficient evidence of carcinogenicity in animals). It is also cited by EPA’s IRIS program and is included on the Special Health Hazard Substance List in New Jersey due to its carcinogenic, mutagenic, and teratogenic properties. Workplace safety regulations require that EMS be handled in a chemical fume hood with appropriate personal protective equipment (PPE). There are no established OSHA PEL or ACGIH TLV for EMS specifically (likely because it is not used widely enough to warrant a standard, and any exposure should be minimized to as low as possible). Instead, guidelines demand treating EMS as if no safe exposure level exists. Laboratories using EMS follow OSHA’s Laboratory Standard and implement chemical hygiene plans that designate EMS as a “select carcinogen” requiring special handling and storage. EMS waste is managed as hazardous waste, and many countries require that any EMS spills or releases be reported to environmental authorities. Regarding pharmaceutical manufacturing, regulatory agencies like the FDA and EMA have set strict limits for EMS as a potential impurity in drug products (usually in the low ppm or ppb range) because of its genotoxicity – part of the guidance on genotoxic impurities. Environmental monitoring of EMS is not a focus (due to rare use and rapid breakdown), but any accidental release would trigger immediate remediation efforts. In summary, regulatory frameworks treat EMS with utmost caution: it is effectively controlled at the source (labs and factories), and it is not allowed in consumer products. The small number of workers potentially exposed fall under occupational health surveillance. EMS’s inclusion in hazard communication documents (material safety data sheets) mandates warning labels indicating it “may cause genetic defects” and “may cause cancer”, reinforcing the safety-first approach to this compound.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/1203.pdf",
+      "PubMed:UsesofEMSinmutagenesis",
+      "FisherScientificSDSforEMS"
+    ]
+  },
+  {
+    "compound_name": "Dibenzo[a,i]pyrene",
+    "cas_rn": "189-55-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dibenzo[a,i]pyrene is a high molecular weight polycyclic aromatic hydrocarbon (PAH) composed of six fused benzene rings. It is not manufactured for consumer use, but rather is a byproduct of incomplete combustion. This compound has been identified in complex hydrocarbon mixtures such as soot and tobacco smoke. Dibenzo[a,i]pyrene is noted for its potent mutagenic properties and is often grouped with other priority pollutant PAHs due to concerns about its carcinogenic potential. In household or urban settings, it may be present in minute quantities as part of the PAH content of polluted air or deposited onto surfaces via smoke and exhaust.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dibenzopyrenes",
+          "https://oehha.ca.gov/chemicals/dibenzoaipyrene"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "As a combustion-derived pollutant, exposure to dibenzo[a,i]pyrene occurs alongside other PAHs rather than from any direct product use. It adheres to fine particulate matter in smoke and dust. Major human exposure routes include:",
+        "bullets": [
+          "**Inhalation of smoke and polluted air:** Dibenzo[a,i]pyrene can be breathed in with tobacco smoke, wood smoke, vehicle exhaust, or any smoke from burning organic matter. Indoor sources like cigarette smoke and indoor cooking fires contribute to this pathway.",
+          "**Ingestion of contaminated food or dust:** PAHs like dibenzo[a,i]pyrene can settle on crops, soil, and dust. Eating charred foods, smoked meats, or produce grown in polluted areas can introduce small amounts into the body. Young children might also ingest it via household dust or soil ingestion.",
+          "**Dermal contact with soot or tar:** Skin exposure can occur by handling materials coated with soot/ash (for example, soot in a fireplace or creosote-treated wood) that contain PAHs. While dermal uptake of these large PAH molecules is limited, prolonged skin contact with contaminated surfaces can lead to some absorption."
+        ],
+        "sources": [
+          "https://www.inchem.org/documents/iarc/vol32/dibenzo[a,i]pyrene.html",
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "In humans, detecting dibenzo[a,i]pyrene in blood signifies recent exposure, since PAH compounds are rapidly metabolized and excreted (typically within a few days). Toxicologically, dibenzo[a,i]pyrene is among the PAHs studied for carcinogenic and mutagenic effects. It has been shown to cause tumors in laboratory animals, indicating **sufficient evidence of carcinogenicity in experimental models**. This PAH forms reactive metabolites that can bind to DNA, and such PAH–DNA adducts are used as biomarkers of exposure and effect in research. There is inadequate direct human data due to its presence only in mixtures, but public health agencies treat dibenzo[a,i]pyrene as a suspected human carcinogen given the strong animal findings and its structural similarity to known carcinogenic PAHs. Aside from carcinogenesis, short-term high exposures to PAHs can irritate the respiratory tract or skin, but dibenzo[a,i]pyrene has not been linked to specific non-cancer health outcomes beyond those general to PAH exposure.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
+          "https://www.inchem.org/documents/iarc/vol32/dibenzo[a,i]pyrene.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Dibenzo[a,i]pyrene is addressed within broader PAH regulations and monitoring. The International Agency for Research on Cancer (IARC) noted as early as the 1980s that this compound is carcinogenic in animals, and in the absence of human data it has been handled \"as if\" carcinogenic to humans (it was later classified with other similar PAHs as possibly carcinogenic). The European Union includes dibenzo[a,i]pyrene (and related isomers) in its priority PAH lists for environmental monitoring due to mutagenicity and suspected human carcinogenicity. In California, it has been listed as a carcinogen under Proposition 65 since 1988, with a very low No Significant Risk Level established (0.005 µg/day for oral exposure). While no specific OSHA or EPA exposure limit exists solely for dibenzo[a,i]pyrene, general regulations on PAH emissions (for air quality) and PAH content in foods and drinking water indirectly seek to minimize exposure. Environmental agencies (like the U.S. EPA and EU regulators) track high molecular weight PAHs in air particulates and soil; dibenzo[a,i]pyrene is one of the analytes measured in specialized studies of air pollution and contaminated sites, though routine human biomonitoring programs typically measure PAH metabolites rather than this compound itself.",
+        "sources": [
+          "https://www.inchem.org/documents/iarc/vol32/dibenzo[a,i]pyrene.html",
+          "https://en.wikipedia.org/wiki/Dibenzopyrenes",
+          "https://oehha.ca.gov/chemicals/dibenzoaipyrene"
+        ]
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Dibenzopyrenes",
+      "https://oehha.ca.gov/chemicals/dibenzoaipyrene",
+      "https://www.inchem.org/documents/iarc/vol32/dibenzo[a,i]pyrene.html",
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+    ]
+  },
+  {
+    "compound_name": "Dibenzo[a,l]pyrene",
+    "cas_rn": "191-30-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dibenzo[a,l]pyrene (DB[a,l]P) is a PAH consisting of six fused aromatic rings, making it one of the highest molecular weight PAHs commonly studied. It is closely related in structure to DB[a,i]P. Like other dibenzopyrenes, it is not manufactured for any commercial or household purpose; it forms unintentionally during high-temperature combustion of organic matter. DB[a,l]P has been detected as a trace contaminant in combustion products – notably, it is present in tobacco smoke and in soot/tar from burning fuels. It has no direct consumer uses. However, it is often examined in research settings due to its remarkably high carcinogenic potency among PAHs.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/toxprofiles/tp69.pdf",
+          "https://oehha.ca.gov/chemicals/dibenzoalpyrene"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to DB[a,l]pyrene primarily occurs through inhalation and ingestion, as is typical for PAHs, with minor contributions from dermal contact in certain scenarios.",
+        "bullets": [
+          "**Inhalation:** Breathing air that contains smoke or particulate pollution is the main exposure route. DB[a,l]P is present in cigarette smoke and in polluted air from combustion sources (e.g., vehicle exhaust, residential wood smoke), although usually in very small concentrations. It adheres to fine particles in smoke, which can be inhaled into the lungs.",
+          "**Ingestion:** Consuming food or water contaminated with PAHs can introduce DB[a,l]P. IARC has noted that human exposure to DB[a,l]P can occur via ingestion of food items contaminated by combustion byproducts. For example, charred meats or smoked foods may contain PAH residues, and PAHs from air pollution can settle on crops or in water. Incidental ingestion of soil or dust (especially by children) that contains deposited PAHs is another possible pathway.",
+          "**Dermal contact:** Skin exposure to DB[a,l]P can happen by touching PAH-containing substances like creosote, tar, or sooty surfaces. PAHs can penetrate the skin to some extent. Occupational settings (such as handling creosote-treated wood or coke oven emissions) could lead to dermal uptake of DB[a,l]P. Generally, however, dermal exposure is a less significant route compared to inhalation of PAH-laden air or ingestion of contaminated food/water."
+        ],
+        "sources": [
+          "https://inchem.org/documents/iarc/vol32/dibenzo[a,l]pyrene.html",
+          "https://oehha.ca.gov/chemicals/dibenzoalpyrene"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "DB[a,l]P is one of the most potently carcinogenic PAHs known. It is rapidly metabolized in the human body, so its detection in blood or tissues indicates fairly recent exposure. Toxicologically, the primary concern with DB[a,l]P is its ability to initiate cancer. In laboratory experiments, DB[a,l]P has induced malignant tumors at relatively low doses. For instance, mouse skin studies demonstrate that DB[a,l]P can produce significantly more tumors than other well-known carcinogenic PAHs (like benzo[a]pyrene or 7,12-dimethylbenz[a]anthracene) under comparable conditions. Mechanistically, DB[a,l]P is metabolized to diol epoxides that form strong DNA adducts, leading to mutations and chromosomal damage. Because of this, research on DB[a,l]P has focused on cancer-related endpoints (e.g., lung, skin, and liver tumors in animal models) and on biomarkers such as PAH-DNA adduct levels. Direct human data are limited – we do not have epidemiological studies specific to DB[a,l]P – but based on animal evidence, it is treated as a probable human carcinogen. Non-cancer effects of DB[a,l]P are less documented; high exposures to PAH mixtures including DB[a,l]P can cause immunotoxic or developmental effects in animals, but those typically occur at exposure levels far above those seen in general environmental settings.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/8504480/",
+          "https://inchem.org/documents/iarc/vol32/dibenzo[a,l]pyrene.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Given its extreme potency, DB[a,l]P is a key reference compound in PAH risk assessments. California has listed DB[a,l]P as a carcinogen under Proposition 65 (effective 1988). Regulatory values highlight its hazard: California’s Air Toxics program, for example, assigns DB[a,l]P an oral cancer slope factor on the order of 120 (mg/kg-day)^−1, which is among the highest for PAHs. Internationally, IARC currently classifies dibenzo[a,l]pyrene as *probably carcinogenic to humans (Group 2A)*, reflecting the strong animal evidence and mechanistic data. The U.S. EPA and other agencies typically regulate DB[a,l]P indirectly, as part of total PAH emissions and via the use of toxic equivalency factors. In air and soil pollution monitoring, DB[a,l]P is measured in specialized studies and is often found to dominate the carcinogenic risk contribution of PAH mixtures. For example, one vehicle exhaust study found that dibenzo[a,l]pyrene alone accounted for roughly 58–67% of the total calculated PAH carcinogenic potency in diesel particulate matter. In the European Union, while DB[a,l]P has no separate regulatory standard, it is encompassed by EU PAH limits (such as those for PAHs in food and consumer products). Overall, monitoring of DB[a,l]P occurs as part of advanced environmental analyses (like high-sensitivity PAH profiling of air particulates), and its control is achieved by limiting PAH emissions from combustion sources generally.",
+        "sources": [
+          "https://oehha.ca.gov/chemicals/dibenzoalpyrene",
+          "https://oehha.ca.gov/chemicals/dibenzoalpyrene#cancer-potency",
+          "https://pubchem.ncbi.nlm.nih.gov/compound/dibenzo%5Ba%2Cl%5Dpyrene",
+          "https://hero.epa.gov/hero/index.cfm/reference/details/reference_id/2091817"
+        ]
+      }
+    ],
+    "sources": [
+      "https://oehha.ca.gov/chemicals/dibenzoalpyrene",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp69.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/8504480/",
+      "https://pubchem.ncbi.nlm.nih.gov/compound/dibenzo%5Ba%2Cl%5Dpyrene",
+      "https://hero.epa.gov/hero/index.cfm/reference/details/reference_id/2091817",
+      "https://inchem.org/documents/iarc/vol32/dibenzo[a,l]pyrene.html"
+    ]
+  },
+  {
+    "compound_name": "1-Methylnaphthalene",
+    "cas_rn": "90-12-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "1-Methylnaphthalene (sometimes called α-methylnaphthalene) is a polycyclic aromatic hydrocarbon that is structurally naphthalene with one methyl substituent. It is a colorless to pale yellow liquid with a chemical formula C₁₁H₁₀. 1-Methylnaphthalene is naturally present in coal tar and in the heavier fractions of petroleum. Industrially, it has been used as an intermediate in organic synthesis; for example, it is oxidized to make 1-methylnaphthoic acid and other derivatives. Historically, 1-methylnaphthalene was notable in the context of diesel fuels: it defined the low end (cetane number of 0) of the cetane scale for diesel fuel ignition quality. It is also reported to have minor uses in dye manufacturing and was at one time considered for use in fragrances/flavorings (as a trace component), though such use is very limited. In consumer contexts, 1-methylnaphthalene itself is not sold as a product, but it can be found as a constituent of kerosene, diesel exhaust, and soot from combustion processes.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://www.mbenergy.com",
+          "http://askthenerd.com"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "For the general population, exposure to 1-methylnaphthalene occurs primarily alongside exposure to naphthalene and other PAHs from combustion sources. Key pathways include:",
+        "bullets": [
+          "**Inhalation:** Breathing air containing combustion byproducts is the main route. 1-Methylnaphthalene is present in cigarette smoke, wood smoke (e.g., from fireplaces or stoves), and vehicle exhaust. Indoor smoking and the use of kerosene heaters or lamps can contribute to indoor air levels. It also evaporates to some extent from petroleum fuels.",
+          "**Ingestion:** This compound can adhere to airborne particles that settle on food or water. Thus, individuals might ingest 1-methylnaphthalene by consuming foods grown or stored in polluted environments or drinking water contaminated by petroleum spills. Additionally, young children may ingest it via contaminated house dust or soil (hand-to-mouth behavior) near garages or waste sites.",
+          "**Dermal contact:** Skin exposure can occur through direct contact with substances containing 1-methylnaphthalene, such as diesel fuel, soot, or creosote. For example, handling used motor oil or coal tar-treated wood could transfer small amounts onto the skin. While skin absorption is not as significant as inhalation or ingestion, prolonged or frequent dermal contact can contribute to overall exposure."
+        ],
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "1-Methylnaphthalene is one of the PAHs monitored for its potential health effects, although it is less studied than naphthalene. Like naphthalene, it is readily metabolized in humans; detection in blood or urine reflects recent exposure (on the order of hours to days) rather than long-term accumulation. High acute exposures to methylnaphthalenes can cause irritation of the eyes and airways (similar to naphthalene). A notable effect observed in animal studies is **pulmonary alveolar proteinosis**, a condition involving buildup of surfactant in the lungs: laboratory mice chronically exposed to 1-methylnaphthalene in their diet developed this lung abnormality at significant incidence. This suggests the respiratory system is a primary target of toxicity for repeated exposure. There is also evidence that PAH exposure can lead to hemolytic anemia (destruction of red blood cells) in susceptible individuals; naphthalene is known for this effect, and metabolites of 1-methylnaphthalene may have similar, though milder, blood impacts. Regarding carcinogenicity, there is no conclusive proof that 1-methylnaphthalene causes cancer in humans. Animal cancer bioassays are limited; one mouse study did not find clear increases in tumors, but data were not sufficient for a definitive evaluation. The U.S. EPA has classified 1-methylnaphthalene as having \"suggestive evidence of carcinogenic potential\" based on the limited animal data available, warranting caution but not a definitive cancer risk value. Overall, health concerns focus on chronic lung effects and its contribution to the total PAH exposure burden.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
+          "https://nepis.epa.gov",
+          "https://academic.oup.com"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "1-Methylnaphthalene is not individually regulated to the same extent as some other PAHs, but it is indirectly managed through broader environmental and health guidelines. The U.S. EPA has developed provisional risk values: for instance, a chronic Reference Concentration (inhalation exposure limit) of 3×10⁻⁶ mg/m³ was proposed in 2024, and a provisional oral Reference Dose of about 0.01 mg/kg/day. These values reflect conservative thresholds intended to protect against non-cancer effects like lung damage. No specific federal drinking water standard exists for 1-methylnaphthalene, but its occurrence in groundwater is monitored, and it was evaluated in the context of unregulated contaminants. Internationally, 1-methylnaphthalene has been considered by the flavor and fragrance industry (it had a Flavor and Extract Manufacturers Association (FEMA) GRAS status historically, indicating it was once approved in trace amounts for flavor use). In the European Union, chemicals of this type fall under REACH regulation; 1-methylnaphthalene is classified as hazardous – e.g., it carries a hazard designation for possible carcinogenicity (\"suspected of causing cancer\") under the EU CLP system. Environmental monitoring programs do not routinely measure 1-methylnaphthalene in human biosamples, but its metabolites (like 1-naphthol) may appear in urine in PAH exposure studies. In pollution monitoring, it is measured in air and water at contaminated sites. Overall, control of 1-methylnaphthalene is achieved by limiting PAH emissions (e.g., via vehicle exhaust regulations) and remediating contaminated sites, rather than compound-specific rules for this chemical.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/88.htm",
+          "https://nepis.epa.gov"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
+      "https://mbenergy.com",
+      "https://nepis.epa.gov"
+    ]
+  },
+  {
+    "compound_name": "2-Methylnaphthalene",
+    "cas_rn": "91-57-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Methylnaphthalene (β-methylnaphthalene) is the other isomer of methylnaphthalene, differing by the position of the methyl group on the naphthalene ring. It is a solid at ambient conditions (melting point ~34 °C) and shares similar chemical properties with 1-methylnaphthalene. 2-Methylnaphthalene occurs as a minor component of coal tar and petroleum distillates, especially in heavier oil fractions. In industry, it has notable uses: it is oxidized to produce 2-methyl-1,4-naphthoquinone, which is a precursor to vitamin K (phytomenadione). It has also been used in organic syntheses for certain dyes and as a sulfonated derivative in some wetting agents. Additionally, 2-methylnaphthalene finds limited use as a perfumery and flavoring agent due to its sweet, floral, slightly woody aroma, although such use is small in scale and it was removed from the EU’s list of supported flavoring substances in recent years. Generally, consumers do not buy 2-methylnaphthalene directly, but they may encounter it as part of kerosene, diesel fuel, cigarette smoke, or creosote mixtures.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+          "https://www.thegoodscentscompany.com/data/rw1179161.html"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "2-Methylnaphthalene exposure occurs in parallel with other combustion-related pollutants. Main pathways include:",
+        "bullets": [
+          "**Inhalation:** Breathing polluted air is the primary route. 2-Methylnaphthalene is emitted in the exhaust from diesel engines and gasoline engines, and is found in tobacco smoke and smoke from burning wood or coal. People in urban environments or those who smoke (or inhale secondhand smoke) will inhale small quantities of this compound attached to airborne particulates.",
+          "**Ingestion:** This chemical can sorb onto fine particles that settle on soil, crops, or in water. It can enter the food chain when individuals consume vegetables, grains, or fish from contaminated areas. Drinking water can also be a source if groundwater or reservoirs are impacted by petroleum spills or coal tar creosote. For example, near former gas manufacturing sites or creosote-treated facilities, 2-methylnaphthalene has been detected and could reach humans through water or dirt ingestion.",
+          "**Dermal Contact:** Direct skin contact is a lesser route but possible for those handling materials containing PAHs. Working with creosote (a wood preservative) or heavy fuel oils can expose skin to 2-methylnaphthalene. Also, anyone regularly touching soot or tar (for instance, chimney cleaners or roofers dealing with coal-tar pitch) might have dermal exposure to this compound along with others. Absorption through skin is limited, but chronic contact could contribute some exposure."
+        ],
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Once in the human body, 2-methylnaphthalene is metabolized by the liver to various metabolites (such as methyl-naphthols and conjugates) and eliminated, largely via urine. Its presence in blood would indicate a fairly recent exposure. Health-wise, the most distinctive finding for 2-methylnaphthalene comes from animal studies: chronic exposure led to **pulmonary alveolar proteinosis** in mice, a condition where protein-lipid material accumulates in the air sacs of the lungs. This suggests that long-term inhalation or ingestion at sufficient doses can cause lung damage and impaired lung function. Unlike naphthalene, which is a known animal carcinogen (causing nasal and lung tumors in rodents), 2-methylnaphthalene did not show a clear increase in tumors in a two-year study on mice (it primarily caused the non-cancer lung effect). Accordingly, major agencies have not officially classified 2-methylnaphthalene as a human carcinogen due to inadequate evidence. It is generally considered a possible or suspected carcinogen by default because it is a PAH, but the data are limited. Other toxicological effects observed in lab animals include mild liver enlargement and centrilobular liver cell changes at high doses, and some indications of blood effects (e.g., anemia) with chronic exposure. In humans, direct studies are lacking; however, exposures to methylnaphthalenes are often accompanied by naphthalene, which is known to cause headaches, nausea, or hemolysis in G6PD-deficient individuals. Thus, while 2-methylnaphthalene itself is less studied, prudent health interpretation treats it as a component of PAH exposure with potential chronic toxicity to the lungs and possibly other organs at high levels.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/12505278",
+          "https://nepis.epa.gov",
+          "https://stacks.cdc.gov"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2-Methylnaphthalene is included in various regulatory assessments mostly in conjunction with naphthalene. The U.S. EPA established a chronic oral Reference Dose (RfD) of 0.004 mg/kg-day for 2-methylnaphthalene (on IRIS in 2003). This RfD was based on the no-effect levels from animal studies (considering lung effects), and it provides a benchmark for safe lifetime daily intake. There is no federal drinking water standard specifically for 2-methylnaphthalene; however, it was listed on EPA’s Contaminant Candidate List (CCL) for potential regulation in drinking water, indicating that it has been monitored and considered due to detections in some water supplies. In the European Union, 2-methylnaphthalene falls under general chemical safety regulations. It is not a high-production volume chemical, but its hazard classification under the EU CLP Regulation includes being flagged as **suspected of causing cancer** (Carc. 2) and harmful if swallowed. This classification triggers labeling requirements for manufacturers handling the substance. Environmental agencies in the EU have also identified PAHs, including methylnaphthalenes, as priority pollutants in water due to their persistence and toxicity, leading to monitoring in surface and ground waters. Currently, 2-methylnaphthalene is measured in certain environmental surveys (for example, it is sometimes tracked in air particulate matter studies and in contaminated site investigations). Regulatory actions specifically targeting 2-methylnaphthalene are limited, but any rules that limit naphthalene in products (like mothballs, fuels, or creosote) or that control PAH emissions will incidentally reduce 2-methylnaphthalene exposure as well.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://eurlex.europa.eu",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/651.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+      "https://www.thegoodscentscompany.com/data/rw1179161.html",
+      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/12505278"
+    ]
+  },
+  {
+    "compound_name": "Diuron",
+    "cas_rn": "330-54-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Diuron is a substituted urea herbicide (chemical class: phenylurea) widely used to control weeds and algae. It is a white, odorless crystalline solid that is typically formulated as wettable powders or granules. Introduced in the 1950s, diuron has been employed as a pre-emergent and post-emergent herbicide on a variety of agricultural crops and non-crop areas. For example, it has seen use on farms growing cotton, asparagus, pineapple, sugarcane, and in orchards and vineyards. Diuron works by inhibiting photosynthesis in plants, thereby killing existing vegetation and preventing new growth. Beyond agriculture, it has also been used to manage unwanted vegetation on rights-of-way and sometimes added in paints or coatings to prevent algal growth (e.g., on boat hulls or building materials). While effective for weed control, its persistence in soil and water has raised environmental concerns in many regions.",
+        "sources": [
+          "https://nj.gov/health/eoh/rtkweb/documents/fs/0819.pdf",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/260.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to diuron can occur both occupationally (among those who manufacture or apply the herbicide) and environmentally (via residues in food or water). The major pathways include:",
+        "bullets": [
+          "**Inhalation** – Breathing in diuron dust or aerosol is a concern for workers mixing or spraying this herbicide. Spray drift can carry diuron particles, which may be inhaled by bystanders near application sites. However, diuron’s low vapor pressure means inhalation of volatilized diuron is minimal under normal conditions.",
+          "**Ingestion** – Consuming food or drinking water containing diuron residues is the primary route for the general population. Trace amounts of diuron can remain on treated crops or run off into surface and groundwater. As a moderately persistent herbicide, diuron has been detected in some water supplies; regulatory limits (such as a 0.2 µg/L guideline in EU surface waters) aim to keep such exposures very low.",
+          "**Dermal contact** – Skin exposure can occur during handling of diuron products or touching treated foliage/soil. Agricultural workers and landscapers may get diuron on their skin or clothing while mixing concentrates or working in recently treated fields. Diuron can be absorbed through the skin to some extent, although intact skin provides some barrier."
+        ],
+        "sources": [
+          "https://www.cdc.gov/niosh/npg/npgd0247.html",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/260.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Diuron’s presence in blood would reflect a recent or ongoing exposure, as this compound is metabolized and eliminated rather than accumulating long-term. In humans, high exposure to diuron (as might occur in occupational settings) can cause irritation of the eyes, skin, and respiratory tract. Animal studies provide much of the toxicological data: chronic feeding studies in rodents have linked diuron to anemia and methemoglobinemia (blood effects due to its metabolite 3,4-dichloroaniline) and to changes in liver enzymes. Notably, diuron caused urinary bladder tumors in rats at high doses. The mode of action is believed to be prolonged urothelial irritation and proliferation from metabolites, rather than direct DNA mutation. As a result, regulators consider diuron a possible carcinogen based on these rodent findings. Reproductive and developmental studies have shown mixed results; very high doses have caused fetal weight reductions in animals, but diuron is not strongly teratogenic. In terms of metabolism, diuron is broken down in the body via demethylation and hydroxylation. Major metabolites (such as DCPMU and DCPU) are excreted in urine, and these can serve as biomarkers of exposure. Overall, health assessments of diuron highlight its chronic toxicity endpoints (blood, liver, and bladder) and advise minimizing long-term exposure, especially for vulnerable groups.",
+        "sources": [
+          "https://nj.gov/health/eoh/rtkweb/documents/fs/0819.pdf",
+          "https://www.cdc.gov/niosh/npg/npgd0247.html",
+          "https://www.ncbi.nlm.nih.gov/pubmed/24172598"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Diuron is subject to extensive regulatory control due to its use as a pesticide and its environmental persistence. In the United States, it is registered with the EPA as a herbicide, and the EPA has established tolerances (maximum residue limits) for diuron on food commodities. The Occupational Safety and Health Administration (OSHA) does not have a substance-specific PEL for diuron, but NIOSH recommends an exposure limit of 10 mg/m³ (as total dust) in workplace air. Diuron was added to California’s Proposition 65 list as a carcinogen in 2002. In the European Union, diuron’s approval for use in plant protection products was not renewed, meaning it is essentially banned as an agricultural herbicide under current EU regulations. Furthermore, the EU has included diuron on its list of priority substances in water policy; for instance, a stringent environmental quality standard of 0.2 µg/L (annual average) is set for diuron in surface waters to protect aquatic life. Ongoing monitoring programs check for diuron residues in ground and surface water, especially near agricultural areas. Internationally, agencies like the World Health Organization (WHO) have evaluated diuron in drinking water guidelines, and it is monitored in food through programs like the Codex Alimentarius. Overall, regulatory actions on diuron reflect a precautionary approach: restrictions and monitoring are in place to reduce human and environmental exposure to this herbicide.",
+        "sources": [
+          "https://nj.gov/health/eoh/rtkweb/documents/fs/0819.pdf",
+          "https://p65warnings.ca.gov/chemicals/diuron",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/260.htm",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/260.htm#_Water",
+          "https://www.cdc.gov/niosh/npg/npgd0247.html"
+        ]
+      }
+    ],
+    "sources": [
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0819.pdf",
+      "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/260.htm",
+      "https://www.cdc.gov/niosh/npg/npgd0247.html",
+      "https://www.ncbi.nlm.nih.gov/pubmed/24172598",
+      "https://p65warnings.ca.gov/chemicals/diuron"
+    ]
+  }
+]

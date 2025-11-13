@@ -4,6 +4,7 @@ import categoryOverviewsHouseholdProducts from './household-products.json';
 import categoryOverviewsIndustrialChemicals from './industrial-chemicals.json';
 import categoryOverviewsPersistentPollutants from './persistent-pollutants.json';
 import categoryOverviewsPersonalCareProducts from './personal-care-products.json';
+import allChemicalsOverview from './all-chemicals-overview.json';
 
 export interface CategoryOverviewSection {
   header: string;
@@ -84,5 +85,12 @@ export function findCategoryOverview(categoryName: string): CategoryOverview | n
  */
 export function getAllCategoryNames(): string[] {
   return Object.keys(categoryOverviewsMap);
+}
+
+/**
+ * Get the overview for "All Chemical Exposures" state
+ */
+export function getAllChemicalsOverview(): CategoryOverview {
+  return allChemicalsOverview as CategoryOverview;
 }
 
