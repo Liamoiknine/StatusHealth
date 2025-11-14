@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
@@ -99,7 +99,7 @@ function CategoriesPageContent() {
   }, [searchParams]);
 
   // Helper function to build current URL with state
-  const buildStateUrl = () => {
+  const buildStateUrl = useCallback(() => {
     const params = new URLSearchParams();
     
     if (selectedCategory && selectedCategory !== 'all-exposures') {
@@ -127,7 +127,7 @@ function CategoriesPageContent() {
     }
     
     return params.toString() ? `/categories?${params.toString()}` : '/categories';
-  };
+  }, [selectedCategory, viewMode, expandedChemical, categoryFilters, allExposuresFilter]);
 
   // Update URL when state changes (using replace for state updates, but preserve history for navigation)
   useEffect(() => {
@@ -141,7 +141,7 @@ function CategoriesPageContent() {
     if (newUrl !== currentUrl) {
       router.replace(newUrl, { scroll: false });
     }
-  }, [selectedCategory, viewMode, expandedChemical, categoryFilters, allExposuresFilter, router, chemicals.length]);
+  }, [buildStateUrl, router, chemicals.length]);
 
   // Reset view mode to overview when category changes (but preserve if coming from URL)
   useEffect(() => {

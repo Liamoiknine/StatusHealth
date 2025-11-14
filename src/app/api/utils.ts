@@ -269,7 +269,7 @@ export function calculateCategoryInsights(
     let otherCategoriesAvg = 0;
     let otherCategoriesCount = 0;
     
-    categoryStats.forEach(({ category, chemicals: catChemicals }) => {
+    categoryStats.forEach(({ chemicals: catChemicals }) => {
       const catDetected = catChemicals.filter(c => c.value > 0);
       if (catDetected.length > 0) {
         const catAvg = catDetected.reduce((sum, c) => sum + (c.percentile || 0), 0) / catDetected.length;
