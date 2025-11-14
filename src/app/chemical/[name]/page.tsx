@@ -104,7 +104,6 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
   }
 
   const getStatusInfo = () => {
-    const color = getPercentileColor(chemical.percentile, chemical.value);
     if (chemical.value === 0) return { label: 'Not Detected', color: 'gray' };
     if (!chemical.percentile || chemical.percentile <= 0.3) return { label: 'Low Exposure', color: 'green' };
     if (chemical.percentile > 0.6) return { label: 'High Exposure', color: 'red' };

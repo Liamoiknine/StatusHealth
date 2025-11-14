@@ -10,6 +10,33 @@ interface ExposureSourceAnalysisProps {
   onSourceClick?: (source: string) => void;
 }
 
+interface TooltipPayload {
+  payload: {
+    name: string;
+    value: number;
+  };
+}
+
+interface TooltipProps {
+  active?: boolean;
+  payload?: TooltipPayload[];
+}
+
+interface LabelProps {
+  cx: number;
+  cy: number;
+  midAngle?: number;
+  innerRadius: number;
+  outerRadius: number;
+  percent?: number;
+}
+
+interface PieData {
+  name: string;
+  value: number;
+  color: string;
+}
+
 const COLORS = [
   '#14b8a6', // teal - site accent
   '#06b6d4', // cyan
@@ -122,7 +149,7 @@ export default function ExposureSourceAnalysis({
     color: COLORS[index % COLORS.length]
   }));
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -138,8 +165,8 @@ export default function ExposureSourceAnalysis({
     return null;
   };
 
-  const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }: any) => {
-    if (percent < 0.05) return null; // Don't show labels for very small slices
+  const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }: LabelProps) => {
+    if (!percent || percent < 0.05 || !midAngle) return null; // Don't show labels for very small slices
     
     const RADIAN = Math.PI / 180;
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -160,7 +187,7 @@ export default function ExposureSourceAnalysis({
     );
   };
 
-  const handleSliceClick = (data: any) => {
+  const handleSliceClick = (data: PieData) => {
     if (data?.name) {
       // Call the optional onSourceClick callback
       onSourceClick?.(data.name);

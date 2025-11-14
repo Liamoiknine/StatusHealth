@@ -9,6 +9,19 @@ interface PercentileDistributionChartProps {
   onBarClick?: (range: string) => void;
 }
 
+interface TooltipPayload {
+  payload: {
+    name: string;
+    value: number;
+  };
+}
+
+interface TooltipProps {
+  active?: boolean;
+  payload?: TooltipPayload[];
+}
+
+
 export default function PercentileDistributionChart({ 
   chemicals, 
   onBarClick 
@@ -42,7 +55,7 @@ export default function PercentileDistributionChart({
     }
   ].filter(item => item.value > 0);
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -126,7 +139,7 @@ export default function PercentileDistributionChart({
           <Bar 
             dataKey="value" 
             radius={[0, 8, 8, 0]}
-            onClick={(data: any) => data?.name && onBarClick?.(data.name)}
+            onClick={(data: { name?: string }) => data?.name && onBarClick?.(data.name)}
             activeBar={false}
             style={{ cursor: onBarClick ? 'pointer' : 'default' }}
           >

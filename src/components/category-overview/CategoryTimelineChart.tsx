@@ -1,11 +1,26 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { CategoryLongitudinalResponse } from '@/app/api/chemicals/longitudinal/category/route';
 
 interface CategoryTimelineChartProps {
   categoryName: string;
+}
+
+interface TooltipPayload {
+  payload: {
+    fullDate: string;
+    averagePercentile: number | null;
+    detectionRate: number;
+    totalDetected: number;
+    totalChemicals: number;
+  };
+}
+
+interface TooltipProps {
+  active?: boolean;
+  payload?: TooltipPayload[];
 }
 
 export default function CategoryTimelineChart({ categoryName }: CategoryTimelineChartProps) {
@@ -98,7 +113,7 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
     testId: point.testId
   }));
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
