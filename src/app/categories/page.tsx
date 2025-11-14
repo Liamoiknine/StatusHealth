@@ -26,9 +26,9 @@ function CategoriesPageContent() {
   const [expandedChemical, setExpandedChemical] = useState<string | null>(null);
   
   // Get the current filter for the selected category, defaulting to 'all' if not set
-  const getCurrentCategoryFilter = (category: string): ExposureFilterType => {
+  const getCurrentCategoryFilter = useCallback((category: string): ExposureFilterType => {
     return categoryFilters[category] || 'all';
-  };
+  }, [categoryFilters]);
   
   // Update filter for a specific category
   const updateCategoryFilter = (category: string, filter: ExposureFilterType) => {
@@ -127,7 +127,7 @@ function CategoriesPageContent() {
     }
     
     return params.toString() ? `/categories?${params.toString()}` : '/categories';
-  }, [selectedCategory, viewMode, expandedChemical, categoryFilters, allExposuresFilter]);
+  }, [selectedCategory, viewMode, expandedChemical, allExposuresFilter, getCurrentCategoryFilter]);
 
   // Update URL when state changes (using replace for state updates, but preserve history for navigation)
   useEffect(() => {
