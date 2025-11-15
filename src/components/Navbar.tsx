@@ -2,39 +2,53 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { Settings, HelpCircle } from 'lucide-react';
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#2c3e6e]/80 backdrop-blur-md">
-      <div className="w-full px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#1a2540] backdrop-blur-md rounded-full shadow-lg border border-[#1a2540]/50 max-w-7xl w-[calc(100%-2rem)]">
+      <div className="w-full px-6">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/logo.png"
               alt="StatusHealth Logo"
-              width={48}
-              height={48}
+              width={32}
+              height={32}
               className="rounded-lg"
             />
             {/* Vertical divider */}
-            <div className="h-8 w-[2px] bg-white"></div>
-            <span className="text-2xl font-extrabold text-white tracking-wide">STATUS HEALTH</span>
+            <div className="h-5 w-[2px] bg-white/30"></div>
+            <span className="text-lg font-extrabold text-white tracking-wide">STATUS</span>
           </Link>
           
-          {/* Right side actions */}
-          <div className="flex items-center space-x-6">
-            {/* Dark mode icon */}
-            <button className="text-white hover:text-cyan-400 transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-            </button>
-            
-            {/* Sign out */}
-            <button className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-              Sign out
-            </button>
+          {/* Navigation buttons */}
+          <div className="flex items-center space-x-2">
+            {/* Dashboard */}
+            <Link href="/" className="px-3 py-1.5 rounded-lg text-sm text-white hover:bg-white/10 transition-colors">
+              <span>Dashboard</span>
+            </Link>
+
+            {/* View Results */}
+            <Link href="/categories" className="px-3 py-1.5 rounded-lg text-sm text-white hover:bg-white/10 transition-colors">
+              <span>View Results</span>
+            </Link>
+
+            {/* Billing */}
+            <Link href="/billing" className="px-3 py-1.5 rounded-lg text-sm text-white hover:bg-white/10 transition-colors">
+              <span>Billing</span>
+            </Link>
+
+            {/* Settings */}
+            <Link href="/settings" className="p-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]" title="Settings">
+              <Settings className="w-5 h-5" strokeWidth={2} />
+            </Link>
+
+            {/* Help */}
+            <Link href="/help" className="p-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]" title="Help">
+              <HelpCircle className="w-5 h-5" strokeWidth={2} />
+            </Link>
           </div>
         </div>
       </div>

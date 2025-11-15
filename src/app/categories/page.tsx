@@ -166,10 +166,10 @@ function CategoriesPageContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
+      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading test data...</p>
+          <p className="text-gray-600">Loading test data...</p>
         </div>
       </div>
     );
@@ -202,8 +202,12 @@ function CategoriesPageContent() {
   const uniqueCategories = new Set(allExposuresChemicals.map(c => c.exposureCategory)).size;
 
   return (
-    <div className="min-h-screen bg-[#0f1729]">
-      <div className="container mx-auto px-8 py-8">
+    <div className="min-h-screen bg-[#f8fafc]">
+      <div className={`mx-auto py-8 max-w-7xl w-[calc(100%-2rem)] transition-all duration-500 ${
+        selectedCategory && selectedCategory !== 'all-exposures' 
+          ? 'pl-8 pr-0' 
+          : 'px-8'
+      }`}>
         <div className={`flex items-start relative transition-all duration-500 ease-in-out ${
           selectedCategory && selectedCategory !== 'all-exposures' 
             ? 'gap-8' 
@@ -213,20 +217,20 @@ function CategoriesPageContent() {
           <div className="flex-1 transition-all duration-500 ease-in-out min-w-0">
             {!selectedCategory ? (
               <div>
-                <h1 className="text-3xl font-bold text-white">Health Categories</h1>
-                <p className="text-gray-400 mt-2">Detailed view of all health categories and their chemical exposures</p>
+                <h1 className="text-3xl font-bold text-gray-900">Health Categories</h1>
+                <p className="text-gray-600 mt-2">Detailed view of all health categories and their chemical exposures</p>
               </div>
             ) : selectedCategory === 'all-exposures' ? (
               <div>
                 <div className="mb-8">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h1 className="text-3xl font-bold text-white mb-2">All Chemical Exposures</h1>
-                      <p className="text-gray-400">Viewing all chemicals across all categories</p>
+                      <h1 className="text-3xl font-bold text-gray-900 mb-2">All Chemical Exposures</h1>
+                      <p className="text-gray-600">Viewing all chemicals across all categories</p>
                       <p className="text-sm text-gray-500 mt-1">Detected {allExposuresDetectedCount}/{allExposuresTotalCount} exposures</p>
                     </div>
-                    <div className="bg-[#1a2540] border border-gray-700 px-4 py-2 rounded-lg">
-                      <span className="text-sm font-medium text-white">
+                    <div className="bg-white border border-gray-200 px-4 py-2 rounded-lg shadow-sm">
+                      <span className="text-sm font-medium text-gray-900">
                         {chemicals.length} total chemicals
                       </span>
                     </div>
@@ -238,8 +242,8 @@ function CategoriesPageContent() {
                       onClick={() => setViewMode('overview')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'overview'
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                          ? 'bg-teal-600 text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     >
                       Overview
@@ -248,8 +252,8 @@ function CategoriesPageContent() {
                       onClick={() => setViewMode('chemicals')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'chemicals'
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                          ? 'bg-teal-600 text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     >
                       Chemical List
@@ -279,9 +283,9 @@ function CategoriesPageContent() {
                         onFilterChange={setAllExposuresFilter}
                       />
                     </div>
-                    <div className="bg-[#1a2540] border border-gray-700 rounded-lg overflow-hidden">
-                      <div className="px-6 py-4 bg-[#0f1729] border-b border-gray-800">
-                        <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-300">
+                    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                      <div className="px-6 py-4 bg-[#1a2540]">
+                        <div className="grid grid-cols-12 gap-4 text-sm font-medium text-white">
                           <div className="col-span-3 min-w-0 truncate">Chemical Name</div>
                           <div className="col-span-2 min-w-0 truncate">Category</div>
                           <div className="col-span-2 text-center min-w-0 truncate">Measured Value</div>
@@ -290,17 +294,20 @@ function CategoriesPageContent() {
                           <div className="col-span-2 min-w-0 truncate">Status</div>
                         </div>
                       </div>
-                      <div className="divide-y divide-gray-800">
+                      <div>
                         {allExposuresChemicals.map((chemical, index) => {
                           const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
                           const isExpanded = expandedChemical === chemical.compound;
+                          const isEven = index % 2 === 0;
                           
                           return (
                             <div key={index}>
                               {/* Clickable Row */}
                               <div
                                 onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
-                                className="px-6 py-4 hover:bg-[#0f1729] transition-colors cursor-pointer"
+                                className={`px-6 py-3.5 transition-all duration-200 cursor-pointer ${
+                                  isEven ? 'bg-white' : 'bg-gray-50'
+                                } hover:bg-gray-100`}
                               >
                                 <div className="grid grid-cols-12 gap-4 items-center">
                                   <div className="col-span-3 flex items-center gap-2">
@@ -312,7 +319,7 @@ function CategoriesPageContent() {
                                     >
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <span className="text-sm font-semibold text-white truncate">
+                                    <span className="text-sm font-semibold text-gray-900 truncate">
                                       {chemical.compound}
                                     </span>
                                   </div>
@@ -322,13 +329,13 @@ function CategoriesPageContent() {
                                         e.stopPropagation();
                                         setSelectedCategory(chemical.exposureCategory);
                                       }}
-                                      className="text-sm text-teal-400 hover:text-teal-300 hover:underline truncate block transition-colors text-left w-full max-w-full"
+                                      className="text-sm text-[#1a2540] hover:text-[#1a2540]/80 hover:underline truncate block transition-colors text-left w-full max-w-full"
                                     >
                                       {chemical.exposureCategory}
                                     </button>
                                   </div>
                                   <div className="col-span-2 text-center">
-                                    <span className="text-sm text-gray-300">
+                                    <span className="text-sm text-gray-700">
                                       {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
                                     </span>
                                   </div>
@@ -338,7 +345,7 @@ function CategoriesPageContent() {
                                     </span>
                                   </div>
                                   <div className="col-span-2">
-                                    <p className="text-sm text-gray-400 truncate">
+                                    <p className="text-sm text-gray-600 truncate">
                                       {chemical.primarySource}
                                     </p>
                                   </div>
@@ -354,36 +361,38 @@ function CategoriesPageContent() {
                               {isExpanded && (
                                 <Link
                                   href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                                  className="block px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer hover:bg-[#1a2540] transition-colors"
+                                  className={`block px-6 py-4 cursor-pointer transition-colors ${
+                                    isEven ? 'bg-gray-50 hover:bg-gray-100' : 'bg-gray-100 hover:bg-gray-200'
+                                  }`}
                                 >
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                     <div>
-                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Primary Source</h4>
-                                      <p className="text-sm text-white">{chemical.primarySource}</p>
+                                      <h4 className="text-xs font-medium text-gray-600 mb-1">Primary Source</h4>
+                                      <p className="text-sm text-gray-900">{chemical.primarySource}</p>
                                     </div>
                                     {chemical.secondarySources && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Secondary Sources</h4>
-                                        <p className="text-sm text-white">{chemical.secondarySources}</p>
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Secondary Sources</h4>
+                                        <p className="text-sm text-gray-900">{chemical.secondarySources}</p>
                                       </div>
                                     )}
                                     {chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Exposure Range</h4>
-                                        <p className="text-sm text-white">
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Exposure Range</h4>
+                                        <p className="text-sm text-gray-900">
                                           {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
                                         </p>
                                       </div>
                                     )}
                                     {chemical.population !== undefined && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Population Exposed</h4>
-                                        <p className="text-sm text-white">{(chemical.population * 100).toFixed(1)}%</p>
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Population Exposed</h4>
+                                        <p className="text-sm text-gray-900">{(chemical.population * 100).toFixed(1)}%</p>
                                       </div>
                                     )}
                                   </div>
                                   
-                                  <div className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
+                                  <div className="inline-flex items-center text-[#1a2540] hover:text-[#1a2540]/80 transition-colors text-sm font-medium">
                                     View Full Page
                                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -415,11 +424,11 @@ function CategoriesPageContent() {
                 <div className="mb-8">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h1 className="text-3xl font-bold text-white mb-2">{selectedCategory}</h1>
-                      <p className="text-gray-400">Detected {detectedCount}/{totalCount} exposures</p>
+                      <h1 className="text-3xl font-bold text-gray-900 mb-2">{selectedCategory}</h1>
+                      <p className="text-gray-600">Detected {detectedCount}/{totalCount} exposures</p>
                     </div>
-                    <div className="bg-[#1a2540] border border-gray-700 px-4 py-2 rounded-lg">
-                      <span className="text-sm font-medium text-white">
+                    <div className="bg-white border border-gray-200 px-4 py-2 rounded-lg">
+                      <span className="text-sm font-medium text-gray-900">
                         {totalCount} chemicals
                       </span>
                     </div>
@@ -431,8 +440,8 @@ function CategoriesPageContent() {
                       onClick={() => setViewMode('overview')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'overview'
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                          ? 'bg-teal-600 text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     >
                       Overview
@@ -441,8 +450,8 @@ function CategoriesPageContent() {
                       onClick={() => setViewMode('details')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'details'
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                          ? 'bg-teal-600 text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     >
                       Details
@@ -451,8 +460,8 @@ function CategoriesPageContent() {
                       onClick={() => setViewMode('chemicals')}
                       className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
                         viewMode === 'chemicals'
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-[#1a2540] text-gray-400 hover:text-white border border-gray-700'
+                          ? 'bg-teal-600 text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                       }`}
                     >
                       Chemical List
@@ -490,9 +499,9 @@ function CategoriesPageContent() {
                         }}
                       />
                     </div>
-                    <div className="bg-[#1a2540] border border-gray-700 rounded-lg overflow-hidden">
-                      <div className="px-6 py-4 bg-[#0f1729] border-b border-gray-800">
-                        <div className="grid grid-cols-12 gap-4 text-sm font-medium text-gray-300">
+                    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                      <div className="px-6 py-4 bg-[#1a2540]">
+                        <div className="grid grid-cols-12 gap-4 text-sm font-medium text-white">
                           <div className="col-span-4">Chemical Name</div>
                           <div className="col-span-2 text-center">Measured Value</div>
                           <div className="col-span-2 text-center">Percentile</div>
@@ -500,17 +509,20 @@ function CategoriesPageContent() {
                           <div className="col-span-2">Status</div>
                         </div>
                       </div>
-                      <div className="divide-y divide-gray-800">
+                      <div>
                         {selectedCategoryChemicals.map((chemical, index) => {
                           const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
                           const isExpanded = expandedChemical === chemical.compound;
+                          const isEven = index % 2 === 0;
                           
                           return (
                             <div key={index}>
                               {/* Clickable Row */}
                               <div
                                 onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
-                                className="px-6 py-4 hover:bg-[#0f1729] transition-colors cursor-pointer"
+                                className={`px-6 py-3.5 transition-all duration-200 cursor-pointer ${
+                                  isEven ? 'bg-white' : 'bg-gray-50'
+                                } hover:bg-gray-100`}
                               >
                                 <div className="grid grid-cols-12 gap-4 items-center">
                                   <div className="col-span-4 flex items-center gap-2">
@@ -522,12 +534,12 @@ function CategoriesPageContent() {
                                     >
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
-                                    <h3 className="text-sm font-semibold text-white truncate">
+                                    <h3 className="text-sm font-semibold text-gray-900 truncate">
                                       {chemical.compound}
                                     </h3>
                                   </div>
                                   <div className="col-span-2 text-center">
-                                    <span className="text-sm text-gray-300">
+                                    <span className="text-sm text-gray-700">
                                       {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
                                     </span>
                                   </div>
@@ -537,7 +549,7 @@ function CategoriesPageContent() {
                                     </span>
                                   </div>
                                   <div className="col-span-2">
-                                    <p className="text-sm text-gray-400 truncate">
+                                    <p className="text-sm text-gray-600 truncate">
                                       {chemical.primarySource}
                                     </p>
                                   </div>
@@ -553,36 +565,38 @@ function CategoriesPageContent() {
                               {isExpanded && (
                                 <Link
                                   href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                                  className="block px-6 py-4 bg-[#0f1729] border-t border-gray-800 cursor-pointer hover:bg-[#1a2540] transition-colors"
+                                  className={`block px-6 py-4 cursor-pointer transition-colors ${
+                                    isEven ? 'bg-gray-50 hover:bg-gray-100' : 'bg-gray-100 hover:bg-gray-200'
+                                  }`}
                                 >
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                     <div>
-                                      <h4 className="text-xs font-medium text-gray-400 mb-1">Primary Source</h4>
-                                      <p className="text-sm text-white">{chemical.primarySource}</p>
+                                      <h4 className="text-xs font-medium text-gray-600 mb-1">Primary Source</h4>
+                                      <p className="text-sm text-gray-900">{chemical.primarySource}</p>
                                     </div>
                                     {chemical.secondarySources && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Secondary Sources</h4>
-                                        <p className="text-sm text-white">{chemical.secondarySources}</p>
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Secondary Sources</h4>
+                                        <p className="text-sm text-gray-900">{chemical.secondarySources}</p>
                                       </div>
                                     )}
                                     {chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Exposure Range</h4>
-                                        <p className="text-sm text-white">
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Exposure Range</h4>
+                                        <p className="text-sm text-gray-900">
                                           {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
                                         </p>
                                       </div>
                                     )}
                                     {chemical.population !== undefined && (
                                       <div>
-                                        <h4 className="text-xs font-medium text-gray-400 mb-1">Population Exposed</h4>
-                                        <p className="text-sm text-white">{(chemical.population * 100).toFixed(1)}%</p>
+                                        <h4 className="text-xs font-medium text-gray-600 mb-1">Population Exposed</h4>
+                                        <p className="text-sm text-gray-900">{(chemical.population * 100).toFixed(1)}%</p>
                                       </div>
                                     )}
                                   </div>
                                   
-                                  <div className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
+                                  <div className="inline-flex items-center text-[#1a2540] hover:text-[#1a2540]/80 transition-colors text-sm font-medium">
                                     View Full Page
                                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -614,7 +628,7 @@ function CategoriesPageContent() {
           <div 
             className={`transition-all duration-500 ease-in-out flex-shrink-0 ${
               selectedCategory && selectedCategory !== 'all-exposures' 
-                ? 'w-80 min-w-80 translate-x-0 opacity-100' 
+                ? 'w-80 min-w-80 translate-x-0 opacity-100 ml-8' 
                 : 'w-0 min-w-0 max-w-0 translate-x-full opacity-0 pointer-events-none overflow-hidden'
             }`}
           >
@@ -626,8 +640,8 @@ function CategoriesPageContent() {
               >
                 <div className={`bg-teal-600 hover:bg-teal-700 border border-teal-500 rounded-lg p-4 transition-all duration-300 cursor-pointer`}>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-sm font-bold text-white truncate flex-1 mr-2">View All Exposures</h2>
-                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <h2 className="text-sm font-bold text-gray-900 truncate flex-1 mr-2">View All Exposures</h2>
+                    <svg className="w-4 h-4 text-gray-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                     </svg>
                   </div>
@@ -646,16 +660,16 @@ function CategoriesPageContent() {
                     onClick={() => setSelectedCategory(category)}
                     className="block w-full text-left"
                   >
-                    <div className={`bg-[#1a2540] border border-gray-700 rounded-lg p-4 hover:border-teal-600 hover:shadow-lg hover:shadow-teal-900/20 transition-all duration-300 cursor-pointer ${
+                     <div className={`bg-white border border-gray-200 rounded-lg p-4 hover:border-[#1a2540] hover:shadow-lg hover:shadow-[#1a2540]/20 transition-all duration-300 cursor-pointer ${
                       isActive ? '-translate-x-4' : ''
                     }`}>
                       <div className="flex items-center justify-between mb-2">
-                        <h2 className="text-sm font-bold text-white truncate flex-1 mr-2">{category}</h2>
+                        <h2 className="text-sm font-bold text-gray-900 truncate flex-1 mr-2">{category}</h2>
                         <div className={`px-2 py-0.5 rounded-full text-xs font-medium flex-shrink-0 ${status.bgColor} ${status.textColor}`}>
                           {status.text}
                         </div>
                       </div>
-                      <p className="text-xs text-gray-400">Detected {detectedCount}/{totalCount}</p>
+                      <p className="text-xs text-gray-600">Detected {detectedCount}/{totalCount}</p>
                     </div>
                   </button>
                 );
@@ -671,10 +685,10 @@ function CategoriesPageContent() {
 export default function CategoriesPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading categories...</p>
+          <p className="text-gray-600">Loading categories...</p>
         </div>
       </div>
     }>

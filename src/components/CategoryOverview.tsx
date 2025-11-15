@@ -60,7 +60,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
     let parsed = escapeHtml(text);
     
     // Parse **bold** text
-    parsed = parsed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>');
+    parsed = parsed.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900 font-semibold">$1</strong>');
     
     return parsed;
   };
@@ -87,16 +87,16 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
   }
 
   return (
-    <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6 mb-8">
+    <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8 shadow-sm">
       <div className="space-y-6">
         {sortedSections.map((section, index) => (
           <div 
             key={index}
-            className="bg-[#0f1729] rounded-lg p-6 border border-gray-800"
+            className="bg-gray-50 rounded-lg p-6 border border-gray-200"
           >
-            <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
               <svg 
-                className="w-5 h-5 mr-2 text-teal-400" 
+                className="w-5 h-5 mr-2 text-[#1a2540]" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -110,9 +110,9 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
               </svg>
               {section.header}
             </h3>
-            <div className="prose prose-invert max-w-none">
+            <div className="prose max-w-none">
               <p 
-                className="text-gray-300 leading-relaxed whitespace-pre-wrap mb-4"
+                className="text-gray-700 leading-relaxed whitespace-pre-wrap mb-4"
                 dangerouslySetInnerHTML={{
                   __html: parseMarkdown(section.content)
                 }}
@@ -120,9 +120,9 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
               {section.bullets && section.bullets.length > 0 && (
                 <ul className="list-none space-y-2 mb-4">
                   {section.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className="flex items-start text-gray-300">
+                    <li key={bulletIndex} className="flex items-start text-gray-700">
                       <svg 
-                        className="w-4 h-4 text-teal-400 mr-2 mt-1 flex-shrink-0" 
+                        className="w-4 h-4 text-[#1a2540] mr-2 mt-1 flex-shrink-0" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -152,7 +152,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                       href={source} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#1a2540] border border-gray-600 text-xs text-teal-400 hover:text-teal-300 hover:border-teal-500 transition-colors"
+                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-[#1a2540] hover:text-[#1a2540] hover:border-[#1a2540] hover:bg-[#1a2540]/5 transition-colors"
                       title={source}
                     >
                       {formatUrlForDisplay(source)}
@@ -165,8 +165,8 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
         ))}
       </div>
       {data.sources && data.sources.length > 0 && (
-        <div className="mt-6 pt-6 border-t border-gray-700">
-          <h4 className="text-sm font-semibold text-white mb-3">General Sources</h4>
+        <div className="mt-6 pt-6 border-t border-gray-200">
+          <h4 className="text-sm font-semibold text-gray-900 mb-3">General Sources</h4>
           <div className="flex flex-wrap gap-2">
             {data.sources.map((source, index) => (
               <a 
@@ -174,7 +174,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                 href={source} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#0f1729] border border-gray-600 text-xs text-teal-400 hover:text-teal-300 hover:border-teal-500 transition-colors"
+                className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-teal-600 hover:text-teal-700 hover:border-teal-500 transition-colors"
                 title={source}
               >
                 {formatUrlForDisplay(source)}
