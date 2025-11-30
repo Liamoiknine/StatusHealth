@@ -131,14 +131,14 @@ export default function ExposureSourceAnalysis({
 
   if (sourceDist.length === 0) {
     return (
-      <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           </svg>
           Exposure Sources
         </h3>
-        <p className="text-gray-400 text-center py-8">No source data available</p>
+        <p className="text-gray-600 text-center py-8">No source data available</p>
       </div>
     );
   }
@@ -153,10 +153,10 @@ export default function ExposureSourceAnalysis({
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
-        <div className="bg-[#0f1729] border border-gray-700 rounded-lg p-3 shadow-lg">
-          <p className="text-white font-semibold mb-1">{data.name}</p>
-          <p className="text-teal-400">
-            <span className="text-gray-300">Count: </span>
+        <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-lg">
+          <p className="text-gray-900 font-semibold mb-1">{data.name}</p>
+          <p className="text-teal-600">
+            <span className="text-gray-600">Count: </span>
             {data.value} chemical{data.value !== 1 ? 's' : ''}
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function ExposureSourceAnalysis({
   };
 
   return (
-    <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
+    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
       <style dangerouslySetInnerHTML={{
         __html: `
           .recharts-wrapper *:focus {
@@ -223,8 +223,8 @@ export default function ExposureSourceAnalysis({
           }
         `
       }} />
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-        <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+        <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
         Exposure Sources
@@ -267,7 +267,7 @@ export default function ExposureSourceAnalysis({
 
         {/* Source explanations on the right */}
         <div className="space-y-4">
-          <h4 className="text-sm font-medium text-gray-400 mb-3">Source Descriptions</h4>
+          <h4 className="text-sm font-medium text-gray-600 mb-3">Source Descriptions</h4>
           <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
             {sourceDist.slice(0, 8).map((item, index) => {
               const explanation = getSourceExplanation(item.source, chemicals);
@@ -282,7 +282,7 @@ export default function ExposureSourceAnalysis({
                       sourceRefs.current.delete(item.source);
                     }
                   }}
-                  className="bg-[#0f1729] border border-gray-800 rounded-lg p-3 hover:border-gray-700 transition-colors scroll-mt-2"
+                  className="bg-gray-50 border border-gray-200 rounded-lg p-3 hover:border-gray-300 transition-colors scroll-mt-2"
                 >
                   <div className="flex items-start gap-2 mb-2">
                     <div 
@@ -290,10 +290,10 @@ export default function ExposureSourceAnalysis({
                       style={{ backgroundColor: color }}
                     />
                     <div className="flex-1 min-w-0">
-                      <h5 className="text-sm font-semibold text-white mb-1 truncate">
+                      <h5 className="text-sm font-semibold text-gray-900 mb-1 truncate">
                         {item.source}
                       </h5>
-                      <p className="text-xs text-gray-400 leading-relaxed">
+                      <p className="text-xs text-gray-600 leading-relaxed">
                         {explanation}
                       </p>
                     </div>

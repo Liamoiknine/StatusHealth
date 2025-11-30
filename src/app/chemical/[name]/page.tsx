@@ -77,10 +77,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0f1729] flex items-center justify-center">
+      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading test data...</p>
+          <p className="text-gray-600">Loading test data...</p>
         </div>
       </div>
     );
@@ -88,10 +88,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
   if (!chemical) {
     return (
-      <div className="min-h-screen bg-[#0f1729]">
+      <div className="min-h-screen bg-[#f8fafc]">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold text-white mb-8">Chemical Not Found</h1>
-          <p className="text-gray-400 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-8">Chemical Not Found</h1>
+          <p className="text-gray-600 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
           <Link 
             href="/categories" 
             className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors"
@@ -113,26 +113,26 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
   const statusInfo = getStatusInfo();
 
   return (
-    <div className="min-h-screen bg-[#0f1729]">
+    <div className="min-h-screen bg-[#f8fafc]">
       <div className="container mx-auto px-8 py-8 max-w-7xl">
         {/* Hero Section */}
         <div className="mb-6">
-          <div className="bg-gradient-to-r from-[#1a2540] via-[#1e2a47] to-[#1a2540] border border-gray-700 rounded-xl p-5 shadow-lg relative overflow-hidden">
+          <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 opacity-5">
               <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#1a2540] rounded-full blur-3xl"></div>
             </div>
             
             <div className="relative z-10">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
-                  <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                     {chemical.compound}
                   </h1>
                   <Link 
                     href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`}
-                    className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors group text-sm"
+                    className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors group text-sm"
                   >
                     <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
@@ -143,10 +143,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                 
                 {/* Status Badge */}
                 <div className={`px-3 py-1.5 rounded-full border ${
-                  statusInfo.color === 'red' ? 'bg-red-500/20 border-red-500/50 text-red-400' :
-                  statusInfo.color === 'yellow' ? 'bg-yellow-500/20 border-yellow-500/50 text-yellow-400' :
-                  statusInfo.color === 'green' ? 'bg-green-500/20 border-green-500/50 text-green-400' :
-                  'bg-gray-500/20 border-gray-500/50 text-gray-400'
+                  statusInfo.color === 'red' ? 'bg-red-50 border-red-500 text-red-600' :
+                  statusInfo.color === 'yellow' ? 'bg-yellow-50 border-yellow-500 text-yellow-600' :
+                  statusInfo.color === 'green' ? 'bg-green-50 border-green-500 text-green-600' :
+                  'bg-gray-50 border-gray-300 text-gray-600'
                 }`}>
                   <span className="text-xs font-semibold">{statusInfo.label}</span>
                 </div>
@@ -155,10 +155,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
               {/* Key Metrics Row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
                 {/* Percentile Card */}
-                <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-teal-500 transition-all group shadow-sm">
                   <div className="flex items-center justify-between mb-2">
-                    <div className="p-2 bg-teal-500/10 rounded-lg group-hover:bg-teal-500/20 transition-colors">
-                      <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="p-2 bg-teal-50 rounded-lg group-hover:bg-teal-100 transition-colors">
+                      <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                     </div>
@@ -166,25 +166,25 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                       {formatPercentile(chemical.percentile, chemical.value)}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-400">Population Percentile</p>
+                  <p className="text-xs text-gray-600">Population Percentile</p>
                   {chemical.population !== undefined && (
                     <p className="text-xs text-gray-500 mt-0.5">Based on exposed population</p>
                   )}
                 </div>
 
                 {/* Measured Value Card */}
-                <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-[#1a2540] transition-all group shadow-sm">
                   <div className="flex items-center justify-between mb-2">
-                    <div className="p-2 bg-blue-500/10 rounded-lg group-hover:bg-blue-500/20 transition-colors">
-                      <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="p-2 bg-[#1a2540]/10 rounded-lg group-hover:bg-[#1a2540]/20 transition-colors">
+                      <svg className="w-4 h-4 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                       </svg>
                     </div>
-                    <span className="text-xl font-bold text-white">
+                    <span className="text-xl font-bold text-gray-900">
                       {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}` : 'N/D'}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-400">Measured Value</p>
+                  <p className="text-xs text-gray-600">Measured Value</p>
                   {chemical.value > 0 && (
                     <p className="text-xs text-gray-500 mt-0.5">ng/mL</p>
                   )}
@@ -192,18 +192,18 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
                 {/* Population Exposed Card */}
                 {chemical.population !== undefined && (
-                  <div className="bg-[#0f1729]/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 hover:border-teal-500/50 transition-all group">
+                  <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-teal-500 transition-all group shadow-sm">
                     <div className="flex items-center justify-between mb-2">
-                      <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
-                        <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="p-2 bg-teal-50 rounded-lg group-hover:bg-teal-100 transition-colors">
+                        <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                       </div>
-                      <span className="text-xl font-bold text-purple-400">
+                      <span className="text-xl font-bold text-teal-600">
                         {(chemical.population * 100).toFixed(1)}%
                       </span>
                     </div>
-                    <p className="text-xs text-gray-400">Population Exposed</p>
+                    <p className="text-xs text-gray-600">Population Exposed</p>
                   </div>
                 )}
               </div>
@@ -216,14 +216,14 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
           <div className="mb-8">
             <div className="relative max-w-[99%] mx-auto">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs text-gray-400">Exposure Range</span>
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-600">Exposure Range</span>
+                <span className="text-xs text-gray-600">
                   {chemical.rangeLow.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} - {chemical.rangeHigh.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
                 </span>
               </div>
-              <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+              <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div 
-                  className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full transition-all duration-300"
+                  className="h-full bg-gradient-to-r from-teal-500 to-[#1a2540] rounded-full transition-all duration-300"
                   style={{ 
                     width: chemical.rangeHigh - chemical.rangeLow > 0 
                       ? `${Math.min(100, Math.max(0, ((chemical.value - chemical.rangeLow) / (chemical.rangeHigh - chemical.rangeLow)) * 100))}%`
@@ -239,9 +239,9 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         {/* Detailed Information */}
         {householdDataStructured && (
           <div className="mb-8">
-            <div className="bg-[#1a2540] border border-gray-700 rounded-xl p-6 shadow-lg">
-              <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Detailed Information
@@ -249,10 +249,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
               
               {householdDataStructured.cas_rn && (
                 <div className="mb-6">
-                  <div className="bg-[#0f1729] rounded-lg p-4 border border-gray-800 mb-4">
+                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 mb-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-300">CAS Registry Number</span>
-                      <span className="text-sm font-semibold text-white">{householdDataStructured.cas_rn}</span>
+                      <span className="text-sm font-medium text-gray-600">CAS Registry Number</span>
+                      <span className="text-sm font-semibold text-gray-900">{householdDataStructured.cas_rn}</span>
                     </div>
                   </div>
                 </div>

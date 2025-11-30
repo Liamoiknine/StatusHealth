@@ -27,7 +27,7 @@ export default function CategoryOverviewDashboard({
       <CategoryInsightsPanel insights={insights} />
 
       {/* Top Chemicals Spotlight */}
-      <TopChemicalsSpotlight chemicals={chemicals} maxCount={5} />
+      <TopChemicalsSpotlight chemicals={chemicals} maxCount={3} />
 
       {/* Percentile Distribution Chart */}
       <PercentileDistributionChart chemicals={chemicals} />

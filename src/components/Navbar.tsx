@@ -3,10 +3,42 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Settings, HelpCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    let ticking = false;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollThreshold = Math.min(window.innerHeight * 0.15, 150); // 15% of viewport height or 150px, whichever is smaller
+          setIsScrolled(window.scrollY > scrollThreshold);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#1a2540] backdrop-blur-md rounded-full shadow-lg border border-[#1a2540]/50 max-w-7xl w-[calc(100%-2rem)]">
+    <nav 
+      className="fixed z-50 bg-[#1a2540] backdrop-blur-md shadow-lg border border-[#1a2540]/50"
+      style={{
+        top: isScrolled ? '0' : '1rem',
+        left: isScrolled ? '0' : '1rem',
+        right: isScrolled ? '0' : '1rem',
+        width: isScrolled ? '100%' : 'auto',
+        maxWidth: isScrolled ? 'none' : '80rem',
+        borderRadius: isScrolled ? '0' : '9999px',
+        margin: isScrolled ? '0' : '0 auto',
+      }}
+    >
       <div className="w-full px-6">
         <div className="flex items-center justify-between h-12">
           {/* Logo */}

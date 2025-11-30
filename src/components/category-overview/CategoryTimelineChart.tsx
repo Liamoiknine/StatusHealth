@@ -57,9 +57,9 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
 
   if (loading) {
     return (
-      <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           Category Trends
@@ -73,14 +73,14 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
 
   if (error) {
     return (
-      <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           Category Trends
         </h3>
-        <div className="text-center text-red-400 py-8">
+        <div className="text-center text-red-600 py-8">
           <p>Error loading data: {error}</p>
         </div>
       </div>
@@ -89,14 +89,14 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
 
   if (!data || !data.hasData || data.data.length === 0) {
     return (
-      <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           Category Trends
         </h3>
-        <div className="text-center text-gray-400 py-8">
+        <div className="text-center text-gray-600 py-8">
           <p>Insufficient historical data available for this category</p>
         </div>
       </div>
@@ -117,21 +117,21 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
-        <div className="bg-[#0f1729] border border-gray-700 rounded-lg p-3 shadow-lg">
-          <p className="text-white font-semibold mb-2">{data.fullDate}</p>
+        <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-lg">
+          <p className="text-gray-900 font-semibold mb-2">{data.fullDate}</p>
           {metric === 'percentile' && data.averagePercentile !== null && (
-            <p className="text-teal-400">
-              <span className="text-gray-300">Avg Percentile: </span>
+            <p className="text-teal-600">
+              <span className="text-gray-600">Avg Percentile: </span>
               {data.averagePercentile}%
             </p>
           )}
           {metric === 'detectionRate' && (
-            <p className="text-teal-400">
-              <span className="text-gray-300">Detection Rate: </span>
+            <p className="text-teal-600">
+              <span className="text-gray-600">Detection Rate: </span>
               {data.detectionRate}%
             </p>
           )}
-          <p className="text-gray-400 text-xs mt-1">
+          <p className="text-gray-600 text-xs mt-1">
             {data.totalDetected} of {data.totalChemicals} detected
           </p>
         </div>
@@ -143,10 +143,10 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
   const hasPercentileData = chartData.some(d => d.averagePercentile !== null);
 
   return (
-    <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
+    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-white flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h3 className="text-xl font-semibold text-gray-900 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           Category Trends
@@ -158,7 +158,7 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
               className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
                 metric === 'percentile'
                   ? 'bg-teal-600 text-white'
-                  : 'bg-[#0f1729] text-gray-400 hover:text-white border border-gray-700'
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
               }`}
             >
               Percentile
@@ -168,7 +168,7 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
               className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
                 metric === 'detectionRate'
                   ? 'bg-teal-600 text-white'
-                  : 'bg-[#0f1729] text-gray-400 hover:text-white border border-gray-700'
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
               }`}
             >
               Detection Rate
@@ -186,16 +186,16 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
                 <stop offset="95%" stopColor="#14b8a6" stopOpacity={0}/>
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis 
               dataKey="date" 
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af' }}
+              stroke="#6b7280"
+              tick={{ fill: '#6b7280' }}
             />
             <YAxis 
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af' }}
-              label={{ value: 'Percentile (%)', angle: -90, position: 'insideLeft', style: { fill: '#9ca3af' } }}
+              stroke="#6b7280"
+              tick={{ fill: '#6b7280' }}
+              label={{ value: 'Percentile (%)', angle: -90, position: 'insideLeft', style: { fill: '#6b7280' } }}
             />
             <Tooltip content={<CustomTooltip />} />
             <Area
@@ -223,16 +223,16 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
                 <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis 
               dataKey="date" 
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af' }}
+              stroke="#6b7280"
+              tick={{ fill: '#6b7280' }}
             />
             <YAxis 
-              stroke="#9ca3af"
-              tick={{ fill: '#9ca3af' }}
-              label={{ value: 'Detection Rate (%)', angle: -90, position: 'insideLeft', style: { fill: '#9ca3af' } }}
+              stroke="#6b7280"
+              tick={{ fill: '#6b7280' }}
+              label={{ value: 'Detection Rate (%)', angle: -90, position: 'insideLeft', style: { fill: '#6b7280' } }}
             />
             <Tooltip content={<CustomTooltip />} />
             <Area
@@ -257,8 +257,8 @@ export default function CategoryTimelineChart({ categoryName }: CategoryTimeline
 
       <div className="mt-4 flex items-center justify-center gap-6 text-sm">
         <div className="flex items-center gap-2">
-          <div className={`w-3 h-3 rounded-full ${metric === 'percentile' && hasPercentileData ? 'bg-teal-400' : 'bg-blue-500'}`} />
-          <span className="text-gray-300">
+          <div className={`w-3 h-3 rounded-full ${metric === 'percentile' && hasPercentileData ? 'bg-teal-500' : 'bg-blue-500'}`} />
+          <span className="text-gray-700">
             {metric === 'percentile' && hasPercentileData ? 'Average Percentile' : 'Detection Rate'}
           </span>
         </div>

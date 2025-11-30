@@ -59,10 +59,10 @@ export default function PercentileDistributionChart({
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
-        <div className="bg-[#0f1729] border border-gray-700 rounded-lg p-3 shadow-lg">
-          <p className="text-white font-semibold mb-2">{data.name}</p>
-          <p className="text-teal-400">
-            <span className="text-gray-300">Count: </span>
+        <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-lg">
+          <p className="text-gray-900 font-semibold mb-2">{data.name}</p>
+          <p className="text-teal-600">
+            <span className="text-gray-600">Count: </span>
             {data.value} chemical{data.value !== 1 ? 's' : ''}
           </p>
         </div>
@@ -76,22 +76,22 @@ export default function PercentileDistributionChart({
 
   if (total === 0) {
     return (
-      <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-        <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
           Percentile Distribution
         </h3>
-        <p className="text-gray-400 text-center py-8">No data available</p>
+        <p className="text-gray-600 text-center py-8">No data available</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-[#1a2540] border border-gray-700 rounded-lg p-6">
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-        <svg className="w-5 h-5 mr-2 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+        <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
         Percentile Distribution
@@ -121,18 +121,18 @@ export default function PercentileDistributionChart({
               <stop offset="100%" stopColor="#dc2626" stopOpacity={1} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#374151" horizontal={true} vertical={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={true} vertical={false} />
           <XAxis 
             type="number" 
-            stroke="#9ca3af"
-            tick={{ fill: '#9ca3af' }}
-            label={{ value: 'Count', position: 'insideBottom', offset: -5, style: { fill: '#9ca3af', textAnchor: 'middle' } }}
+            stroke="#6b7280"
+            tick={{ fill: '#6b7280' }}
+            label={{ value: 'Count', position: 'insideBottom', offset: -5, style: { fill: '#6b7280', textAnchor: 'middle' } }}
           />
           <YAxis 
             dataKey="name" 
             type="category" 
-            stroke="#9ca3af"
-            tick={{ fill: '#9ca3af' }}
+            stroke="#6b7280"
+            tick={{ fill: '#6b7280' }}
             width={120}
           />
           <Tooltip content={<CustomTooltip />} cursor={false} />
@@ -154,7 +154,7 @@ export default function PercentileDistributionChart({
             <LabelList 
               dataKey="value" 
               position="right" 
-              style={{ fill: '#9ca3af', fontSize: '12px', fontWeight: '500' }}
+              style={{ fill: '#6b7280', fontSize: '12px', fontWeight: '500' }}
             />
           </Bar>
         </BarChart>
