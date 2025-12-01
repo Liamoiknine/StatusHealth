@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Navbar";
 import { TestProvider } from "@/contexts/TestContext";
 import { Suspense } from "react";
 
@@ -35,10 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f8fafc] min-h-screen`}
       >
         <TestProvider>
+          <Navbar />
           <Suspense fallback={<div className="w-60 bg-white min-h-screen border-r border-gray-200" />}>
             <Sidebar />
           </Suspense>
-          <main className="ml-60 pt-10">
+          <main className="ml-60 pt-15">
             {children}
           </main>
         </TestProvider>

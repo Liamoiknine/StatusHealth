@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard } from 'lucide-react';
 import { useMemo, useRef, useEffect, useState } from 'react';
@@ -94,22 +93,8 @@ export default function Sidebar() {
 
   return (
     <aside className="w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40">
-      {/* Logo */}
-      <div className="px-5 pt-6 pb-2">
-        <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src="/logo.png"
-            alt="StatusHealth Logo"
-            width={40}
-            height={40}
-            className="rounded-lg"
-          />
-          <span className="text-lg font-bold text-gray-900">STATUS</span>
-        </Link>
-      </div>
-
       {/* Navigation */}
-      <nav ref={navRef} className="flex-1 py-6 space-y-1 relative">
+      <nav ref={navRef} className="flex-1 pt-22 pb-6 space-y-1 relative">
         {/* Sliding blue indicator */}
         <div
           className="absolute right-0 w-1 bg-blue-600 transition-all duration-300 ease-in-out"
