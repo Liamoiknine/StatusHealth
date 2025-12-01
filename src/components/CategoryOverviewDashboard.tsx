@@ -23,20 +23,28 @@ export default function CategoryOverviewDashboard({
 
   return (
     <div className="space-y-6">
+      {/* Top Row: Category Trends and Top Chemicals */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        {/* Category Trends - Takes 2 columns */}
+        <div className="lg:col-span-2">
+          <CategoryTimelineChart categoryName={categoryName} />
+        </div>
+        {/* Top Chemicals - Takes 1 column */}
+        <div className="lg:col-span-1">
+          <TopChemicalsSpotlight chemicals={chemicals} maxCount={3} />
+        </div>
+      </div>
+
       {/* Insights Panel */}
-      <CategoryInsightsPanel insights={insights} />
-
-      {/* Top Chemicals Spotlight */}
-      <TopChemicalsSpotlight chemicals={chemicals} maxCount={3} />
-
-      {/* Percentile Distribution Chart */}
-      <PercentileDistributionChart chemicals={chemicals} />
+      <div className="-mt-4">
+        <CategoryInsightsPanel insights={insights} />
+      </div>
 
       {/* Exposure Source Analysis */}
       <ExposureSourceAnalysis chemicals={chemicals} />
 
-      {/* Category Timeline Chart */}
-      <CategoryTimelineChart categoryName={categoryName} />
+      {/* Percentile Distribution Chart */}
+      <PercentileDistributionChart chemicals={chemicals} />
     </div>
   );
 }

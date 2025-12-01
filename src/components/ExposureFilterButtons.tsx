@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { ExposureFilterType } from '@/app/api/utils';
 
 interface ExposureFilterButtonsProps {
@@ -9,51 +12,71 @@ export default function ExposureFilterButtons({ currentFilter, onFilterChange }:
   const filters = [
     { 
       value: 'pay-attention' as const, 
-      label: 'Pay Attention', 
-      activeClass: 'bg-red-50 border-red-500 text-red-600 hover:bg-red-100',
-      inactiveClass: 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+      label: 'Pay Attention'
     },
     { 
       value: 'monitor-only' as const, 
-      label: 'Monitor Only', 
-      activeClass: 'bg-yellow-50 border-yellow-500 text-yellow-600 hover:bg-yellow-100',
-      inactiveClass: 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+      label: 'Monitor Only'
     },
     { 
       value: 'low-exposure' as const, 
-      label: 'Low Exposure', 
-      activeClass: 'bg-green-50 border-green-500 text-green-600 hover:bg-green-100',
-      inactiveClass: 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+      label: 'Low Exposure'
     },
     { 
       value: 'not-detected' as const, 
-      label: 'Not Detected', 
-      activeClass: 'bg-gray-100 border-gray-400 text-gray-700 hover:bg-gray-200',
-      inactiveClass: 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+      label: 'Not Detected'
     },
     { 
       value: 'all' as const, 
-      label: 'All Chemicals', 
-      activeClass: 'bg-[#1a2540] border-[#1a2540] text-white hover:bg-[#1a2540]/90',
-      inactiveClass: 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+      label: 'All Chemicals'
     }
   ];
 
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const activeIndex = filters.findIndex(f => f.value === currentFilter);
+    const activeButton = buttonRefs.current[activeIndex];
+    const container = containerRef.current;
+
+    if (activeButton && container) {
+      const containerRect = container.getBoundingClientRect();
+      const buttonRect = activeButton.getBoundingClientRect();
+      const underlineWidth = buttonRect.width * 0.7; // 70% of button width
+      const underlineLeft = buttonRect.left - containerRect.left + (buttonRect.width - underlineWidth) / 2; // Center the underline
+      
+      setUnderlineStyle({
+        left: underlineLeft,
+        width: underlineWidth
+      });
+    }
+  }, [currentFilter]);
+
   return (
-    <div className="flex items-center space-x-2">
-      {filters.map((filter) => (
+    <div ref={containerRef} className="relative flex items-center space-x-2">
+      {filters.map((filter, index) => (
         <button
           key={filter.value}
+          ref={(el) => { buttonRefs.current[index] = el; }}
           onClick={() => onFilterChange(filter.value)}
-          className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 border cursor-pointer shadow-sm hover:-translate-y-0.5 hover:shadow-md ${
+          className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
             currentFilter === filter.value
-              ? filter.activeClass
-              : filter.inactiveClass
+              ? 'text-gray-900'
+              : 'text-gray-600 hover:text-gray-900'
           }`}
         >
           {filter.label}
         </button>
       ))}
+      <div
+        className="absolute bottom-0 h-1.5 bg-teal-600 transition-all duration-300 ease-in-out"
+        style={{
+          left: `${underlineStyle.left}px`,
+          width: `${underlineStyle.width}px`
+        }}
+      />
     </div>
   );
 }

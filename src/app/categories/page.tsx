@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { useTest } from '@/contexts/TestContext';
-import { groupChemicalsByCategory, getCategoryStats, getPercentileDistribution, getCategoryStatusInfo, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType, formatPercentile, getPercentileColor } from '@/app/api/utils';
+import { groupChemicalsByCategory, getCategoryStats, getPercentileDistribution, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType, formatPercentile, getPercentileColor } from '@/app/api/utils';
 import { findCategoryOverview, getAllCategoryNames } from '@/data/category-overviews';
 import { ChemicalData } from '@/app/api/csv-parser';
 import CategoryCard from '@/components/CategoryCard';
@@ -303,21 +303,13 @@ function CategoriesPageContent() {
     );
   }
 
-  // Show category detail view with sidebar when a category is selected
+  // Show category detail view when a category is selected
   return (
     <div className="min-h-screen bg-[#f8fafc]">
-      <div className={`mx-auto py-8 max-w-7xl w-[calc(100%-2rem)] transition-all duration-500 ${
-        selectedCategory
-          ? 'pl-8 pr-0' 
-          : 'px-8'
-      }`}>
-        <div className={`flex items-start relative transition-all duration-500 ease-in-out ${
-          selectedCategory
-            ? 'gap-8' 
-            : 'gap-0'
-        }`}>
-          {/* Main Content Area - Left */}
-          <div className="flex-1 transition-all duration-500 ease-in-out min-w-0">
+      <div className="mx-auto py-8 max-w-7xl px-8">
+        <div className="flex items-start relative">
+          {/* Main Content Area */}
+          <div className="flex-1 min-w-0">
             <div>
               <div className="mb-8">
                 <div className="flex items-start justify-between mb-6">
@@ -332,39 +324,39 @@ function CategoriesPageContent() {
                   </div>
                 </div>
                 
-                {/* View Toggle */}
-                <div className="flex items-center gap-2 mb-6">
-                  <button
-                    onClick={() => setViewMode('overview')}
-                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
-                      viewMode === 'overview'
-                        ? 'bg-teal-600 text-gray-900'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                  >
-                    Overview
-                  </button>
-                  <button
-                    onClick={() => setViewMode('details')}
-                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
-                      viewMode === 'details'
-                        ? 'bg-teal-600 text-gray-900'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                  >
-                    Details
-                  </button>
-                  <button
-                    onClick={() => setViewMode('chemicals')}
-                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
-                      viewMode === 'chemicals'
-                        ? 'bg-teal-600 text-gray-900'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                    }`}
-                  >
-                    Chemical List
-                  </button>
-                </div>
+                    {/* View Toggle */}
+                    <div className="flex items-center gap-2 mb-6">
+                      <button
+                        onClick={() => setViewMode('overview')}
+                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                          viewMode === 'overview'
+                            ? 'bg-teal-600 text-white'
+                            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                        }`}
+                      >
+                        Overview
+                      </button>
+                      <button
+                        onClick={() => setViewMode('details')}
+                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                          viewMode === 'details'
+                            ? 'bg-teal-600 text-white'
+                            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                        }`}
+                      >
+                        Details
+                      </button>
+                      <button
+                        onClick={() => setViewMode('chemicals')}
+                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                          viewMode === 'chemicals'
+                            ? 'bg-teal-600 text-white'
+                            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                        }`}
+                      >
+                        Chemical List
+                      </button>
+                    </div>
               </div>
 
               {/* Overview Section */}
@@ -398,8 +390,8 @@ function CategoriesPageContent() {
                     />
                   </div>
                   <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <div className="px-6 py-4 bg-[#1a2540]">
-                      <div className="grid grid-cols-12 gap-4 text-sm font-medium text-white">
+                    <div className="px-6 py-4 bg-white border-b-4 border-teal-600">
+                      <div className="grid grid-cols-12 gap-4 text-sm font-bold text-gray-900  tracking-wide">
                         <div className="col-span-4">Chemical Name</div>
                         <div className="col-span-2 text-center">Measured Value</div>
                         <div className="col-span-2 text-center">Percentile</div>
@@ -518,59 +510,6 @@ function CategoriesPageContent() {
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-
-          {/* Categories List - Right Side (slides out smoothly when viewing category) */}
-          <div 
-            className={`transition-all duration-500 ease-in-out flex-shrink-0 ${
-              selectedCategory
-                ? 'w-80 min-w-80 translate-x-0 opacity-100 ml-8' 
-                : 'w-0 min-w-0 max-w-0 translate-x-full opacity-0 pointer-events-none overflow-hidden'
-            }`}
-          >
-            <div className="space-y-3">
-              {/* Back to Categories Card */}
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className="block w-full text-left"
-              >
-                <div className={`bg-teal-600 hover:bg-teal-700 border border-teal-500 rounded-lg p-4 transition-all duration-300 cursor-pointer`}>
-                  <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-sm font-bold text-gray-900 truncate flex-1 mr-2">All Categories</h2>
-                    <svg className="w-4 h-4 text-gray-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-                    </svg>
-                  </div>
-                  <p className="text-xs text-teal-100">View all categories</p>
-                </div>
-              </button>
-
-              {/* Category Cards */}
-              {categoriesWithStats.map(({ category, chemicals: catChemicals, detectedCount, totalCount }) => {
-                const status = getCategoryStatusInfo(catChemicals);
-                const isActive = selectedCategory === category;
-                
-                return (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className="block w-full text-left"
-                  >
-                     <div className={`bg-white border border-gray-200 rounded-lg p-4 hover:border-[#1a2540] hover:shadow-lg hover:shadow-[#1a2540]/20 transition-all duration-300 cursor-pointer ${
-                      isActive ? '-translate-x-4' : ''
-                    }`}>
-                      <div className="flex items-center justify-between mb-2">
-                        <h2 className="text-sm font-bold text-gray-900 truncate flex-1 mr-2">{category}</h2>
-                        <div className={`px-2 py-0.5 rounded-full text-xs font-medium flex-shrink-0 ${status.bgColor} ${status.textColor}`}>
-                          {status.text}
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-600">Detected {detectedCount}/{totalCount}</p>
-                    </div>
-                  </button>
-                );
-              })}
             </div>
           </div>
         </div>

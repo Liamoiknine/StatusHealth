@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard } from 'lucide-react';
+import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight } from 'lucide-react';
 import { useRef, useEffect, useState, useCallback } from 'react';
+import { getAllCategoryNames } from '@/data/category-overviews';
 
 interface NavItem {
   href: string;
@@ -25,8 +26,21 @@ export default function Sidebar() {
   const searchParams = useSearchParams();
   const [activeIndex, setActiveIndex] = useState(0);
   const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 });
+  const [isCategoriesExpanded, setIsCategoriesExpanded] = useState(false);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const navRef = useRef<HTMLElement | null>(null);
+  const categoriesSubmenuRef = useRef<HTMLDivElement | null>(null);
+  const categoryNames = getAllCategoryNames();
+  
+  // Get selected category from URL
+  const selectedCategory = searchParams?.get('category');
+  
+  // Auto-expand categories if we're on a category page
+  useEffect(() => {
+    if (pathname?.startsWith('/categories')) {
+      setIsCategoriesExpanded(true);
+    }
+  }, [pathname]);
 
   // Find active index
   useEffect(() => {
@@ -66,10 +80,19 @@ export default function Sidebar() {
       const navRect = nav.getBoundingClientRect();
       const itemRect = activeItem.getBoundingClientRect();
       const top = itemRect.top - navRect.top;
-      const height = itemRect.height;
+      
+      // If categories is active and expanded, include submenu height
+      const isCategoriesActive = navItems[activeIndex]?.href === '/categories';
+      let height = itemRect.height;
+      
+      if (isCategoriesActive && isCategoriesExpanded && categoriesSubmenuRef.current) {
+        const submenuRect = categoriesSubmenuRef.current.getBoundingClientRect();
+        height = submenuRect.bottom - itemRect.top;
+      }
+      
       setIndicatorStyle({ top, height });
     }
-  }, [activeIndex]);
+  }, [activeIndex, isCategoriesExpanded]);
 
   useEffect(() => {
     // Use requestAnimationFrame to ensure DOM is ready
@@ -80,7 +103,7 @@ export default function Sidebar() {
     // Recalculate on window resize
     window.addEventListener('resize', updateIndicatorPosition);
     return () => window.removeEventListener('resize', updateIndicatorPosition);
-  }, [activeIndex, updateIndicatorPosition]);
+  }, [activeIndex, isCategoriesExpanded, updateIndicatorPosition]);
 
   // Also update when all refs are set (initial mount)
   useEffect(() => {
@@ -94,7 +117,7 @@ export default function Sidebar() {
   return (
     <aside className="w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40">
       {/* Navigation */}
-      <nav ref={navRef} className="flex-1 pt-22 pb-6 space-y-1 relative">
+      <nav ref={navRef} className="flex-1 pt-20 pb-6 space-y-1 relative">
         {/* Sliding blue indicator */}
         <div
           className="absolute right-0 w-1 bg-blue-600 transition-all duration-300 ease-in-out"
@@ -110,6 +133,8 @@ export default function Sidebar() {
             ? pathname === '/'
             : pathname?.startsWith(item.href);
           
+          const isCategories = item.href === '/categories';
+          
           return (
             <div
               key={item.href}
@@ -118,17 +143,69 @@ export default function Sidebar() {
               }}
               className="relative w-full"
             >
-              <Link
-                href={item.href}
-                className={`flex items-center space-x-2.5 pl-6.5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  isActive
-                    ? 'text-gray-900'
-                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                <Icon className="w-4 h-4" strokeWidth={2} />
-                <span>{item.label}</span>
-              </Link>
+              {isCategories ? (
+                <>
+                  <div className="flex items-center w-full">
+                    <Link
+                      href="/categories"
+                      className={`flex-1 flex items-center space-x-2.5 pl-6.5 pr-2 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                        isActive && !selectedCategory
+                          ? 'text-gray-900'
+                          : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" strokeWidth={2} />
+                      <span className="flex-1 text-left">{item.label}</span>
+                    </Link>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsCategoriesExpanded(!isCategoriesExpanded);
+                      }}
+                      className="p-1.5 rounded transition-colors"
+                      aria-label="Toggle categories"
+                    >
+                      {isCategoriesExpanded ? (
+                        <ChevronDown className="w-4 h-4" strokeWidth={2} />
+                      ) : (
+                        <ChevronRight className="w-4 h-4" strokeWidth={2} />
+                      )}
+                    </button>
+                  </div>
+                  {isCategoriesExpanded && (
+                    <div ref={categoriesSubmenuRef} className="pl-11 pr-3 py-1 space-y-0.5">
+                      {categoryNames.map((categoryName) => {
+                        const isCategoryActive = selectedCategory === categoryName;
+                        return (
+                          <Link
+                            key={categoryName}
+                            href={`/categories?category=${encodeURIComponent(categoryName)}`}
+                            className={`block py-1.5 px-2 rounded text-sm transition-colors ${
+                              isCategoryActive
+                                ? 'text-teal-600 font-medium bg-teal-50'
+                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                            }`}
+                          >
+                            {categoryName}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  className={`flex items-center space-x-2.5 pl-6.5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'text-gray-900'
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" strokeWidth={2} />
+                  <span>{item.label}</span>
+                </Link>
+              )}
             </div>
           );
         })}

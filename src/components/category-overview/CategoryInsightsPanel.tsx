@@ -42,14 +42,8 @@ export default function CategoryInsightsPanel({ insights }: CategoryInsightsPane
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-        <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-        Key Insights
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div>
+      <div className="grid grid-cols-auto gap-1" style={{ gridTemplateColumns: `repeat(${insights.length}, minmax(0, 1fr))` }}>
         {insights.map((insight, index) => (
           <motion.div
             key={insight.type}
@@ -57,25 +51,20 @@ export default function CategoryInsightsPanel({ insights }: CategoryInsightsPane
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-[#1a2540]/50 transition-colors"
+            className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm hover:border-[#1a2540]/50 hover:shadow-md transition-all duration-300"
           >
-            <div className="flex items-start gap-3">
-              <div className="bg-[#1a2540]/10 p-2 rounded-lg text-[#1a2540] flex-shrink-0">
-                {iconMap[insight.type] || iconMap.averagePercentile}
+            <div className="flex-1 min-w-0">
+              <div className="text-xs font-medium text-gray-600 mb-0.5">{insight.label}</div>
+              <div className="text-base font-bold text-gray-900 mb-0.5 truncate">
+                {typeof insight.value === 'number' && insight.type === 'detectionRate' 
+                  ? `${insight.value}%`
+                  : typeof insight.value === 'number' && insight.type === 'averagePercentile'
+                  ? `${insight.value}%`
+                  : insight.value}
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs font-medium text-gray-600 mb-1">{insight.label}</div>
-                <div className="text-lg font-bold text-gray-900 mb-1 truncate">
-                  {typeof insight.value === 'number' && insight.type === 'detectionRate' 
-                    ? `${insight.value}%`
-                    : typeof insight.value === 'number' && insight.type === 'averagePercentile'
-                    ? `${insight.value}%`
-                    : insight.value}
-                </div>
-                {insight.subValue && (
-                  <div className="text-xs text-gray-500 truncate">{insight.subValue}</div>
-                )}
-              </div>
+              {insight.subValue && (
+                <div className="text-xs text-gray-500 truncate">{insight.subValue}</div>
+              )}
             </div>
           </motion.div>
         ))}

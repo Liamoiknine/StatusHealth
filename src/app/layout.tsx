@@ -40,7 +40,7 @@ export default function RootLayout({
           <Suspense fallback={<div className="w-60 bg-white min-h-screen border-r border-gray-200" />}>
             <Sidebar />
           </Suspense>
-          <main className="ml-60 pt-15">
+          <main className="ml-60 pt-16">
             {children}
           </main>
         </TestProvider>

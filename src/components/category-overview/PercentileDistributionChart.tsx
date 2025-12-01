@@ -28,12 +28,19 @@ export default function PercentileDistributionChart({
 }: PercentileDistributionChartProps) {
   const distribution = getPercentileDistribution(chemicals);
   
-  const chartData = [
+  const chartData: Array<{
+    name: string;
+    value: number;
+    color: string;
+    gradientId: string;
+    usePattern?: boolean;
+  }> = [
     {
       name: 'Not Detected',
       value: distribution.notDetected,
-      color: '#6b7280',
-      gradientId: 'gradientNotDetected'
+      color: '#e5e7eb',
+      gradientId: 'gradientNotDetected',
+      usePattern: true
     },
     {
       name: 'Low Exposure',
@@ -104,9 +111,13 @@ export default function PercentileDistributionChart({
           margin={{ top: 10, right: 50, left: 0, bottom: 20 }}
         >
           <defs>
+            <pattern id="stripedNotDetected" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+              <rect width="4" height="8" fill="#e5e7eb" />
+              <rect x="4" width="4" height="8" fill="#f3f4f6" />
+            </pattern>
             <linearGradient id="gradientNotDetected" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#6b7280" stopOpacity={0.6} />
-              <stop offset="100%" stopColor="#6b7280" stopOpacity={1} />
+              <stop offset="0%" stopColor="#e5e7eb" stopOpacity={0.8} />
+              <stop offset="100%" stopColor="#e5e7eb" stopOpacity={1} />
             </linearGradient>
             <linearGradient id="gradientLowExposure" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stopColor="#16a34a" stopOpacity={0.6} />
@@ -146,7 +157,7 @@ export default function PercentileDistributionChart({
             {chartData.map((entry, index) => (
               <Cell 
                 key={`cell-${index}`} 
-                fill={`url(#${entry.gradientId})`}
+                fill={entry.usePattern ? 'url(#stripedNotDetected)' : `url(#${entry.gradientId})`}
                 stroke={entry.color}
                 strokeWidth={1.5}
               />
