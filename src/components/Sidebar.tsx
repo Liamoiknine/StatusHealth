@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard } from 'lucide-react';
-import { useMemo, useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 
 interface NavItem {
   href: string;
@@ -59,7 +59,7 @@ export default function Sidebar() {
   }, [pathname, searchParams]);
 
   // Update indicator position when active index changes or on resize
-  const updateIndicatorPosition = () => {
+  const updateIndicatorPosition = useCallback(() => {
     const activeItem = itemRefs.current[activeIndex];
     const nav = navRef.current;
     if (activeItem && nav) {
@@ -69,7 +69,7 @@ export default function Sidebar() {
       const height = itemRect.height;
       setIndicatorStyle({ top, height });
     }
-  };
+  }, [activeIndex]);
 
   useEffect(() => {
     // Use requestAnimationFrame to ensure DOM is ready
@@ -80,7 +80,7 @@ export default function Sidebar() {
     // Recalculate on window resize
     window.addEventListener('resize', updateIndicatorPosition);
     return () => window.removeEventListener('resize', updateIndicatorPosition);
-  }, [activeIndex]);
+  }, [activeIndex, updateIndicatorPosition]);
 
   // Also update when all refs are set (initial mount)
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Sidebar() {
         updateIndicatorPosition();
       });
     }
-  }, []);
+  }, [updateIndicatorPosition]);
 
   return (
     <aside className="w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40">
