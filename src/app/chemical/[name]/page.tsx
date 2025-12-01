@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { ChemicalData } from '@/app/api/csv-parser';
 import { getPercentileColor, formatPercentile } from '@/app/api/utils';
@@ -17,10 +18,14 @@ import ChemicalDescriptionSections from '@/components/ChemicalDescriptionSection
 
 export default function ChemicalPage({ params }: { params: Promise<{ name: string }> }) {
   const { selectedTest } = useTest();
+  const searchParams = useSearchParams();
   const [chemicalName, setChemicalName] = useState<string>('');
   const [chemical, setChemical] = useState<ChemicalData | null>(null);
   const [loading, setLoading] = useState(true);
   const [householdDataStructured, setHouseholdDataStructured] = useState<HouseholdChemicalDataStructured | null>(null);
+  
+  // Get the 'from' parameter to preserve tab context
+  const fromParam = searchParams?.get('from') || 'dashboard';
 
   useEffect(() => {
     async function loadData() {
@@ -93,10 +98,16 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Chemical Not Found</h1>
           <p className="text-gray-600 mb-8">The chemical &quot;{chemicalName}&quot; was not found.</p>
           <Link 
-            href="/categories" 
+            href={
+              fromParam === 'categories' 
+                ? '/categories'
+                : fromParam === 'exposures'
+                ? '/exposures'
+                : '/'
+            }
             className="inline-block bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors"
           >
-            Back to Categories
+            {fromParam === 'categories' ? 'Back to Categories' : fromParam === 'exposures' ? 'Back to Exposures' : 'Back to Dashboard'}
           </Link>
         </div>
       </div>
@@ -131,7 +142,13 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                     {chemical.compound}
                   </h1>
                   <Link 
-                    href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`}
+                    href={
+                      fromParam === 'categories' 
+                        ? `/categories?category=${encodeURIComponent(chemical.exposureCategory)}`
+                        : fromParam === 'exposures'
+                        ? `/exposures`
+                        : `/categories?category=${encodeURIComponent(chemical.exposureCategory)}`
+                    }
                     className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors group text-sm"
                   >
                     <svg className="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

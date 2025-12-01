@@ -1,20 +1,8 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-
-export default function HomePage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace('/categories');
-  }, [router]);
-
+export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
-        <p className="text-gray-600">Redirecting...</p>
+    <div className="min-h-screen bg-[#f8fafc]">
+      <div className="max-w-7xl mx-auto px-8 py-8">
+        {/* Dashboard content will be added here */}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import type { ReactElement } from 'react';
 import { CategoryOverview as CategoryOverviewType } from '@/data/category-overviews';
 import { getAllCategoryNames } from '@/data/category-overviews';
@@ -117,10 +118,20 @@ const parseMarkdown = (text: string): string => {
 };
 
 export default function AllChemicalsOverview({ data, onCategoryClick, categoryStats = [] }: AllChemicalsOverviewProps) {
+  const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Database Overview']));
   const allCategories = getAllCategoryNames();
   const interpretingResultsRef = useRef<HTMLDivElement>(null);
   const regulatoryContextRef = useRef<HTMLDivElement>(null);
+  
+  const handleCategoryClick = (category: string) => {
+    if (onCategoryClick) {
+      onCategoryClick(category);
+    } else {
+      // Default behavior: navigate to categories page
+      router.push(`/categories?category=${encodeURIComponent(category)}`);
+    }
+  };
   
   const toggleSection = (header: string, ref?: React.RefObject<HTMLDivElement | null>) => {
     const wasExpanded = expandedSections.has(header);
@@ -225,7 +236,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
               return (
                 <button
                   key={category}
-                  onClick={() => onCategoryClick?.(category)}
+                  onClick={() => handleCategoryClick(category)}
                   className="bg-white border border-gray-200 rounded-lg p-5 hover:border-[#1a2540] hover:shadow-lg hover:shadow-[#1a2540]/10 transition-all duration-300 text-left group shadow-sm"
                 >
                   <div className="flex items-start gap-4">

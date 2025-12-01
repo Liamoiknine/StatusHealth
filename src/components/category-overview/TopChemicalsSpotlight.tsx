@@ -54,7 +54,7 @@ export default function TopChemicalsSpotlight({
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
             >
               <Link
-                href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
                 className="block bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-teal-500 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-3">
