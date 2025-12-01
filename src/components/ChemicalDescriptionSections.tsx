@@ -211,7 +211,7 @@ export default function ChemicalDescriptionSections({ data }: ChemicalDescriptio
                     href={source} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-[#1a2540] hover:text-[#1a2540] hover:border-[#1a2540] hover:bg-[#1a2540]/5 transition-colors"
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-teal-500 text-xs text-teal-600 hover:text-teal-700 hover:border-teal-500 transition-colors"
                     title={source}
                   >
                     {formatUrlForDisplay(source)}
