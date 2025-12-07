@@ -1,16 +1,17 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback, memo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { useTest } from '@/contexts/TestContext';
 import { ChemicalData } from '@/app/api/csv-parser';
 import OverallExposureSummary from '@/components/dashboard/OverallExposureSummary';
 import CategoryComparisonChart from '@/components/dashboard/CategoryComparisonChart';
+import CategoryStackedBarChart from '@/components/dashboard/CategoryStackedBarChart';
 import TopPriorityChemicals from '@/components/dashboard/TopPriorityChemicals';
 import NavigationHub from '@/components/dashboard/NavigationHub';
 import ExposureSourceAnalysis from '@/components/category-overview/ExposureSourceAnalysis';
 import CategoryCard from '@/components/CategoryCard';
-import { groupChemicalsByCategory, getCategoryStats, filterChemicalsByExposure, sortChemicalsByPercentile, getChemicalStatusInfo } from '@/app/api/utils';
+import { groupChemicalsByCategory, getCategoryStats, filterChemicalsByExposure, sortChemicalsByPercentile, getChemicalStatusInfo, getCategoryStatusInfo } from '@/app/api/utils';
 import { getAllCategoryNames, findCategoryOverview } from '@/data/category-overviews';
 import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, LabelList } from 'recharts';
@@ -307,6 +308,11 @@ export default function DashboardPage() {
           </div>
         </div>
 
+        {/* Category Stacked Bar Chart Section */}
+        <div className="mb-12">
+          <CategoryStackedBarChart chemicals={chemicals} />
+        </div>
+
         {/* New Section - Detection Overview */}
         <div className="mb-12 px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-end">
@@ -350,6 +356,165 @@ export default function DashboardPage() {
               <div className="mt-6 w-full">
                 <p className="text-base font-bold text-teal-600">↓ 17% below average</p>
               </div>
+            </div>
+          </div>
+
+          {/* Expandable Section for Top Chemicals */}
+          {selectedClassification && (
+            <div className="mt-6 col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {sortChemicalsByPercentile(filterChemicalsByExposure(chemicals, selectedClassification))
+                    .slice(0, 3)
+                    .map((chemical) => {
+                      const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
+                      return (
+                        <Link
+                          key={chemical.compound}
+                          href={`/chemical/${encodeURIComponent(chemical.compound)}`}
+                          className="border border-gray-200 rounded-lg p-4 bg-white hover:border-teal-300 hover:shadow-md transition-all"
+                        >
+                          <div className="flex items-start justify-between mb-2">
+                            <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 flex-1">
+                              {chemical.compound}
+                            </h4>
+                            <div className={`ml-2 px-2 py-1 rounded text-xs font-bold ${statusInfo.textColor}`} style={{ backgroundColor: `${statusInfo.color}20` }}>
+                              {statusInfo.text}
+                            </div>
+                          </div>
+                          <div className="text-xs text-gray-600 mb-1">{chemical.exposureCategory}</div>
+                          <div className="flex items-center justify-between mt-2">
+                            <div className="text-xs text-gray-500">
+                              Value: {chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL
+                            </div>
+                            <div className={`text-sm font-bold ${statusInfo.textColor}`}>
+                              {Math.round((chemical.percentile || 0) * 100)}%
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Duplicated Section - Detection Overview */}
+        <div className="mb-12 px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-end">
+            {/* Left Side */}
+            <div className="flex flex-col">
+              <div className="flex items-start justify-between mb-2">
+                <h2 className="text-2xl font-bold text-gray-900">
+                  <span className="text-3xl text-teal-600">{chemicals.filter(c => c.value > 0).length}</span> chemicals detected
+                </h2>
+              </div>
+              <DetectionBreakdownChart 
+                chemicals={chemicals} 
+                onBarClick={(classification) => {
+                  setSelectedClassification(selectedClassification === classification ? null : classification);
+                }}
+              />
+            </div>
+
+            {/* Right Side - Category List */}
+            <div className="flex flex-col space-y-4">
+              {allCategories.map((category) => {
+                const categoryStatusInfo = getCategoryStatusInfo(category.chemicals);
+                const maxDetected = Math.max(...allCategories.map(c => c.detectedCount), 1);
+                const barWidth = (category.detectedCount / maxDetected) * 100;
+                
+                // Get the color based on classification
+                const getBarColor = (): string => {
+                  if (categoryStatusInfo.text === 'Pay Attention') {
+                    return EXPOSURE_COLORS.payAttention;
+                  } else if (categoryStatusInfo.text === 'Monitor Only') {
+                    return EXPOSURE_COLORS.monitorOnly;
+                  } else {
+                    return EXPOSURE_COLORS.lowExposure;
+                  }
+                };
+                const barColor = getBarColor();
+                
+                // Get category icon
+                const getCategoryIcon = (categoryName: string) => {
+                  const iconMap: Record<string, React.ReactElement> = {
+                    'Agricultural Chemicals': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                      </svg>
+                    ),
+                    'Containers & Coatings': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/>
+                        <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7"/>
+                        <path d="M3 7h18"/>
+                        <path d="M7 7v10"/>
+                        <path d="M17 7v10"/>
+                      </svg>
+                    ),
+                    'Household Products': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <path d="M9 22V12h6v10"/>
+                      </svg>
+                    ),
+                    'Industrial Chemicals': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                      </svg>
+                    ),
+                    'Persistent Pollutants': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M12 2v2"/>
+                        <path d="M12 20v2"/>
+                        <path d="M4 12H2"/>
+                        <path d="M22 12h-2"/>
+                        <path d="m15.536 15.536 1.414 1.414"/>
+                        <path d="m7.05 7.05-1.414-1.414"/>
+                        <path d="m15.536 8.464 1.414-1.414"/>
+                        <path d="m7.05 16.95-1.414 1.414"/>
+                        <circle cx="12" cy="12" r="4"/>
+                      </svg>
+                    ),
+                    'Personal Care Products': (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                        <path d="M8 12h8"/>
+                        <path d="M12 8v8"/>
+                      </svg>
+                    ),
+                  };
+                  return iconMap[categoryName] || null;
+                };
+                
+                return (
+                  <div key={category.name} className="flex items-start gap-3">
+                    {/* Icon */}
+                    <div className="text-teal-600 mt-0.5 flex-shrink-0">
+                      {getCategoryIcon(category.name)}
+                    </div>
+                    
+                    {/* Name and Bar */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-900">{category.name}</span>
+                        <span className="text-sm font-semibold text-gray-900 ml-2">{category.detectedCount}</span>
+                      </div>
+                      {/* Indicator Bar */}
+                      <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full transition-all duration-300"
+                          style={{ 
+                            width: `${barWidth}%`,
+                            backgroundColor: barColor
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
