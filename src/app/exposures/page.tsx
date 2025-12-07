@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { getPercentileColor, formatPercentile, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType } from '@/app/api/utils';
 import { useTest } from '@/contexts/TestContext';
@@ -9,13 +10,25 @@ import ExposureFilterButtons from '@/components/ExposureFilterButtons';
 import ChemicalSearchBar from '@/components/ChemicalSearchBar';
 import { ChemicalData } from '@/app/api/csv-parser';
 
-export default function AllExposuresPage() {
+function AllExposuresPageContent() {
   const { selectedTest } = useTest();
+  const searchParams = useSearchParams();
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
   const [exposureFilter, setExposureFilter] = useState<ExposureFilterType>('all');
   const [expandedChemical, setExpandedChemical] = useState<string | null>(null);
   const chemicalRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  // Read filter from URL on mount
+  useEffect(() => {
+    const filterParam = searchParams?.get('filter');
+    if (filterParam) {
+      const validFilters: ExposureFilterType[] = ['all', 'pay-attention', 'monitor-only', 'low-exposure', 'not-detected'];
+      if (validFilters.includes(filterParam as ExposureFilterType)) {
+        setExposureFilter(filterParam as ExposureFilterType);
+      }
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     async function loadData() {
@@ -251,5 +264,20 @@ export default function AllExposuresPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AllExposuresPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading exposures...</p>
+        </div>
+      </div>
+    }>
+      <AllExposuresPageContent />
+    </Suspense>
   );
 }

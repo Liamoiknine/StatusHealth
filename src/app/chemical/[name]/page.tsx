@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { ChemicalData } from '@/app/api/csv-parser';
 import { getPercentileColor, formatPercentile } from '@/app/api/utils';
+import { EXPOSURE_COLOR_CLASSES } from '@/lib/colors';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import LongitudinalChart from '@/components/LongitudinalChart';
@@ -162,7 +163,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                 <div className={`px-3 py-1.5 rounded-full border ${
                   statusInfo.color === 'red' ? 'bg-red-50 border-red-500 text-red-600' :
                   statusInfo.color === 'yellow' ? 'bg-yellow-50 border-yellow-500 text-yellow-600' :
-                  statusInfo.color === 'green' ? 'bg-green-50 border-green-500 text-green-600' :
+                  statusInfo.color === 'green' ? `${EXPOSURE_COLOR_CLASSES.lowExposure.bgLight} ${EXPOSURE_COLOR_CLASSES.lowExposure.border} ${EXPOSURE_COLOR_CLASSES.lowExposure.text}` :
                   'bg-gray-50 border-gray-300 text-gray-600'
                 }`}>
                   <span className="text-xs font-semibold">{statusInfo.label}</span>

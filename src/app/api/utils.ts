@@ -1,4 +1,5 @@
 import { ChemicalData } from './csv-parser';
+import { EXPOSURE_COLORS, EXPOSURE_COLOR_CLASSES } from '@/lib/colors';
 
 // Utility functions for chemical data processing
 
@@ -39,10 +40,10 @@ export function sortChemicalsByPercentile(chemicals: ChemicalData[]): ChemicalDa
 
 // Percentile-based color for individual chemicals
 export function getPercentileColor(percentile?: number, value?: number): string {
-  if (value === 0) return 'text-gray-500';                       // Not Detected
-  if (!percentile || percentile <= 0.3) return 'text-green-600'; // Low Exposure (0-30%)
-  if (percentile > 0.6) return 'text-red-600';                   // Pay Attention (>60%)
-  return 'text-yellow-400';                                       // Monitor Only (30-60%)
+  if (value === 0) return EXPOSURE_COLOR_CLASSES.notDetected.text;
+  if (!percentile || percentile <= 0.3) return EXPOSURE_COLOR_CLASSES.lowExposure.text;
+  if (percentile > 0.6) return EXPOSURE_COLOR_CLASSES.payAttention.text;
+  return EXPOSURE_COLOR_CLASSES.monitorOnly.text;
 }
 
 // Format percentile for display (converts 0.532 to "53%")
@@ -63,24 +64,24 @@ export function getChemicalStatusInfo(percentile?: number, value?: number) {
     };
   } else if (!percentile || percentile <= 0.3) {
     return {
-      color: 'bg-green-600',
+      color: EXPOSURE_COLOR_CLASSES.lowExposure.bg,
       text: 'Low Exposure',
-      bgColor: 'bg-transparent border border-green-500',
-      textColor: 'text-green-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.lowExposure.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.lowExposure.text
     };
   } else if (percentile > 0.6) {
     return {
-      color: 'bg-red-500',
+      color: EXPOSURE_COLOR_CLASSES.payAttention.bg,
       text: 'Pay Attention',
-      bgColor: 'bg-transparent border border-red-500',
-      textColor: 'text-red-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.payAttention.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.payAttention.text
     };
   } else {
     return {
-      color: 'bg-yellow-400',
+      color: EXPOSURE_COLOR_CLASSES.monitorOnly.bg,
       text: 'Monitor Only',
-      bgColor: 'bg-transparent border border-yellow-500',
-      textColor: 'text-yellow-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.monitorOnly.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.monitorOnly.text
     };
   }
 }
@@ -126,26 +127,26 @@ export function getCategoryStatusInfo(chemicals: ChemicalData[]) {
   if (payAttentionCount >= 3) {
     // If 3+ chemicals are Pay Attention, category is Pay Attention
     return {
-      color: 'bg-red-500',
+      color: EXPOSURE_COLOR_CLASSES.payAttention.bg,
       text: 'Pay Attention',
-      bgColor: 'bg-transparent border border-red-500',
-      textColor: 'text-red-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.payAttention.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.payAttention.text
     };
   } else if (monitorOnlyCount >= 3 || payAttentionCount >= 1) {
     // If 3+ Monitor Only OR 1+ Pay Attention, category is Monitor Only
     return {
-      color: 'bg-yellow-400',
+      color: EXPOSURE_COLOR_CLASSES.monitorOnly.bg,
       text: 'Monitor Only',
-      bgColor: 'bg-transparent border border-yellow-500',
-      textColor: 'text-yellow-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.monitorOnly.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.monitorOnly.text
     };
   } else {
     // If <3 Monitor Only and no Pay Attention, category is Low Exposure
     return {
-      color: 'bg-green-400',
+      color: EXPOSURE_COLOR_CLASSES.lowExposure.bg,
       text: 'Low Exposure',
-      bgColor: 'bg-transparent border border-green-500',
-      textColor: 'text-green-500'
+      bgColor: `bg-transparent border ${EXPOSURE_COLOR_CLASSES.lowExposure.border}`,
+      textColor: EXPOSURE_COLOR_CLASSES.lowExposure.text
     };
   }
 }

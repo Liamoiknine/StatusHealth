@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { useTest } from '@/contexts/TestContext';
 import { groupChemicalsByCategory, getCategoryStats, getPercentileDistribution, getChemicalStatusInfo, filterChemicalsByExposure, sortChemicalsByPercentile, ExposureFilterType, formatPercentile, getPercentileColor } from '@/app/api/utils';
+import { EXPOSURE_COLOR_CLASSES } from '@/lib/colors';
 import { findCategoryOverview, getAllCategoryNames } from '@/data/category-overviews';
 import { ChemicalData } from '@/app/api/csv-parser';
 import CategoryCard from '@/components/CategoryCard';
@@ -257,7 +258,7 @@ function CategoriesPageContent() {
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-600 mb-1">Low Exposure</div>
-                <div className="text-2xl font-bold text-green-600">{overallDistribution.lowExposure}</div>
+                <div className={`text-2xl font-bold ${EXPOSURE_COLOR_CLASSES.lowExposure.text}`}>{overallDistribution.lowExposure}</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="text-sm text-gray-600 mb-1">Monitor / Pay Attention</div>

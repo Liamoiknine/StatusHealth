@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { TestProvider } from "@/contexts/TestContext";
 import { Suspense } from "react";
 
@@ -40,9 +41,14 @@ export default function RootLayout({
           <Suspense fallback={<div className="w-60 bg-white min-h-screen border-r border-gray-200" />}>
             <Sidebar />
           </Suspense>
-          <main className="ml-60 pt-16">
-            {children}
-          </main>
+          <div className="flex flex-col min-h-screen">
+            <main className="ml-60 pt-16 flex-1">
+              {children}
+            </main>
+            <div className="ml-60">
+              <Footer />
+            </div>
+          </div>
         </TestProvider>
       </body>
     </html>

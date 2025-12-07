@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight } from 'lucide-react';
+import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar } from 'lucide-react';
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { getAllCategoryNames } from '@/data/category-overviews';
 
@@ -16,6 +16,7 @@ const navItems: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/categories', label: 'Categories', icon: FileText },
   { href: '/exposures', label: 'All Exposures', icon: Search },
+  { href: '/tests', label: 'All Tests', icon: Calendar },
   { href: '/billing', label: 'Billing', icon: CreditCard },
   { href: '/settings', label: 'Settings', icon: Settings },
   { href: '/help', label: 'Help', icon: MessageSquare },
@@ -120,10 +121,11 @@ export default function Sidebar() {
       <nav ref={navRef} className="flex-1 pt-20 pb-6 space-y-1 relative">
         {/* Sliding blue indicator */}
         <div
-          className="absolute right-0 w-1 bg-blue-600 transition-all duration-300 ease-in-out"
+          className="absolute right-[-4px] w-1 transition-all duration-300 ease-in-out rounded-r-full"
           style={{
             top: `${indicatorStyle.top}px`,
             height: `${indicatorStyle.height}px`,
+            backgroundColor: '#3b82f6',
           }}
         />
         
@@ -148,32 +150,35 @@ export default function Sidebar() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/categories"
-                      className={`flex-1 flex items-center space-x-2.5 pl-6.5 pr-2 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                      className={`flex-1 flex items-center space-x-2.5 pl-5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                         isActive && !selectedCategory
                           ? 'text-gray-900'
                           : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                       }`}
                     >
                       <Icon className="w-4 h-4" strokeWidth={2} />
-                      <span className="flex-1 text-left">{item.label}</span>
-                    </Link>
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setIsCategoriesExpanded(!isCategoriesExpanded);
-                      }}
-                      className="p-1.5 rounded transition-colors"
-                      aria-label="Toggle categories"
-                    >
-                      {isCategoriesExpanded ? (
-                        <ChevronDown className="w-4 h-4" strokeWidth={2} />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" strokeWidth={2} />
+                      <span>{item.label}</span>
+                      {(isCategoriesExpanded || isActive) && (
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setIsCategoriesExpanded(!isCategoriesExpanded);
+                          }}
+                          className="ml-1 p-0.5 rounded transition-colors"
+                          aria-label="Toggle categories"
+                        >
+                          {isCategoriesExpanded ? (
+                            <ChevronDown className="w-4 h-4" strokeWidth={2} />
+                          ) : (
+                            <ChevronRight className="w-4 h-4" strokeWidth={2} />
+                          )}
+                        </button>
                       )}
-                    </button>
+                    </Link>
                   </div>
                   {isCategoriesExpanded && (
-                    <div ref={categoriesSubmenuRef} className="pl-11 pr-3 py-1 space-y-0.5">
+                    <div ref={categoriesSubmenuRef} className="pl-9 pr-3 py-1 space-y-0.5">
                       {categoryNames.map((categoryName) => {
                         const isCategoryActive = selectedCategory === categoryName;
                         return (
@@ -196,7 +201,7 @@ export default function Sidebar() {
               ) : (
                 <Link
                   href={item.href}
-                  className={`flex items-center space-x-2.5 pl-6.5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-2.5 pl-5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
                       ? 'text-gray-900'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'

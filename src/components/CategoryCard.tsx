@@ -19,33 +19,49 @@ interface CategoryCardProps {
 const getCategoryIcon = (categoryName: string) => {
   const iconMap: Record<string, React.ReactElement> = {
     'Agricultural Chemicals': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
       </svg>
     ),
     'Containers & Coatings': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/>
+        <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7"/>
+        <path d="M3 7h18"/>
+        <path d="M7 7v10"/>
+        <path d="M17 7v10"/>
       </svg>
     ),
     'Household Products': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <path d="M9 22V12h6v10"/>
       </svg>
     ),
     'Industrial Chemicals': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
       </svg>
     ),
     'Persistent Pollutants': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M12 2v2"/>
+        <path d="M12 20v2"/>
+        <path d="M4 12H2"/>
+        <path d="M22 12h-2"/>
+        <path d="m15.536 15.536 1.414 1.414"/>
+        <path d="m7.05 7.05-1.414-1.414"/>
+        <path d="m15.536 8.464 1.414-1.414"/>
+        <path d="m7.05 16.95-1.414 1.414"/>
+        <circle cx="12" cy="12" r="4"/>
       </svg>
     ),
     'Personal Care Products': (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        <path d="M8 12h8"/>
+        <path d="M12 8v8"/>
       </svg>
     ),
   };
@@ -92,17 +108,14 @@ export default function CategoryCard({
         className="block h-full bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg hover:border-[#1a2540]/50 transition-all duration-300 group"
       >
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-3 flex-1 min-w-0">
+        <div className="mb-4">
+          <div className="flex items-center gap-3">
             <div className="bg-teal-100 p-2 rounded-lg text-teal-600 flex-shrink-0 group-hover:bg-teal-200 transition-colors">
               {getCategoryIcon(categoryName)}
             </div>
-            <h3 className="text-lg font-bold text-gray-900 truncate">
+            <h3 className="text-lg font-bold text-gray-900">
               {categoryName}
             </h3>
-          </div>
-          <div className={`px-2.5 py-1 rounded-full text-xs font-medium flex-shrink-0 ${statusInfo.bgColor} ${statusInfo.textColor}`}>
-            {statusInfo.text}
           </div>
         </div>
 
@@ -110,6 +123,13 @@ export default function CategoryCard({
         <p className="text-sm text-gray-600 mb-4 line-clamp-3">
           {briefDescription}
         </p>
+
+        {/* Classification Tag */}
+        <div className="mb-3">
+          <div className={`w-full px-3 py-2 rounded-lg text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+            {statusInfo.text}
+          </div>
+        </div>
 
         {/* Metrics */}
         <div className="grid grid-cols-2 gap-3 mb-4">
