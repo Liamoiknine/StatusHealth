@@ -8,30 +8,30 @@ interface ExposureFilterButtonsProps {
   onFilterChange: (filter: ExposureFilterType) => void;
 }
 
-export default function ExposureFilterButtons({ currentFilter, onFilterChange }: ExposureFilterButtonsProps) {
-  const filters = [
-    { 
-      value: 'pay-attention' as const, 
-      label: 'Pay Attention'
-    },
-    { 
-      value: 'monitor-only' as const, 
-      label: 'Monitor Only'
-    },
-    { 
-      value: 'low-exposure' as const, 
-      label: 'Low Exposure'
-    },
-    { 
-      value: 'not-detected' as const, 
-      label: 'Not Detected'
-    },
-    { 
-      value: 'all' as const, 
-      label: 'All Chemicals'
-    }
-  ];
+const filters = [
+  { 
+    value: 'pay-attention' as const, 
+    label: 'Pay Attention'
+  },
+  { 
+    value: 'monitor-only' as const, 
+    label: 'Monitor Only'
+  },
+  { 
+    value: 'low-exposure' as const, 
+    label: 'Low Exposure'
+  },
+  { 
+    value: 'not-detected' as const, 
+    label: 'Not Detected'
+  },
+  { 
+    value: 'all' as const, 
+    label: 'All Chemicals'
+  }
+];
 
+export default function ExposureFilterButtons({ currentFilter, onFilterChange }: ExposureFilterButtonsProps) {
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -52,7 +52,7 @@ export default function ExposureFilterButtons({ currentFilter, onFilterChange }:
         width: underlineWidth
       });
     }
-  }, [currentFilter, filters]);
+  }, [currentFilter]);
 
   return (
     <div ref={containerRef} className="relative flex items-center space-x-2">
