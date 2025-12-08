@@ -147,8 +147,35 @@ export default function ExposureSourceAnalysis({
     );
   }
 
+  // Calculate total count
+  const totalCount = sourceDist.reduce((sum, item) => sum + item.count, 0);
+  
+  // Filter sources above 10% and group the rest as "Other"
+  const threshold = 0.1; // 10%
+  const sourcesAboveThreshold: typeof sourceDist = [];
+  let otherCount = 0;
+  const otherSources: string[] = [];
 
-  const pieData = sourceDist.map((item, index) => ({
+  sourceDist.forEach((item) => {
+    const percentage = item.count / totalCount;
+    if (percentage > threshold) {
+      sourcesAboveThreshold.push(item);
+    } else {
+      otherCount += item.count;
+      otherSources.push(item.source);
+    }
+  });
+
+  // Create the final distribution array
+  const filteredSourceDist = [...sourcesAboveThreshold];
+  if (otherCount > 0) {
+    filteredSourceDist.push({
+      source: 'Other',
+      count: otherCount
+    });
+  }
+
+  const pieData = filteredSourceDist.map((item, index) => ({
     name: item.source,
     value: item.count,
     color: COLORS[index % COLORS.length]
@@ -237,83 +264,85 @@ export default function ExposureSourceAnalysis({
         </h3>
       )}
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Chart on the left */}
-        <div className="flex justify-center lg:justify-start">
-          <div className="w-full max-w-sm">
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomLabel}
-                  outerRadius={100}
-                  innerRadius={60}
-                  fill="#8884d8"
-                  dataKey="value"
-                  onMouseEnter={(_, index) => setActiveIndex(index)}
-                  onMouseLeave={() => setActiveIndex(null)}
-                  onClick={handleSliceClick}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {pieData.map((entry, index) => (
-                    <Cell 
-                      key={`cell-${index}`} 
-                      fill={entry.color}
-                      opacity={activeIndex === index ? 1 : activeIndex === null ? 1 : 0.5}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip content={<CustomTooltip />} />
-              </PieChart>
-            </ResponsiveContainer>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          {/* Chart on the left */}
+          <div className="flex justify-center lg:justify-start pr-2">
+            <div className="w-full max-w-sm">
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={renderCustomLabel}
+                    outerRadius={100}
+                    innerRadius={60}
+                    fill="#8884d8"
+                    dataKey="value"
+                    onMouseEnter={(_, index) => setActiveIndex(index)}
+                    onMouseLeave={() => setActiveIndex(null)}
+                    onClick={handleSliceClick}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell 
+                        key={`cell-${index}`} 
+                        fill={entry.color}
+                        opacity={activeIndex === index ? 1 : activeIndex === null ? 1 : 0.5}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip content={<CustomTooltip />} />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
           </div>
-        </div>
 
-        {/* Source explanations on the right */}
-        <div className="space-y-4">
-          <h4 className="text-sm font-medium text-gray-600 mb-3">Source Descriptions</h4>
-          <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
-            {sourceDist.slice(0, 8).map((item, index) => {
-              const explanation = getSourceExplanation(item.source, chemicals);
-              const color = COLORS[index % COLORS.length];
-              return (
-                <div 
-                  key={item.source}
-                  ref={(el) => {
-                    if (el) {
-                      sourceRefs.current.set(item.source, el);
-                    } else {
-                      sourceRefs.current.delete(item.source);
-                    }
-                  }}
-                  className="bg-gray-50 border border-gray-200 rounded-lg p-3 hover:border-gray-300 transition-colors scroll-mt-2"
-                >
-                  <div className="flex items-start gap-2 mb-2">
-                    <div 
-                      className="w-3 h-3 rounded-full flex-shrink-0 mt-1"
-                      style={{ backgroundColor: color }}
-                    />
-                    <div className="flex-1 min-w-0">
-                      <h5 className="text-sm font-semibold text-gray-900 mb-1 truncate">
-                        {item.source}
-                      </h5>
-                      <p className="text-xs text-gray-600 leading-relaxed">
-                        {explanation}
-                      </p>
+          {/* Source explanations on the right */}
+          <div className="space-y-4 pl-2">
+            <h4 className="text-sm font-medium text-gray-600 mb-2">Source Descriptions</h4>
+            <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+              {filteredSourceDist.map((item, index) => {
+                const explanation = item.source === 'Other' 
+                  ? `Chemicals from various sources that each represent less than 10% of total exposures.${otherSources.length > 0 ? ` Includes: ${otherSources.slice(0, 5).join(', ')}${otherSources.length > 5 ? `, and ${otherSources.length - 5} more` : ''}.` : ''}`
+                  : getSourceExplanation(item.source, chemicals);
+                const color = COLORS[index % COLORS.length];
+                return (
+                  <div 
+                    key={item.source}
+                    ref={(el) => {
+                      if (el) {
+                        sourceRefs.current.set(item.source, el);
+                      } else {
+                        sourceRefs.current.delete(item.source);
+                      }
+                    }}
+                    className="bg-gray-50 border border-gray-200 rounded-lg p-3 hover:border-gray-300 transition-colors scroll-mt-2"
+                  >
+                    <div className="flex items-start gap-2 mb-2">
+                      <div 
+                        className="w-3 h-3 rounded-full flex-shrink-0 mt-1"
+                        style={{ backgroundColor: color }}
+                      />
+                      <div className="flex-1 min-w-0">
+                        <h5 className="text-sm font-semibold text-gray-900 mb-1 truncate">
+                          {item.source}
+                        </h5>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          {explanation}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-xs text-gray-500 mt-2">
+                      {item.count} chemical{item.count !== 1 ? 's' : ''}
                     </div>
                   </div>
-                  <div className="text-xs text-gray-500 mt-2">
-                    {item.count} chemical{item.count !== 1 ? 's' : ''}
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
     </>
   );
 

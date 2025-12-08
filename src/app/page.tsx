@@ -11,7 +11,7 @@ import TopPriorityChemicals from '@/components/dashboard/TopPriorityChemicals';
 import NavigationHub from '@/components/dashboard/NavigationHub';
 import ExposureSourceAnalysis from '@/components/category-overview/ExposureSourceAnalysis';
 import CategoryCard from '@/components/CategoryCard';
-import { groupChemicalsByCategory, getCategoryStats, filterChemicalsByExposure, sortChemicalsByPercentile, getChemicalStatusInfo, getCategoryStatusInfo } from '@/app/api/utils';
+import { groupChemicalsByCategory, getCategoryStats, filterChemicalsByExposure, sortChemicalsByPercentile, getChemicalStatusInfo, getCategoryStatusInfo, formatPercentile, getPercentileColor } from '@/app/api/utils';
 import { getAllCategoryNames, findCategoryOverview } from '@/data/category-overviews';
 import Link from 'next/link';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, LabelList } from 'recharts';
@@ -568,38 +568,163 @@ export default function DashboardPage() {
         </div>
 
         {/* Two Column Layout: Top Category Preview + Navigation Hub */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-30">
-          {/* Top Category Preview - Takes 2 columns */}
-          <div className="lg:col-span-2">
-            <div className="mb-6 flex items-center justify-between">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-1">Top Category</h2>
-                <p className="text-gray-600 text-sm">Your category with the most detected chemicals</p>
-              </div>
-              <Link
-                href="/categories"
-                className="text-sm text-teal-600 hover:text-teal-700 font-medium inline-flex items-center"
-              >
-                View all categories
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+        <div className="mb-10">
+          <div className="space-y-1">
+            {/* Header row */}
+            <div className="mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-0">Top Category</h2>
             </div>
-            {allCategories.length > 0 && (
-              <CategoryCard
-                categoryName={allCategories[0].name}
-                chemicals={allCategories[0].chemicals}
-                allCategories={chemicals}
-                overview={allCategories[0].overview}
-                index={0}
-              />
-            )}
-          </div>
 
-          {/* Navigation Hub - Takes 1 column */}
-          <div className="lg:col-span-1">
-            <NavigationHub />
+            {/* Subheader */}
+            <div className="mb-4">
+              <p className="text-gray-600 text-sm">
+                {allCategories.length > 0 
+                  ? `Your category with the most detected chemicals`
+                  : 'No category data available'
+                }
+              </p>
+            </div>
+
+            {/* Content row: Top Category Card + Navigation Hub side by side */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+              {/* Top Category Content - Takes 2 columns */}
+              <div className="lg:col-span-2 flex flex-col h-full min-h-0">
+                {allCategories.length > 0 && (() => {
+                  const topCategory = allCategories[0];
+                  const detectedCount = topCategory.chemicals.filter(c => c.value > 0).length;
+                  const totalCount = topCategory.chemicals.length;
+                  const detectionRate = totalCount > 0 ? Math.round((detectedCount / totalCount) * 100) : 0;
+                  const statusInfo = getCategoryStatusInfo(topCategory.chemicals);
+                  const topChemicals = sortChemicalsByPercentile(topCategory.chemicals.filter(c => c.value > 0)).slice(0, 3);
+                  const briefDescription = topCategory.overview?.summary_sections?.[0]?.content 
+                    ? topCategory.overview.summary_sections[0].content.substring(0, 200) + (topCategory.overview.summary_sections[0].content.length > 200 ? '...' : '')
+                    : 'Explore chemicals in this category and understand your exposure levels.';
+
+                  // Get category icon
+                  const getCategoryIcon = (categoryName: string) => {
+                    const iconMap: Record<string, React.ReactElement> = {
+                      'Agricultural Chemicals': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                        </svg>
+                      ),
+                      'Containers & Coatings': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/>
+                          <path d="M21 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7"/>
+                          <path d="M3 7h18"/>
+                          <path d="M7 7v10"/>
+                          <path d="M17 7v10"/>
+                        </svg>
+                      ),
+                      'Household Products': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                          <path d="M9 22V12h6v10"/>
+                        </svg>
+                      ),
+                      'Industrial Chemicals': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                      ),
+                      'Persistent Pollutants': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M12 2v2"/>
+                          <path d="M12 20v2"/>
+                          <path d="M4 12H2"/>
+                          <path d="M22 12h-2"/>
+                          <path d="m15.536 15.536 1.414 1.414"/>
+                          <path d="m7.05 7.05-1.414-1.414"/>
+                          <path d="m15.536 8.464 1.414-1.414"/>
+                          <path d="m7.05 16.95-1.414 1.414"/>
+                          <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                      ),
+                      'Personal Care Products': (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                          <path d="M8 12h8"/>
+                          <path d="M12 8v8"/>
+                        </svg>
+                      ),
+                    };
+                    return iconMap[categoryName] || null;
+                  };
+
+                  return (
+                    <div className="rounded-lg pr-6 pt-6 pb-6 w-full flex flex-col flex-1 min-h-0 overflow-hidden relative">
+                      {/* Top section: Category info and stats */}
+                      <div className="grid grid-cols-2 gap-6 mb-4 flex-shrink-0 -mt-6">
+                        {/* Left side: Category icon, name, and status */}
+                        <div className="flex flex-col items-center justify-center pr-6 border-r border-gray-200">
+                          <div className="text-teal-600 mb-3">
+                            {getCategoryIcon(topCategory.name)}
+                          </div>
+                          <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 text-center">{topCategory.name}</h3>
+                          <div className={`px-3 py-1.5 rounded-lg text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                            {statusInfo.text}
+                          </div>
+                        </div>
+
+                        {/* Right side: Stats */}
+                        <div className="flex flex-col justify-center pl-6 w-full">
+                          <div className="w-full pb-2 pt-10 border-b border-gray-200 flex items-center justify-between gap-4">
+                            <div className="text-xs text-gray-500">Detection Rate</div>
+                            <div className="text-sm text-gray-900 text-right">{detectionRate}%</div>
+                          </div>
+                          <div className="w-full py-2 border-b border-gray-200 flex items-center justify-between gap-4">
+                            <div className="text-xs text-gray-500">Total Chemicals</div>
+                            <div className="text-sm text-gray-900 text-right">{totalCount}</div>
+                          </div>
+                          <div className="w-full py-2 flex items-center justify-between gap-4">
+                            <div className="text-xs text-gray-500">Detected</div>
+                            <div className="text-sm text-gray-900 text-right">{detectedCount} of {totalCount}</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Middle section: Description */}
+                      <div className="mb-4 flex-shrink-0">
+                        <p className="text-sm text-gray-700 leading-relaxed">
+                          {briefDescription}
+                        </p>
+                      </div>
+
+                      {/* Bottom section: Top chemicals */}
+                      {topChemicals.length > 0 && (
+                        <div className="mt-auto pt-4 border-t border-gray-200 flex-shrink-0">
+                          <div className="text-xs text-gray-500 mb-2">Top Chemicals</div>
+                          <div className="space-y-2">
+                            {topChemicals.map((chemical) => {
+                              const percentileColor = getPercentileColor(chemical.percentile, chemical.value);
+                              return (
+                                <Link
+                                  key={chemical.compound}
+                                  href={`/chemical/${encodeURIComponent(chemical.compound)}?from=dashboard`}
+                                  className="flex items-center justify-between text-sm hover:text-teal-600 transition-colors"
+                                >
+                                  <span className="line-clamp-1">{chemical.compound}</span>
+                                  <span className={`${percentileColor} font-semibold ml-2 flex-shrink-0`}>
+                                    {formatPercentile(chemical.percentile, chemical.value)}
+                                  </span>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
+              </div>
+              
+              {/* Navigation Hub - Takes 1 column */}
+              <div className="lg:col-span-1 -mt-17">
+                <NavigationHub />
+              </div>
+            </div>
           </div>
         </div>
 
