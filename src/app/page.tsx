@@ -41,8 +41,8 @@ function TestDateDropdown({
           onClick={() => setIsOpen(!isOpen)}
           className="text-left w-full"
         >
-          <p className="text-sm text-gray-600">Viewing results for</p>
-          <h2 className="text-xl font-bold text-gray-900 underline decoration-teal-600 cursor-pointer">
+          <p className="text-sm text-gray-300">Viewing results for</p>
+          <h2 className="text-xl font-bold text-white underline decoration-teal-400 cursor-pointer">
             {currentDate}
           </h2>
         </button>
@@ -276,9 +276,8 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-10 sm:px-16 lg:px-20 py-8">
         {/* Hero Section */}
         <div className="mb-12">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none">
-            <span className="text-4xl lg:text-5xl text-gray-300 font-bold block">In a world of exposures</span>
-            <span className="text-7xl lg:text-7xl text-teal-600 ml-8 lg:ml-20 block -mt-1 lg:-mt-1.5">we've got you covered.</span>
+          <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none text-teal-600">
+            We've got you covered, Danny.
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl">
             View your comprehensive overview of your test results across all {chemicals.length} chemicals and 6 exposure categories
@@ -286,7 +285,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Test Selection Section */}
-        <div className="mb-12 bg-white border-b-4 border-teal-600 rounded-lg p-6">
+        <div className="mb-10 bg-[#1a2540] rounded-lg p-6 -mt-6 shadow-xl">
           <div className="flex items-center justify-between">
             <TestDateDropdown 
               selectedTest={selectedTest}
@@ -297,11 +296,11 @@ export default function DashboardPage() {
             <div className="flex items-center gap-3">
               <Link 
                 href="/tests"
-                className="bg-[#1a2540] text-white rounded-lg px-4 py-1.5 hover:bg-[#1a2540]/90 transition-colors font-medium text-sm inline-block"
+                className="bg-transparent text-teal-400 border border-teal-400 rounded-lg px-4 py-1.5 hover:bg-teal-400/10 transition-colors font-medium text-sm inline-block"
               >
                 View all tests
               </Link>
-              <button className="bg-white text-teal-600 border border-teal-600 rounded-lg px-4 py-1.5 hover:bg-teal-50 transition-colors font-medium text-sm">
+              <button className="bg-teal-600 text-white rounded-lg px-4 py-1.5 hover:bg-teal-700 transition-colors font-medium text-sm">
                 Schedule your next test
               </button>
             </div>
