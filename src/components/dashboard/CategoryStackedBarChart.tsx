@@ -380,7 +380,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
         </div>
       </div>
       
-      <div className="rounded-lg -mt-40">
+      <div className="rounded-lg -mt-50">
         <div className="[&_svg]:outline-none [&_svg]:focus:outline-none" tabIndex={-1} style={{ pointerEvents: 'auto' }}>
           <ResponsiveContainer width="100%" height={500}>
             <BarChart
