@@ -52,7 +52,7 @@ export default function ExposureFilterButtons({ currentFilter, onFilterChange }:
         width: underlineWidth
       });
     }
-  }, [currentFilter]);
+  }, [currentFilter, filters]);
 
   return (
     <div ref={containerRef} className="relative flex items-center space-x-2">

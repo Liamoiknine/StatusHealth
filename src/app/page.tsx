@@ -10,11 +10,10 @@ import CategoryStackedBarChart from '@/components/dashboard/CategoryStackedBarCh
 import TopPriorityChemicals from '@/components/dashboard/TopPriorityChemicals';
 import NavigationHub from '@/components/dashboard/NavigationHub';
 import ExposureSourceAnalysis from '@/components/category-overview/ExposureSourceAnalysis';
-import CategoryCard from '@/components/CategoryCard';
 import { groupChemicalsByCategory, getCategoryStats, filterChemicalsByExposure, sortChemicalsByPercentile, getChemicalStatusInfo, getCategoryStatusInfo, formatPercentile, getPercentileColor } from '@/app/api/utils';
 import { getAllCategoryNames, findCategoryOverview } from '@/data/category-overviews';
 import Link from 'next/link';
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, LabelList } from 'recharts';
+import { BarChart, Bar, XAxis, ResponsiveContainer, Cell, LabelList } from 'recharts';
 import { formatTestDate } from '@/lib/date-utils';
 import { EXPOSURE_COLORS } from '@/lib/colors';
 import { TestMetadata } from '@/app/api/csv-parser';
@@ -102,8 +101,18 @@ const DetectionBreakdownChart = memo(function DetectionBreakdownChart({
     ];
   }, [chemicals]);
 
-  const handleBarClick = useCallback((data: any) => {
-    const entry = chartData.find(item => item.name === data.name || item.value === data.value);
+  interface BarClickData {
+    name?: string;
+    value?: number | [number, number];
+    payload?: {
+      name?: string;
+      value?: number;
+    };
+  }
+
+  const handleBarClick = useCallback((data: BarClickData) => {
+    const dataValue = Array.isArray(data.value) ? data.value[0] : data.value;
+    const entry = chartData.find(item => item.name === data.name || item.value === dataValue || item.name === data.payload?.name || item.value === data.payload?.value);
     if (entry && onBarClick) {
       onBarClick(entry.filter);
     }
@@ -122,6 +131,7 @@ const DetectionBreakdownChart = memo(function DetectionBreakdownChart({
             <Cell key={`cell-${index}`} fill={entry.color} />
           ))}
           <LabelList 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             content={(props: any) => {
               const { x, y, width, value, payload } = props;
               // Get the name from payload or find entry by value
@@ -130,10 +140,14 @@ const DetectionBreakdownChart = memo(function DetectionBreakdownChart({
                 : chartData.find(item => item.value === value);
               const color = entry?.color || '#000000';
               
+              const xNum = typeof x === 'number' ? x : Number(x) || 0;
+              const yNum = typeof y === 'number' ? y : Number(y) || 0;
+              const widthNum = typeof width === 'number' ? width : Number(width) || 0;
+              
               return (
                 <text
-                  x={x + width / 2}
-                  y={y - 8}
+                  x={xNum + widthNum / 2}
+                  y={yNum - 8}
                   fill={color}
                   textAnchor="middle"
                   fontSize={32}
@@ -277,7 +291,7 @@ export default function DashboardPage() {
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none text-teal-600">
-            We've got you covered, Danny.
+            We&apos;ve got you covered, Danny.
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl">
             View your comprehensive overview of your test results across all {chemicals.length} chemicals and 6 exposure categories
