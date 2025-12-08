@@ -130,6 +130,11 @@ export default function CategoryComparisonChart({ chemicals }: CategoryCompariso
   // Custom shape to show average percentile as a subtle line within the bar
   const CustomBar = (props: CustomBarProps) => {
     const { x, y, width, height, payload } = props;
+    
+    if (!payload || x === undefined || y === undefined || width === undefined || height === undefined) {
+      return null;
+    }
+    
     const avgPercentile = payload.avgPercentileLine || 0;
     const categoryInfo = categoryData.find(c => c.category === payload.name);
     const barColor = categoryInfo ? getBarColor(categoryInfo.classification) : EXPOSURE_COLORS.lowExposure;
