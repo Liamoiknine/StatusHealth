@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import SemiCircleProgressBar from 'react-progressbar-semicircle';
 import { ChemicalData } from '@/app/api/csv-parser';
-import { getChemicalStatusInfo, formatPercentile, getPercentileColor, sortChemicalsByPercentile } from '@/app/api/utils';
+import { getChemicalStatusInfo, getPercentileColor, sortChemicalsByPercentile } from '@/app/api/utils';
 import { EXPOSURE_COLORS } from '@/lib/colors';
 import { ReactElement } from 'react';
 
@@ -237,7 +237,7 @@ export default function TopPriorityChemicals({
                 {/* Bottom section: Description */}
                 <div className="mt-auto pt-4 border-t border-gray-200 flex-shrink-0">
                   <p className="text-sm text-gray-700 leading-relaxed">
-                    A weed-killing chemical used on lawns, golf courses, and some farm crops to stop unwanted plants from growing. You may have come across trace exposures if you're near areas recently sprayed.
+                    A weed-killing chemical used on lawns, golf courses, and some farm crops to stop unwanted plants from growing. You may have come across trace exposures if you&apos;re near areas recently sprayed.
                   </p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ export default function TopPriorityChemicals({
                   Your highest readings mostly involve pesticides that commonly show up in the food supply. They come from routine agricultural use, and many people carry several of them at once through everyday eating patterns. Your values land in the higher part of the population range, which can reflect steadier dietary exposure rather than anything unusual.
                 </p>
                 <p>
-                  The main takeaway is the overall trend: a cluster of food-related pesticide residues that appear together in many people. The site's individual pages can give you simple, chemical-by-chemical context if you want to dig deeper.
+                  The main takeaway is the overall trend: a cluster of food-related pesticide residues that appear together in many people. The site&apos;s individual pages can give you simple, chemical-by-chemical context if you want to dig deeper.
                 </p>
               </div>
             </div>

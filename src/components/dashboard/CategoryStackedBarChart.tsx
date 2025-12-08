@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, LabelList, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ChemicalData } from '@/app/api/csv-parser';
 import { groupChemicalsByCategory, filterChemicalsByExposure, getCategoryStatusInfo } from '@/app/api/utils';
 import { EXPOSURE_COLORS } from '@/lib/colors';
@@ -16,13 +16,6 @@ interface CategoryChartData {
   'Monitor Only': number;
   'Low Exposure': number;
   total: number;
-}
-
-interface CustomLabelProps {
-  x?: number;
-  y?: number;
-  width?: number;
-  value?: number;
 }
 
 type ClassificationType = 'pay-attention' | 'monitor-only' | 'low-exposure' | null;
@@ -58,7 +51,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     };
     
     requestAnimationFrame(animate);
-  }, [activeCategory]);
+  }, [activeCategory, animatedGap]);
 
   const categoryGroups = useMemo(() => groupChemicalsByCategory(chemicals), [chemicals]);
 
@@ -167,7 +160,14 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     }
   }, [chemicals, categoryGroups, activeCategory, activeClassification]);
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  interface TooltipProps {
+    active?: boolean;
+    payload?: Array<{
+      payload: CategoryChartData;
+    }>;
+  }
+
+  const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload as CategoryChartData;
       
@@ -203,8 +203,15 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     return null;
   };
 
+  interface LabelProps {
+    x?: number;
+    y?: number;
+    width?: number;
+    payload?: CategoryChartData;
+  }
+
   // Custom label component to show total above each bar
-  const CustomLabel = (props: any) => {
+  const CustomLabel = (props: LabelProps) => {
     const { x, y, width, payload } = props;
     if (x === undefined || y === undefined || width === undefined || !payload) {
       return null;
@@ -231,7 +238,14 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     );
   };
 
-  const handleBarClick = (data: any, event?: any) => {
+  interface BarClickData {
+    category?: string;
+    payload?: {
+      category?: string;
+    };
+  }
+
+  const handleBarClick = (data: BarClickData) => {
     const categoryName = data?.category || data?.payload?.category;
     if (categoryName) {
       // Toggle category selection - if clicking the same category, deselect it
@@ -246,8 +260,20 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     setActiveCategory(null); // Clear category when selecting classification
   };
 
+  interface CustomBarProps {
+    x?: number;
+    y?: number;
+    width?: number;
+    height?: number;
+    payload?: CategoryChartData & { isActive?: boolean; labelColor?: string };
+    fill?: string;
+    isTopBar?: boolean;
+    dataKey?: string;
+    radius?: number[];
+  }
+
   // Custom bar shape to highlight active category
-  const CustomBar = (props: any) => {
+  const CustomBar = (props: CustomBarProps) => {
     const { x, y, width, height, payload, fill, isTopBar, dataKey } = props;
     const isActive = payload?.isActive || false;
     const radius = props.radius || [0, 0, 0, 0];
@@ -275,10 +301,10 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
         adjustedY = y;
       } else if (dataKey === 'Monitor Only') {
         // Middle segment: shift up by gap amount
-        adjustedY = y - segmentGap;
+        adjustedY = (y || 0) - segmentGap;
       } else if (dataKey === 'Low Exposure') {
         // Top segment: shift up by 2x gap (gap above middle + gap above top)
-        adjustedY = y - (segmentGap * 2);
+        adjustedY = (y || 0) - (segmentGap * 2);
       }
     }
     
@@ -286,7 +312,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     const labelColor = payload?.labelColor || '#1f2937';
     
     // Calculate transform for smooth animation
-    const yOffset = adjustedY - y;
+    const yOffset = (adjustedY || 0) - (y || 0);
     const transform = yOffset !== 0 ? `translate(0, ${yOffset})` : 'none';
     
     return (
@@ -307,8 +333,8 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
         {/* Render label only on top bar - adjust y position to account for shifted segment */}
         {isTopBar && total > 0 && (
           <text
-            x={x + width / 2}
-            y={y - 15}
+            x={(x || 0) + (width || 0) / 2}
+            y={(y || 0) - 15}
             fill={labelColor}
             textAnchor="middle"
             fontSize={32}
@@ -367,9 +393,9 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
                 dataKey="category" 
                 axisLine={false}
                 tickLine={false}
-                tick={(props: any) => {
+                tick={(props: { x?: number; y?: number; payload?: { value: string } }) => {
                   const { x, y, payload } = props;
-                  const words = payload.value.split(' ');
+                  const words = payload?.value.split(' ') || [];
                   const maxWidth = 100; // Maximum width before wrapping
                   
                   // Simple word wrapping - split into lines

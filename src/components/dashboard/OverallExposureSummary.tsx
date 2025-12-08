@@ -92,11 +92,15 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
         <div 
           className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-all cursor-pointer"
           style={{ '--hover-border-color': EXPOSURE_COLORS.lowExposure } as React.CSSProperties & { '--hover-border-color': string }}
-          onMouseEnter={(e) => e.currentTarget.style.borderColor = EXPOSURE_COLORS.lowExposure}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = '#e5e7eb'}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = EXPOSURE_COLORS.lowExposure;
+            setHoveredMetric('low');
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = '#e5e7eb';
+            setHoveredMetric(null);
+          }}
           onClick={() => handleMetricClick('low-exposure')}
-          onMouseEnter={() => setHoveredMetric('low')}
-          onMouseLeave={() => setHoveredMetric(null)}
         >
           <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Low Exposure</div>
           <div className={`text-3xl font-bold ${EXPOSURE_COLOR_CLASSES.lowExposure.text}`}>{distribution.lowExposure}</div>
