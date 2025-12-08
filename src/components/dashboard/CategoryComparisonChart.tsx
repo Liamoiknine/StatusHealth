@@ -1,6 +1,6 @@
 'use client';
 
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, CartesianGrid, ReferenceLine } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ChemicalData } from '@/app/api/csv-parser';
 import { groupChemicalsByCategory, getCategoryStatusInfo } from '@/app/api/utils';
 import { EXPOSURE_COLORS } from '@/lib/colors';
@@ -91,7 +91,14 @@ export default function CategoryComparisonChart({ chemicals }: CategoryCompariso
     return null;
   };
 
-  const handleBarClick = (data: any) => {
+  interface BarClickData {
+    name?: string;
+    payload?: {
+      name?: string;
+    };
+  }
+
+  const handleBarClick = (data: BarClickData) => {
     const categoryName = data?.name || data?.payload?.name;
     if (categoryName) {
       router.push(`/categories?category=${encodeURIComponent(categoryName)}`);
@@ -112,8 +119,16 @@ export default function CategoryComparisonChart({ chemicals }: CategoryCompariso
     }
   };
 
+  interface CustomBarProps {
+    x?: number;
+    y?: number;
+    width?: number;
+    height?: number;
+    payload?: CategoryData & { name: string; 'Detection Rate (%)': number; avgPercentileLine: number };
+  }
+
   // Custom shape to show average percentile as a subtle line within the bar
-  const CustomBar = (props: any) => {
+  const CustomBar = (props: CustomBarProps) => {
     const { x, y, width, height, payload } = props;
     const avgPercentile = payload.avgPercentileLine || 0;
     const categoryInfo = categoryData.find(c => c.category === payload.name);
