@@ -23,35 +23,9 @@ type ClassificationType = 'pay-attention' | 'monitor-only' | 'low-exposure' | nu
 export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBarChartProps) {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeClassification, setActiveClassification] = useState<ClassificationType>(null);
-  const [animatedGap, setAnimatedGap] = useState(0);
   
-  // Animate the gap value smoothly
-  useEffect(() => {
-    const targetGap = activeCategory ? 8 : 0;
-    const duration = 1000; // 1 second
-    const startTime = Date.now();
-    const startGap = animatedGap;
-    
-    const animate = () => {
-      const now = Date.now();
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentGap = startGap + (targetGap - startGap) * easeOutQuart;
-      
-      setAnimatedGap(currentGap);
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setAnimatedGap(targetGap);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }, [activeCategory, animatedGap]);
+  // Calculate gap instantly (no animation)
+  const gap = activeCategory ? 8 : 0;
 
   const categoryGroups = useMemo(() => groupChemicalsByCategory(chemicals), [chemicals]);
 
@@ -162,13 +136,12 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
 
   interface BarClickData {
     category?: string;
-    payload?: {
-      category?: string;
-    };
+    payload?: CategoryChartData & { isActive?: boolean; labelColor?: string };
   }
 
-  const handleBarClick = (data: BarClickData) => {
-    const categoryName = data?.category || data?.payload?.category;
+  const handleBarClick = (data: BarClickData, index?: number, e?: React.MouseEvent) => {
+    // Extract category from payload (Recharts passes the full data entry)
+    const categoryName = data?.payload?.category || data?.category;
     if (categoryName) {
       // Toggle category selection - if clicking the same category, deselect it
       setActiveCategory(activeCategory === categoryName ? null : categoryName);
@@ -211,8 +184,8 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     }
     
     // Add spacing between segments when bar is active by shifting segments up
-    // Use animatedGap for smooth transitions
-    const segmentGap = isActive ? animatedGap : 0;
+    // Use gap for instant transitions (no animation)
+    const segmentGap = isActive ? gap : 0;
     let adjustedY = y;
     // Keep height the same - we're shifting, not shrinking
     
@@ -233,9 +206,17 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
     const total = payload?.total || 0;
     const labelColor = payload?.labelColor || '#1f2937';
     
-    // Calculate transform for smooth animation
+    // Calculate transform for instant positioning (no animation)
     const yOffset = (adjustedY || 0) - (y || 0);
     const transform = yOffset !== 0 ? `translate(0, ${yOffset})` : 'none';
+    
+    // Handle click on the bar segment
+    const handleClick = (e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (payload?.category) {
+        handleBarClick({ payload }, undefined, e);
+      }
+    };
     
     return (
       <g>
@@ -247,6 +228,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
           fill={fill}
           rx={radius[0]}
           transform={transform}
+          onClick={handleClick}
           style={{ 
             cursor: 'pointer',
             opacity
