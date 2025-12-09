@@ -220,6 +220,7 @@ export default function DashboardPage() {
   const [chemicals, setChemicals] = useState<ChemicalData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedClassification, setSelectedClassification] = useState<'pay-attention' | 'monitor-only' | 'low-exposure' | null>(null);
+  const [selectedClassificationSecond, setSelectedClassificationSecond] = useState<'pay-attention' | 'monitor-only' | 'low-exposure' | null>(null);
 
   useEffect(() => {
     async function loadData() {
@@ -424,7 +425,7 @@ export default function DashboardPage() {
               <DetectionBreakdownChart 
                 chemicals={chemicals} 
                 onBarClick={(classification) => {
-                  setSelectedClassification(selectedClassification === classification ? null : classification);
+                  setSelectedClassificationSecond(selectedClassificationSecond === classification ? null : classification);
                 }}
               />
             </div>
@@ -532,10 +533,10 @@ export default function DashboardPage() {
           </div>
 
           {/* Expandable Section for Top Chemicals */}
-          {selectedClassification && (
+          {selectedClassificationSecond && (
             <div className="mt-6 col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {sortChemicalsByPercentile(filterChemicalsByExposure(chemicals, selectedClassification))
+                  {sortChemicalsByPercentile(filterChemicalsByExposure(chemicals, selectedClassificationSecond))
                     .slice(0, 3)
                     .map((chemical) => {
                       const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
@@ -753,6 +754,59 @@ export default function DashboardPage() {
             <p className="text-gray-600 text-sm">Primary sources of detected chemicals</p>
           </div>
           <ExposureSourceAnalysis chemicals={chemicals} noCard={true} />
+        </div>
+
+        {/* Heavy Metals Test Panel */}
+        <div className="mb-12">
+          <div className="bg-gradient-to-r from-teal-50 to-teal-100 border border-teal-200 rounded-lg p-8 shadow-sm relative">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              {/* Left side: Content */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-teal-600 rounded-lg p-2">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                      <path d="M12 8v4"/>
+                      <path d="M12 16h.01"/>
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900">Add Heavy Metals Test to Your Next Exam</h2>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed mb-4">
+                  Complete your health picture by testing for heavy metals like lead, mercury, cadmium, and arsenic. 
+                  These toxic elements can accumulate in your body over time and may impact your long-term health. 
+                  Adding a Heavy Metals panel to your next exam provides comprehensive insights into your toxic exposure profile.
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Tests for lead, mercury, cadmium, arsenic</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Comprehensive toxic exposure analysis</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Track accumulation over time</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* CTA Button - Bottom right corner */}
+            <div className="absolute bottom-8 right-4">
+              <button className="bg-teal-600 text-white rounded-lg px-6 py-3 hover:bg-teal-700 transition-colors font-semibold text-base shadow-md hover:shadow-lg whitespace-nowrap">
+                Add to Next Test
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

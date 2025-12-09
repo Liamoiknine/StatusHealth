@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { parseChemicalsCSV } from '@/lib/csv-parser-client';
 import { ChemicalData } from '@/app/api/csv-parser';
-import { getPercentileColor, formatPercentile } from '@/app/api/utils';
+import { getPercentileColor, formatPercentile, getChemicalStatusInfo } from '@/app/api/utils';
 import { EXPOSURE_COLOR_CLASSES } from '@/lib/colors';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
@@ -115,14 +115,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
     );
   }
 
-  const getStatusInfo = () => {
-    if (chemical.value === 0) return { label: 'Not Detected', color: 'gray' };
-    if (!chemical.percentile || chemical.percentile <= 0.3) return { label: 'Low Exposure', color: 'green' };
-    if (chemical.percentile > 0.6) return { label: 'High Exposure', color: 'red' };
-    return { label: 'Moderate Exposure', color: 'yellow' };
-  };
-
-  const statusInfo = getStatusInfo();
+  const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
 
   return (
     <div className="min-h-screen bg-[#f8fafc]">
@@ -160,13 +153,8 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                 </div>
                 
                 {/* Status Badge */}
-                <div className={`px-3 py-1.5 rounded-full border ${
-                  statusInfo.color === 'red' ? 'bg-red-50 border-red-500 text-red-600' :
-                  statusInfo.color === 'yellow' ? 'bg-yellow-50 border-yellow-500 text-yellow-600' :
-                  statusInfo.color === 'green' ? `${EXPOSURE_COLOR_CLASSES.lowExposure.bgLight} ${EXPOSURE_COLOR_CLASSES.lowExposure.border} ${EXPOSURE_COLOR_CLASSES.lowExposure.text}` :
-                  'bg-gray-50 border-gray-300 text-gray-600'
-                }`}>
-                  <span className="text-xs font-semibold">{statusInfo.label}</span>
+                <div className={`px-3 py-1.5 rounded-full border ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                  <span className="text-xs font-semibold">{statusInfo.text}</span>
                 </div>
               </div>
 
