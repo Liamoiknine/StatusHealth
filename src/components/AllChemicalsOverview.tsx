@@ -194,7 +194,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
   return (
     <div className="space-y-6">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 mb-8 shadow-sm">
+      <div className="bg-gradient-to-br from-[#9CBB04]/10 to-blue-50 border border-[#9CBB04]/30 rounded-xl p-8 mb-8 shadow-sm">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Understanding Your Chemical Exposure Database</h2>
@@ -206,8 +206,8 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
             />
           </div>
           <div className="ml-6 flex gap-4">
-            <div className="bg-white border border-[#1a2540]/20 rounded-lg px-4 py-3 text-center shadow-sm">
-              <div className="text-2xl font-bold text-[#1a2540]">{allCategories.length}</div>
+            <div className="bg-white border border-[#404B69]/20 rounded-lg px-4 py-3 text-center shadow-sm">
+              <div className="text-2xl font-bold text-[#404B69]">{allCategories.length}</div>
               <div className="text-xs text-gray-600 mt-1">Categories</div>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
       {categoryOrg && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
             </svg>
             Explore by Category
@@ -237,14 +237,14 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                 <button
                   key={category}
                   onClick={() => handleCategoryClick(category)}
-                  className="bg-white border border-gray-200 rounded-lg p-5 hover:border-[#1a2540] hover:shadow-lg hover:shadow-[#1a2540]/10 transition-all duration-300 text-left group shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg p-5 hover:border-[#404B69] hover:shadow-lg hover:shadow-[#404B69]/10 transition-all duration-300 text-left group shadow-sm"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-teal-50 p-3 rounded-lg text-teal-600 group-hover:bg-teal-100 transition-colors flex-shrink-0">
+                    <div className="bg-[#9CBB04]/10 p-3 rounded-lg text-[#9CBB04] group-hover:bg-[#9CBB04]/20 transition-colors flex-shrink-0">
                       {icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-[#1a2540] transition-colors">
+                      <h4 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-[#404B69] transition-colors">
                         {category}
                       </h4>
                       <p className="text-sm text-gray-600 line-clamp-2 mb-3">
@@ -256,7 +256,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                         </div>
                       )}
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#1a2540] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#404B69] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -271,7 +271,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
       {exposurePathways && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             How Chemicals Enter Your Body
@@ -324,7 +324,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
               className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
             >
               <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
                 {interpretingResults.header}
@@ -365,7 +365,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
               className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
             >
               <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 {regulatoryContext.header}

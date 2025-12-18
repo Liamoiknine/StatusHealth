@@ -22,7 +22,7 @@ export default function CategoryInsightsPanel({ insights }: CategoryInsightsPane
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-            className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm hover:border-[#1a2540]/50 hover:shadow-md transition-all duration-300"
+            className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm hover:border-[#404B69]/50 hover:shadow-md transition-all duration-300"
           >
             <div className="flex-1 min-w-0">
               <div className="text-xs font-medium text-gray-600 mb-0.5">{insight.label}</div>

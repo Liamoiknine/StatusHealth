@@ -105,12 +105,12 @@ export default function CategoryCard({
     >
       <Link
         href={`/categories?category=${encodeURIComponent(categoryName)}`}
-        className="block h-full bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg hover:border-[#1a2540]/50 transition-all duration-300 group"
+        className="block h-full bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg hover:border-[#404B69]/50 transition-all duration-300 group"
       >
         {/* Header */}
         <div className="mb-4">
           <div className="flex items-center gap-3">
-            <div className="bg-teal-100 p-2 rounded-lg text-teal-600 flex-shrink-0 group-hover:bg-teal-200 transition-colors">
+            <div className="bg-[#9CBB04]/20 p-2 rounded-lg text-[#9CBB04] flex-shrink-0 group-hover:bg-[#9CBB04]/30 transition-colors">
               {getCategoryIcon(categoryName)}
             </div>
             <h3 className="text-lg font-bold text-gray-900">
@@ -145,7 +145,7 @@ export default function CategoryCard({
 
         {/* Top Insight */}
         {topInsight && (
-          <div className="bg-[#1a2540]/5 rounded-lg p-3 mb-4 border border-[#1a2540]/10">
+          <div className="bg-[#404B69]/5 rounded-lg p-3 mb-4 border border-[#404B69]/10">
             <div className="text-xs font-medium text-gray-600 mb-1">{topInsight.label}</div>
             <div className="text-sm font-semibold text-gray-900">
               {typeof topInsight.value === 'number' && (topInsight.type === 'detectionRate' || topInsight.type === 'averagePercentile')
@@ -163,7 +163,7 @@ export default function CategoryCard({
           <div className="text-xs text-gray-500">
             {detectedCount} of {totalCount} detected
           </div>
-          <div className="flex items-center text-[#1a2540] text-sm font-medium group-hover:text-teal-600 transition-colors">
+          <div className="flex items-center text-[#404B69] text-sm font-medium group-hover:text-[#9CBB04] transition-colors">
             <span>Explore</span>
             <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

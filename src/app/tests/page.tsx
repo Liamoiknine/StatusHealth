@@ -45,9 +45,9 @@ export default function TestsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9CBB04] mx-auto mb-4"></div>
           <p className="text-gray-600">Loading tests...</p>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default function TestsPage() {
     <div 
       className="min-h-screen"
       style={{
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#F7F7F7',
         backgroundImage: `
           linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
           linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px)
@@ -90,7 +90,7 @@ export default function TestsPage() {
                 <button
                   onClick={() => handleTestClick(test.id)}
                   className={`w-full text-left p-4 hover:bg-gray-50 transition-all ${
-                    isSelected ? 'bg-teal-50' : ''
+                    isSelected ? 'bg-[#9CBB04]/10' : ''
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -104,12 +104,12 @@ export default function TestsPage() {
                         </p>
                       </div>
                       {isSelected && (
-                        <div className="bg-teal-600 text-white rounded-full px-3 py-1 text-xs font-semibold">
+                        <div className="bg-[#9CBB04] text-white rounded-full px-3 py-1 text-xs font-semibold">
                           Current
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center text-sm text-teal-600 font-medium ml-4">
+                    <div className="flex items-center text-sm text-[#9CBB04] font-medium ml-4">
                       <span>View Results</span>
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -132,7 +132,7 @@ export default function TestsPage() {
         )}
 
         {/* Schedule Next Test Panel */}
-        <div className="mt-8 bg-[#1a2540] rounded-lg p-8 shadow-sm">
+        <div className="mt-8 bg-[#404B69] rounded-lg p-8 shadow-sm">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-white mb-2">
@@ -143,19 +143,19 @@ export default function TestsPage() {
               </p>
               <div className="space-y-2 text-sm text-gray-300">
                 <div className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-teal-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#9CBB04] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Recommended testing interval: Every 3-6 months</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-teal-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#9CBB04] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Track your progress and identify trends</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-teal-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#9CBB04] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Get personalized recommendations based on your results</span>
@@ -163,10 +163,10 @@ export default function TestsPage() {
               </div>
             </div>
             <div className="flex flex-col gap-3 lg:ml-6">
-              <button className="bg-teal-600 text-white rounded-lg px-6 py-3 hover:bg-teal-700 transition-colors font-medium text-sm whitespace-nowrap">
+              <button className="bg-[#9CBB04] text-white rounded-lg px-6 py-3 hover:bg-[#8AA803] transition-colors font-medium text-sm whitespace-nowrap">
                 Schedule Test
               </button>
-              <button className="bg-white text-[#1a2540] border border-white rounded-lg px-6 py-3 hover:bg-gray-100 transition-colors font-medium text-sm whitespace-nowrap">
+              <button className="bg-white text-[#404B69] border border-white rounded-lg px-6 py-3 hover:bg-gray-100 transition-colors font-medium text-sm whitespace-nowrap">
                 Contact Support
               </button>
             </div>

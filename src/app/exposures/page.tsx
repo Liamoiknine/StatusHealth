@@ -48,9 +48,9 @@ function AllExposuresPageContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9CBB04] mx-auto mb-4"></div>
           <p className="text-gray-600">Loading test data...</p>
         </div>
       </div>
@@ -78,14 +78,14 @@ function AllExposuresPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
+    <div className="min-h-screen bg-[#F7F7F7]">
       <div className="container mx-auto px-8 py-8 max-w-7xl">
         <div className="mb-8">
           <div className="flex items-start justify-between mb-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2 flex items-center gap-3">
                 All Chemical Exposures
-                <span className="text-teal-600">
+                <span className="text-[#9CBB04]">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -93,11 +93,11 @@ function AllExposuresPageContent() {
               </h1>
               <p className="text-gray-600">Viewing all chemicals across all categories</p>
               <p className="text-sm text-gray-500 mt-1">
-                <span className="text-teal-600 font-semibold">Detected {detectedCount}/{totalCount}</span> exposures
+                <span className="text-[#9CBB04] font-semibold">Detected {detectedCount}/{totalCount}</span> exposures
               </p>
             </div>
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 px-4 py-2 rounded-lg shadow-sm">
-              <span className="text-sm font-medium text-teal-700">
+            <div className="bg-gradient-to-br from-[#9CBB04]/10 to-[#9CBB04]/20 border border-[#9CBB04]/30 px-4 py-2 rounded-lg shadow-sm">
+              <span className="text-sm font-medium text-[#9CBB04]">
                 {chemicals.length} total chemicals
               </span>
             </div>
@@ -116,7 +116,7 @@ function AllExposuresPageContent() {
             />
           </div>
           <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <div className="grid grid-cols-12 gap-4 text-sm font-medium text-white">
                 <div className="col-span-3">Chemical Name</div>
                 <div className="col-span-2">Category</div>
@@ -152,7 +152,7 @@ function AllExposuresPageContent() {
                       <div className="grid grid-cols-12 gap-4 items-center">
                         <div className="col-span-3 flex items-center gap-2">
                           <svg 
-                            className={`w-4 h-4 text-teal-600 transition-transform flex-shrink-0 ${isExpanded ? 'rotate-90' : ''}`}
+                            className={`w-4 h-4 text-[#9CBB04] transition-transform flex-shrink-0 ${isExpanded ? 'rotate-90' : ''}`}
                             fill="none" 
                             stroke="currentColor" 
                             viewBox="0 0 24 24"
@@ -162,7 +162,7 @@ function AllExposuresPageContent() {
                           <Link 
                             href={`/chemical/${encodeURIComponent(chemical.compound)}?from=exposures`}
                             onClick={(e) => e.stopPropagation()}
-                            className="text-sm font-semibold text-gray-900 hover:text-teal-600 truncate block transition-colors"
+                            className="text-sm font-semibold text-gray-900 hover:text-[#9CBB04] truncate block transition-colors"
                           >
                             {chemical.compound}
                           </Link>
@@ -171,7 +171,7 @@ function AllExposuresPageContent() {
                           <Link
                             href={`/categories?category=${encodeURIComponent(chemical.exposureCategory)}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="text-sm text-teal-600 hover:text-teal-700 hover:underline truncate block transition-colors font-medium"
+                            className="text-sm text-[#9CBB04] hover:text-[#9CBB04] hover:underline truncate block transition-colors font-medium"
                           >
                             {chemical.exposureCategory}
                           </Link>
@@ -234,7 +234,7 @@ function AllExposuresPageContent() {
                           )}
                         </div>
                         
-                        <div className="inline-flex items-center text-teal-600 hover:text-teal-700 transition-colors text-sm font-medium group">
+                        <div className="inline-flex items-center text-[#9CBB04] hover:text-[#9CBB04] transition-colors text-sm font-medium group">
                           View Full Page
                           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -251,12 +251,12 @@ function AllExposuresPageContent() {
         
         <div className="text-sm text-gray-500 text-center">
           <span className="inline-flex items-center gap-2">
-            <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
-            Showing <span className="text-teal-600 font-semibold">{filteredChemicals.length}</span> chemicals across <span className="text-teal-600 font-semibold">{uniqueCategories}</span> categories
+            Showing <span className="text-[#9CBB04] font-semibold">{filteredChemicals.length}</span> chemicals across <span className="text-[#9CBB04] font-semibold">{uniqueCategories}</span> categories
             {exposureFilter !== 'all' && (
-              <span className="ml-2 text-teal-600">
+              <span className="ml-2 text-[#9CBB04]">
                 (filtered by {exposureFilter.replace('-', ' ')})
               </span>
             )}
@@ -270,9 +270,9 @@ function AllExposuresPageContent() {
 export default function AllExposuresPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9CBB04] mx-auto mb-4"></div>
           <p className="text-gray-600">Loading exposures...</p>
         </div>
       </div>

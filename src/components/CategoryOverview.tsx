@@ -96,7 +96,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
               <svg 
-                className="w-5 h-5 mr-2 text-[#1a2540]" 
+                className="w-5 h-5 mr-2 text-[#404B69]" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -122,7 +122,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                   {section.bullets.map((bullet, bulletIndex) => (
                     <li key={bulletIndex} className="flex items-start text-gray-700">
                       <svg 
-                        className="w-4 h-4 text-[#1a2540] mr-2 mt-1 flex-shrink-0" 
+                        className="w-4 h-4 text-[#404B69] mr-2 mt-1 flex-shrink-0" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -152,7 +152,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                       href={source} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-teal-500 text-xs text-teal-600 hover:text-teal-700 hover:border-teal-500 transition-colors"
+                      className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#9CBB04] text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
                       title={source}
                     >
                       {formatUrlForDisplay(source)}
@@ -174,7 +174,7 @@ export default function CategoryOverview({ data }: CategoryOverviewProps) {
                 href={source} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-teal-600 hover:text-teal-700 hover:border-teal-500 transition-colors"
+                className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
                 title={source}
               >
                 {formatUrlForDisplay(source)}

@@ -263,7 +263,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
         {/* Details Section */}
         <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm min-w-[320px] flex-shrink-0 relative z-20">
           <div className="pb-3 border-b border-gray-200">
-            <h2 className="text-2xl font-bold text-teal-600">
+            <h2 className="text-2xl font-bold text-[#9CBB04]">
               {activeClassification 
                 ? detailsData.classificationName 
                 : activeCategory 
@@ -278,7 +278,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
             </div>
             <div>
               <div className="text-2xl font-semibold text-gray-900">{detailsData.detectionRate}% detection rate</div>
-              <div className="text-sm text-teal-600 font-medium mt-1">↓ 18% below average</div>
+              <div className="text-sm text-[#9CBB04] font-medium mt-1">↓ 18% below average</div>
             </div>
           </div>
         </div>
@@ -379,7 +379,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
             onClick={() => handleLegendClick('pay-attention')}
             className={`flex items-center gap-2 px-3 py-1.5 rounded transition-all relative z-20 ${
               activeClassification === 'pay-attention'
-                ? 'bg-teal-50 border-2 border-teal-600'
+                ? 'bg-[#9CBB04]/10 border-2 border-[#9CBB04]'
                 : 'hover:bg-gray-50'
             }`}
             style={{ pointerEvents: 'auto' }}
@@ -392,7 +392,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
               }}
             ></div>
             <span className={`text-sm ${
-              activeClassification === 'pay-attention' ? 'text-teal-700 font-semibold' : 'text-gray-700'
+              activeClassification === 'pay-attention' ? 'text-[#9CBB04] font-semibold' : 'text-gray-700'
             }`}>
               Pay Attention
             </span>
@@ -401,7 +401,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
             onClick={() => handleLegendClick('monitor-only')}
             className={`flex items-center gap-2 px-3 py-1.5 rounded transition-all relative z-20 ${
               activeClassification === 'monitor-only'
-                ? 'bg-teal-50 border-2 border-teal-600'
+                ? 'bg-[#9CBB04]/10 border-2 border-[#9CBB04]'
                 : 'hover:bg-gray-50'
             }`}
             style={{ pointerEvents: 'auto' }}
@@ -414,7 +414,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
               }}
             ></div>
             <span className={`text-sm ${
-              activeClassification === 'monitor-only' ? 'text-teal-700 font-semibold' : 'text-gray-700'
+              activeClassification === 'monitor-only' ? 'text-[#9CBB04] font-semibold' : 'text-gray-700'
             }`}>
               Monitor Only
             </span>
@@ -423,7 +423,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
             onClick={() => handleLegendClick('low-exposure')}
             className={`flex items-center gap-2 px-3 py-1.5 rounded transition-all relative z-20 ${
               activeClassification === 'low-exposure'
-                ? 'bg-teal-50 border-2 border-teal-600'
+                ? 'bg-[#9CBB04]/10 border-2 border-[#9CBB04]'
                 : 'hover:bg-gray-50'
             }`}
             style={{ pointerEvents: 'auto' }}
@@ -436,7 +436,7 @@ export default function CategoryStackedBarChart({ chemicals }: CategoryStackedBa
               }}
             ></div>
             <span className={`text-sm ${
-              activeClassification === 'low-exposure' ? 'text-teal-700 font-semibold' : 'text-gray-700'
+              activeClassification === 'low-exposure' ? 'text-[#9CBB04] font-semibold' : 'text-gray-700'
             }`}>
               Low Exposure
             </span>

@@ -33,7 +33,7 @@ export default function SettingsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
+    <div className="min-h-screen bg-[#F7F7F7]">
       <div className="max-w-7xl mx-auto px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Settings</h1>
@@ -43,7 +43,7 @@ export default function SettingsPage() {
         <div className="space-y-6">
           {/* Profile Information */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Profile Information</h2>
             </div>
             <div className="p-6">
@@ -56,7 +56,7 @@ export default function SettingsPage() {
                     type="text"
                     value={profile.firstName}
                     onChange={(e) => setProfile({ ...profile, firstName: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   />
                 </div>
                 <div>
@@ -67,7 +67,7 @@ export default function SettingsPage() {
                     type="text"
                     value={profile.lastName}
                     onChange={(e) => setProfile({ ...profile, lastName: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ export default function SettingsPage() {
                     type="email"
                     value={profile.email}
                     onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function SettingsPage() {
                     type="tel"
                     value={profile.phone}
                     onChange={(e) => setProfile({ ...profile, phone: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default function SettingsPage() {
                     type="date"
                     value={profile.dateOfBirth}
                     onChange={(e) => setProfile({ ...profile, dateOfBirth: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   />
                 </div>
                 <div>
@@ -110,7 +110,7 @@ export default function SettingsPage() {
                   <select
                     value={profile.gender}
                     onChange={(e) => setProfile({ ...profile, gender: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   >
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
@@ -120,7 +120,7 @@ export default function SettingsPage() {
                 </div>
               </div>
               <div className="mt-6 flex justify-end">
-                <button className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium">
+                <button className="px-6 py-2 bg-[#9CBB04] text-white rounded-lg hover:bg-[#8AA803] transition-colors font-medium">
                   Save Changes
                 </button>
               </div>
@@ -129,7 +129,7 @@ export default function SettingsPage() {
 
           {/* Notification Preferences */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Notification Preferences</h2>
             </div>
             <div className="p-6">
@@ -146,7 +146,7 @@ export default function SettingsPage() {
                       onChange={(e) => setNotifications({ ...notifications, emailReports: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-gray-100">
@@ -161,7 +161,7 @@ export default function SettingsPage() {
                       onChange={(e) => setNotifications({ ...notifications, weeklySummary: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-gray-100">
@@ -176,7 +176,7 @@ export default function SettingsPage() {
                       onChange={(e) => setNotifications({ ...notifications, newTestResults: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-gray-100">
@@ -191,7 +191,7 @@ export default function SettingsPage() {
                       onChange={(e) => setNotifications({ ...notifications, importantAlerts: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
                 <div className="flex items-center justify-between py-3">
@@ -206,7 +206,7 @@ export default function SettingsPage() {
                       onChange={(e) => setNotifications({ ...notifications, marketing: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function SettingsPage() {
 
           {/* Privacy & Security */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Privacy & Security</h2>
             </div>
             <div className="p-6">
@@ -232,7 +232,7 @@ export default function SettingsPage() {
                       onChange={(e) => setPrivacy({ ...privacy, shareAnonymizedData: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
                 <div className="flex items-center justify-between py-3">
@@ -247,7 +247,7 @@ export default function SettingsPage() {
                       onChange={(e) => setPrivacy({ ...privacy, allowResearchParticipation: e.target.checked })}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-teal-600"></div>
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#9CBB04]/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#9CBB04]"></div>
                   </label>
                 </div>
               </div>
@@ -260,7 +260,7 @@ export default function SettingsPage() {
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h3 className="text-sm font-medium text-gray-900 mb-2">Two-Factor Authentication</h3>
                 <p className="text-sm text-gray-500 mb-4">Add an extra layer of security to your account</p>
-                <button className="px-6 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors font-medium">
+                <button className="px-6 py-2 bg-[#9CBB04] text-white rounded-lg hover:bg-[#8AA803] transition-colors font-medium">
                   Enable 2FA
                 </button>
               </div>
@@ -269,7 +269,7 @@ export default function SettingsPage() {
 
           {/* Preferences */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Preferences</h2>
             </div>
             <div className="p-6">
@@ -281,7 +281,7 @@ export default function SettingsPage() {
                   <select
                     value={preferences.defaultView}
                     onChange={(e) => setPreferences({ ...preferences, defaultView: e.target.value })}
-                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   >
                     <option value="overview">Overview</option>
                     <option value="details">Details</option>
@@ -295,7 +295,7 @@ export default function SettingsPage() {
                   <select
                     value={preferences.dateFormat}
                     onChange={(e) => setPreferences({ ...preferences, dateFormat: e.target.value })}
-                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   >
                     <option value="MM/DD/YYYY">MM/DD/YYYY</option>
                     <option value="DD/MM/YYYY">DD/MM/YYYY</option>
@@ -309,7 +309,7 @@ export default function SettingsPage() {
                   <select
                     value={preferences.units}
                     onChange={(e) => setPreferences({ ...preferences, units: e.target.value })}
-                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   >
                     <option value="metric">Metric (ng/mL)</option>
                     <option value="imperial">Imperial</option>
@@ -322,7 +322,7 @@ export default function SettingsPage() {
                   <select
                     value={preferences.theme}
                     onChange={(e) => setPreferences({ ...preferences, theme: e.target.value })}
-                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                    className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-colors"
                   >
                     <option value="light">Light</option>
                     <option value="dark">Dark</option>
@@ -335,7 +335,7 @@ export default function SettingsPage() {
 
           {/* Data & Reports */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Data & Reports</h2>
             </div>
             <div className="p-6">
@@ -370,7 +370,7 @@ export default function SettingsPage() {
 
           {/* Account Actions */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-6 py-4 bg-[#1a2540]">
+            <div className="px-6 py-4 bg-[#404B69]">
               <h2 className="text-lg font-semibold text-white">Account Actions</h2>
             </div>
             <div className="p-6">

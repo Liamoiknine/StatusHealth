@@ -40,7 +40,7 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
       <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#9CBB04]"></div>
         </div>
       </div>
     );
@@ -178,12 +178,12 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
           <p className="text-gray-900 font-semibold mb-2">{data.fullDate}</p>
           {data.detected ? (
             <>
-              <p className="text-teal-600">
+              <p className="text-[#9CBB04]">
                 <span className="text-gray-600">Value: </span>
                 {formatValue(data.value)}
               </p>
               {data.percentile !== null && (
-                <p className="text-teal-600">
+                <p className="text-[#9CBB04]">
                   <span className="text-gray-600">Percentile: </span>
                   {data.percentile}%
                 </p>
@@ -210,8 +210,8 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
               <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#14b8a6" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#14b8a6" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#9CBB04" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#9CBB04" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -250,7 +250,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                 <Area
                   type="monotone"
                   dataKey="value"
-                  stroke="#14b8a6"
+                  stroke="#9CBB04"
                   strokeWidth={2}
                   fillOpacity={1}
                   fill="url(#colorValue)"
@@ -259,9 +259,9 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                 <Line
                   type="monotone"
                   dataKey="value"
-                  stroke="#14b8a6"
+                  stroke="#9CBB04"
                   strokeWidth={2}
-                  dot={{ fill: '#14b8a6', r: 4 }}
+                  dot={{ fill: '#9CBB04', r: 4 }}
                   activeDot={{ r: 6 }}
                   connectNulls={false}
                 />
@@ -272,7 +272,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
           {/* Legend */}
           <div className="mt-4 flex items-center justify-center gap-6 text-sm">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-teal-500" />
+              <div className="w-3 h-3 rounded-full bg-[#9CBB04]" />
               <span className="text-gray-700">Your Results</span>
             </div>
             <div className="flex items-center gap-2">

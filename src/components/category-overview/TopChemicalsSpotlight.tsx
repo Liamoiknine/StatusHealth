@@ -43,7 +43,7 @@ export default function TopChemicalsSpotlight({
             >
               <Link
                 href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
-                className="block bg-white border border-gray-200 rounded-lg p-3 shadow-sm hover:border-teal-500 hover:shadow-md transition-all duration-300"
+                className="block bg-white border border-gray-200 rounded-lg p-3 shadow-sm hover:border-[#9CBB04] hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-1">
                   <h4 className="text-sm font-semibold text-gray-900 flex-1 line-clamp-2">
@@ -81,7 +81,7 @@ export default function TopChemicalsSpotlight({
                   )}
                 </div>
                 
-                <div className="mt-2 flex items-center text-teal-600 text-xs">
+                <div className="mt-2 flex items-center text-[#9CBB04] text-xs">
                   <span>View details</span>
                   <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

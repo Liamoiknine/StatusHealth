@@ -163,7 +163,7 @@ export default function CategoryComparisonChart({ chemicals }: CategoryCompariso
             y1={y + height - linePosition}
             x2={x + width}
             y2={y + height - linePosition}
-            stroke="#1a2540"
+            stroke="#404B69"
             strokeWidth={2}
             strokeOpacity={0.3}
             strokeDasharray="4 4"

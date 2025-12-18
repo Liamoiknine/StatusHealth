@@ -41,14 +41,14 @@ function TestDateDropdown({
           className="text-left w-full"
         >
           <p className="text-sm text-gray-300">Viewing results for</p>
-          <h2 className="text-xl font-bold text-white underline decoration-teal-400 cursor-pointer">
+          <h2 className="text-xl font-bold text-white underline decoration-[#9CBB04] cursor-pointer">
             {currentDate}
           </h2>
         </button>
       ) : (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-teal-50 border border-teal-600 text-teal-600 rounded-lg px-4 py-1.5 hover:bg-teal-100 transition-colors font-medium text-sm"
+          className="bg-[#9CBB04]/10 border border-[#9CBB04] text-[#9CBB04] rounded-lg px-4 py-1.5 hover:bg-[#9CBB04]/20 transition-colors font-medium text-sm"
         >
           Change test
         </button>
@@ -69,7 +69,7 @@ function TestDateDropdown({
                   setIsOpen(false);
                 }}
                 className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
-                  test.id === selectedTest ? 'bg-teal-50 text-teal-700 font-semibold' : 'text-gray-700'
+                  test.id === selectedTest ? 'bg-[#9CBB04]/10 text-[#9CBB04] font-semibold' : 'text-gray-700'
                 }`}
               >
                 {test.date ? formatTestDate(test.date) : `Test ${test.id}`}
@@ -240,9 +240,9 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9CBB04] mx-auto mb-4"></div>
           <p className="text-gray-600">Loading your test results...</p>
         </div>
       </div>
@@ -280,7 +280,7 @@ export default function DashboardPage() {
     <div 
       className="min-h-screen"
       style={{
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#F7F7F7',
         backgroundImage: `
           linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
           linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px)
@@ -291,7 +291,7 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-10 sm:px-16 lg:px-20 py-8">
         {/* Hero Section */}
         <div className="mb-12">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none text-teal-600">
+          <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none text-[#9CBB04]">
             We&apos;ve got you covered, Danny.
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl">
@@ -300,7 +300,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Test Selection Section */}
-        <div className="mb-10 bg-[#1a2540] rounded-lg p-6 -mt-6 shadow-xl">
+        <div className="mb-10 bg-[#404B69] rounded-lg p-6 -mt-6 shadow-xl">
           <div className="flex items-center justify-between">
             <TestDateDropdown 
               selectedTest={selectedTest}
@@ -311,11 +311,11 @@ export default function DashboardPage() {
             <div className="flex items-center gap-3">
               <Link 
                 href="/tests"
-                className="bg-transparent text-teal-400 border border-teal-400 rounded-lg px-4 py-1.5 hover:bg-teal-400/10 transition-colors font-medium text-sm inline-block"
+                className="bg-transparent text-[#9CBB04] border border-[#9CBB04] rounded-lg px-4 py-1.5 hover:bg-[#9CBB04]/10 transition-colors font-medium text-sm inline-block"
               >
                 View all tests
               </Link>
-              <button className="bg-teal-600 text-white rounded-lg px-4 py-1.5 hover:bg-teal-700 transition-colors font-medium text-sm">
+              <button className="bg-[#9CBB04] text-white rounded-lg px-4 py-1.5 hover:bg-[#8AA803] transition-colors font-medium text-sm">
                 Schedule your next test
               </button>
             </div>
@@ -334,7 +334,7 @@ export default function DashboardPage() {
             <div className="flex flex-col">
               <div className="flex items-start justify-between mb-2">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  <span className="text-3xl text-teal-600">{chemicals.filter(c => c.value > 0).length}</span> chemicals detected
+                  <span className="text-3xl text-[#9CBB04]">{chemicals.filter(c => c.value > 0).length}</span> chemicals detected
                 </h2>
               </div>
               <DetectionBreakdownChart 
@@ -354,7 +354,7 @@ export default function DashboardPage() {
                     duration={2000}
                   />%
                 </span>
-                <span className="text-3xl lg:text-4xl font-bold text-teal-600 ml-2">
+                <span className="text-3xl lg:text-4xl font-bold text-[#9CBB04] ml-2">
                   detection rate
                 </span>
               </div>
@@ -368,7 +368,7 @@ export default function DashboardPage() {
               
               {/* Full width clause below */}
               <div className="mt-6 w-full">
-                <p className="text-base font-bold text-teal-600">↓ 17% below average</p>
+                <p className="text-base font-bold text-[#9CBB04]">↓ 17% below average</p>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function DashboardPage() {
                         <Link
                           key={chemical.compound}
                           href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                          className="border border-gray-200 rounded-lg p-4 bg-white hover:border-teal-300 hover:shadow-md transition-all"
+                          className="border border-gray-200 rounded-lg p-4 bg-white hover:border-[#9CBB04]/50 hover:shadow-md transition-all"
                         >
                           <div className="flex items-start justify-between mb-2">
                             <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 flex-1">
@@ -419,7 +419,7 @@ export default function DashboardPage() {
             <div className="flex flex-col">
               <div className="flex items-start justify-between mb-2">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  <span className="text-3xl text-teal-600">{chemicals.filter(c => c.value > 0).length}</span> chemicals detected
+                  <span className="text-3xl text-[#9CBB04]">{chemicals.filter(c => c.value > 0).length}</span> chemicals detected
                 </h2>
               </div>
               <DetectionBreakdownChart 
@@ -505,7 +505,7 @@ export default function DashboardPage() {
                 return (
                   <div key={category.name} className="flex items-start gap-3">
                     {/* Icon */}
-                    <div className="text-teal-600 mt-0.5 flex-shrink-0">
+                    <div className="text-[#9CBB04] mt-0.5 flex-shrink-0">
                       {getCategoryIcon(category.name)}
                     </div>
                     
@@ -544,7 +544,7 @@ export default function DashboardPage() {
                         <Link
                           key={chemical.compound}
                           href={`/chemical/${encodeURIComponent(chemical.compound)}`}
-                          className="border border-gray-200 rounded-lg p-4 bg-white hover:border-teal-300 hover:shadow-md transition-all"
+                          className="border border-gray-200 rounded-lg p-4 bg-white hover:border-[#9CBB04]/50 hover:shadow-md transition-all"
                         >
                           <div className="flex items-start justify-between mb-2">
                             <h4 className="text-sm font-semibold text-gray-900 line-clamp-2 flex-1">
@@ -673,7 +673,7 @@ export default function DashboardPage() {
                       <div className="grid grid-cols-2 gap-6 mb-4 flex-shrink-0 -mt-6">
                         {/* Left side: Category icon, name, and status */}
                         <div className="flex flex-col items-center justify-center pr-6 border-r border-gray-200">
-                          <div className="text-teal-600 mb-3">
+                          <div className="text-[#9CBB04] mb-3">
                             {getCategoryIcon(topCategory.name)}
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 text-center">{topCategory.name}</h3>
@@ -717,7 +717,7 @@ export default function DashboardPage() {
                                 <Link
                                   key={chemical.compound}
                                   href={`/chemical/${encodeURIComponent(chemical.compound)}?from=dashboard`}
-                                  className="flex items-center justify-between text-sm hover:text-teal-600 transition-colors"
+                                  className="flex items-center justify-between text-sm hover:text-[#9CBB04] transition-colors"
                                 >
                                   <span className="line-clamp-1">{chemical.compound}</span>
                                   <span className={`${percentileColor} font-semibold ml-2 flex-shrink-0`}>
@@ -758,12 +758,12 @@ export default function DashboardPage() {
 
         {/* Heavy Metals Test Panel */}
         <div className="mb-12">
-          <div className="bg-gradient-to-r from-teal-50 to-teal-100 border border-teal-200 rounded-lg p-8 shadow-sm relative">
+          <div className="bg-gradient-to-r from-[#9CBB04]/10 to-[#9CBB04]/20 border border-[#9CBB04]/30 rounded-lg p-8 shadow-sm relative">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               {/* Left side: Content */}
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-teal-600 rounded-lg p-2">
+                  <div className="bg-[#9CBB04] rounded-lg p-2">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
                       <path d="M12 8v4"/>
@@ -779,19 +779,19 @@ export default function DashboardPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Tests for lead, mercury, cadmium, arsenic</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Comprehensive toxic exposure analysis</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Track accumulation over time</span>
@@ -802,7 +802,7 @@ export default function DashboardPage() {
             
             {/* CTA Button - Bottom right corner */}
             <div className="absolute bottom-8 right-4">
-              <button className="bg-teal-600 text-white rounded-lg px-6 py-3 hover:bg-teal-700 transition-colors font-semibold text-base shadow-md hover:shadow-lg whitespace-nowrap">
+              <button className="bg-[#9CBB04] text-white rounded-lg px-6 py-3 hover:bg-[#8AA803] transition-colors font-semibold text-base shadow-md hover:shadow-lg whitespace-nowrap">
                 Add to Next Test
               </button>
             </div>

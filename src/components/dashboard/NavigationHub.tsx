@@ -84,7 +84,7 @@ export default function NavigationHub() {
   ];
 
   return (
-    <div className="bg-[#1a2540] rounded-lg p-6 space-y-6 h-full flex flex-col">
+    <div className="bg-[#404B69] rounded-lg p-6 space-y-6 h-full flex flex-col">
       <div>
         <h2 className="text-2xl font-bold text-white mb-1">Quick Navigation</h2>
         <p className="text-gray-300 text-sm">Explore your results in detail</p>
@@ -96,20 +96,20 @@ export default function NavigationHub() {
           <Link
             key={item.href}
             href={item.href}
-            className="group border border-teal-500/30 rounded-lg p-4 hover:border-teal-500 hover:bg-teal-500/10 transition-all duration-300 bg-white/5 block"
+            className="group border border-[#9CBB04]/30 rounded-lg p-4 hover:border-[#9CBB04] hover:bg-[#9CBB04]/10 transition-all duration-300 bg-white/5 block"
           >
             <div className="flex items-start gap-3">
-              <div className="text-teal-400 group-hover:text-teal-300 transition-colors flex-shrink-0">
+              <div className="text-[#9CBB04] group-hover:text-[#9CBB04] transition-colors flex-shrink-0">
                 {item.icon}
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-base font-semibold text-white group-hover:text-teal-300 transition-colors mb-1">
+                <h3 className="text-base font-semibold text-white group-hover:text-[#9CBB04] transition-colors mb-1">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-300">{item.description}</p>
               </div>
               <svg 
-                className="w-5 h-5 text-gray-400 group-hover:text-teal-400 transition-colors flex-shrink-0" 
+                className="w-5 h-5 text-gray-400 group-hover:text-[#9CBB04] transition-colors flex-shrink-0" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -122,17 +122,17 @@ export default function NavigationHub() {
       </div>
 
       {/* Category Quick Links */}
-      <div className="pt-4 border-t border-teal-500/20 flex-1">
+      <div className="pt-4 border-t border-[#9CBB04]/20 flex-1">
         <h3 className="text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wide">Browse by Category</h3>
         <div className="grid grid-cols-3 gap-3">
           {allCategories.map((category) => (
             <Link
               key={category}
               href={`/categories?category=${encodeURIComponent(category)}`}
-              className="group flex items-center justify-center p-3 border border-teal-500/30 rounded-lg hover:border-teal-500 hover:bg-teal-500/10 transition-all duration-300 bg-white/5"
+              className="group flex items-center justify-center p-3 border border-[#9CBB04]/30 rounded-lg hover:border-[#9CBB04] hover:bg-[#9CBB04]/10 transition-all duration-300 bg-white/5"
               title={category}
             >
-              <div className="text-teal-400 group-hover:text-teal-300 transition-colors">
+              <div className="text-[#9CBB04] group-hover:text-[#9CBB04] transition-colors">
                 {getCategoryIcon(category)}
               </div>
             </Link>

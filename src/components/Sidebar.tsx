@@ -14,6 +14,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/dashboard-2', label: 'Dashboard 2', icon: LayoutDashboard },
+  { href: '/dashboard-3', label: 'Dashboard 3', icon: LayoutDashboard },
   { href: '/categories', label: 'Categories', icon: FileText },
   { href: '/exposures', label: 'All Exposures', icon: Search },
   { href: '/tests', label: 'All Tests', icon: Calendar },
@@ -57,6 +59,10 @@ export default function Sidebar() {
         index = navItems.findIndex(item => item.href === '/categories');
       } else if (fromParam === 'dashboard') {
         index = navItems.findIndex(item => item.href === '/');
+      } else if (fromParam === 'dashboard-2') {
+        index = navItems.findIndex(item => item.href === '/dashboard-2');
+      } else if (fromParam === 'dashboard-3') {
+        index = navItems.findIndex(item => item.href === '/dashboard-3');
       } else if (fromParam === 'exposures') {
         index = navItems.findIndex(item => item.href === '/exposures');
       }
@@ -187,7 +193,7 @@ export default function Sidebar() {
                             href={`/categories?category=${encodeURIComponent(categoryName)}`}
                             className={`block py-1.5 px-2 rounded text-sm transition-colors ${
                               isCategoryActive
-                                ? 'text-teal-600 font-medium bg-teal-50'
+                                ? 'text-[#9CBB04] font-medium bg-[#9CBB04]/10'
                                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                             }`}
                           >

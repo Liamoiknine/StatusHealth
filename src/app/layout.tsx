@@ -32,9 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#f8fafc]">
+    <html lang="en" className="bg-[#F7F7F7]">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f8fafc] min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F7F7F7] min-h-screen`}
       >
         <TestProvider>
           <Navbar />

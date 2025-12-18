@@ -37,7 +37,7 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {/* Total Chemicals */}
         <div 
-          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all cursor-pointer"
+          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#9CBB04]/50 hover:shadow-md transition-all cursor-pointer"
           onClick={() => router.push('/exposures')}
           onMouseEnter={() => setHoveredMetric('total')}
           onMouseLeave={() => setHoveredMetric(null)}
@@ -45,46 +45,46 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
           <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Total Tested</div>
           <div className="text-3xl font-bold text-gray-900">{totalChemicals}</div>
           {hoveredMetric === 'total' && (
-            <div className="text-xs text-teal-600 mt-1">Click to view all</div>
+            <div className="text-xs text-[#9CBB04] mt-1">Click to view all</div>
           )}
         </div>
 
         {/* Detected Count */}
         <div 
-          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all cursor-pointer relative overflow-hidden"
+          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#9CBB04]/50 hover:shadow-md transition-all cursor-pointer relative overflow-hidden"
           onClick={() => handleMetricClick('all')}
           onMouseEnter={() => setHoveredMetric('detected')}
           onMouseLeave={() => setHoveredMetric(null)}
         >
           <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Detected</div>
-          <div className="text-3xl font-bold text-teal-600">{detectedCount}</div>
+          <div className="text-3xl font-bold text-[#9CBB04]">{detectedCount}</div>
           <div className="text-xs text-gray-500">{detectionRate}% detection rate</div>
           {/* Progress bar */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-100">
             <div 
-              className="h-full bg-teal-600 transition-all duration-300"
+              className="h-full bg-[#9CBB04] transition-all duration-300"
               style={{ width: `${detectionRate}%` }}
             />
           </div>
           {hoveredMetric === 'detected' && (
-            <div className="text-xs text-teal-600 mt-1">Click to view detected</div>
+            <div className="text-xs text-[#9CBB04] mt-1">Click to view detected</div>
           )}
         </div>
 
         {/* Average Percentile */}
         <div 
-          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-teal-300 hover:shadow-md transition-all cursor-pointer"
+          className="space-y-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#9CBB04]/50 hover:shadow-md transition-all cursor-pointer"
           onClick={() => handleMetricClick('all')}
           onMouseEnter={() => setHoveredMetric('percentile')}
           onMouseLeave={() => setHoveredMetric(null)}
         >
           <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Avg Percentile</div>
-          <div className="text-3xl font-bold text-[#1a2540]">
+          <div className="text-3xl font-bold text-[#404B69]">
             {avgPercentile > 0 ? `${Math.round(avgPercentile * 100)}%` : '—'}
           </div>
           <div className="text-xs text-gray-500">of detected</div>
           {hoveredMetric === 'percentile' && avgPercentile > 0 && (
-            <div className="text-xs text-teal-600 mt-1">Click to view details</div>
+            <div className="text-xs text-[#9CBB04] mt-1">Click to view details</div>
           )}
         </div>
 
@@ -106,7 +106,7 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
           <div className={`text-3xl font-bold ${EXPOSURE_COLOR_CLASSES.lowExposure.text}`}>{distribution.lowExposure}</div>
           <div className="text-xs text-gray-500">0-30th percentile</div>
           {hoveredMetric === 'low' && (
-            <div className="text-xs text-teal-600 mt-1">Click to view</div>
+            <div className="text-xs text-[#9CBB04] mt-1">Click to view</div>
           )}
         </div>
 
@@ -125,7 +125,7 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
             {distribution.monitorOnly} monitor, {distribution.payAttention} alert
           </div>
           {hoveredMetric === 'monitor' && (
-            <div className="text-xs text-teal-600 mt-1">Click to view</div>
+            <div className="text-xs text-[#9CBB04] mt-1">Click to view</div>
           )}
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
           {distribution.payAttention > 0 && (
             <Link
               href="/exposures?filter=pay-attention"
-              className="text-sm text-teal-600 hover:text-teal-700 font-medium inline-flex items-center"
+              className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium inline-flex items-center"
             >
               View {distribution.payAttention} priority chemical{distribution.payAttention !== 1 ? 's' : ''}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,7 +147,7 @@ export default function OverallExposureSummary({ chemicals }: OverallExposureSum
           )}
           <Link
             href="/exposures"
-            className="text-sm text-teal-600 hover:text-teal-700 font-medium inline-flex items-center"
+            className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium inline-flex items-center"
           >
             View all exposures
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

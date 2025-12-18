@@ -11,7 +11,7 @@ import { Settings, HelpCircle } from 'lucide-react';
 export default function Navbar() {
   return (
     <nav 
-      className="fixed top-0 left-0 right-0 z-50 bg-[#1a2540] backdrop-blur-md shadow-lg border border-[#1a2540]/50"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#404B69] backdrop-blur-md shadow-lg border border-[#404B69]/50"
     >
       <div className="w-full px-6">
         <div className="flex items-center justify-between h-12">

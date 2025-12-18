@@ -71,7 +71,7 @@ export default function ExposureFilterButtons({ currentFilter, onFilterChange }:
         </button>
       ))}
       <div
-        className="absolute bottom-0 h-1.5 bg-teal-600 transition-all duration-300 ease-in-out"
+        className="absolute bottom-0 h-1.5 bg-[#9CBB04] transition-all duration-300 ease-in-out"
         style={{
           left: `${underlineStyle.left}px`,
           width: `${underlineStyle.width}px`

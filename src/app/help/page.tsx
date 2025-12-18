@@ -31,9 +31,9 @@ export default function HelpPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F7F7F7] flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#9CBB04] mx-auto mb-4"></div>
           <p className="text-gray-600">Loading...</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function HelpPage() {
   const categoriesWithStats = getCategoryStats(categoryGroups);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc]">
+    <div className="min-h-screen bg-[#F7F7F7]">
       <div className="max-w-7xl mx-auto px-8 py-8">
         {/* Overview Section */}
         <AllChemicalsOverview 

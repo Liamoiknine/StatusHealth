@@ -107,10 +107,10 @@ export default function ChemicalSearchBar({ chemicals, onSelect }: ChemicalSearc
           onFocus={handleInputFocus}
           onKeyDown={handleKeyDown}
           placeholder="Search chemicals..."
-          className="w-full px-4 py-2 pl-10 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all shadow-sm hover:border-teal-300"
+          className="w-full px-4 py-2 pl-10 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#9CBB04] focus:border-[#9CBB04] transition-all shadow-sm hover:border-[#9CBB04]/50"
         />
         <svg
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-teal-500"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[#9CBB04]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ export default function ChemicalSearchBar({ chemicals, onSelect }: ChemicalSearc
 
       {/* Autocomplete Dropdown */}
       {isOpen && filteredResults.length > 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-white border border-teal-200 rounded-lg shadow-lg max-h-60 overflow-auto">
+        <div className="absolute z-50 w-full mt-1 bg-white border border-[#9CBB04]/30 rounded-lg shadow-lg max-h-60 overflow-auto">
           {filteredResults.map((chemical, index) => (
             <button
               key={`${chemical.compound}-${index}`}
@@ -135,8 +135,8 @@ export default function ChemicalSearchBar({ chemicals, onSelect }: ChemicalSearc
               onMouseEnter={() => setHighlightedIndex(index)}
               className={`w-full px-4 py-2 text-left text-sm transition-colors ${
                 highlightedIndex === index
-                  ? 'bg-teal-600 text-white'
-                  : 'text-gray-900 hover:bg-teal-50 hover:text-teal-700'
+                  ? 'bg-[#9CBB04] text-white'
+                  : 'text-gray-900 hover:bg-[#9CBB04]/10 hover:text-[#8AA803]'
               }`}
             >
               <div className="font-medium">{chemical.compound}</div>
@@ -152,7 +152,7 @@ export default function ChemicalSearchBar({ chemicals, onSelect }: ChemicalSearc
 
       {/* No results message */}
       {isOpen && searchQuery.trim().length > 0 && filteredResults.length === 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-white border border-teal-200 rounded-lg shadow-lg px-4 py-3 text-sm text-gray-500">
+        <div className="absolute z-50 w-full mt-1 bg-white border border-[#9CBB04]/30 rounded-lg shadow-lg px-4 py-3 text-sm text-gray-500">
           No chemicals found matching &quot;{searchQuery}&quot;
         </div>
       )}

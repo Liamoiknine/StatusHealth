@@ -136,7 +136,7 @@ export default function ExposureSourceAnalysis({
       <div className={noCard ? "" : "bg-white border border-gray-200 rounded-lg p-6 shadow-sm"}>
         {!noCard && (
           <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
             Exposure Sources
@@ -187,7 +187,7 @@ export default function ExposureSourceAnalysis({
       return (
         <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-lg">
           <p className="text-gray-900 font-semibold mb-1">{data.name}</p>
-          <p className="text-teal-600">
+          <p className="text-[#9CBB04]">
             <span className="text-gray-600">Count: </span>
             {data.value} chemical{data.value !== 1 ? 's' : ''}
           </p>
@@ -257,7 +257,7 @@ export default function ExposureSourceAnalysis({
       }} />
       {!noCard && (
         <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-[#1a2540]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           </svg>
           Exposure Sources

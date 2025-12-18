@@ -166,7 +166,7 @@ export default function TopPriorityChemicals({
           {selectedChemical && (
             <button
               onClick={() => setSelectedChemical(null)}
-              className="text-sm text-teal-600 hover:text-teal-700 transition-colors"
+              className="text-sm text-[#9CBB04] hover:text-[#8AA803] transition-colors"
               aria-label="Deselect chemical"
             >
               (deselect)
@@ -194,7 +194,7 @@ export default function TopPriorityChemicals({
                       />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1 line-clamp-2 text-center">{selectedChemical.compound}</h3>
-                    <p className="text-sm text-teal-600 font-medium text-center">{selectedChemical.exposureCategory}</p>
+                    <p className="text-sm text-[#9CBB04] font-medium text-center">{selectedChemical.exposureCategory}</p>
                   </div>
 
                   {/* Right side: Stats in one column with lines separating rows */}
@@ -261,7 +261,7 @@ export default function TopPriorityChemicals({
             {selectedChemical && (
               <Link
                 href={`/chemical/${encodeURIComponent(selectedChemical.compound)}?from=dashboard`}
-                className="text-sm text-teal-600 hover:text-teal-700 font-medium inline-flex items-center"
+                className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium inline-flex items-center"
               >
                 View full details
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ export default function TopPriorityChemicals({
             {topChemicals.length >= maxCount && (
               <Link 
                 href="/exposures?filter=pay-attention"
-                className="text-sm text-teal-600 hover:text-teal-700 font-medium inline-flex items-center ml-auto"
+                className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium inline-flex items-center ml-auto"
               >
                 View all priority chemicals
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -308,7 +308,7 @@ export default function TopPriorityChemicals({
               >
                 <div className="flex items-start gap-3">
                   {/* Category Icon */}
-                  <div className="text-teal-600 flex-shrink-0 mt-0.5">
+                  <div className="text-[#9CBB04] flex-shrink-0 mt-0.5">
                     {categoryIcon}
                   </div>
                   
