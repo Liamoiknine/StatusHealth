@@ -136,13 +136,13 @@ export default function Sidebar() {
       
       {/* Navigation */}
       <nav ref={navRef} className="flex-1 pt-6 pb-6 space-y-1 relative">
-        {/* Sliding blue indicator */}
+        {/* Sliding navy indicator */}
         <div
           className="absolute right-[-4px] w-1 transition-all duration-300 ease-in-out rounded-r-full"
           style={{
             top: `${indicatorStyle.top}px`,
             height: `${indicatorStyle.height}px`,
-            backgroundColor: '#3b82f6',
+            backgroundColor: '#404B69',
           }}
         />
         
