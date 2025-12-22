@@ -3,7 +3,6 @@
 import { ChemicalData } from '@/app/api/csv-parser';
 import { calculateCategoryInsights } from '@/app/api/utils';
 import CategoryInsightsPanel from './category-overview/CategoryInsightsPanel';
-import PercentileDistributionChart from './category-overview/PercentileDistributionChart';
 import TopChemicalsSpotlight from './category-overview/TopChemicalsSpotlight';
 import ExposureSourceAnalysis from './category-overview/ExposureSourceAnalysis';
 import CategoryTimelineChart from './category-overview/CategoryTimelineChart';
@@ -42,9 +41,6 @@ export default function CategoryOverviewDashboard({
 
       {/* Exposure Source Analysis */}
       <ExposureSourceAnalysis chemicals={chemicals} />
-
-      {/* Percentile Distribution Chart */}
-      <PercentileDistributionChart chemicals={chemicals} />
     </div>
   );
 }

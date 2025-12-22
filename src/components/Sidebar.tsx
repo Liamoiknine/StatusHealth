@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar } from 'lucide-react';
+import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar, Home } from 'lucide-react';
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { getAllCategoryNames } from '@/data/category-overviews';
 
@@ -13,10 +14,8 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/dashboard-2', label: 'Dashboard 2', icon: LayoutDashboard },
-  { href: '/dashboard-3', label: 'Dashboard 3', icon: LayoutDashboard },
-  { href: '/categories', label: 'Categories', icon: FileText },
+  { href: '/dashboard', label: 'Dashboard', icon: Home },
+  { href: '/categories', label: 'Categories', icon: LayoutDashboard },
   { href: '/exposures', label: 'All Exposures', icon: Search },
   { href: '/tests', label: 'All Tests', icon: Calendar },
   { href: '/billing', label: 'Billing', icon: CreditCard },
@@ -58,11 +57,7 @@ export default function Sidebar() {
       if (fromParam === 'categories') {
         index = navItems.findIndex(item => item.href === '/categories');
       } else if (fromParam === 'dashboard') {
-        index = navItems.findIndex(item => item.href === '/');
-      } else if (fromParam === 'dashboard-2') {
-        index = navItems.findIndex(item => item.href === '/dashboard-2');
-      } else if (fromParam === 'dashboard-3') {
-        index = navItems.findIndex(item => item.href === '/dashboard-3');
+        index = navItems.findIndex(item => item.href === '/dashboard');
       } else if (fromParam === 'exposures') {
         index = navItems.findIndex(item => item.href === '/exposures');
       }
@@ -123,8 +118,24 @@ export default function Sidebar() {
 
   return (
     <aside className="w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40">
+      {/* Banner with Logo and STATUS */}
+      <div className="bg-[#404B69] pl-3 pr-6 py-3 border-b border-[#404B69]/50">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/logo.png"
+            alt="StatusHealth Logo"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
+          {/* Vertical divider */}
+          <div className="h-5 w-[2px] bg-white/30"></div>
+          <span className="text-lg font-extrabold text-white tracking-wide">STATUS</span>
+        </Link>
+      </div>
+      
       {/* Navigation */}
-      <nav ref={navRef} className="flex-1 pt-20 pb-6 space-y-1 relative">
+      <nav ref={navRef} className="flex-1 pt-6 pb-6 space-y-1 relative">
         {/* Sliding blue indicator */}
         <div
           className="absolute right-[-4px] w-1 transition-all duration-300 ease-in-out rounded-r-full"
@@ -137,9 +148,7 @@ export default function Sidebar() {
         
         {navItems.map((item, index) => {
           const Icon = item.icon;
-          const isActive = item.href === '/' 
-            ? pathname === '/'
-            : pathname?.startsWith(item.href);
+          const isActive = pathname?.startsWith(item.href) || (item.href === '/dashboard' && pathname === '/');
           
           const isCategories = item.href === '/categories';
           

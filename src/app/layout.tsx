@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TestProvider } from "@/contexts/TestContext";
 import { Suspense } from "react";
@@ -37,12 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F7F7F7] min-h-screen`}
       >
         <TestProvider>
-          <Navbar />
           <Suspense fallback={<div className="w-60 bg-white min-h-screen border-r border-gray-200" />}>
             <Sidebar />
           </Suspense>
           <div className="flex flex-col min-h-screen">
-            <main className="ml-60 pt-16 flex-1">
+            <main className="ml-60 flex-1">
               {children}
             </main>
             <div className="ml-60">

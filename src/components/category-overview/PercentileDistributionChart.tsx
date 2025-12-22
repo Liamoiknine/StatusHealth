@@ -1,9 +1,10 @@
 'use client';
 
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, CartesianGrid, LabelList } from 'recharts';
+import { BarChart, Bar, XAxis, ResponsiveContainer, Cell, LabelList } from 'recharts';
 import { getPercentileDistribution } from '@/app/api/utils';
 import { ChemicalData } from '@/app/api/csv-parser';
 import { EXPOSURE_COLORS } from '@/lib/colors';
+import { useMemo, useCallback, useState, useEffect } from 'react';
 
 interface PercentileDistributionChartProps {
   chemicals: ChemicalData[];
@@ -23,6 +24,13 @@ interface TooltipProps {
   payload?: TooltipPayload[];
 }
 
+type ClassificationType = 'Pay Attention' | 'Monitor Only' | 'Low Exposure';
+
+const CLASSIFICATION_DESCRIPTIONS: Record<ClassificationType, string> = {
+  'Pay Attention': 'Your exposure level falls in the 60th-100th percentile range, indicating higher exposure compared to the general population. Consider taking steps to reduce exposure and consult with a healthcare provider if you have concerns.',
+  'Monitor Only': 'Your exposure level falls in the 30th-60th percentile range, indicating moderate exposure. Continue monitoring your exposure levels and consider ways to minimize contact with these chemicals when possible.',
+  'Low Exposure': 'Your exposure level falls in the 0th-30th percentile range, indicating lower exposure compared to the general population. This is generally considered a favorable exposure level, but continue to be mindful of potential sources.'
+};
 
 export default function PercentileDistributionChart({ 
   chemicals, 
@@ -31,136 +39,136 @@ export default function PercentileDistributionChart({
 }: PercentileDistributionChartProps) {
   const distribution = getPercentileDistribution(chemicals);
   
-  const chartData: Array<{
-    name: string;
-    value: number;
-    color: string;
-    gradientId: string;
-    usePattern?: boolean;
-  }> = [
-    {
-      name: 'Not Detected',
-      value: distribution.notDetected,
-      color: '#e5e7eb',
-      gradientId: 'gradientNotDetected',
-      usePattern: true
-    },
-    {
-      name: 'Low Exposure',
-      value: distribution.lowExposure,
-      color: EXPOSURE_COLORS.lowExposure,
-      gradientId: 'gradientLowExposure'
-    },
-    {
-      name: 'Monitor Only',
-      value: distribution.monitorOnly,
-      color: EXPOSURE_COLORS.monitorOnly,
-      gradientId: 'gradientMonitorOnly'
-    },
-    {
-      name: 'Pay Attention',
-      value: distribution.payAttention,
-      color: EXPOSURE_COLORS.payAttention,
-      gradientId: 'gradientPayAttention'
-    }
-  ].filter(item => item.value > 0);
+  const chartData = useMemo(() => {
+    return [
+      { name: 'Pay Attention', value: distribution.payAttention, color: EXPOSURE_COLORS.payAttention, filter: 'pay-attention' as const },
+      { name: 'Monitor Only', value: distribution.monitorOnly, color: EXPOSURE_COLORS.monitorOnly, filter: 'monitor-only' as const },
+      { name: 'Low Exposure', value: distribution.lowExposure, color: EXPOSURE_COLORS.lowExposure, filter: 'low-exposure' as const },
+    ].filter(item => item.value > 0);
+  }, [distribution]);
 
-  const CustomTooltip = ({ active, payload }: TooltipProps) => {
-    if (active && payload && payload.length) {
-      const data = payload[0].payload;
-      return (
-        <div className="bg-white border border-gray-200 rounded-lg p-3 shadow-lg">
-          <p className="text-gray-900 font-semibold mb-2">{data.name}</p>
-          <p className="text-[#9CBB04]">
-            <span className="text-gray-600">Count: </span>
-            {data.value} chemical{data.value !== 1 ? 's' : ''}
-          </p>
-        </div>
-      );
+  // Find the classification with the most chemicals for default selection
+  const defaultClassification = useMemo(() => {
+    const maxEntry = chartData.reduce((max, current) => 
+      current.value > max.value ? current : max, 
+      chartData[0] || { name: 'Low Exposure' as ClassificationType }
+    );
+    return maxEntry.name as ClassificationType;
+  }, [chartData]);
+
+  const [selectedClassification, setSelectedClassification] = useState<ClassificationType>(defaultClassification);
+
+  // Update selected classification when default changes
+  useEffect(() => {
+    setSelectedClassification(defaultClassification);
+  }, [defaultClassification]);
+
+  interface BarClickData {
+    name?: string;
+    value?: number | [number, number];
+    payload?: {
+      name?: string;
+      value?: number;
+    };
+  }
+
+  const handleBarClick = useCallback((data: BarClickData) => {
+    const dataValue = Array.isArray(data.value) ? data.value[0] : data.value;
+    const entry = chartData.find(item => item.name === data.name || item.value === dataValue || item.name === data.payload?.name || item.value === data.payload?.value);
+    if (entry) {
+      setSelectedClassification(entry.name as ClassificationType);
+      if (onBarClick) {
+        onBarClick(entry.filter);
+      }
     }
-    return null;
-  };
+  }, [chartData, onBarClick]);
 
   const total = distribution.notDetected + distribution.lowExposure + 
                 distribution.monitorOnly + distribution.payAttention;
 
+  const selectedEntry = chartData.find(entry => entry.name === selectedClassification);
+  const selectedColor = selectedEntry?.color || EXPOSURE_COLORS.lowExposure;
+
   const content = (
     <>
       {!noCard && (
-        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
+        <h3 className="text-xl font-semibold text-gray-900 mb-4">
           Percentile Distribution
         </h3>
       )}
-      <div className="[&_svg]:outline-none [&_svg]:focus:outline-none" tabIndex={-1}>
-      <ResponsiveContainer width="100%" height={350}>
-        <BarChart
-          data={chartData}
-          layout="vertical"
-          margin={{ top: 10, right: 50, left: 0, bottom: 20 }}
-        >
-          <defs>
-            <pattern id="stripedNotDetected" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
-              <rect width="4" height="8" fill="#e5e7eb" />
-              <rect x="4" width="4" height="8" fill="#f3f4f6" />
-            </pattern>
-            <linearGradient id="gradientNotDetected" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#e5e7eb" stopOpacity={0.8} />
-              <stop offset="100%" stopColor="#e5e7eb" stopOpacity={1} />
-            </linearGradient>
-            <linearGradient id="gradientLowExposure" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor={EXPOSURE_COLORS.lowExposure} stopOpacity={0.6} />
-              <stop offset="100%" stopColor={EXPOSURE_COLORS.lowExposure} stopOpacity={1} />
-            </linearGradient>
-            <linearGradient id="gradientMonitorOnly" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor={EXPOSURE_COLORS.monitorOnly} stopOpacity={0.6} />
-              <stop offset="100%" stopColor={EXPOSURE_COLORS.monitorOnly} stopOpacity={1} />
-            </linearGradient>
-            <linearGradient id="gradientPayAttention" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor={EXPOSURE_COLORS.payAttention} stopOpacity={0.6} />
-              <stop offset="100%" stopColor={EXPOSURE_COLORS.payAttention} stopOpacity={1} />
-            </linearGradient>
-          </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={true} vertical={false} />
-          <XAxis 
-            type="number" 
-            stroke="#6b7280"
-            tick={{ fill: '#6b7280' }}
-            label={{ value: 'Count', position: 'insideBottom', offset: -5, style: { fill: '#6b7280', textAnchor: 'middle' } }}
-          />
-          <YAxis 
-            dataKey="name" 
-            type="category" 
-            stroke="#6b7280"
-            tick={{ fill: '#6b7280' }}
-            width={120}
-          />
-          <Tooltip content={<CustomTooltip />} cursor={false} />
-          <Bar 
-            dataKey="value" 
-            radius={[0, 8, 8, 0]}
-            onClick={(data: { name?: string }) => data?.name && onBarClick?.(data.name)}
-            activeBar={false}
-            style={{ cursor: onBarClick ? 'pointer' : 'default' }}
-          >
-            {chartData.map((entry, index) => (
-              <Cell 
-                key={`cell-${index}`} 
-                fill={entry.usePattern ? 'url(#stripedNotDetected)' : `url(#${entry.gradientId})`}
-                stroke={entry.color}
-                strokeWidth={1.5}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Chart on the left - takes 2 columns */}
+        <div className="lg:col-span-2 [&_svg]:outline-none [&_svg]:focus:outline-none outline-none focus:outline-none" tabIndex={-1}>
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart
+              data={chartData}
+              margin={{ top: 50, right: 30, left: 0, bottom: -10 }}
+              barCategoryGap="1%"
+            >
+              <Bar dataKey="value" radius={[4, 4, 0, 0]} onClick={handleBarClick} style={{ cursor: 'pointer' }} isAnimationActive={false}>
+                {chartData.map((entry, index) => (
+                  <Cell 
+                    key={`cell-${index}`} 
+                    fill={entry.color}
+                    style={{ 
+                      opacity: selectedClassification === entry.name ? 1 : 0.6,
+                      transition: 'opacity 0.2s'
+                    }}
+                  />
+                ))}
+                <LabelList 
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  content={(props: any) => {
+                    const { x, y, width, value, payload } = props;
+                    // Get the name from payload or find entry by value
+                    const entry = payload?.name 
+                      ? chartData.find(item => item.name === payload.name)
+                      : chartData.find(item => item.value === value);
+                    const color = entry?.color || '#000000';
+                    
+                    const xNum = typeof x === 'number' ? x : Number(x) || 0;
+                    const yNum = typeof y === 'number' ? y : Number(y) || 0;
+                    const widthNum = typeof width === 'number' ? width : Number(width) || 0;
+                    
+                    return (
+                      <text
+                        x={xNum + widthNum / 2}
+                        y={yNum - 8}
+                        fill={color}
+                        textAnchor="middle"
+                        fontSize={32}
+                        fontWeight="bold"
+                      >
+                        {value}
+                      </text>
+                    );
+                  }} 
+                />
+              </Bar>
+              <XAxis 
+                dataKey="name" 
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: '#6b7280', fontSize: 12, fontWeight: 500 }}
               />
-            ))}
-            <LabelList 
-              dataKey="value" 
-              position="right" 
-              style={{ fill: '#6b7280', fontSize: '12px', fontWeight: '500' }}
-            />
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Info panel on the right - takes 1 column */}
+        <div className="lg:col-span-1">
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 h-full flex flex-col">
+            <h4 
+              className="text-xl font-bold mb-3"
+              style={{ color: selectedColor }}
+            >
+              {selectedClassification}
+            </h4>
+            <p className="text-sm text-gray-700 leading-relaxed flex-grow">
+              {CLASSIFICATION_DESCRIPTIONS[selectedClassification]}
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -169,10 +177,7 @@ export default function PercentileDistributionChart({
     return (
       <div className={noCard ? "" : "bg-white border border-gray-200 rounded-lg p-6 shadow-sm"}>
         {!noCard && (
-          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-            <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Percentile Distribution
           </h3>
         )}

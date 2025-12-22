@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import { ExposureFilterType } from '@/app/api/utils';
 
 interface ExposureFilterButtonsProps {
@@ -32,51 +31,21 @@ const filters = [
 ];
 
 export default function ExposureFilterButtons({ currentFilter, onFilterChange }: ExposureFilterButtonsProps) {
-  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
-  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const activeIndex = filters.findIndex(f => f.value === currentFilter);
-    const activeButton = buttonRefs.current[activeIndex];
-    const container = containerRef.current;
-
-    if (activeButton && container) {
-      const containerRect = container.getBoundingClientRect();
-      const buttonRect = activeButton.getBoundingClientRect();
-      const underlineWidth = buttonRect.width * 0.7; // 70% of button width
-      const underlineLeft = buttonRect.left - containerRect.left + (buttonRect.width - underlineWidth) / 2; // Center the underline
-      
-      setUnderlineStyle({
-        left: underlineLeft,
-        width: underlineWidth
-      });
-    }
-  }, [currentFilter]);
-
   return (
-    <div ref={containerRef} className="relative flex items-center space-x-2">
-      {filters.map((filter, index) => (
+    <div className="flex items-center space-x-2">
+      {filters.map((filter) => (
         <button
           key={filter.value}
-          ref={(el) => { buttonRefs.current[index] = el; }}
           onClick={() => onFilterChange(filter.value)}
-          className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+          className={`px-4 py-2 text-sm font-medium rounded-lg border transition-all duration-200 ${
             currentFilter === filter.value
-              ? 'text-gray-900'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'bg-[#404B69] text-white border-[#404B69] shadow-sm'
+              : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
           }`}
         >
           {filter.label}
         </button>
       ))}
-      <div
-        className="absolute bottom-0 h-1.5 bg-[#9CBB04] transition-all duration-300 ease-in-out"
-        style={{
-          left: `${underlineStyle.left}px`,
-          width: `${underlineStyle.width}px`
-        }}
-      />
     </div>
   );
 }

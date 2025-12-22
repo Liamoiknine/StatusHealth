@@ -14,7 +14,7 @@ interface TestContextType {
 const TestContext = createContext<TestContextType | undefined>(undefined);
 
 export function TestProvider({ children }: { children: ReactNode }) {
-  const [selectedTest, setSelectedTest] = useState(1);
+  const [selectedTest, setSelectedTest] = useState(4);
   const [availableTests, setAvailableTests] = useState<TestMetadata[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,7 +26,7 @@ export function TestProvider({ children }: { children: ReactNode }) {
       } catch (error) {
         console.error('Error loading available tests:', error);
         // Fallback to default test if API fails
-        setAvailableTests([{ id: 1, filename: 'all-chemicals_test1.csv', date: '10/18/24' }]);
+        setAvailableTests([{ id: 4, filename: 'all-chemicals_test4.csv', date: '9/28/25' }]);
       } finally {
         setIsLoading(false);
       }

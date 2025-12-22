@@ -17,7 +17,7 @@ export function filterChemicalsByExposure(
       case 'not-detected':
         return value === 0;
       case 'low-exposure':
-        return value > 0 && percentile <= 0.3;
+        return value > 0 && percentile !== undefined && percentile > 0 && percentile <= 0.3;
       case 'monitor-only':
         return value > 0 && percentile > 0.3 && percentile <= 0.6;
       case 'pay-attention':
@@ -40,8 +40,8 @@ export function sortChemicalsByPercentile(chemicals: ChemicalData[]): ChemicalDa
 
 // Percentile-based color for individual chemicals
 export function getPercentileColor(percentile?: number, value?: number): string {
-  if (value === 0) return EXPOSURE_COLOR_CLASSES.notDetected.text;
-  if (!percentile || percentile <= 0.3) return EXPOSURE_COLOR_CLASSES.lowExposure.text;
+  if (value === 0 || !percentile || percentile === 0) return EXPOSURE_COLOR_CLASSES.notDetected.text;
+  if (percentile > 0 && percentile <= 0.3) return EXPOSURE_COLOR_CLASSES.lowExposure.text;
   if (percentile > 0.6) return EXPOSURE_COLOR_CLASSES.payAttention.text;
   return EXPOSURE_COLOR_CLASSES.monitorOnly.text;
 }
@@ -55,14 +55,14 @@ export function formatPercentile(percentile?: number, value?: number): string {
 
 // Get status info for individual chemicals based on percentile
 export function getChemicalStatusInfo(percentile?: number, value?: number) {
-  if (value === 0) {
+  if (value === 0 || !percentile || percentile === 0) {
     return {
       color: 'bg-gray-400',
       text: 'Not Detected',
-      bgColor: 'bg-transparent border border-white',
-      textColor: 'text-white'
+      bgColor: 'bg-transparent border border-gray-500',
+      textColor: 'text-gray-700'
     };
-  } else if (!percentile || percentile <= 0.3) {
+  } else if (percentile > 0 && percentile <= 0.3) {
     return {
       color: EXPOSURE_COLOR_CLASSES.lowExposure.bg,
       text: 'Low Exposure',
@@ -161,17 +161,15 @@ export function getPercentileDistribution(chemicals: ChemicalData[]) {
   };
 
   chemicals.forEach(chemical => {
-    if (chemical.value === 0) {
+    const percentile = chemical.percentile;
+    if (chemical.value === 0 || !percentile || percentile === 0) {
       distribution.notDetected++;
-    } else {
-      const percentile = chemical.percentile || 0;
-      if (percentile <= 0.3) {
-        distribution.lowExposure++;
-      } else if (percentile <= 0.6) {
-        distribution.monitorOnly++;
-      } else {
-        distribution.payAttention++;
-      }
+    } else if (percentile > 0 && percentile <= 0.3) {
+      distribution.lowExposure++;
+    } else if (percentile > 0.3 && percentile <= 0.6) {
+      distribution.monitorOnly++;
+    } else if (percentile > 0.6) {
+      distribution.payAttention++;
     }
   });
 
@@ -195,7 +193,7 @@ export function getSourceDistribution(chemicals: ChemicalData[]) {
 
 // Calculate category insights
 export interface CategoryInsight {
-  type: 'averagePercentile' | 'highestPercentile' | 'detectionRate' | 'mostCommonSource' | 'categoryComparison';
+  type: 'averagePercentile' | 'detectionRate' | 'mostCommonSource' | 'categoryComparison';
   label: string;
   value: string | number;
   subValue?: string;
@@ -223,20 +221,6 @@ export function calculateCategoryInsights(
     });
   }
 
-  // Highest percentile chemical
-  if (detectedCount > 0) {
-    const highest = detectedChemicals.reduce((max, c) => {
-      const p = c.percentile || 0;
-      return p > (max.percentile || 0) ? c : max;
-    }, detectedChemicals[0]);
-    insights.push({
-      type: 'highestPercentile',
-      label: 'Highest Exposure',
-      value: highest.compound,
-      subValue: `${formatPercentile(highest.percentile, highest.value)} percentile`,
-      meaningful: true
-    });
-  }
 
   // Detection rate
   insights.push({

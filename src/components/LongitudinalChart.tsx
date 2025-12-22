@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea } from 'recharts';
+import { useState, useEffect, useRef } from 'react';
+import { AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceArea, ComposedChart } from 'recharts';
+import { createPortal } from 'react-dom';
 import { LongitudinalDataPoint, LongitudinalResponse } from '@/app/api/chemicals/longitudinal/route';
 
 interface LongitudinalChartProps {
@@ -37,10 +38,18 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (loading) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
-        <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#9CBB04]"></div>
+      <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-lg shadow-sm p-6 relative">
+        <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#404B69] rounded-full blur-3xl"></div>
+          </div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
+          <div className="flex items-center justify-center h-64">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#9CBB04]"></div>
+          </div>
         </div>
       </div>
     );
@@ -48,10 +57,18 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (error) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
-        <div className="text-center text-red-600">
-          <p>Error loading data: {error}</p>
+      <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-lg shadow-sm p-6 relative">
+        <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#404B69] rounded-full blur-3xl"></div>
+          </div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
+          <div className="text-center text-red-600">
+            <p>Error loading data: {error}</p>
+          </div>
         </div>
       </div>
     );
@@ -59,10 +76,18 @@ export default function LongitudinalChart({ chemicalName }: LongitudinalChartPro
 
   if (!data || !data.hasData) {
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
-        <div className="text-center text-gray-600">
-          <p>No exposure data available for this chemical across all tests.</p>
+      <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-lg shadow-sm p-6 relative">
+        <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#404B69] rounded-full blur-3xl"></div>
+          </div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Exposure Over Time</h2>
+          <div className="text-center text-gray-600">
+            <p>No exposure data available for this chemical across all tests.</p>
+          </div>
         </div>
       </div>
     );
@@ -149,13 +174,31 @@ interface TooltipProps {
 
 function ChartComponent({ data }: { data: LongitudinalResponse }) {
   const { data: points } = data;
+  const [clickedPercentile, setClickedPercentile] = useState<{ percentile: number; value: number; x: number; y: number } | null>(null);
+  const chartContainerRef = useRef<HTMLDivElement>(null);
 
   // Format data for Recharts
-  const chartData = points.map(point => {
+  const chartData = points.map((point, index) => {
     const cleanDate = point.date.replace(/\r/g, '').trim();
     const date = new Date(cleanDate);
+    const dateStr = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    
+    // Calculate 25th and 75th percentiles from rangeLow (0th percentile) and rangeHigh (100th percentile)
+    const rangeLow = point.rangeLow != null && !isNaN(point.rangeLow) && point.rangeLow >= 0 ? point.rangeLow : null;
+    const rangeHigh = point.rangeHigh != null && !isNaN(point.rangeHigh) && point.rangeHigh > (point.rangeLow || 0) ? point.rangeHigh : null;
+    
+    let percentile25: number | null = null;
+    let percentile75: number | null = null;
+    
+    if (rangeLow != null && rangeHigh != null && rangeHigh > rangeLow) {
+      const range = rangeHigh - rangeLow;
+      percentile25 = rangeLow + 0.25 * range;
+      percentile75 = rangeLow + 0.75 * range;
+    }
+    
     return {
-      date: date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+      index: index,
+      date: dateStr,
       fullDate: date.toLocaleDateString('en-US', { 
         month: 'short', 
         day: 'numeric', 
@@ -164,11 +207,62 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
       value: point.detected ? point.value : null,
       detected: point.detected,
       percentile: point.percentile ? Math.round(point.percentile * 100) : null,
-      rangeLow: point.rangeLow,
-      rangeHigh: point.rangeHigh,
+      rangeLow: rangeLow,
+      rangeHigh: rangeHigh,
+      percentile25: percentile25,
+      percentile75: percentile75,
       testId: point.testId
     };
   });
+
+  // Custom dot component for clickable percentile lines
+  const PercentileDot = (props: any) => {
+    const { cx, cy, payload, dataKey } = props;
+    if (cx == null || cy == null || !payload || payload[dataKey] == null) {
+      return null;
+    }
+    
+    const percentile = dataKey === 'percentile75' ? 75 : 25;
+    const value = payload[dataKey];
+    
+    const handleClick = (e: React.MouseEvent<SVGCircleElement>) => {
+      e.stopPropagation();
+      if (chartContainerRef.current) {
+        const rect = chartContainerRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        setClickedPercentile({ percentile, value, x, y });
+      }
+    };
+    
+    return (
+      <circle
+        cx={cx}
+        cy={cy}
+        r={8}
+        fill="transparent"
+        strokeWidth={0}
+        style={{ cursor: 'pointer' }}
+        onClick={handleClick}
+      />
+    );
+  };
+
+  // Close tooltip when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (clickedPercentile && chartContainerRef.current && !chartContainerRef.current.contains(event.target as Node)) {
+        setClickedPercentile(null);
+      }
+    };
+
+    if (clickedPercentile) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [clickedPercentile]);
 
   const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
@@ -199,15 +293,22 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
-      <h2 className="text-xl font-semibold text-gray-900 mb-6">Exposure Over Time</h2>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-6">
+    <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-lg shadow-sm p-6 relative">
+      <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#404B69] rounded-full blur-3xl"></div>
+        </div>
+      </div>
+      <div className="relative z-10">
+        <h2 className="text-xl font-semibold text-gray-900 mb-6">Exposure Over Time</h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-6">
         {/* Left: Chart */}
-        <div>
+        <div ref={chartContainerRef} className="relative">
           <div className="[&_svg]:outline-none [&_svg]:focus:outline-none" tabIndex={-1}>
             <ResponsiveContainer width="100%" height={350}>
-              <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              <ComposedChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#9CBB04" stopOpacity={0.3}/>
@@ -226,26 +327,30 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                   label={{ value: 'Value (ng/mL)', angle: -90, position: 'insideLeft', style: { fill: '#6b7280' } }}
                 />
                 <Tooltip content={<CustomTooltip />} />
-                {/* Percentile range shaded area - rendered first so it's behind the main line */}
-                {/* Use ReferenceArea for each data point to create the shaded region between rangeLow and rangeHigh */}
-                {chartData.map((entry, index) => {
-                  if (entry.rangeLow != null && entry.rangeHigh != null && index < chartData.length - 1) {
-                    const nextEntry = chartData[index + 1];
-                    return (
-                      <ReferenceArea
-                        key={`range-${index}`}
-                        x1={entry.date}
-                        x2={nextEntry.date}
-                        y1={entry.rangeLow}
-                        y2={entry.rangeHigh}
-                        fill="#4169E1"
-                        fillOpacity={0.3}
-                        stroke="none"
-                      />
-                    );
-                  }
-                  return null;
-                })}
+                {/* Percentile range lines - rendered first so they're behind the main line */}
+                {/* Use dotted lines to show the 25th-75th percentile range */}
+                <Line
+                  type="monotone"
+                  dataKey="percentile75"
+                  stroke="#4169E1"
+                  strokeWidth={1.5}
+                  strokeDasharray="5 5"
+                  dot={<PercentileDot dataKey="percentile75" />}
+                  activeDot={false}
+                  connectNulls={true}
+                  isAnimationActive={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="percentile25"
+                  stroke="#4169E1"
+                  strokeWidth={1.5}
+                  strokeDasharray="5 5"
+                  dot={<PercentileDot dataKey="percentile25" />}
+                  activeDot={false}
+                  connectNulls={true}
+                  isAnimationActive={false}
+                />
                 {/* Main value area and line */}
                 <Area
                   type="monotone"
@@ -265,7 +370,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
                   activeDot={{ r: 6 }}
                   connectNulls={false}
                 />
-              </AreaChart>
+              </ComposedChart>
             </ResponsiveContainer>
           </div>
 
@@ -276,10 +381,29 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
               <span className="text-gray-700">Your Results</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-6 h-3 rounded" style={{ backgroundColor: 'rgba(65, 105, 225, 0.3)' }} />
-              <span className="text-gray-700">25th-75th Percentile</span>
+              <svg width="20" height="2" className="text-[#4169E1]">
+                <line x1="0" y1="1" x2="20" y2="1" stroke="#4169E1" strokeWidth="2" strokeDasharray="5 5" />
+              </svg>
+              <span className="text-gray-700">25th / 75th Percentile</span>
             </div>
           </div>
+          
+          {/* Percentile Tooltip */}
+          {clickedPercentile && typeof window !== 'undefined' && chartContainerRef.current && createPortal(
+            <div 
+              className="fixed z-[9999] bg-black text-white text-xs rounded-lg p-3 shadow-xl pointer-events-none"
+              style={{
+                left: `${clickedPercentile.x + chartContainerRef.current.getBoundingClientRect().left}px`,
+                top: `${clickedPercentile.y + chartContainerRef.current.getBoundingClientRect().top}px`,
+                transform: 'translate(-50%, -100%) translateY(-8px)'
+              }}
+            >
+              <p className="font-semibold mb-1">{clickedPercentile.percentile}th Percentile</p>
+              <p className="text-gray-300">{clickedPercentile.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ng/mL</p>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+            </div>,
+            document.body
+          )}
         </div>
 
         {/* Right: Stats and Interpretation */}
@@ -289,7 +413,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
             <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg">
               <div className="text-xs font-medium text-gray-600 mb-1">Peak Exposure</div>
               <div className="text-lg font-semibold text-gray-900">
-                {points.filter(p => p.detected).length > 0 ? formatValue(Math.max(...points.filter(p => p.detected).map(p => p.value))) : 'N/A'}
+                {points.filter(p => p.detected).length > 0 ? `${formatValue(Math.max(...points.filter(p => p.detected).map(p => p.value)))} ng/mL` : 'N/A'}
               </div>
             </div>
             <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg">
@@ -308,6 +432,7 @@ function ChartComponent({ data }: { data: LongitudinalResponse }) {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

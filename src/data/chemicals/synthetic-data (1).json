@@ -1,0 +1,601 @@
+[
+  {
+    "sample_id": "dataset_001",
+    "compound_name": "Benfuracarb",
+    "cas_rn": "82560-54-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Benfuracarb is a carbamate insecticide and nematicide used to control a variety of soil and foliar pests in crops such as maize, rice, sugar beet, and vegetables. It is known for its broad-spectrum efficacy and systemic action, allowing it to protect plants from various pests over an extended period.",
+        "sources": [
+          "https://www.oat-agrio.co.jp/en/product/benfuracarb/"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to benfuracarb can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in aerosols or dust during application.",
+          "Ingestion: Consuming contaminated food or water.",
+          "Dermal: Skin contact during handling or application."
+        ],
+        "sources": [
+          "https://www.rayfull.net/Content/upload/pdf/202228235/Benfuracarb-MSDS.pdf?rnd=288"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of benfuracarb in blood indicates recent exposure, as it is rapidly metabolized and excreted. The primary metabolite is carbofuran, which inhibits acetylcholinesterase, an enzyme essential for nervous system function. This inhibition can lead to symptoms such as nausea, dizziness, and, in severe cases, respiratory paralysis. The main biological system affected is the nervous system.",
+        "sources": [
+          "https://hero.epa.gov/hero/index.cfm/reference/details/reference_id/7420672"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Benfuracarb is not registered for use in the United States. In the European Union, it is not approved for use as a plant protection product. Monitoring and regulation of benfuracarb are conducted by agencies such as the European Food Safety Authority (EFSA) and the Environmental Protection Agency (EPA).",
+        "sources": [
+          "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB3316836.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.oat-agrio.co.jp/en/product/benfuracarb/",
+      "https://www.rayfull.net/Content/upload/pdf/202228235/Benfuracarb-MSDS.pdf?rnd=288",
+      "https://hero.epa.gov/hero/index.cfm/reference/details/reference_id/7420672",
+      "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB3316836.htm"
+    ]
+  },
+  {
+    "response": {
+      "compound_name": "Benzoximate",
+      "cas_rn": "29104-30-1",
+      "summary_sections": [
+        {
+          "header": "Overview and Common Uses",
+          "content": "Benzoximate is an acaricide, a type of pesticide specifically designed to control mite populations. It belongs to the chemical class of benzohydroxamic acid derivatives. Benzoximate is primarily used in agricultural settings to protect crops from mite infestations.",
+          "sources": [
+            "https://webbook.nist.gov/cgi/inchi/InChI%3D1S/C18H18ClNO5/c1-4-24-20-17%2825-18%2821%2912-8-6-5-7-9-12%2915-14%2822-2%2911-10-13%2819%2916%2815%2923-3/h5-11H%2C4H2%2C1-3H3"
+          ]
+        },
+        {
+          "header": "Exposure Pathways",
+          "content": "Human exposure to benzoximate can occur through various routes, particularly in occupational settings or through environmental contamination.",
+          "bullets": [
+            "Inhalation: Breathing in air containing benzoximate particles or vapors, especially during pesticide application.",
+            "Dermal: Skin contact with benzoximate, which can occur during handling or application of the pesticide.",
+            "Ingestion: Consuming food or water contaminated with benzoximate residues."
+          ],
+          "sources": []
+        },
+        {
+          "header": "Health and Toxicological Information",
+          "content": "Detection of benzoximate in human blood indicates exposure to the chemical, which could be recent or ongoing. The specific health effects and toxicological profile of benzoximate in humans are not well-documented. However, as with many pesticides, potential concerns may include effects on the nervous system, liver, or other organ systems. Further research is needed to fully understand the implications of benzoximate exposure in humans.",
+          "sources": []
+        },
+        {
+          "header": "Regulatory and Monitoring Context",
+          "content": "Information regarding the regulatory status and monitoring practices for benzoximate is limited. It is advisable to consult national and international regulatory agencies for the most current guidelines and regulations concerning the use and monitoring of benzoximate.",
+          "sources": []
+        }
+      ],
+      "sources": [
+        "https://webbook.nist.gov/cgi/inchi/InChI%3D1S/C18H18ClNO5/c1-4-24-20-17%2825-18%2821%2912-8-6-5-7-9-12%2915-14%2822-2%2911-10-13%2819%2916%2815%2923-3/h5-11H%2C4H2%2C1-3H3"
+      ]
+    },
+    "sample_id": "dataset_002"
+  },
+  {
+    "sample_id": "dataset_003",
+    "compound_name": "Bifenazate",
+    "cas_rn": "149877-41-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Bifenazate is a chemical compound belonging to the carbazate class, primarily utilized as an acaricide to control mite infestations in agricultural and ornamental crops. It is effective against various mite species, including the two-spotted spider mite (Tetranychus urticae) and the citrus red mite (Panonychus citri). Bifenazate is commonly applied in greenhouses, nurseries, and field-grown ornamentals to protect plants from mite damage.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/17972019/"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to bifenazate can occur through several routes, particularly for individuals involved in its application or residing near treated areas.",
+        "bullets": [
+          "Inhalation: Breathing in aerosolized particles during application.",
+          "Dermal: Skin contact with the chemical during handling or application.",
+          "Ingestion: Consuming residues present on treated produce."
+        ],
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-000586_01-Jun-99.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of bifenazate in blood indicates recent exposure, as the compound is metabolized and eliminated from the body over time. Studies have shown that bifenazate and its principal active metabolite, diazene, exhibit high toxicity to target mite species but have low toxicity to non-target organisms, including predatory mites. The primary biological systems studied in relation to bifenazate exposure include the nervous system, given its mode of action as a GABA (gamma-aminobutyric acid) receptor modulator in mites.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/17972019/"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, the Environmental Protection Agency (EPA) regulates the use of bifenazate as a pesticide. The EPA has established guidelines for its application to ensure safety for both applicators and consumers. In the European Union, the European Food Safety Authority (EFSA) has set maximum residue levels (MRLs) for bifenazate in various food products to monitor and control dietary exposure. These regulatory frameworks aim to minimize potential risks associated with bifenazate use.",
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-000586_01-Jun-99.pdf",
+          "https://agrinfo.eu/book-of-reports/maximum-residue-levels-for-bifenazate/"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/17972019/",
+      "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-000586_01-Jun-99.pdf",
+      "https://agrinfo.eu/book-of-reports/maximum-residue-levels-for-bifenazate/"
+    ]
+  },
+  {
+    "response": {
+      "compound_name": "Bupirimate",
+      "cas_rn": "41483-43-6",
+      "summary_sections": [
+        {
+          "header": "Overview and Common Uses",
+          "content": "Bupirimate is a fungicide belonging to the pyrimidine sulfamate chemical class. It is primarily used to control powdery mildew on various crops, including apples, pears, stone fruits, cucurbits, roses, strawberries, gooseberries, currants, raspberries, hops, and beets. Bupirimate exhibits translaminar mobility and systemic translocation within plants, effectively inhibiting fungal sporulation.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Bupirimate"
+          ]
+        },
+        {
+          "header": "Exposure Pathways",
+          "content": "Human exposure to bupirimate can occur through several routes:",
+          "bullets": [
+            "Inhalation: Breathing in air containing bupirimate particles or vapors during application or in areas where it has been used.",
+            "Dermal: Skin contact with bupirimate during handling or application.",
+            "Ingestion: Consuming food products that have residues of bupirimate."
+          ],
+          "sources": [
+            "https://en.wikipedia.org/wiki/Bupirimate"
+          ]
+        },
+        {
+          "header": "Health and Toxicological Information",
+          "content": "Detection of bupirimate in blood indicates recent exposure to the compound. Bupirimate is considered to have low mammalian toxicity and is non-toxic to bees. Specific biomarkers for bupirimate exposure are not well-established. The primary biological systems or endpoints studied in relation to bupirimate exposure include hepatic (liver) and renal (kidney) functions.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Bupirimate"
+          ]
+        },
+        {
+          "header": "Regulatory and Monitoring Context",
+          "content": "In the European Union, bupirimate is under revision for inclusion in Annex I of the 91/414/EEC Directive, which pertains to the authorization of plant protection products. In France, bupirimate is permitted in the composition of preparations with market authorization.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Bupirimate"
+          ]
+        }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bupirimate"
+      ]
+    },
+    "sample_id": "dataset_004"
+  },
+  {
+    "sample_id": "dataset_005",
+    "compound_name": "Dimoxystrobin",
+    "cas_rn": "149961-52-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Dimoxystrobin is a fungicide belonging to the strobilurin class, designed to protect crops from various fungal diseases. It has been utilized in agriculture to safeguard cereals, oilseed rape, sunflowers, and grasslands from infections such as leaf spots and rusts.",
+        "sources": [
+          "https://www.pan-europe.info/dimoxystrobin",
+          "https://news.agropages.com/News/NewsDetail---47650.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to dimoxystrobin can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in air containing dimoxystrobin particles during or after its application.",
+          "Ingestion: Consuming food products that have residues of dimoxystrobin.",
+          "Dermal: Skin contact with the compound during handling or application."
+        ],
+        "sources": [
+          "https://www.pan-europe.info/dimoxystrobin"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of dimoxystrobin in blood indicates recent exposure to the compound. Studies have shown that dimoxystrobin can induce oxidative stress and morphological changes in the liver of zebrafish (Danio rerio), suggesting potential hepatotoxic effects. Additionally, it has been classified as a probable reproductive toxin and carcinogen.",
+        "sources": [
+          "https://www.mdpi.com/2076-3298/11/12/282",
+          "https://www.pan-europe.info/dimoxystrobin"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In June 2023, the European Union decided not to renew the approval of dimoxystrobin due to concerns over its potential to contaminate groundwater with toxic metabolites. Consequently, EU member states were required to withdraw authorizations for products containing dimoxystrobin by January 31, 2024, with a grace period for using existing stocks expiring by July 31, 2024.",
+        "sources": [
+          "https://news.agropages.com/News/NewsDetail---47650.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.pan-europe.info/dimoxystrobin",
+      "https://news.agropages.com/News/NewsDetail---47650.htm",
+      "https://www.mdpi.com/2076-3298/11/12/282"
+    ]
+  },
+  {
+    "sample_id": "dataset_006",
+    "compound_name": "Doramectin",
+    "cas_rn": "117704-25-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Doramectin is a macrocyclic lactone derivative of ivermectin, belonging to the avermectin class of compounds. It is primarily used as a broad-spectrum antiparasitic agent in veterinary medicine to treat and control internal and external parasites in livestock, including gastrointestinal roundworms, lungworms, eyeworms, grubs, sucking lice, and mange mites in cattle.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Doramectin"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to doramectin can occur through several routes, particularly among individuals involved in the handling or administration of the compound in veterinary settings.",
+        "bullets": [
+          "Dermal contact: Direct skin exposure during the application of doramectin formulations.",
+          "Inhalation: Breathing in aerosols or vapors during the handling of the product.",
+          "Ingestion: Accidental swallowing due to improper handling or contamination of food and water."
+        ],
+        "sources": [
+          "https://www.msd.com/docs/product/safety-data-sheets/ah-sds/Doramectin%20Formulation_AH_AR_EN.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of doramectin in human blood indicates recent exposure, likely due to occupational contact. In animal studies, repeated oral exposure to doramectin has been associated with effects on the central nervous system, liver, and kidneys. Specific biomarkers for doramectin exposure in humans have not been well established. The primary biological systems studied in relation to doramectin exposure include the central nervous system, hepatic system, and renal system.",
+        "sources": [
+          "https://www.msd.com/docs/product/safety-data-sheets/ah-sds/Doramectin%20Formulation_AH_AR_EN.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, the Food and Drug Administration (FDA) has approved doramectin for use in cattle to treat and control various parasites. The FDA has also approved generic formulations of doramectin for similar uses. Specific monitoring programs for doramectin exposure in humans are not widely established.",
+        "sources": [
+          "https://www.fda.gov/animal-veterinary/cvm-updates/fda-approves-first-generic-doramectin-topical-solution-treatment-certain-parasites-cattle"
+        ]
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Doramectin",
+      "https://www.msd.com/docs/product/safety-data-sheets/ah-sds/Doramectin%20Formulation_AH_AR_EN.pdf",
+      "https://www.fda.gov/animal-veterinary/cvm-updates/fda-approves-first-generic-doramectin-topical-solution-treatment-certain-parasites-cattle"
+    ]
+  },
+  {
+    "sample_id": "dataset_007",
+    "compound_name": "Emamectin Benzoate",
+    "cas_rn": "155569-91-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Emamectin benzoate is a semi-synthetic derivative of avermectin, a class of compounds known for their insecticidal properties. It is widely utilized in agriculture to control lepidopteran pests on various crops, including fruits, vegetables, and cotton. The compound functions by disrupting the nervous system of target insects, leading to paralysis and death.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/Emamectin-benzoate",
+          "https://www3.epa.gov/pesticides/chem_search/ppls/000100-00904-20200501.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to emamectin benzoate can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in aerosolized particles during pesticide application.",
+          "Ingestion: Consuming residues present on treated produce.",
+          "Dermal: Skin contact during handling or application of the pesticide."
+        ],
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/ppls/000100-00904-20200501.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of emamectin benzoate in blood indicates recent exposure. Studies have shown that exposure can lead to neurological effects, such as muscle tremors and incoordination. Research on human bronchial epithelial cells suggests potential cytotoxic effects, including DNA damage and apoptosis. However, these findings are based on in vitro studies, and their relevance to human health requires further investigation.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/31784274/",
+          "https://www3.epa.gov/pesticides/chem_search/ppls/000100-00904-20200501.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, the Environmental Protection Agency (EPA) regulates the use of emamectin benzoate, setting maximum residue limits for various crops to ensure consumer safety. The compound is also subject to monitoring programs to assess its presence in food and the environment. Specific regulations and monitoring practices may vary by region and over time.",
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/ppls/000100-00904-20200501.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Emamectin-benzoate",
+      "https://www3.epa.gov/pesticides/chem_search/ppls/000100-00904-20200501.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/31784274/"
+    ]
+  },
+  {
+    "sample_id": "dataset_008",
+    "compound_name": "Ethofumesate",
+    "cas_rn": "26225-79-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Ethofumesate is a selective herbicide belonging to the benzofuran chemical class. It is primarily utilized in agriculture to control a variety of annual grasses and broadleaf weeds. Common applications include use in sugar beet cultivation, turf management, and certain vegetable crops. Ethofumesate functions by inhibiting lipid synthesis in target plants, leading to impaired growth and development.",
+        "sources": [
+          "https://www.albaugh.com/us/agriculture/crop-protection/herbicides/listings/ethofumesate-4-sc-select",
+          "https://chemicalwarehouse.com/blogs/active-ingredients/ethofumesate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to ethofumesate can occur through various routes, particularly among individuals involved in its manufacture, formulation, or application. The primary exposure pathways include:",
+        "bullets": [
+          "Inhalation: Breathing in aerosolized particles during application.",
+          "Dermal contact: Skin exposure during handling or application.",
+          "Ingestion: Accidental swallowing, though less common."
+        ],
+        "sources": [
+          "https://www.epa.gov/sites/default/files/documents/pestsymptoms.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of ethofumesate in blood indicates recent exposure. Acute exposure may lead to symptoms such as eye and skin irritation, dizziness, and nausea. Chronic exposure effects are less well-documented. The primary biological systems affected include the integumentary (skin) and nervous systems.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/documents/pestsymptoms.pdf",
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2004-0346-0026/content.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, the Environmental Protection Agency (EPA) oversees the regulation of ethofumesate. The EPA has classified certain formulations of ethofumesate as Class I (high toxicity) and Class III (low toxicity) pesticides. Monitoring practices include incident reporting systems to track adverse effects associated with its use.",
+        "sources": [
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2004-0346-0026/content.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.albaugh.com/us/agriculture/crop-protection/herbicides/listings/ethofumesate-4-sc-select",
+      "https://chemicalwarehouse.com/blogs/active-ingredients/ethofumesate",
+      "https://www.epa.gov/sites/default/files/documents/pestsymptoms.pdf",
+      "https://downloads.regulations.gov/EPA-HQ-OPP-2004-0346-0026/content.pdf"
+    ]
+  },
+  {
+    "sample_id": "dataset_009",
+    "compound_name": "Fluoxastrobin",
+    "cas_rn": "361377-29-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Fluoxastrobin is a systemic fungicide belonging to the strobilurin class of chemicals. It is designed to protect a wide range of crops, including cereals, fruits, vegetables, and ornamental plants, from various fungal infections. Its systemic nature allows it to be absorbed and translocated throughout the plant, providing protection to both treated and new growth.",
+        "sources": [
+          "https://chemicalwarehouse.com/blogs/active-ingredients/fluoxastrobin"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to fluoxastrobin can occur through several routes:",
+        "bullets": [
+          "Ingestion: Consuming food products that have been treated with fluoxastrobin or contain residues of the fungicide.",
+          "Inhalation: Breathing in air that contains fluoxastrobin particles, especially during or after its application in agricultural settings.",
+          "Dermal contact: Skin exposure during the handling or application of fluoxastrobin-containing products."
+        ],
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-028869_01-Nov-05.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of fluoxastrobin in human blood indicates recent exposure to the compound. Studies have observed effects such as decreased body weight gain, liver cell hypertrophy, and increased liver weights in animal models. No neurotoxicity, carcinogenicity, developmental toxicity, teratogenicity, or genotoxicity was observed in these studies. The primary biological systems studied include hepatic (liver) and renal (kidney) systems.",
+        "sources": [
+          "https://www.fsc.go.jp/english/evaluationreports/pesticide/fluoxastrobin_no_fs240_2015.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In the United States, the Environmental Protection Agency (EPA) has established tolerances for fluoxastrobin residues in various food commodities, specifying maximum allowable levels to ensure consumer safety. The Food Safety Commission of Japan (FSCJ) has conducted risk assessments and specified an acceptable daily intake (ADI) for fluoxastrobin. These regulatory measures aim to monitor and control the presence of fluoxastrobin in the food supply to protect public health.",
+        "sources": [
+          "https://www.law.cornell.edu/cfr/text/40/180.609",
+          "https://www.fsc.go.jp/english/evaluationreports/pesticide/fluoxastrobin_no_fs240_2015.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://chemicalwarehouse.com/blogs/active-ingredients/fluoxastrobin",
+      "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-028869_01-Nov-05.pdf",
+      "https://www.fsc.go.jp/english/evaluationreports/pesticide/fluoxastrobin_no_fs240_2015.pdf",
+      "https://www.law.cornell.edu/cfr/text/40/180.609"
+    ]
+  },
+  {
+    "sample_id": "dataset_010",
+    "compound_name": "Formetanate Hydrochloride",
+    "cas_rn": "23422-53-9",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Formetanate hydrochloride is a carbamate pesticide primarily used as an insecticide and acaricide. It is applied to control pests such as thrips, leafhoppers, and mites on various crops, including fruits like citrus, pome, and stone fruits, as well as alfalfa grown for seed.",
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/reregistration/red_G-43_24-Sep-07.pdf",
+          "https://en.wikipedia.org/wiki/Formetanate"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to formetanate hydrochloride can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in air containing pesticide particles during or after application.",
+          "Ingestion: Consuming food or water contaminated with pesticide residues.",
+          "Dermal: Skin contact with the pesticide during handling or application."
+        ],
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/reregistration/red_G-43_24-Sep-07.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of formetanate hydrochloride in blood indicates recent exposure, as it is rapidly metabolized and excreted. This compound inhibits cholinesterase, an enzyme essential for normal nervous system function. In animal studies, exposure has led to symptoms such as decreased body weight, excessive salivation, labored breathing, and tremors, consistent with cholinesterase inhibition. The primary biological systems affected include the nervous system.",
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/html/formetanatehcl_fs.html"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "The U.S. Environmental Protection Agency (EPA) has evaluated formetanate hydrochloride under its reregistration program. The agency has established safety measures and usage guidelines to mitigate potential risks associated with its application. Monitoring practices include assessing dietary exposure through food and water to ensure levels remain within acceptable limits.",
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/reregistration/red_G-43_24-Sep-07.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www3.epa.gov/pesticides/chem_search/reg_actions/reregistration/red_G-43_24-Sep-07.pdf",
+      "https://en.wikipedia.org/wiki/Formetanate",
+      "https://archive.epa.gov/pesticides/reregistration/web/html/formetanatehcl_fs.html"
+    ]
+  },
+  {
+    "sample_id": "dataset_011",
+    "compound_name": "Pencycuron",
+    "cas_rn": "66063-05-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Pencycuron is a non-systemic phenylurea fungicide primarily used to control diseases caused by the fungus Rhizoctonia solani. It is commonly applied to crops such as potatoes, rice, cotton, sugar beet, vegetables, ornamentals, and turf to prevent and manage fungal infections.",
+        "sources": [
+          "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB3145931.htm"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to pencycuron can occur through various routes:",
+        "bullets": [
+          "Inhalation: Breathing in air containing pencycuron particles, especially during or after its application in agricultural settings.",
+          "Ingestion: Consuming food products that have been treated with pencycuron or drinking contaminated water.",
+          "Dermal: Skin contact with pencycuron during its handling or application."
+        ],
+        "sources": [
+          "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB3145931.htm"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of pencycuron in human blood indicates recent exposure to the compound. Toxicological studies have shown that pencycuron is not acutely toxic via oral, dermal, or inhalation routes. It does not cause skin or eye irritation and is not a skin sensitizer. The liver has been identified as the target organ after repeated exposures, with no observed adverse effect levels (NOAELs) of 65 mg/kg body weight per day in mice and 120 mg/kg body weight per day in rats for short-term studies. Long-term studies reported NOAELs of 18 mg/kg body weight per day in rats and 43 mg/kg body weight per day in mice. Pencycuron has not demonstrated genotoxic or carcinogenic potential and is not considered a reproductive or developmental toxicant.",
+        "sources": [
+          "https://chemreg.net/regulations/11-437_gmsds.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Pencycuron is subject to various regulatory frameworks. The European Food Safety Authority (EFSA) has evaluated its toxicological profile, establishing an Acceptable Daily Intake (ADI) of 0.2 mg/kg body weight per day and an Acceptable Operator Exposure Level (AOEL) of 0.15 mg/kg body weight per day. In Great Britain, pencycuron is no longer an approved active substance, and all plant protection product authorizations have been withdrawn. Consequently, it is proposed to lower all Maximum Residue Levels (MRLs) for pencycuron to the limit of quantification, with the new MRLs expected to be adopted in March 2024.",
+        "sources": [
+          "https://chemreg.net/regulations/11-437_gmsds.pdf",
+          "https://content.govdelivery.com/accounts/UKHSE/bulletins/37c1b91"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB3145931.htm",
+      "https://chemreg.net/regulations/11-437_gmsds.pdf",
+      "https://content.govdelivery.com/accounts/UKHSE/bulletins/37c1b91"
+    ]
+  },
+  {
+    "response": "{\n  \"compound_name\": \"Moxidectin\",\n  \"cas_rn\": \"113507-06-5\",\n  \"summary_sections\": [\n    {\n      \"header\": \"Overview and Common Uses\",\n      \"content\": \"Moxidectin is a macrocyclic lactone belonging to the milbemycin chemical class. It is primarily used as an anthelmintic agent to control parasitic infections. Initially developed for veterinary applications, moxidectin is utilized in animals such as dogs, cats, cattle, and horses to treat and prevent infestations by various parasites, including nematodes and ectoparasites. In 2018, the U.S. Food and Drug Administration (FDA) approved moxidectin for human use to treat onchocerciasis, commonly known as river blindness, a disease caused by the parasitic worm Onchocerca volvulus.\",\n      \"sources\": [\n        \"https://www.fda.gov/drugs/drug-approvals-and-databases/drug-trials-snapshots-moxidectin\",\n        \"https://www.acs.org/molecule-of-the-week/archive/m/moxidectin.html\"\n      ]\n    },\n    {\n      \"header\": \"Exposure Pathways\",\n      \"content\": \"Human exposure to moxidectin can occur through several routes:\",\n      \"bullets\": [\n        \"Ingestion: Consumption of moxidectin tablets prescribed for the treatment of parasitic infections.\",\n        \"Dermal contact: Handling veterinary formulations or accidental skin exposure during administration to animals.\",\n        \"Inhalation: Inhalation of aerosolized particles during the application of moxidectin-containing products, though this is less common.\"\n      ],\n      \"sources\": [\n        \"https://www.mayoclinic.org/drugs-supplements/moxidectin-oral-route/description/drg-20443828\"\n      ]\n    },\n    {\n      \"header\": \"Health and Toxicological Information\",\n      \"content\": \"Detection of moxidectin in human blood indicates recent exposure, typically through prescribed oral administration. Moxidectin is known to have a long elimination half-life, averaging between 20.2 to 35.1 days, which suggests that it remains in the system for an extended period. The primary biological systems studied in relation to moxidectin exposure include the central nervous system, where transient, mild to moderate adverse effects such as dizziness and headache have been observed. Other reported effects include eosinophilia (an increase in a type of white blood cell), pruritus (itching), and musculoskeletal pain.\"\n      \"sources\": [\n        \"https://pubmed.ncbi.nlm.nih.gov/14517193/\",\n        \"https://www.fda.gov/drugs/drug-approvals-and-databases/drug-trials-snapshots-moxidectin\"\n      ]\n    },\n    {\n      \"header\": \"Regulatory and Monitoring Context\",\n      \"content\": \"Moxidectin received FDA approval in 2018 for the treatment of onchocerciasis in adults and adolescents aged 12 years and older. The European Medicines Agency (EMA) has evaluated moxidectin for veterinary use, establishing maximum residue limits in food-producing animals to ensure consumer safety. Monitoring practices include pharmacovigilance programs to track adverse effects and efficacy in both human and veterinary applications.\"\n      \"sources\": [\n        \"https://www.fda.gov/drugs/drug-approvals-and-databases/drug-trials-snapshots-moxidectin\",\n        \"https://www.ema.europa.eu/en/documents/mrl-report/moxidectin-summary-report-1-committee-veterinary-medicinal-products_en.pdf\"\n      ]\n    }\n  ],\n  \"sources\": [\n    \"https://www.fda.gov/drugs/drug-approvals-and-databases/drug-trials-snapshots-moxidectin\",\n    \"https://www.acs.org/molecule-of-the-week/archive/m/moxidectin.html\",\n    \"https://www.mayoclinic.org/drugs-supplements/moxidectin-oral-route/description/drg-20443828\",\n    \"https://pubmed.ncbi.nlm.nih.gov/14517193/\",\n    \"https://www.ema.europa.eu/en/documents/mrl-report/moxidectin-summary-report-1-committee-veterinary-medicinal-products_en.pdf\"\n  ]\n}",
+    "sample_id": "dataset_012"
+  },
+  {
+    "sample_id": "dataset_013",
+    "compound_name": "Novaluron",
+    "cas_rn": "116714-46-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Novaluron is a benzoylphenyl urea insecticide that functions as an insect growth regulator by inhibiting chitin synthesis, a critical component of insect exoskeletons. It is primarily used in agriculture to control a variety of insect pests, including whiteflies, thrips, and leafminers, on crops such as apples, potatoes, brassicas, ornamentals, and cotton.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Novaluron",
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-124002_24-Sep-01.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to novaluron can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in air containing novaluron particles during or after its application.",
+          "Ingestion: Consuming food or water that has been contaminated with novaluron residues.",
+          "Dermal: Skin contact with novaluron during handling or application of the pesticide."
+        ],
+        "sources": [
+          "https://downloads.regulations.gov/EPA-HQ-OPP-2019-0249-0007/content.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of novaluron in blood indicates recent exposure to the compound. Studies have shown that novaluron is unlikely to be carcinogenic to humans and is not considered a developmental toxicant. The primary biological systems studied in relation to novaluron exposure include the hematological system, with observations of erythrocyte damage and secondary splenic and liver changes in animal studies.",
+        "sources": [
+          "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/JMPR/Evaluation05/2005_Novaluron1.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Novaluron has been evaluated by various regulatory agencies. The U.S. Environmental Protection Agency (EPA) issued a conditional registration for novaluron in 2001, considering it a low-risk pesticide suitable for integrated pest management programs. The World Health Organization (WHO) has assessed novaluron for use as a mosquito larvicide in drinking water containers, recommending a maximum dosage of 0.05 mg/L. In the European Union, as of 2012, permits for the use of novaluron were discontinued.",
+        "sources": [
+          "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-124002_24-Sep-01.pdf",
+          "https://cdn.who.int/media/docs/default-source/wash-documents/water-safety-and-quality/chemical-fact-sheets-2022/novaluron-fact-sheet-2022ee4c5c17-bf7d-44b9-bb79-864908fe65c1.pdf?download=true&sfvrsn=af1dea01_2",
+          "https://en.wikipedia.org/wiki/Novaluron"
+        ]
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Novaluron",
+      "https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_PC-124002_24-Sep-01.pdf",
+      "https://downloads.regulations.gov/EPA-HQ-OPP-2019-0249-0007/content.pdf",
+      "https://www.fao.org/fileadmin/templates/agphome/documents/Pests_Pesticides/JMPR/Evaluation05/2005_Novaluron1.pdf",
+      "https://cdn.who.int/media/docs/default-source/wash-documents/water-safety-and-quality/chemical-fact-sheets-2022/novaluron-fact-sheet-2022ee4c5c17-bf7d-44b9-bb79-864908fe65c1.pdf?download=true&sfvrsn=af1dea01_2"
+    ]
+  },
+  {
+    "sample_id": "dataset_014",
+    "compound_name": "Oxadixyl",
+    "cas_rn": "77732-09-3",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Oxadixyl is a systemic fungicide belonging to the phenylamide chemical class. It was introduced in 1982 by Sandoz (now Novartis) and has been used to control diseases caused by Oomycetes, such as downy mildew and damping-off, in various crops including grapes, potatoes, tobacco, hops, sunflowers, citrus fruits, and vegetables.",
+        "sources": [
+          "https://de.wikipedia.org/wiki/Oxadixyl"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Human exposure to oxadixyl can occur through several routes:",
+        "bullets": [
+          "Inhalation: Breathing in air containing oxadixyl particles, especially during application or in areas where it has been used.",
+          "Ingestion: Consuming food products that have been treated with oxadixyl or drinking contaminated water.",
+          "Dermal: Skin contact with oxadixyl during handling, application, or through contact with treated surfaces."
+        ],
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/html/oxadixyl_fs.html"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Detection of oxadixyl in blood indicates exposure to the compound. The specific health effects associated with oxadixyl exposure are not well-documented in the available literature. However, as with many pesticides, potential areas of concern may include effects on the liver, kidneys, and nervous system. Further research is needed to fully understand the toxicological profile of oxadixyl.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "In 2001, the United States Environmental Protection Agency (EPA) received a request for voluntary cancellation of oxadixyl registrations, leading to the cessation of its use in the U.S. In the European Union and Switzerland, oxadixyl is not approved for use in plant protection products.",
+        "sources": [
+          "https://archive.epa.gov/pesticides/reregistration/web/html/oxadixyl_fs.html",
+          "https://de.wikipedia.org/wiki/Oxadixyl"
+        ]
+      }
+    ],
+    "sources": [
+      "https://de.wikipedia.org/wiki/Oxadixyl",
+      "https://archive.epa.gov/pesticides/reregistration/web/html/oxadixyl_fs.html"
+    ]
+  }
+]

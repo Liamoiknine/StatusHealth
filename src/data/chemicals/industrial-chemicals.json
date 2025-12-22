@@ -1,5 +1,57 @@
 [
   {
+    "compound_name": "1-Methylnaphthalene",
+    "cas_rn": "90-12-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "1-Methylnaphthalene (sometimes called α-methylnaphthalene) is a polycyclic aromatic hydrocarbon that is structurally naphthalene with one methyl substituent. It is a colorless to pale yellow liquid with a chemical formula C₁₁H₁₀. 1-Methylnaphthalene is naturally present in coal tar and in the heavier fractions of petroleum. Industrially, it has been used as an intermediate in organic synthesis; for example, it is oxidized to make 1-methylnaphthoic acid and other derivatives. Historically, 1-methylnaphthalene was notable in the context of diesel fuels: it defined the low end (cetane number of 0) of the cetane scale for diesel fuel ignition quality. It is also reported to have minor uses in dye manufacturing and was at one time considered for use in fragrances/flavorings (as a trace component), though such use is very limited. In consumer contexts, 1-methylnaphthalene itself is not sold as a product, but it can be found as a constituent of kerosene, diesel exhaust, and soot from combustion processes.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://www.mbenergy.com",
+          "http://askthenerd.com"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "For the general population, exposure to 1-methylnaphthalene occurs primarily alongside exposure to naphthalene and other PAHs from combustion sources. Key pathways include:",
+        "bullets": [
+          "**Inhalation:** Breathing air containing combustion byproducts is the main route. 1-Methylnaphthalene is present in cigarette smoke, wood smoke (e.g., from fireplaces or stoves), and vehicle exhaust. Indoor smoking and the use of kerosene heaters or lamps can contribute to indoor air levels. It also evaporates to some extent from petroleum fuels.",
+          "**Ingestion:** This compound can adhere to airborne particles that settle on food or water. Thus, individuals might ingest 1-methylnaphthalene by consuming foods grown or stored in polluted environments or drinking water contaminated by petroleum spills. Additionally, young children may ingest it via contaminated house dust or soil (hand-to-mouth behavior) near garages or waste sites.",
+          "**Dermal contact:** Skin exposure can occur through direct contact with substances containing 1-methylnaphthalene, such as diesel fuel, soot, or creosote. For example, handling used motor oil or coal tar-treated wood could transfer small amounts onto the skin. While skin absorption is not as significant as inhalation or ingestion, prolonged or frequent dermal contact can contribute to overall exposure."
+        ],
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "1-Methylnaphthalene is one of the PAHs monitored for its potential health effects, although it is less studied than naphthalene. Like naphthalene, it is readily metabolized in humans; detection in blood or urine reflects recent exposure (on the order of hours to days) rather than long-term accumulation. High acute exposures to methylnaphthalenes can cause irritation of the eyes and airways (similar to naphthalene). A notable effect observed in animal studies is **pulmonary alveolar proteinosis**, a condition involving buildup of surfactant in the lungs: laboratory mice chronically exposed to 1-methylnaphthalene in their diet developed this lung abnormality at significant incidence. This suggests the respiratory system is a primary target of toxicity for repeated exposure. There is also evidence that PAH exposure can lead to hemolytic anemia (destruction of red blood cells) in susceptible individuals; naphthalene is known for this effect, and metabolites of 1-methylnaphthalene may have similar, though milder, blood impacts. Regarding carcinogenicity, there is no conclusive proof that 1-methylnaphthalene causes cancer in humans. Animal cancer bioassays are limited; one mouse study did not find clear increases in tumors, but data were not sufficient for a definitive evaluation. The U.S. EPA has classified 1-methylnaphthalene as having \"suggestive evidence of carcinogenic potential\" based on the limited animal data available, warranting caution but not a definitive cancer risk value. Overall, health concerns focus on chronic lung effects and its contribution to the total PAH exposure burden.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
+          "https://nepis.epa.gov",
+          "https://academic.oup.com"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "1-Methylnaphthalene is not individually regulated to the same extent as some other PAHs, but it is indirectly managed through broader environmental and health guidelines. The U.S. EPA has developed provisional risk values: for instance, a chronic Reference Concentration (inhalation exposure limit) of 3×10⁻⁶ mg/m³ was proposed in 2024, and a provisional oral Reference Dose of about 0.01 mg/kg/day. These values reflect conservative thresholds intended to protect against non-cancer effects like lung damage. No specific federal drinking water standard exists for 1-methylnaphthalene, but its occurrence in groundwater is monitored, and it was evaluated in the context of unregulated contaminants. Internationally, 1-methylnaphthalene has been considered by the flavor and fragrance industry (it had a Flavor and Extract Manufacturers Association (FEMA) GRAS status historically, indicating it was once approved in trace amounts for flavor use). In the European Union, chemicals of this type fall under REACH regulation; 1-methylnaphthalene is classified as hazardous – e.g., it carries a hazard designation for possible carcinogenicity (\"suspected of causing cancer\") under the EU CLP system. Environmental monitoring programs do not routinely measure 1-methylnaphthalene in human biosamples, but its metabolites (like 1-naphthol) may appear in urine in PAH exposure studies. In pollution monitoring, it is measured in air and water at contaminated sites. Overall, control of 1-methylnaphthalene is achieved by limiting PAH emissions (e.g., via vehicle exhaust regulations) and remediating contaminated sites, rather than compound-specific rules for this chemical.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/88.htm",
+          "https://nepis.epa.gov"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
+      "https://mbenergy.com",
+      "https://nepis.epa.gov"
+    ]
+  },
+  {
     "compound_name": "1,2-Dichlorobenzene",
     "cas_rn": "95-50-1",
     "summary_sections": [
@@ -52,6 +104,246 @@
     ]
   },
   {
+    "compound_name": "1,3-Dichlorobenzene",
+    "cas_rn": "541-73-1",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "1,3-Dichlorobenzene (m-dichlorobenzene) is a halogenated aromatic hydrocarbon and one of three dichlorobenzene isomers. It is a colorless liquid used primarily as an industrial intermediate rather than a direct consumer product. Historically, 1,3-dichlorobenzene has been used in the synthesis of herbicides, insecticides, dyes, and pharmaceuticals. In contrast to the 1,4-isomer (para-dichlorobenzene, used in moth repellents and deodorizers), the 1,3-isomer's applications are limited to chemical manufacturing processes and laboratory solvent uses. It does not occur naturally and enters the environment through industrial production and waste disposal.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "bullets": [
+          "Inhalation of contaminated air is the principal exposure route for the general population. 1,3-Dichlorobenzene may be released to ambient air from facilities that produce or use it, and it has been detected (at very low levels) in outdoor air. Unlike 1,4-dichlorobenzene, it is not common in indoor air because it is not present in consumer deodorant or mothball products.",
+          "Occupational exposure can occur via inhalation or dermal contact in chemical manufacturing plants (e.g., herbicide production) where 1,3-dichlorobenzene is used. Workers involved in the production or processing of this chemical have the highest potential exposures, though the number of such workers is relatively small (only a few hundred in the U.S. in past surveys).",
+          "Ingestion of 1,3-dichlorobenzene is generally a minor pathway. Low concentrations of dichlorobenzenes, including the 1,3-isomer, have occasionally been detected in drinking water and foods, but typically at negligible levels. Consequently, oral exposure for the general public is limited unless one is near a contaminated site.",
+          "Localized environmental contamination (hazardous waste sites) can lead to exposure via multiple routes. 1,3-Dichlorobenzene has been found in at least 175 U.S. EPA National Priorities List sites. In such areas, people may inhale volatilized 1,3-dichlorobenzene or come into contact through contaminated soil or groundwater, emphasizing the importance of site remediation."
+        ],
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Because it is a volatile organic compound that is rapidly metabolized, the presence of 1,3-dichlorobenzene in blood generally indicates recent or ongoing exposure. Acute high-level exposure can irritate mucous membranes; humans acutely inhaling chlorinated benzene vapors (at high concentrations) have reported eye and respiratory irritation, similar to effects seen with the other dichlorobenzene isomers. Very high exposures (inhalation or ingestion) may transiently affect the liver – animal studies show liver enzyme changes and damage at high doses. There is also evidence of endocrine-related effects in animal studies: for example, rats exposed to 1,3-dichlorobenzene over 90 days developed thyroid and pituitary gland lesions at relatively low doses. 1,3-Dichlorobenzene is metabolized primarily in the liver to reactive intermediates and is excreted in urine as metabolites. No specific biomarker metabolite is uniquely used for this isomer in humans (unlike 1,4-dichlorobenzene, which is monitored via 2,5-dichlorophenol in urine), but the parent compound can be measured in blood for exposure assessment. Importantly, regulatory agencies have not identified 1,3-dichlorobenzene as carcinogenic; the International Agency for Research on Cancer (IARC) classifies it as Group 3, not classifiable as to human carcinogenicity. Overall, health risk from low environmental levels is considered minimal, while acute or occupational overexposure can principally affect the liver and hormone-responsive organs without evidence of widespread systemic toxicity at lower concentrations.",
+        "sources": [
+          "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+          "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+          "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+          "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "1,3-Dichlorobenzene is subject to environmental regulations due to its designation as a toxic substance. In the United States it is classified as a hazardous waste (EPA RCRA waste code U071) and spills of 100 pounds or more must be reported to the National Response Center. The compound's use in registered pesticides has been discontinued, and it appears on the EPA's Toxic Substances Control Act (TSCA) inventory for tracking industrial chemicals. Although there is no specific federal drinking water maximum contaminant level (MCL) for 1,3-dichlorobenzene, the EPA has established health-based advisory levels for dichlorobenzenes as a group, and state or international guidelines exist to limit contamination of water and air. For example, the World Health Organization has included dichlorobenzenes in drinking-water guidelines, and the compound is considered in risk assessments for waste site cleanups. Biomonitoring efforts have been undertaken by agencies like the U.S. Centers for Disease Control and Prevention (CDC): 1,3-dichlorobenzene is measured in blood in national surveys (e.g., NHANES 2003–2010 and beyond). These surveys have generally found that blood levels in the general U.S. population are very low or undetectable, consistent with limited use of this chemical in consumer products. Internationally, chemical safety regulations (such as the EU REACH program) require companies to assess and report on 1,3-dichlorobenzene's hazards. Overall, regulatory focus on this compound is aimed at industrial emission controls and hazardous waste management rather than consumer-level restrictions, given its niche uses.",
+        "sources": [
+          "https://cameochemicals.noaa.gov/chris/DBM.pdf",
+          "https://cameochemicals.noaa.gov/chris/DBM.pdf",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+      "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+      "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+      "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/cresol-cresylic-acid.pdf",
+      "https://www.osha.gov/chemicaldata/223",
+      "https://haz-map.com/Agents/3149",
+      "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+      "https://cameochemicals.noaa.gov/chris/DBM.pdf"
+    ]
+  },
+  {
+    "compound_name": "1,3-Dinitrobenzene",
+    "cas_rn": "99-65-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "1,3-Dinitrobenzene is a synthetic aromatic nitro compound. It is one of the three isomeric dinitrobenzenes, appearing as a yellow crystalline solid. This chemical is primarily used as a precursor or intermediate in military and industrial applications, most notably in the production of explosives. 1,3-Dinitrobenzene has been used in the formulation of munitions and in the synthesis of certain dyes and industrial chemicals. It has few, if any, direct consumer uses; its presence in consumer environments is usually only as an impurity or residue from industrial processes. Because of its explosive properties, 1,3-dinitrobenzene's commercial applications outside of explosives manufacturing (and related research) are very limited. It is not naturally found in the environment.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "bullets": [
+          "Environmental releases from military manufacturing are the primary source of exposure. People living or working near Army ammunition plants or chemical factories that produce 1,3-dinitrobenzene can be exposed via multiple routes: breathing contaminated air, drinking affected well water, or contact with polluted soil near these facilities. Such contamination is typically localized; 1,3-dinitrobenzene has been detected in soil, groundwater, and surface water at a number of military or industrial hazardous waste sites (identified in 19 EPA Superfund sites).",
+          "Occupational exposure is significant in settings where 1,3-dinitrobenzene is handled. Workers at munitions factories or chemical manufacturing plants may inhale its vapors or dust and absorb it through the skin. Without adequate protective measures, long-term workplace exposure can occur during the production, loading, or disposal of explosives containing this compound.",
+          "General population exposure to 1,3-dinitrobenzene is expected to be minimal. This compound is not used in consumer products and is not commonly found in air or water far from production sites. Therefore, for most people the risk of exposure arises only if they are in proximity to contaminated sites or involved in activities like the demolition of old munitions. Regulatory monitoring indicates that outside of specialized locations, 1,3-dinitrobenzene is rarely detected in environmental media."
+        ],
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "1,3-Dinitrobenzene is a toxic compound that primarily affects the blood's ability to carry oxygen. Acute exposure to high levels (through inhalation or ingestion) can cause methemoglobinemia – a condition in which hemoglobin is oxidized, impairing oxygen delivery and causing cyanosis (a bluish discoloration of skin and lips). Short-term symptoms of significant exposure include headache, dizziness, nausea, and fatigue, stemming from reduced oxygen in tissues. Prolonged or repeated exposure to lower levels can lead to anemia (a reduction in red blood cell count) as the compound chronically damages blood cells. Other effects observed in humans have been mild central nervous system symptoms (e.g., weakness, lethargy) and, in some cases, a yellowish discoloration of the skin or eyes due to nitrobenzene compounds' tendency to affect blood and possibly liver. Animal studies corroborate these findings: rodents exposed to 1,3-dinitrobenzene developed blood changes similar to humans, as well as male reproductive system damage at high doses (such as testicular degeneration). There is no conclusive evidence of developmental or birth defects from 1,3-dinitrobenzene in humans, and data on long-term cancer risk are lacking. U.S. EPA has classified 1,3-dinitrobenzene as not classifiable as to human carcinogenicity (Group D) due to insufficient data. Biomonitoring in humans is not routine for this chemical; while it and its metabolites can be measured in blood or urine in research settings, no widely available medical test definitively indicates exposure at environmental levels. Health surveillance focuses on signs of oxygen deprivation (methemoglobinemia) in potentially exposed workers. Overall, detection of 1,3-dinitrobenzene in blood would suggest relatively recent high exposure, given that the compound is metabolized (primarily to amino-nitrobenzoic acids) and excreted within days.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Given its toxicity and specialized use, 1,3-dinitrobenzene is subject to regulatory oversight mainly in occupational and environmental contexts. The U.S. Occupational Safety and Health Administration (OSHA) has set an 8-hour time-weighted average Permissible Exposure Limit of 1 mg/m³ for 1,3-dinitrobenzene in workplace air (reflecting a conservative limit to protect workers from blood effects). Similarly, the National Institute for Occupational Safety and Health (NIOSH) recommends an exposure limit of 1 mg/m³ and treats 1,3-dinitrobenzene as a potential occupational carcinogen (though carcinogenicity evidence is inconclusive). The EPA requires that any spill or release of 1,3-dinitrobenzene of 100 pounds or more be reported, under CERCLA (Comprehensive Environmental Response, Compensation, and Liability Act) regulations. This low Reportable Quantity underscores the concern for environmental contamination. 1,3-Dinitrobenzene has been identified at a number of Superfund hazardous waste sites, which has prompted clean-up actions by environmental authorities. There are no specific consumer product regulations for this chemical since it is not used in consumer goods. However, transport and handling are regulated as for explosive and toxic materials (it is classified in the U.S. Department of Transportation hazardous materials table as a flammable solid and a toxic substance). Internationally, 1,3-dinitrobenzene is listed on chemical inventories and subject to export/import notifications due to its explosive potential. Monitoring efforts (e.g., in water or soil) are generally limited to areas around production or waste sites; national surveys of the general population (such as CDC biomonitoring) do not include 1,3-dinitrobenzene, reflecting the expectation of negligible public exposure. In summary, regulatory focus is on protecting workers and preventing environmental releases, rather than on routine public exposure monitoring.",
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+          "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+      "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+      "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+      "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/cresol-cresylic-acid.pdf",
+      "https://www.osha.gov/chemicaldata/223",
+      "https://haz-map.com/Agents/3149",
+      "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+      "https://cameochemicals.noaa.gov/chris/DBM.pdf"
+    ]
+  },
+  {
+    "compound_name": "2-Chlorophenol",
+    "cas_rn": "95-57-8",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Chlorophenol (ortho-chlorophenol) is a chlorinated aromatic phenol. It is one of three monochlorophenol isomers and is a colorless to pale yellow liquid with a medicinal (phenolic) odor. Historically, 2-chlorophenol saw occasional use as a disinfectant and antiseptic. For example, mixtures of chlorophenols and cresols were once components of hospital and household disinfectant solutions. However, such uses have largely been discontinued in favor of less toxic alternatives. Today, 2-chlorophenol's primary role is as an intermediate in chemical manufacturing. It is used in the synthesis of higher chlorinated phenols and in producing certain pesticides, dyes, and rubber chemicals. It can also be formed as a minor by-product in processes like the chlorination of drinking water or wastewater (when phenol or organic matter is present). Overall, 2-chlorophenol has few direct consumer applications in modern times; its presence in the household environment is more likely to result from environmental formation or breakdown of other substances than from purposeful use.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "bullets": [
+          "Drinking water is a potential exposure route, since 2-chlorophenol can form as a disinfection by-product. When chlorine is used to treat water that contains natural phenolic compounds, small amounts of 2-chlorophenol (and other chlorophenols) may be produced. Thus, individuals may ingest trace levels in chlorinated tap water or swimming pool water. These concentrations are typically very low (often below odor thresholds), but 2-chlorophenol's strong medicinal taste and odor can make even low ppb levels noticeable.",
+          "Occupational exposure can occur in industrial settings. Workers in facilities manufacturing chlorophenols, pesticides, or phenolic resins could inhale vapors or have skin contact with 2-chlorophenol. In the past, workers applying antiseptic or preservative solutions containing chlorophenols (e.g., in wood treatment or health care) also had direct exposure. Proper ventilation and personal protective equipment significantly reduce these risks today.",
+          "Environmental exposure in the general population is infrequent. 2-Chlorophenol is occasionally detected near hazardous waste sites or industrial discharge points where it has leached into soil or groundwater. In such locales, contaminated well water or soil could be a route of human exposure (via ingestion or dermal contact). In air, 2-chlorophenol is not very volatile (and it readily degrades), so inhalation exposure is expected only very close to emission sources (such as near certain pulp and paper mills or waste incinerators that could release chlorinated phenols). Overall, outside of specific contamination incidents, background exposure to 2-chlorophenol for the public is extremely low."
+        ],
+        "sources": [
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "In the body, 2-chlorophenol is rapidly metabolized to more water-soluble compounds (such as conjugated chlorophenolics) and excreted, so its detection in blood would indicate recent exposure rather than accumulation. Acute exposure to high concentrations can be corrosive and irritating: monochlorophenols, including o-chlorophenol, are caustic to tissues. Direct skin or eye contact with concentrated 2-chlorophenol can cause burns, severe irritation, or even permanent eye damage. Inhalation of high levels (such as during an industrial accident) could irritate the respiratory tract and potentially lead to systemic effects like headache or dizziness. Animal studies provide insight into systemic toxicity. When laboratory animals were given very large oral doses of chlorophenols, the primary effects were on the liver and immune system. For example, liver enzyme changes and reduced weight gain have been observed in rodents at high doses of 2-chlorophenol. Unlike some chlorinated organics, 2-chlorophenol has not been clearly linked to cancer in either animals or humans; carcinogenicity data are limited, and agencies have not classified it as a known or probable carcinogen. IARC has grouped chlorophenols (as a broad class) as possibly carcinogenic to humans (Group 2B) based on certain higher chlorophenols, but 2-chlorophenol by itself has not shown evidence of causing cancer in available studies. From a biomonitoring perspective, there is no specific biomarker test for 2-chlorophenol exposure, though total chlorophenol levels can be measured in urine. Health agencies instead rely on environmental monitoring and odor/taste detection (since chlorophenols impart a distinct taste to water at very low levels). Overall, occasional low-level exposure to 2-chlorophenol (e.g., via drinking water) has not been associated with significant health effects, whereas high acute exposure would pose risks of mucosal injury and systemic toxicity.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2-Chlorophenol is regulated primarily to protect water quality because of its potent odor/taste and potential toxicity. The U.S. Environmental Protection Agency (EPA) has issued a non-enforceable drinking water health advisory of 0.1 ppb for monochlorophenols, aimed largely at preventing unpleasant taste and odor in water. (This extremely low level is far below concentrations associated with health harm, providing a large margin of safety.) No federal Maximum Contaminant Level has been set specifically for 2-chlorophenol in drinking water, reflecting its infrequent detection in public water systems. However, the presence of any chlorophenols in drinking water is closely monitored under EPA guidelines due to their potential as disinfection by-products. In the environment, 2-chlorophenol is identified as a priority pollutant by regulators because it can indicate industrial pollution. It is included on the U.S. CERCLA (Superfund) list of hazardous substances (with a reportable quantity of 100 pounds under CERCLA, applicable to chlorophenols generally). At least one hundred industrial or waste sites in the United States have been found to contain chlorophenols like 2-chlorophenol, and remediation efforts often involve treating or removing contaminated soil and groundwater. Internationally, organizations such as the World Health Organization (WHO) have evaluated chlorophenols in the context of drinking water guidelines, noting that 2-chlorophenol's strong taste makes organoleptic criteria (taste/odor) more limiting than health-based values. Workplace exposure limits have also been set in jurisdictions for chlorophenol mixtures (to control inhalation of phenolic vapors), although specific occupational exposure standards for 2-chlorophenol alone are not common. In summary, regulatory focus for 2-chlorophenol centers on water quality and environmental contamination control, supported by routine monitoring for chlorophenols in water and waste sites.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+          "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+      "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+      "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+      "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/cresol-cresylic-acid.pdf",
+      "https://www.osha.gov/chemicaldata/223",
+      "https://haz-map.com/Agents/3149",
+      "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+      "https://cameochemicals.noaa.gov/chris/DBM.pdf"
+    ]
+  },
+  {
+    "compound_name": "2-Methylnaphthalene",
+    "cas_rn": "91-57-6",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Methylnaphthalene (β-methylnaphthalene) is the other isomer of methylnaphthalene, differing by the position of the methyl group on the naphthalene ring. It is a solid at ambient conditions (melting point ~34 °C) and shares similar chemical properties with 1-methylnaphthalene. 2-Methylnaphthalene occurs as a minor component of coal tar and petroleum distillates, especially in heavier oil fractions. In industry, it has notable uses: it is oxidized to produce 2-methyl-1,4-naphthoquinone, which is a precursor to vitamin K (phytomenadione). It has also been used in organic syntheses for certain dyes and as a sulfonated derivative in some wetting agents. Additionally, 2-methylnaphthalene finds limited use as a perfumery and flavoring agent due to its sweet, floral, slightly woody aroma, although such use is small in scale and it was removed from the EU’s list of supported flavoring substances in recent years. Generally, consumers do not buy 2-methylnaphthalene directly, but they may encounter it as part of kerosene, diesel fuel, cigarette smoke, or creosote mixtures.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+          "https://www.thegoodscentscompany.com/data/rw1179161.html"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "2-Methylnaphthalene exposure occurs in parallel with other combustion-related pollutants. Main pathways include:",
+        "bullets": [
+          "**Inhalation:** Breathing polluted air is the primary route. 2-Methylnaphthalene is emitted in the exhaust from diesel engines and gasoline engines, and is found in tobacco smoke and smoke from burning wood or coal. People in urban environments or those who smoke (or inhale secondhand smoke) will inhale small quantities of this compound attached to airborne particulates.",
+          "**Ingestion:** This chemical can sorb onto fine particles that settle on soil, crops, or in water. It can enter the food chain when individuals consume vegetables, grains, or fish from contaminated areas. Drinking water can also be a source if groundwater or reservoirs are impacted by petroleum spills or coal tar creosote. For example, near former gas manufacturing sites or creosote-treated facilities, 2-methylnaphthalene has been detected and could reach humans through water or dirt ingestion.",
+          "**Dermal Contact:** Direct skin contact is a lesser route but possible for those handling materials containing PAHs. Working with creosote (a wood preservative) or heavy fuel oils can expose skin to 2-methylnaphthalene. Also, anyone regularly touching soot or tar (for instance, chimney cleaners or roofers dealing with coal-tar pitch) might have dermal exposure to this compound along with others. Absorption through skin is limited, but chronic contact could contribute some exposure."
+        ],
+        "sources": [
+          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Once in the human body, 2-methylnaphthalene is metabolized by the liver to various metabolites (such as methyl-naphthols and conjugates) and eliminated, largely via urine. Its presence in blood would indicate a fairly recent exposure. Health-wise, the most distinctive finding for 2-methylnaphthalene comes from animal studies: chronic exposure led to **pulmonary alveolar proteinosis** in mice, a condition where protein-lipid material accumulates in the air sacs of the lungs. This suggests that long-term inhalation or ingestion at sufficient doses can cause lung damage and impaired lung function. Unlike naphthalene, which is a known animal carcinogen (causing nasal and lung tumors in rodents), 2-methylnaphthalene did not show a clear increase in tumors in a two-year study on mice (it primarily caused the non-cancer lung effect). Accordingly, major agencies have not officially classified 2-methylnaphthalene as a human carcinogen due to inadequate evidence. It is generally considered a possible or suspected carcinogen by default because it is a PAH, but the data are limited. Other toxicological effects observed in lab animals include mild liver enlargement and centrilobular liver cell changes at high doses, and some indications of blood effects (e.g., anemia) with chronic exposure. In humans, direct studies are lacking; however, exposures to methylnaphthalenes are often accompanied by naphthalene, which is known to cause headaches, nausea, or hemolysis in G6PD-deficient individuals. Thus, while 2-methylnaphthalene itself is less studied, prudent health interpretation treats it as a component of PAH exposure with potential chronic toxicity to the lungs and possibly other organs at high levels.",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/12505278",
+          "https://nepis.epa.gov",
+          "https://stacks.cdc.gov"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2-Methylnaphthalene is included in various regulatory assessments mostly in conjunction with naphthalene. The U.S. EPA established a chronic oral Reference Dose (RfD) of 0.004 mg/kg-day for 2-methylnaphthalene (on IRIS in 2003). This RfD was based on the no-effect levels from animal studies (considering lung effects), and it provides a benchmark for safe lifetime daily intake. There is no federal drinking water standard specifically for 2-methylnaphthalene; however, it was listed on EPA’s Contaminant Candidate List (CCL) for potential regulation in drinking water, indicating that it has been monitored and considered due to detections in some water supplies. In the European Union, 2-methylnaphthalene falls under general chemical safety regulations. It is not a high-production volume chemical, but its hazard classification under the EU CLP Regulation includes being flagged as **suspected of causing cancer** (Carc. 2) and harmful if swallowed. This classification triggers labeling requirements for manufacturers handling the substance. Environmental agencies in the EU have also identified PAHs, including methylnaphthalenes, as priority pollutants in water due to their persistence and toxicity, leading to monitoring in surface and ground waters. Currently, 2-methylnaphthalene is measured in certain environmental surveys (for example, it is sometimes tracked in air particulate matter studies and in contaminated site investigations). Regulatory actions specifically targeting 2-methylnaphthalene are limited, but any rules that limit naphthalene in products (like mothballs, fuels, or creosote) or that control PAH emissions will incidentally reduce 2-methylnaphthalene exposure as well.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+          "https://eurlex.europa.eu",
+          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/651.htm"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
+      "https://www.thegoodscentscompany.com/data/rw1179161.html",
+      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/12505278"
+    ]
+  },
+  {
     "compound_name": "2-Methylphenol (o-Cresol)",
     "cas_rn": "95-48-7",
     "summary_sections": [
@@ -88,6 +380,132 @@
       "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=944&toxid=196(PublicHealthStatementforCresols",
       "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
       "https://haz-map.com/Agents/296(Haz-Map:Anilineentry,forTLVdataonskinnotation"
+    ]
+  },
+  {
+    "compound_name": "2-Nitroaniline",
+    "cas_rn": "88-74-4",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Nitroaniline is an aromatic amine compound, consisting of an aniline (phenylamine) core with a nitro group in the ortho position. It appears as an orange-yellow crystalline solid. 2-Nitroaniline is primarily used as a chemical intermediate in the synthesis of dyes, pigments, and agricultural chemicals. In the dye industry, it serves as a diazo component (sometimes under trade names like Fast Orange Base GR) for the production of azo dyes and pigments (e.g., certain yellow and orange dyes). It is also used in the manufacture of pharmaceuticals and pesticides – for instance, it can be a building block for herbicides or fungicides. Additionally, 2-nitroaniline has specialized uses such as in the preparation of photographic chemicals (antifoggants) and corrosion inhibitors. There are no significant direct consumer products containing 2-nitroaniline itself. Its presence in consumer or household contexts would typically be only as a trace impurity in dyed materials or as a residual from industrial products. Overall, the compound's value lies in its role as a versatile intermediate in organic synthesis rather than as an end-use product.",
+        "sources": [
+          "https://pubchem.ncbi.nlm.nih.gov/compound/2-Nitroaniline",
+          "https://haz-map.com/Agents/3149"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "bullets": [
+          "Occupational exposure is the most significant pathway for 2-nitroaniline. Workers in facilities that produce or use this chemical (such as dye manufacturing plants, pigment production workshops, or agrochemical factories) may inhale dust or vapor and have skin contact with 2-nitroaniline. Without proper engineering controls and personal protective equipment, these workers can absorb the compound through the lungs or skin (2-nitroaniline is readily absorbed dermally). Processes like weighing powders, mixing reagents, or packing dyes are scenarios with increased exposure risk if not managed carefully.",
+          "Environmental exposure for the general public is uncommon. 2-Nitroaniline is not volatile (low vapor pressure) and tends to break down or bind to soil over time. However, in the vicinity of industrial sites or hazardous waste facilities, it can contaminate soil and water. Residents living near a dye or chemical plant that historically released nitroanilines might be exposed via contaminated well water or soil contact, though such cases are rare. Regulatory monitoring data on ambient air and water do not typically report 2-nitroaniline at detectable levels in the wider environment.",
+          "Consumer product exposure to 2-nitroaniline itself is very limited. The compound may be present as residual traces in some azo dyes used to color textiles, leather, or plastics, but it is usually chemically bound within the dye matrix. Normal use of dyed consumer goods (clothing, for example) is not known to result in significant 2-nitroaniline exposure. Similarly, 2-nitroaniline is not a constituent of common household chemicals. Any potential indirect exposure could occur from products that degrade into 2-nitroaniline or from mishandling of industrial materials (for example, hobbyists or workers taking home contaminated clothing). In summary, outside of the workplace, exposure opportunities are minimal and would most likely occur only in cases of environmental contamination or accidental misuse of industrial products."
+        ],
+        "sources": [
+          "https://haz-map.com/Agents/3149",
+          "https://haz-map.com/Agents/3149",
+          "https://haz-map.com/Agents/3149"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "2-Nitroaniline is toxic, with acute effects primarily on the blood and nervous system. Like other aromatic nitro compounds, it can induce methemoglobinemia – a condition where hemoglobin is oxidized such that it cannot carry oxygen efficiently. Acute inhalation or ingestion of a substantial amount of 2-nitroaniline may lead to symptoms of oxygen deprivation: blue coloration of lips and skin (cyanosis), headache, dizziness, nausea, confusion, and in severe cases loss of consciousness or convulsions. These symptoms often have a delayed onset, because it takes time for methemoglobin to form in the blood. 2-Nitroaniline can be absorbed through the skin as well, so prolonged skin contact with the solid or concentrated solutions may produce systemic toxicity (including methemoglobinemia) without ingestion. Chronic or repeated exposure at lower levels might result in cumulative effects, such as persistent anemia or organ effects. There is some evidence (from animal studies and cases with similar chemicals) that long-term exposure can cause liver injury; workers chronically exposed to related nitroaromatics have shown liver enzyme changes, suggesting the liver as a target over time. Animal studies on 2-nitroaniline have not shown significant mutagenic activity in standard tests, and no clear evidence of carcinogenicity or reproductive toxicity has emerged (limited testing indicates it did not cause birth defects or fertility issues in animals). Consequently, major agencies have not classified 2-nitroaniline as a carcinogen. In humans, no epidemiological studies link 2-nitroaniline to cancer or reproductive harm, likely due in part to the relatively small population of people chronically exposed. Biomonitoring for 2-nitroaniline is not routine; however, exposure can be inferred by measuring methemoglobin levels or detecting aromatic amine metabolites in blood or urine of exposed individuals. In summary, finding 2-nitroaniline in blood would point to recent exposure and raises concern for methemoglobinemia. The compound's health profile is dominated by its acute toxicity (especially via hemoglobin effects and organ irritation) rather than chronic disease outcomes, given the current evidence.",
+        "sources": [
+          "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+          "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+          "https://haz-map.com/Agents/3149",
+          "https://hpvchemicals.oecd.org/UI/handler.axd?id=0c5b06b5-65e2-4748-8c42-9874f90ac6de"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2-Nitroaniline is regulated as an industrial hazardous chemical. In workplaces, although no substance-specific OSHA PEL exists for 2-nitroaniline, it is covered under general limits for aromatic amines and by requirements to minimize skin contact due to its toxicity. Many safety data sheets and guidelines recommend treating it as a material that should be kept below about 1 mg/m³ in air (a level extrapolated from related compounds) and emphasize the use of gloves and protection because of skin absorption risk. In transport regulations, 2-nitroaniline is classified in the US DOT and UN system as a toxic solid (UN 1661) and typically assigned to Packing Group II, reflecting high toxicity. Environmentally, 2-nitroaniline is listed on inventories like the U.S. EPA's Toxic Substances Control Act (TSCA) Inventory and was part of the OECD High Production Volume (HPV) program for international hazard assessment. It is not specifically enumerated as a hazardous air pollutant or priority water pollutant in the U.S., but releases are reportable under broad categories (for instance, as a nitroaromatic chemical). Some U.S. states (e.g., New Jersey) include o-nitroaniline on their Right-to-Know Hazardous Substance Lists, requiring employers to inform workers of its presence. Internationally, the European Union's classification labels 2-nitroaniline as a toxic substance (with hazard statements H301/H311/H331: toxic if swallowed, in contact with skin, or inhaled) and as a Category 2 reproductive toxicant (H361: suspected of damaging fertility or the unborn child) based on some evidence of effects in high-dose animal studies (though data are limited). These classifications trigger strict handling and labeling requirements for manufacturers and users. Monitoring for 2-nitroaniline in the environment is not routine, but it may be included in site investigations at dye manufacturing plants or Superfund sites. No widespread biomonitoring data (e.g., from NHANES) exist, as the general population is not commonly exposed. In summary, regulatory measures for 2-nitroaniline focus on controlling occupational exposure and chemical releases, hazard communication, and ensuring safe transport, given its toxicity and specialized usage.",
+        "sources": [
+          "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+          "https://haz-map.com/Agents/3149",
+          "https://haz-map.com/Agents/3149"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+      "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+      "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+      "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/cresol-cresylic-acid.pdf",
+      "https://www.osha.gov/chemicaldata/223",
+      "https://haz-map.com/Agents/3149",
+      "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+      "https://cameochemicals.noaa.gov/chris/DBM.pdf"
+    ]
+  },
+  {
+    "compound_name": "2-Nitrophenol",
+    "cas_rn": "88-75-5",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "2-Nitrophenol (ortho-nitrophenol) is an aromatic compound featuring a nitro group on a phenol ring. It is a yellow crystalline solid that has limited direct applications but serves as a precursor in chemical synthesis. The primary use of 2-nitrophenol is as an intermediate in the manufacture of other chemicals, especially agricultural and industrial products. For example, 2-nitrophenol is used to synthesize certain pesticides (including fungicides and insecticides) and wood preservatives. It also finds use in the production of some dyes and pigments, and in making rubber chemicals (such as accelerators or antioxidants for rubber processing). In addition, 2-nitrophenol can be utilized as a chemical reagent or reference standard in laboratory settings and has seen niche use as a pH indicator (though more commonly, 3-nitrophenol is used in that role). Unlike its isomer 4-nitrophenol (para-nitrophenol), which is produced in larger quantities (partly as a byproduct of certain insecticides), 2-nitrophenol is made in smaller volumes tailored to specific industrial syntheses. It is not encountered as a standalone consumer product. Any presence of 2-nitrophenol in everyday contexts typically comes from its formation in the environment or trace residuals in products. For instance, 2-nitrophenol can form in the atmosphere as a component of smog (through reactions involving phenol and nitrogen oxides) and thus may be found in very low concentrations in air or rainwater. Overall, 2-nitrophenol's significance lies in its role in chemical manufacturing rather than in direct use.",
+        "sources": [
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.llojibwe.org/drm/environment/pdf/nitrophenols.pdf",
+          "https://www.nj.gov/health/eoh/rtkweb/documents/fs/1371.pdf"
+        ]
+      },
+      {
+        "header": "Exposure Pathways",
+        "bullets": [
+          "Inhalation of polluted air is a notable pathway for 2-nitrophenol exposure. Nitrophenols, including the ortho-isomer, are generated in vehicle exhaust and urban air pollution. They form when phenolic compounds in fuels undergo high-temperature reactions with nitrogen oxides during combustion. As a result, 2-nitrophenol has been detected in the atmosphere of urban areas (in particulate matter and rainwater), though typically at very low concentrations (parts per trillion). People living in cities or near highways might inhale trace amounts as part of general smog exposure. However, because nitrophenols have low vapor pressures, they tend to attach to airborne particles or degrade in air within days, limiting long-range exposure.",
+          "Occupational exposure can occur in industries producing or using nitrophenols or related pesticides. Workers in chemical plants manufacturing 2-nitrophenol or converting it into pesticides, dyes, or rubber additives may be exposed via inhalation of dust or vapors and through dermal contact. Similarly, farm workers or pesticide applicators handling organophosphate insecticides (like parathion, which degrades into 4-nitrophenol) could encounter nitrophenol residues, though 4-nitrophenol is the primary degradate in those cases. For 2-nitrophenol specifically, any field exposures would likely stem from handling products that contain it or from its formation as a minor breakdown product of certain fungicides. Proper industrial hygiene and protective equipment can mitigate these exposures.",
+          "Ingestion and dermal contact from environmental media are possible but rare. 2-Nitrophenol has been found at low levels in surface waters and soils, especially in areas with heavy traffic or industrial emissions. It is fairly soluble in water, so it can be present in rainwater; however, it has not been detected in drinking water supplies in surveys. It has also not been found in food samples. Thus, oral intake by the general public is likely negligible. Dermal exposure from soil could theoretically occur near contaminated sites (like near an old chemical factory or a spill site), but such instances are localized. For most people, routine activities do not result in any meaningful 2-nitrophenol contact.",
+          "Overall population exposure to 2-nitrophenol is low. Biomonitoring data for nitrophenols in humans are limited, but one indicator comes from studies of parathion exposure: the metabolite 4-nitrophenol is often measured in urine of exposed individuals, whereas 2-nitrophenol is not commonly measured as a biomarker. This suggests that typical environmental or dietary exposures to 2-nitrophenol are minimal. The most exposed sub-groups are likely workers in certain chemical manufacturing roles or individuals breathing contaminated urban air. Even in those cases, exposure levels are usually far below thresholds of acute toxicity."
+        ],
+        "sources": [
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf"
+        ]
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "2-Nitrophenol shares some toxicological characteristics with other mononitrophenols. It is rapidly absorbed through ingestion or inhalation and is metabolized to aminophenols and other conjugates, which are then excreted. Because it does not significantly bioaccumulate, finding 2-nitrophenol in blood would suggest recent exposure rather than chronic build-up. At high doses, nitrophenols can cause acute systemic effects. One primary acute effect observed with the para-isomer (4-nitrophenol) is methemoglobinemia – high doses caused an increase in methemoglobin and related symptoms in animal studies. By analogy, extremely high exposure to 2-nitrophenol might also impair oxygen delivery by a similar mechanism, although 2-nitrophenol is somewhat less studied in this respect. More prominently, nitrophenols are irritants: direct exposure to 2-nitrophenol can irritate the eyes, skin, and respiratory tract. In animal inhalation studies, the most sensitive target of 2-nitrophenol toxicity was the upper respiratory tract – specifically, damage to the nasal mucosa was noted in rats breathing 2-nitrophenol aerosols repeatedly. Orally, high doses in animals led only to nonspecific effects like reduced body weight gain, indicating relatively low acute systemic toxicity aside from irritation. Chronic toxicity data are limited. Prolonged exposure to nitrophenols in animals did not produce notable organ toxicity at low doses, and no clear evidence of carcinogenicity was found in the limited studies available (4-nitrophenol was tested in rodents with no increase in tumors observed). Accordingly, EPA has not classified 2-nitrophenol for carcinogenicity, and it is not considered a cancer risk at environmental exposure levels. There is also no evidence of reproductive or developmental harm from 2-nitrophenol in the sparse literature. In humans, direct health data are lacking; however, anecdotal reports suggest that inhaling air with high nitrophenol content (such as in accidental chemical releases) could cause headache, drowsiness, or cyanosis (blue lips/fingernails) consistent with blood effects observed in animals. For typical environmental exposures, no health effects have been documented. The key takeaways are that 2-nitrophenol at high concentrations could pose acute hazards (irritation, possible blood oxygen issues), but such exposures are rare, and at low levels the compound has not been linked to adverse health outcomes. Biomonitoring is not common; if needed, 2-nitrophenol or its metabolites can be measured in urine, but interpretation must account for possible contributions from other sources (like parathion exposure yielding 4-nitrophenol, not 2-nitrophenol). Overall, the toxicological profile of 2-nitrophenol suggests caution at high exposures, with minimal concern at background environmental levels.",
+        "sources": [
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+          "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf"
+        ]
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "2-Nitrophenol is included within the regulatory scope of nitroaromatic compounds due to its presence in environmental emissions and its use in pesticide synthesis. However, it is not singled out by many regulations because it is not a high-volume commercial chemical on its own. In the United States, 2-nitrophenol is listed on the Toxic Substances Control Act (TSCA) Inventory. There is no specific EPA ambient air standard or water quality criterion exclusively for 2-nitrophenol, but the compound is indirectly addressed through broader regulations. For instance, vehicular emission standards and fuel regulations help limit nitrophenol formation by curbing overall exhaust pollutants. The EPA's Integrated Risk Information System (IRIS) has not derived a reference dose or cancer slope factor for 2-nitrophenol, reflecting insufficient toxicity data. Occupational exposure limits specific to 2-nitrophenol do not exist, but workplaces manufacturing or using it would fall under general nuisance dust or toxic organics guidelines. On the international front, 2-nitrophenol is not listed as a Persistent Organic Pollutant or subject to the Rotterdam Convention, as it is not particularly persistent or bioaccumulative (its atmospheric half-life is on the order of days). It is classified under the EU CLP regulation with hazard warnings for acute toxicity and aquatic toxicity (harmful if swallowed and harmful to aquatic life), similar to 4-nitrophenol's classification. Monitoring programs have occasionally measured nitrophenols in precipitation and air as part of studying urban pollution. For example, environmental scientists track 2-nitrophenol in rainwater to gauge photochemical smog reactions. Public health monitoring (such as CDC's national exposure reports) have not routinely measured 2-nitrophenol in human biospecimens, partly because exposure is expected to be very low and also because 4-nitrophenol (from pesticide exposure) is of greater interest in biomonitoring. Nonetheless, the presence of 2-nitrophenol at contaminated sites means it features in risk assessments for site remediation. Cleanup standards, where applicable, are often risk-based; for example, some states may set soil or groundwater cleanup levels for total nitrophenols to protect drinking water and ecosystems. In summary, regulatory attention on 2-nitrophenol is embedded in broader pollution control strategies (like vehicle emission regulations and pesticide oversight), and it is monitored in specialized environmental studies, but it does not have many compound-specific regulations due to its limited direct impact on human populations.",
+        "sources": [
+          "https://hhpprtv.ornl.gov/issue_papers/p-Nitrophenol.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+          "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf"
+        ]
+      }
+    ],
+    "sources": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK600877/",
+      "https://wwwn.cdc.gov/TSP/MMG/MMGDetails.aspx?mmgid=1207&toxid=126",
+      "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/VOCWB_J.htm",
+      "https://wwwn.cdc.gov/TSP/ToxFAQs/ToxFAQsDetails.aspx?faqid=841&toxid=164",
+      "https://www.atsdr.cdc.gov/ToxProfiles/tp107-c1-b.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/cresol-cresylic-acid.pdf",
+      "https://www.osha.gov/chemicaldata/223",
+      "https://haz-map.com/Agents/3149",
+      "https://chemicalsafety.ilo.org/dyn/icsc/showcard.display?p_card_id=0306",
+      "https://www.atsdr.cdc.gov/toxprofiles/tp50-c1.pdf",
+      "https://www.epa.gov/sites/default/files/2016-09/documents/4-nitrophenol.pdf",
+      "https://cameochemicals.noaa.gov/chris/DBM.pdf"
     ]
   },
   {
@@ -333,118 +751,6 @@
     ]
   },
   {
-    "compound_name": "Dibenzofuran",
-    "cas_rn": "132-64-9",
-    "summary_sections": [
-      {
-        "header": "Overview and Common Uses",
-        "content": "Dibenzofuran is a polycyclic aromatic compound consisting of two benzene rings joined by a furan (oxygen-containing) ring. It appears as a white crystalline solid and is a persistent environmental pollutant rather than a deliberately manufactured consumer product. There are no significant commercial uses for dibenzofuran itself. Historically, it has been encountered as an impurity in coal tar and as a minor constituent in certain heat-transfer fluids. Dibenzofuran can also be formed during combustion processes (for example, in coal-fired power plants or waste incineration) and is found in the tar fraction of coal gasification. Some of its derivatives (especially polychlorinated dibenzofurans, PCDFs) have been of concern as toxic contaminants (e.g., in PCB transformer fires or as impurities in some herbicides), but the parent compound dibenzofuran is less toxic and was not itself targeted for specific industrial applications. It has been used in research contexts to study degradation of aromatic compounds by bacteria. In summary, there are no typical household or consumer uses for dibenzofuran; any presence in human blood would likely be due to environmental exposure to combustion byproducts or contaminated sites, rather than use of a product containing dibenzofuran.",
-        "sources": []
-      },
-      {
-        "header": "Exposure Pathways",
-        "content": "Major exposure routes for dibenzofuran include:",
-        "bullets": [
-          "**Inhalation of contaminated air** – This is the primary pathway. Dibenzofuran is released into air via combustion of coal, wood, or waste. Occupational settings like coal tar processing, coal gasification, or coke oven operations can generate dibenzofuran in workplace air. The general public may inhale dibenzofuran in polluted air near incinerators or coal-burning facilities.",
-          "**Ingestion of contaminated food or water** – Dibenzofuran can deposit on soil and water bodies from air emissions. It has been detected at low levels in some groundwater near creosote-contaminated sites and in soil or sediments. Humans might ingest it by eating food grown in contaminated soil or fish from contaminated water, though at trace concentrations. Overall, ingestion is a less significant route compared to inhalation, but not zero.",
-          "**Dermal contact** – Direct skin contact with soot, tar, or contaminated soils containing dibenzofuran can occur, especially for workers at hazardous waste sites or in industries handling coal tar. Dibenzofuran is somewhat lipophilic and can adhere to skin oils, but absorption through intact skin is limited. Nonetheless, contact with creosote or tar (which contain dibenzofuran) could allow some uptake through the skin.",
-          "It should be noted that polychlorinated dibenzofurans (toxic dioxin-like compounds) often co-occur with dibenzofuran. Therefore, exposure to dibenzofuran might indicate concurrent exposure to related toxic substances, although the pathways are the same (breathing smoke or dust, ingesting contaminated media, or skin contact with contaminated materials)."
-        ],
-        "sources": []
-      },
-      {
-        "header": "Health and Toxicological Information",
-        "content": "Relatively little specific toxicological data exists for dibenzofuran in humans or laboratory animals, especially compared to its chlorinated analogues. Dibenzofuran is considered less acutely toxic than dioxins or PCBs. No acute poisoning cases in humans have been directly attributed to dibenzofuran alone. In occupational studies, workers chronically exposed to coal tar (containing dibenzofuran among many components) have shown respiratory issues and skin irritation, but it’s hard to single out dibenzofuran’s contribution. High doses in animals (from limited studies) can cause weight loss and liver enzyme changes, but definitive chronic effects were not well characterized. Importantly, the U.S. EPA has classified dibenzofuran as Group D – not classifiable as to human carcinogenicity – due to inadequate evidence. This means there isn’t clear evidence that dibenzofuran causes cancer in animals or humans. That said, certain polychlorinated dibenzofurans are known carcinogens and share the core structure, but the parent compound is less biologically active. If dibenzofuran is detected in blood, it likely indicates recent environmental exposure (e.g., inhaling smoke or dust from a contaminated site) because it does not accumulate significantly in human tissues (in contrast to chlorinated dioxins which do accumulate). Dibenzofuran is moderately persistent in the environment; in the body, it would be metabolized via cytochrome P450 enzymes to more water-soluble metabolites and excreted. No known unique biomarkers for dibenzofuran exposure are used clinically. Overall, health concerns for dibenzofuran itself center on general irritant effects (as part of soot/tar exposure) and the possibility of systemic effects at high doses, but the lack of observed toxicity data suggests it is of lower concern than many other aromatic pollutants. Its presence alongside more toxic compounds often complicates risk assessment, so in practice, monitoring and mitigating dibenzofuran exposure also reduces exposure to co-contaminants.",
-        "sources": []
-      },
-      {
-        "header": "Regulatory and Monitoring Context",
-        "content": "Dibenzofuran is monitored and regulated mainly in the context of environmental pollution control. The EPA has identified dibenzofuran as a \"pollutant of concern\" in its Great Waters Program due to persistence, bioaccumulation potential, and toxicity to wildlife. However, unlike chlorinated dioxins/furans, it is not subject to strict toxin-specific regulations. For example, there are no specific EPA ambient air quality standards for dibenzofuran, but facilities that emit coal tar pitch volatiles or PAHs (categories that include dibenzofuran) are regulated, which indirectly controls dibenzofuran. OSHA does not have a separate PEL for dibenzofuran vapor, and it is not on the OSHA list of specifically regulated carcinogens. At contaminated sites (Superfund sites), dibenzofuran is often included in the suite of semi-volatile organic compounds tested. Clean-up guidelines might reference risk-based concentrations; for instance, some states have soil cleanup target levels for dibenzofuran to protect groundwater and human health. The EPA’s Integrated Risk Information System (IRIS) provides a provisional oral reference dose and inhalation reference concentration for dibenzofuran based on limited data (these values are used to gauge risk from chronic exposure). Internationally, agencies focus on polychlorinated dibenzofurans (the highly toxic dioxin-like compounds), while unsubstituted dibenzofuran gets comparatively less attention. Nonetheless, its listing as a Hazardous Air Pollutant (as part of \"polycyclic organic matter\") means large emitters must report and control it. In summary, dibenzofuran’s regulatory profile is as an environmental pollutant to monitor, especially at sites of incomplete combustion or creosote contamination, and actions to control soot, tar, and industrial emissions address it. Public health monitoring would not normally measure dibenzofuran in human blood outside of specialized exposure studies, but its inclusion in national reports (like the EPA’s National Air Toxics Assessment) underscores the need to minimize its release.",
-        "sources": []
-      }
-    ],
-    "sources": [
-      "https://www.epa.gov/sites/default/files/2016-09/documents/dibenzofuran.pdf",
-      "EPAIRIS(DibenzofuranQuickView)–ClassificationGroupD",
-      "ATSDR1995GreatLakes“Pollutantofconcern”list–mentionsDibenzofuran"
-    ]
-  },
-  {
-    "compound_name": "Diphenylamine",
-    "cas_rn": "122-39-4",
-    "summary_sections": [
-      {
-        "header": "Overview and Common Uses",
-        "content": "Diphenylamine (DPA) is an aromatic amine with the formula (C₆H₅)₂NH. It is a colorless to tan solid (leaflet or crystalline form) that emits a mild pleasant odor. DPA is used in a variety of industrial applications. One major use is as an antioxidant in certain products: for example, DPA is added to some lubricants and to rubber mixtures to prevent degradation (particularly in automobile tires). It has also been used in the manufacture of dyes and photographic chemicals. Another significant application is in agriculture – diphenylamine is used post-harvest on apples and pears to prevent a storage disorder called “superficial scald.” Fruits are often dipped in or coated with DPA (in ppm levels) before cold storage to preserve their skin quality. Diphenylamine had historical uses in explosives as well; it’s been used as a stabilizer for nitrocellulose explosives and in gunpowder formulations to prevent decomposition. In consumer contexts, direct DPA use is limited, but residues can be present on treated apples (regulated by law to safe levels) and in trace amounts in rubber goods or oils that used DPA as a stabilizer. Diphenylamine was also formerly used in some veterinary medicine preparations. Overall, while not a household chemical per se, DPA can be encountered through treated produce or contact with materials containing it (e.g., tires or industrial oils). Its detection in blood could result from dietary intake of treated fruit or occupational exposure in industries using DPA.",
-        "sources": []
-      },
-      {
-        "header": "Exposure Pathways",
-        "content": "Potential diphenylamine exposure routes include:",
-        "bullets": [
-          "**Dietary ingestion** – The general population’s primary exposure is likely through eating apples or other fruit that have been treated with diphenylamine post-harvest. Regulatory agencies set maximum residue limits (for instance, in the U.S. it's 10 ppm on apples). Washing and peeling reduce residues, but some DPA can be ingested. This use is seasonal and controlled, so exposures are low. Drinking water is not commonly a DPA source, unless near a manufacturing plant or disposal site.",
-          "**Occupational inhalation and dermal** – Workers in factories producing or using DPA (e.g., rubber manufacturing, lubricant blending, fruit packing houses where DPA dips are applied) may inhale DPA dust or aerosol and have skin contact with it. DPA has low vapor pressure but can form dust when handled as a powder. Dermal exposure can occur when handling DPA formulations or treated fruit without gloves. Absorption through skin is possible for aromatic amines, though specific data for DPA is limited.",
-          "**Environmental** – Diphenylamine has been found as a pollutant at some hazardous waste sites, likely from its use in munitions or as a chemical waste from manufacturing. In such localized scenarios, people could be exposed via contaminated soil or groundwater (ingestion, dermal contact, or inhalation of dust). DPA in the environment degrades moderately fast (it can break down in soil and water to aniline and other products), but near point sources, exposure could occur.",
-          "Overall, current typical exposure to DPA for the general public is quite low and mainly oral (dietary). Occupational exposure (inhalation/dermal) historically occurred in industries like tire manufacturing (as DPA is used in rubber antioxidants), but now protective measures and possibly alternative chemicals limit that. Blood detection of DPA might reflect recent substantial exposure (e.g., in an industrial incident or high dietary intake beyond normal)."
-        ],
-        "sources": []
-      },
-      {
-        "header": "Health and Toxicological Information",
-        "content": "Diphenylamine’s acute toxicity is considered moderate. It can irritate the skin, eyes, and respiratory tract upon contact. High oral doses in animals cause methemoglobinemia and kidney damage (specifically, DPA has been associated with the development of cystic kidneys in rodents). In humans, excessive exposure could similarly cause symptoms of hemoglobin oxidation (cyanosis, fatigue), although cases are rare. Chronic exposure studies in animals have shown that diphenylamine can affect the bladder (in dogs, it caused lesions in the bladder at high doses) and the liver. It is not classed as a confirmed human carcinogen; however, some older rodent studies suggested an increase in bladder tumors in female mice at high chronic dietary doses of DPA. Regulatory agencies regard this evidence as limited or equivocal (for example, EPA has not classified DPA as to human carcinogenicity due to insufficient data). There is no strong evidence of DPA causing cancer in humans. Reproductively, DPA has been observed to cause developmental toxicity in rodents at maternally toxic doses (e.g., reduced fetal weight), but it’s not a known human teratogen. The primary health concern for workplace DPA exposure historically was its effect on the kidneys and bladder, and potential blood changes. DPA is metabolized partly to aniline and p-aminodiphenylamine in the body, which could contribute to methemoglobin formation. If DPA is found in blood, it likely indicates ongoing exposure, as DPA doesn’t bioaccumulate and would be excreted (mainly via urine) within days. In essence, while not as acutely hazardous as some aromatic amines, diphenylamine can cause organ damage (kidney, liver, blood) at high doses and has raised long-term toxicity questions. Standard toxicology evaluations have set oral reference doses to protect against these chronic effects (for instance, EPA’s provisional RfD for DPA is 0.02 mg/kg/day based on kidney effects). Adherence to regulated residue limits in food ensures that typical exposure levels are far below those causing observable effects.",
-        "sources": []
-      },
-      {
-        "header": "Regulatory and Monitoring Context",
-        "content": "Diphenylamine is regulated in several domains. In agriculture, DPA is registered as a post-harvest pesticide. Regulatory agencies like the U.S. EPA and EU have established Maximum Residue Limits (MRLs) for DPA on apples/pears (e.g., 10 ppm in the U.S., 5 ppm in the EU as of current standards). These limits are enforced through food monitoring, and, in fact, the EU suspended use of DPA on apples in 2012 due to concerns about nitrosamine impurities, thus imported apples must meet very low DPA residue standards. In the workplace, DPA is on advisory occupational hazard lists (OSHA and ACGIH list it on their hazardous substance lists). The New Jersey hazardous substance fact sheet notes DPA can affect the kidneys and bladder and includes recommendations for protective measures. There isn’t a specific OSHA PEL for diphenylamine, but a NIOSH/OSHA guideline of 10 mg/m³ (inhalable dust) has been used as an exposure limit. DPA is also listed by the EPA on the Toxic Substances Control Act (TSCA) Inventory; any significant new use might require notification. Environmental cleanup values exist because DPA appears on some state cleanup lists: for instance, if soil or groundwater is contaminated, risk-based screening levels guide remediation (often a few ppm in soil). On an international level, diphenylamine is not classified as a carcinogen or mutagen under GHS; it is classified as hazardous (for toxicity to target organs). The European Chemicals Agency (ECHA) classifies DPA as harmful if swallowed and very toxic to aquatic life (since DPA has been observed to have some aquatic toxicity, environmental discharge is regulated). Monitoring: the USDA and FDA include DPA in their pesticide residue testing programs for produce, and results have shown compliance with limits in recent years. Occupational monitoring would involve measuring DPA levels in air or perhaps metabolites (like aniline) in urine of workers, but given the limited hazard relative to more toxic chemicals, routine biomonitoring for DPA is not common. Summarily, DPA’s use is permitted but closely regulated in specific contexts (like fruit storage), and protections are in place to keep exposure low. The compound is on hazard lists (e.g., U.S. EPA’s list of toxic pollutants in some contexts), ensuring that industries using DPA follow environmental and safety regulations. As an example, industries must report significant DPA releases to EPA’s TRI if thresholds are exceeded. The current regulatory consensus is that when used as intended (e.g., at regulated levels on fruit, or as a bound antioxidant in rubber), DPA does not pose significant risk to the public, but occupational handlers and contaminated sites must be managed to prevent excessive exposure.",
-        "sources": []
-      }
-    ],
-    "sources": [
-      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
-      "WashingtonStateUniversityTreeFruitextension–DPAuseinscaldcontrol",
-      "EPA2014:DiphenylaminecancellationinEUandresiduemonitoringresults",
-      "40CFRPart423AppendixA"
-    ]
-  },
-  {
-    "compound_name": "Ethyl methanesulfonate",
-    "cas_rn": "62-50-0",
-    "summary_sections": [
-      {
-        "header": "Overview and Common Uses",
-        "content": "Ethyl methanesulfonate (EMS) is a chemical mutagen belonging to the alkylating agents class. It is a colorless liquid with a faint pleasant odor. EMS is not a household or consumer-use chemical; its primary use is in research and biotechnology. In laboratory settings, EMS is extensively used to induce random genetic mutations in organisms (such as fruit flies, plants, worms, and cell cultures) for experimental purposes. For example, EMS mutagenesis is a common technique in plant breeding and in genetic screens because EMS introduces point mutations in DNA. Outside of research, EMS has essentially no commercial applications due to its potent DNA-damaging properties. It has occasionally been encountered as a trace impurity in certain chemical syntheses or pharmaceuticals (where residual solvents like ethyl sulfate can react to form EMS), which has prompted regulatory scrutiny in drug manufacturing. However, EMS is not intentionally present in consumer products. Therefore, any detection of EMS in human blood would likely be from an occupational exposure in a laboratory or an incident (such as accidental release or contamination), rather than everyday consumer activities.",
-        "sources": []
-      },
-      {
-        "header": "Exposure Pathways",
-        "content": "Ethyl methanesulfonate exposure is uncommon and primarily concerns specialized workplaces:",
-        "bullets": [
-          "**Occupational (inhalation and dermal)** – Laboratory personnel or factory workers who handle EMS (for mutagenesis experiments or chemical synthesis) could be exposed by breathing EMS vapors or aerosol, or by skin contact if spills occur. EMS is reasonably volatile and can be inhaled if not handled in a fume hood. Skin absorption is also a serious concern, as EMS can readily penetrate skin and is toxic through dermal uptake. Strict controls (gloves, lab coat, fume hood) are used because EMS should be treated as a carcinogen and teratogen.",
-          "**Accidental ingestion** – In a lab, accidental hand-to-mouth contact or poorly handled contaminated food/drink could lead to ingestion. This is highly unlikely in a controlled lab, but any ingestion would be dangerous given EMS’s potency.",
-          "**Environmental** – EMS is not stable in the environment for long; it hydrolyzes in water to ethanol and methanesulfonic acid. As a result, general population exposure via air, water, or soil is expected to be negligible. There are no known cases of EMS contamination in environmental media at levels of concern. Thus, non-occupational exposure pathways are essentially absent under normal conditions.",
-          "In summary, exposure to EMS is almost exclusively occupational and usually intentional (as part of experimental procedures). The small number of people working with EMS do so under safety protocols. EMS is not in consumer items, so the public’s exposure is virtually zero."
-        ],
-        "sources": []
-      },
-      {
-        "header": "Health and Toxicological Information",
-        "content": "Ethyl methanesulfonate is a highly reactive alkylating agent that can transfer ethyl groups to DNA bases, causing mutations (like base substitutions). Health-wise, this means EMS is a potent genotoxic chemical. Animal studies have shown that EMS exposure can induce tumors; for example, chronic exposure in rats caused increased incidence of lung and kidney cancers, and EMS is therefore regarded as a possible human carcinogen. It also has teratogenic effects (can cause birth defects) in animal experiments. Acute toxicity: EMS can irritate eyes, skin, and respiratory tract on contact. Short-term inhalation may cause symptoms such as cough or sore throat, while skin contact can lead to redness or burns. At higher exposures, systemic effects like nausea, vomiting, and central nervous system depression (drowsiness) have been reported. There is evidence from animal tests that EMS can cause heritable genetic damage (mutations passed to offspring), making it a concern for reproductive health. In humans, no large-scale epidemiological data exist (given the small exposed population), but it is prudent to assume EMS could increase cancer or reproductive risk in exposed workers. If EMS were found in blood, it would indicate a very recent exposure because EMS is rapidly acting and also can hydrolyze in the body. The presence of EMS itself in blood would be rare; more likely, one would detect biomarkers of DNA or protein alkylation. There are no routine medical tests for EMS exposure specifically, but genetic assays (like the Ames test or chromosomal aberration tests) readily demonstrate its mutagenic potential. Clinically, any significant EMS exposure would be handled as an emergency, with measures to decontaminate and supportive care. In summary, EMS is recognized as a dangerous chemical – mutagenic, carcinogenic (inferred), and toxic via multiple routes – which is why it is handled with extreme caution in lab environments.",
-        "sources": []
-      },
-      {
-        "header": "Regulatory and Monitoring Context",
-        "content": "Ethyl methanesulfonate is subject to stringent control due to its hazardous nature. Although not produced in large quantities, it appears on various regulatory lists. For instance, EMS is listed by the U.S. National Toxicology Program (NTP) as a substance “reasonably anticipated to be a human carcinogen,” and by IARC as a Group 2A (probably carcinogenic) or similar category (based on sufficient evidence of carcinogenicity in animals). It is also cited by EPA’s IRIS program and is included on the Special Health Hazard Substance List in New Jersey due to its carcinogenic, mutagenic, and teratogenic properties. Workplace safety regulations require that EMS be handled in a chemical fume hood with appropriate personal protective equipment (PPE). There are no established OSHA PEL or ACGIH TLV for EMS specifically (likely because it is not used widely enough to warrant a standard, and any exposure should be minimized to as low as possible). Instead, guidelines demand treating EMS as if no safe exposure level exists. Laboratories using EMS follow OSHA’s Laboratory Standard and implement chemical hygiene plans that designate EMS as a “select carcinogen” requiring special handling and storage. EMS waste is managed as hazardous waste, and many countries require that any EMS spills or releases be reported to environmental authorities. Regarding pharmaceutical manufacturing, regulatory agencies like the FDA and EMA have set strict limits for EMS as a potential impurity in drug products (usually in the low ppm or ppb range) because of its genotoxicity – part of the guidance on genotoxic impurities. Environmental monitoring of EMS is not a focus (due to rare use and rapid breakdown), but any accidental release would trigger immediate remediation efforts. In summary, regulatory frameworks treat EMS with utmost caution: it is effectively controlled at the source (labs and factories), and it is not allowed in consumer products. The small number of workers potentially exposed fall under occupational health surveillance. EMS’s inclusion in hazard communication documents (material safety data sheets) mandates warning labels indicating it “may cause genetic defects” and “may cause cancer”, reinforcing the safety-first approach to this compound.",
-        "sources": []
-      }
-    ],
-    "sources": [
-      "https://nj.gov/health/eoh/rtkweb/documents/fs/1203.pdf",
-      "PubMed:UsesofEMSinmutagenesis",
-      "FisherScientificSDSforEMS"
-    ]
-  },
-  {
     "compound_name": "Dibenzo[a,i]pyrene",
     "cas_rn": "189-55-9",
     "summary_sections": [
@@ -548,105 +854,78 @@
     ]
   },
   {
-    "compound_name": "1-Methylnaphthalene",
-    "cas_rn": "90-12-0",
+    "compound_name": "Dibenzofuran",
+    "cas_rn": "132-64-9",
     "summary_sections": [
       {
         "header": "Overview and Common Uses",
-        "content": "1-Methylnaphthalene (sometimes called α-methylnaphthalene) is a polycyclic aromatic hydrocarbon that is structurally naphthalene with one methyl substituent. It is a colorless to pale yellow liquid with a chemical formula C₁₁H₁₀. 1-Methylnaphthalene is naturally present in coal tar and in the heavier fractions of petroleum. Industrially, it has been used as an intermediate in organic synthesis; for example, it is oxidized to make 1-methylnaphthoic acid and other derivatives. Historically, 1-methylnaphthalene was notable in the context of diesel fuels: it defined the low end (cetane number of 0) of the cetane scale for diesel fuel ignition quality. It is also reported to have minor uses in dye manufacturing and was at one time considered for use in fragrances/flavorings (as a trace component), though such use is very limited. In consumer contexts, 1-methylnaphthalene itself is not sold as a product, but it can be found as a constituent of kerosene, diesel exhaust, and soot from combustion processes.",
-        "sources": [
-          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
-          "https://www.mbenergy.com",
-          "http://askthenerd.com"
-        ]
+        "content": "Dibenzofuran is a polycyclic aromatic compound consisting of two benzene rings joined by a furan (oxygen-containing) ring. It appears as a white crystalline solid and is a persistent environmental pollutant rather than a deliberately manufactured consumer product. There are no significant commercial uses for dibenzofuran itself. Historically, it has been encountered as an impurity in coal tar and as a minor constituent in certain heat-transfer fluids. Dibenzofuran can also be formed during combustion processes (for example, in coal-fired power plants or waste incineration) and is found in the tar fraction of coal gasification. Some of its derivatives (especially polychlorinated dibenzofurans, PCDFs) have been of concern as toxic contaminants (e.g., in PCB transformer fires or as impurities in some herbicides), but the parent compound dibenzofuran is less toxic and was not itself targeted for specific industrial applications. It has been used in research contexts to study degradation of aromatic compounds by bacteria. In summary, there are no typical household or consumer uses for dibenzofuran; any presence in human blood would likely be due to environmental exposure to combustion byproducts or contaminated sites, rather than use of a product containing dibenzofuran.",
+        "sources": []
       },
       {
         "header": "Exposure Pathways",
-        "content": "For the general population, exposure to 1-methylnaphthalene occurs primarily alongside exposure to naphthalene and other PAHs from combustion sources. Key pathways include:",
+        "content": "Major exposure routes for dibenzofuran include:",
         "bullets": [
-          "**Inhalation:** Breathing air containing combustion byproducts is the main route. 1-Methylnaphthalene is present in cigarette smoke, wood smoke (e.g., from fireplaces or stoves), and vehicle exhaust. Indoor smoking and the use of kerosene heaters or lamps can contribute to indoor air levels. It also evaporates to some extent from petroleum fuels.",
-          "**Ingestion:** This compound can adhere to airborne particles that settle on food or water. Thus, individuals might ingest 1-methylnaphthalene by consuming foods grown or stored in polluted environments or drinking water contaminated by petroleum spills. Additionally, young children may ingest it via contaminated house dust or soil (hand-to-mouth behavior) near garages or waste sites.",
-          "**Dermal contact:** Skin exposure can occur through direct contact with substances containing 1-methylnaphthalene, such as diesel fuel, soot, or creosote. For example, handling used motor oil or coal tar-treated wood could transfer small amounts onto the skin. While skin absorption is not as significant as inhalation or ingestion, prolonged or frequent dermal contact can contribute to overall exposure."
+          "**Inhalation of contaminated air** – This is the primary pathway. Dibenzofuran is released into air via combustion of coal, wood, or waste. Occupational settings like coal tar processing, coal gasification, or coke oven operations can generate dibenzofuran in workplace air. The general public may inhale dibenzofuran in polluted air near incinerators or coal-burning facilities.",
+          "**Ingestion of contaminated food or water** – Dibenzofuran can deposit on soil and water bodies from air emissions. It has been detected at low levels in some groundwater near creosote-contaminated sites and in soil or sediments. Humans might ingest it by eating food grown in contaminated soil or fish from contaminated water, though at trace concentrations. Overall, ingestion is a less significant route compared to inhalation, but not zero.",
+          "**Dermal contact** – Direct skin contact with soot, tar, or contaminated soils containing dibenzofuran can occur, especially for workers at hazardous waste sites or in industries handling coal tar. Dibenzofuran is somewhat lipophilic and can adhere to skin oils, but absorption through intact skin is limited. Nonetheless, contact with creosote or tar (which contain dibenzofuran) could allow some uptake through the skin.",
+          "It should be noted that polychlorinated dibenzofurans (toxic dioxin-like compounds) often co-occur with dibenzofuran. Therefore, exposure to dibenzofuran might indicate concurrent exposure to related toxic substances, although the pathways are the same (breathing smoke or dust, ingesting contaminated media, or skin contact with contaminated materials)."
         ],
-        "sources": [
-          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
-        ]
+        "sources": []
       },
       {
         "header": "Health and Toxicological Information",
-        "content": "1-Methylnaphthalene is one of the PAHs monitored for its potential health effects, although it is less studied than naphthalene. Like naphthalene, it is readily metabolized in humans; detection in blood or urine reflects recent exposure (on the order of hours to days) rather than long-term accumulation. High acute exposures to methylnaphthalenes can cause irritation of the eyes and airways (similar to naphthalene). A notable effect observed in animal studies is **pulmonary alveolar proteinosis**, a condition involving buildup of surfactant in the lungs: laboratory mice chronically exposed to 1-methylnaphthalene in their diet developed this lung abnormality at significant incidence. This suggests the respiratory system is a primary target of toxicity for repeated exposure. There is also evidence that PAH exposure can lead to hemolytic anemia (destruction of red blood cells) in susceptible individuals; naphthalene is known for this effect, and metabolites of 1-methylnaphthalene may have similar, though milder, blood impacts. Regarding carcinogenicity, there is no conclusive proof that 1-methylnaphthalene causes cancer in humans. Animal cancer bioassays are limited; one mouse study did not find clear increases in tumors, but data were not sufficient for a definitive evaluation. The U.S. EPA has classified 1-methylnaphthalene as having \"suggestive evidence of carcinogenic potential\" based on the limited animal data available, warranting caution but not a definitive cancer risk value. Overall, health concerns focus on chronic lung effects and its contribution to the total PAH exposure burden.",
-        "sources": [
-          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
-          "https://nepis.epa.gov",
-          "https://academic.oup.com"
-        ]
+        "content": "Relatively little specific toxicological data exists for dibenzofuran in humans or laboratory animals, especially compared to its chlorinated analogues. Dibenzofuran is considered less acutely toxic than dioxins or PCBs. No acute poisoning cases in humans have been directly attributed to dibenzofuran alone. In occupational studies, workers chronically exposed to coal tar (containing dibenzofuran among many components) have shown respiratory issues and skin irritation, but it’s hard to single out dibenzofuran’s contribution. High doses in animals (from limited studies) can cause weight loss and liver enzyme changes, but definitive chronic effects were not well characterized. Importantly, the U.S. EPA has classified dibenzofuran as Group D – not classifiable as to human carcinogenicity – due to inadequate evidence. This means there isn’t clear evidence that dibenzofuran causes cancer in animals or humans. That said, certain polychlorinated dibenzofurans are known carcinogens and share the core structure, but the parent compound is less biologically active. If dibenzofuran is detected in blood, it likely indicates recent environmental exposure (e.g., inhaling smoke or dust from a contaminated site) because it does not accumulate significantly in human tissues (in contrast to chlorinated dioxins which do accumulate). Dibenzofuran is moderately persistent in the environment; in the body, it would be metabolized via cytochrome P450 enzymes to more water-soluble metabolites and excreted. No known unique biomarkers for dibenzofuran exposure are used clinically. Overall, health concerns for dibenzofuran itself center on general irritant effects (as part of soot/tar exposure) and the possibility of systemic effects at high doses, but the lack of observed toxicity data suggests it is of lower concern than many other aromatic pollutants. Its presence alongside more toxic compounds often complicates risk assessment, so in practice, monitoring and mitigating dibenzofuran exposure also reduces exposure to co-contaminants.",
+        "sources": []
       },
       {
         "header": "Regulatory and Monitoring Context",
-        "content": "1-Methylnaphthalene is not individually regulated to the same extent as some other PAHs, but it is indirectly managed through broader environmental and health guidelines. The U.S. EPA has developed provisional risk values: for instance, a chronic Reference Concentration (inhalation exposure limit) of 3×10⁻⁶ mg/m³ was proposed in 2024, and a provisional oral Reference Dose of about 0.01 mg/kg/day. These values reflect conservative thresholds intended to protect against non-cancer effects like lung damage. No specific federal drinking water standard exists for 1-methylnaphthalene, but its occurrence in groundwater is monitored, and it was evaluated in the context of unregulated contaminants. Internationally, 1-methylnaphthalene has been considered by the flavor and fragrance industry (it had a Flavor and Extract Manufacturers Association (FEMA) GRAS status historically, indicating it was once approved in trace amounts for flavor use). In the European Union, chemicals of this type fall under REACH regulation; 1-methylnaphthalene is classified as hazardous – e.g., it carries a hazard designation for possible carcinogenicity (\"suspected of causing cancer\") under the EU CLP system. Environmental monitoring programs do not routinely measure 1-methylnaphthalene in human biosamples, but its metabolites (like 1-naphthol) may appear in urine in PAH exposure studies. In pollution monitoring, it is measured in air and water at contaminated sites. Overall, control of 1-methylnaphthalene is achieved by limiting PAH emissions (e.g., via vehicle exhaust regulations) and remediating contaminated sites, rather than compound-specific rules for this chemical.",
-        "sources": [
-          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
-          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
-          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/88.htm",
-          "https://nepis.epa.gov"
-        ]
+        "content": "Dibenzofuran is monitored and regulated mainly in the context of environmental pollution control. The EPA has identified dibenzofuran as a \"pollutant of concern\" in its Great Waters Program due to persistence, bioaccumulation potential, and toxicity to wildlife. However, unlike chlorinated dioxins/furans, it is not subject to strict toxin-specific regulations. For example, there are no specific EPA ambient air quality standards for dibenzofuran, but facilities that emit coal tar pitch volatiles or PAHs (categories that include dibenzofuran) are regulated, which indirectly controls dibenzofuran. OSHA does not have a separate PEL for dibenzofuran vapor, and it is not on the OSHA list of specifically regulated carcinogens. At contaminated sites (Superfund sites), dibenzofuran is often included in the suite of semi-volatile organic compounds tested. Clean-up guidelines might reference risk-based concentrations; for instance, some states have soil cleanup target levels for dibenzofuran to protect groundwater and human health. The EPA’s Integrated Risk Information System (IRIS) provides a provisional oral reference dose and inhalation reference concentration for dibenzofuran based on limited data (these values are used to gauge risk from chronic exposure). Internationally, agencies focus on polychlorinated dibenzofurans (the highly toxic dioxin-like compounds), while unsubstituted dibenzofuran gets comparatively less attention. Nonetheless, its listing as a Hazardous Air Pollutant (as part of \"polycyclic organic matter\") means large emitters must report and control it. In summary, dibenzofuran’s regulatory profile is as an environmental pollutant to monitor, especially at sites of incomplete combustion or creosote contamination, and actions to control soot, tar, and industrial emissions address it. Public health monitoring would not normally measure dibenzofuran in human blood outside of specialized exposure studies, but its inclusion in national reports (like the EPA’s National Air Toxics Assessment) underscores the need to minimize its release.",
+        "sources": []
       }
     ],
     "sources": [
-      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
-      "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25",
-      "https://mbenergy.com",
-      "https://nepis.epa.gov"
+      "https://www.epa.gov/sites/default/files/2016-09/documents/dibenzofuran.pdf",
+      "EPAIRIS(DibenzofuranQuickView)–ClassificationGroupD",
+      "ATSDR1995GreatLakes“Pollutantofconcern”list–mentionsDibenzofuran"
     ]
   },
   {
-    "compound_name": "2-Methylnaphthalene",
-    "cas_rn": "91-57-6",
+    "compound_name": "Diphenylamine",
+    "cas_rn": "122-39-4",
     "summary_sections": [
       {
         "header": "Overview and Common Uses",
-        "content": "2-Methylnaphthalene (β-methylnaphthalene) is the other isomer of methylnaphthalene, differing by the position of the methyl group on the naphthalene ring. It is a solid at ambient conditions (melting point ~34 °C) and shares similar chemical properties with 1-methylnaphthalene. 2-Methylnaphthalene occurs as a minor component of coal tar and petroleum distillates, especially in heavier oil fractions. In industry, it has notable uses: it is oxidized to produce 2-methyl-1,4-naphthoquinone, which is a precursor to vitamin K (phytomenadione). It has also been used in organic syntheses for certain dyes and as a sulfonated derivative in some wetting agents. Additionally, 2-methylnaphthalene finds limited use as a perfumery and flavoring agent due to its sweet, floral, slightly woody aroma, although such use is small in scale and it was removed from the EU’s list of supported flavoring substances in recent years. Generally, consumers do not buy 2-methylnaphthalene directly, but they may encounter it as part of kerosene, diesel fuel, cigarette smoke, or creosote mixtures.",
-        "sources": [
-          "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
-          "https://www.thegoodscentscompany.com/data/rw1179161.html"
-        ]
+        "content": "Diphenylamine (DPA) is an aromatic amine with the formula (C₆H₅)₂NH. It is a colorless to tan solid (leaflet or crystalline form) that emits a mild pleasant odor. DPA is used in a variety of industrial applications. One major use is as an antioxidant in certain products: for example, DPA is added to some lubricants and to rubber mixtures to prevent degradation (particularly in automobile tires). It has also been used in the manufacture of dyes and photographic chemicals. Another significant application is in agriculture – diphenylamine is used post-harvest on apples and pears to prevent a storage disorder called “superficial scald.” Fruits are often dipped in or coated with DPA (in ppm levels) before cold storage to preserve their skin quality. Diphenylamine had historical uses in explosives as well; it’s been used as a stabilizer for nitrocellulose explosives and in gunpowder formulations to prevent decomposition. In consumer contexts, direct DPA use is limited, but residues can be present on treated apples (regulated by law to safe levels) and in trace amounts in rubber goods or oils that used DPA as a stabilizer. Diphenylamine was also formerly used in some veterinary medicine preparations. Overall, while not a household chemical per se, DPA can be encountered through treated produce or contact with materials containing it (e.g., tires or industrial oils). Its detection in blood could result from dietary intake of treated fruit or occupational exposure in industries using DPA.",
+        "sources": []
       },
       {
         "header": "Exposure Pathways",
-        "content": "2-Methylnaphthalene exposure occurs in parallel with other combustion-related pollutants. Main pathways include:",
+        "content": "Potential diphenylamine exposure routes include:",
         "bullets": [
-          "**Inhalation:** Breathing polluted air is the primary route. 2-Methylnaphthalene is emitted in the exhaust from diesel engines and gasoline engines, and is found in tobacco smoke and smoke from burning wood or coal. People in urban environments or those who smoke (or inhale secondhand smoke) will inhale small quantities of this compound attached to airborne particulates.",
-          "**Ingestion:** This chemical can sorb onto fine particles that settle on soil, crops, or in water. It can enter the food chain when individuals consume vegetables, grains, or fish from contaminated areas. Drinking water can also be a source if groundwater or reservoirs are impacted by petroleum spills or coal tar creosote. For example, near former gas manufacturing sites or creosote-treated facilities, 2-methylnaphthalene has been detected and could reach humans through water or dirt ingestion.",
-          "**Dermal Contact:** Direct skin contact is a lesser route but possible for those handling materials containing PAHs. Working with creosote (a wood preservative) or heavy fuel oils can expose skin to 2-methylnaphthalene. Also, anyone regularly touching soot or tar (for instance, chimney cleaners or roofers dealing with coal-tar pitch) might have dermal exposure to this compound along with others. Absorption through skin is limited, but chronic contact could contribute some exposure."
+          "**Dietary ingestion** – The general population’s primary exposure is likely through eating apples or other fruit that have been treated with diphenylamine post-harvest. Regulatory agencies set maximum residue limits (for instance, in the U.S. it's 10 ppm on apples). Washing and peeling reduce residues, but some DPA can be ingested. This use is seasonal and controlled, so exposures are low. Drinking water is not commonly a DPA source, unless near a manufacturing plant or disposal site.",
+          "**Occupational inhalation and dermal** – Workers in factories producing or using DPA (e.g., rubber manufacturing, lubricant blending, fruit packing houses where DPA dips are applied) may inhale DPA dust or aerosol and have skin contact with it. DPA has low vapor pressure but can form dust when handled as a powder. Dermal exposure can occur when handling DPA formulations or treated fruit without gloves. Absorption through skin is possible for aromatic amines, though specific data for DPA is limited.",
+          "**Environmental** – Diphenylamine has been found as a pollutant at some hazardous waste sites, likely from its use in munitions or as a chemical waste from manufacturing. In such localized scenarios, people could be exposed via contaminated soil or groundwater (ingestion, dermal contact, or inhalation of dust). DPA in the environment degrades moderately fast (it can break down in soil and water to aniline and other products), but near point sources, exposure could occur.",
+          "Overall, current typical exposure to DPA for the general public is quite low and mainly oral (dietary). Occupational exposure (inhalation/dermal) historically occurred in industries like tire manufacturing (as DPA is used in rubber antioxidants), but now protective measures and possibly alternative chemicals limit that. Blood detection of DPA might reflect recent substantial exposure (e.g., in an industrial incident or high dietary intake beyond normal)."
         ],
-        "sources": [
-          "https://wwwn.cdc.gov/TSP/PHS/PHS.aspx?phsid=120&toxid=25"
-        ]
+        "sources": []
       },
       {
         "header": "Health and Toxicological Information",
-        "content": "Once in the human body, 2-methylnaphthalene is metabolized by the liver to various metabolites (such as methyl-naphthols and conjugates) and eliminated, largely via urine. Its presence in blood would indicate a fairly recent exposure. Health-wise, the most distinctive finding for 2-methylnaphthalene comes from animal studies: chronic exposure led to **pulmonary alveolar proteinosis** in mice, a condition where protein-lipid material accumulates in the air sacs of the lungs. This suggests that long-term inhalation or ingestion at sufficient doses can cause lung damage and impaired lung function. Unlike naphthalene, which is a known animal carcinogen (causing nasal and lung tumors in rodents), 2-methylnaphthalene did not show a clear increase in tumors in a two-year study on mice (it primarily caused the non-cancer lung effect). Accordingly, major agencies have not officially classified 2-methylnaphthalene as a human carcinogen due to inadequate evidence. It is generally considered a possible or suspected carcinogen by default because it is a PAH, but the data are limited. Other toxicological effects observed in lab animals include mild liver enlargement and centrilobular liver cell changes at high doses, and some indications of blood effects (e.g., anemia) with chronic exposure. In humans, direct studies are lacking; however, exposures to methylnaphthalenes are often accompanied by naphthalene, which is known to cause headaches, nausea, or hemolysis in G6PD-deficient individuals. Thus, while 2-methylnaphthalene itself is less studied, prudent health interpretation treats it as a component of PAH exposure with potential chronic toxicity to the lungs and possibly other organs at high levels.",
-        "sources": [
-          "https://pubmed.ncbi.nlm.nih.gov/12505278",
-          "https://nepis.epa.gov",
-          "https://stacks.cdc.gov"
-        ]
+        "content": "Diphenylamine’s acute toxicity is considered moderate. It can irritate the skin, eyes, and respiratory tract upon contact. High oral doses in animals cause methemoglobinemia and kidney damage (specifically, DPA has been associated with the development of cystic kidneys in rodents). In humans, excessive exposure could similarly cause symptoms of hemoglobin oxidation (cyanosis, fatigue), although cases are rare. Chronic exposure studies in animals have shown that diphenylamine can affect the bladder (in dogs, it caused lesions in the bladder at high doses) and the liver. It is not classed as a confirmed human carcinogen; however, some older rodent studies suggested an increase in bladder tumors in female mice at high chronic dietary doses of DPA. Regulatory agencies regard this evidence as limited or equivocal (for example, EPA has not classified DPA as to human carcinogenicity due to insufficient data). There is no strong evidence of DPA causing cancer in humans. Reproductively, DPA has been observed to cause developmental toxicity in rodents at maternally toxic doses (e.g., reduced fetal weight), but it’s not a known human teratogen. The primary health concern for workplace DPA exposure historically was its effect on the kidneys and bladder, and potential blood changes. DPA is metabolized partly to aniline and p-aminodiphenylamine in the body, which could contribute to methemoglobin formation. If DPA is found in blood, it likely indicates ongoing exposure, as DPA doesn’t bioaccumulate and would be excreted (mainly via urine) within days. In essence, while not as acutely hazardous as some aromatic amines, diphenylamine can cause organ damage (kidney, liver, blood) at high doses and has raised long-term toxicity questions. Standard toxicology evaluations have set oral reference doses to protect against these chronic effects (for instance, EPA’s provisional RfD for DPA is 0.02 mg/kg/day based on kidney effects). Adherence to regulated residue limits in food ensures that typical exposure levels are far below those causing observable effects.",
+        "sources": []
       },
       {
         "header": "Regulatory and Monitoring Context",
-        "content": "2-Methylnaphthalene is included in various regulatory assessments mostly in conjunction with naphthalene. The U.S. EPA established a chronic oral Reference Dose (RfD) of 0.004 mg/kg-day for 2-methylnaphthalene (on IRIS in 2003). This RfD was based on the no-effect levels from animal studies (considering lung effects), and it provides a benchmark for safe lifetime daily intake. There is no federal drinking water standard specifically for 2-methylnaphthalene; however, it was listed on EPA’s Contaminant Candidate List (CCL) for potential regulation in drinking water, indicating that it has been monitored and considered due to detections in some water supplies. In the European Union, 2-methylnaphthalene falls under general chemical safety regulations. It is not a high-production volume chemical, but its hazard classification under the EU CLP Regulation includes being flagged as **suspected of causing cancer** (Carc. 2) and harmful if swallowed. This classification triggers labeling requirements for manufacturers handling the substance. Environmental agencies in the EU have also identified PAHs, including methylnaphthalenes, as priority pollutants in water due to their persistence and toxicity, leading to monitoring in surface and ground waters. Currently, 2-methylnaphthalene is measured in certain environmental surveys (for example, it is sometimes tracked in air particulate matter studies and in contaminated site investigations). Regulatory actions specifically targeting 2-methylnaphthalene are limited, but any rules that limit naphthalene in products (like mothballs, fuels, or creosote) or that control PAH emissions will incidentally reduce 2-methylnaphthalene exposure as well.",
-        "sources": [
-          "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
-          "https://eurlex.europa.eu",
-          "https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/651.htm"
-        ]
+        "content": "Diphenylamine is regulated in several domains. In agriculture, DPA is registered as a post-harvest pesticide. Regulatory agencies like the U.S. EPA and EU have established Maximum Residue Limits (MRLs) for DPA on apples/pears (e.g., 10 ppm in the U.S., 5 ppm in the EU as of current standards). These limits are enforced through food monitoring, and, in fact, the EU suspended use of DPA on apples in 2012 due to concerns about nitrosamine impurities, thus imported apples must meet very low DPA residue standards. In the workplace, DPA is on advisory occupational hazard lists (OSHA and ACGIH list it on their hazardous substance lists). The New Jersey hazardous substance fact sheet notes DPA can affect the kidneys and bladder and includes recommendations for protective measures. There isn’t a specific OSHA PEL for diphenylamine, but a NIOSH/OSHA guideline of 10 mg/m³ (inhalable dust) has been used as an exposure limit. DPA is also listed by the EPA on the Toxic Substances Control Act (TSCA) Inventory; any significant new use might require notification. Environmental cleanup values exist because DPA appears on some state cleanup lists: for instance, if soil or groundwater is contaminated, risk-based screening levels guide remediation (often a few ppm in soil). On an international level, diphenylamine is not classified as a carcinogen or mutagen under GHS; it is classified as hazardous (for toxicity to target organs). The European Chemicals Agency (ECHA) classifies DPA as harmful if swallowed and very toxic to aquatic life (since DPA has been observed to have some aquatic toxicity, environmental discharge is regulated). Monitoring: the USDA and FDA include DPA in their pesticide residue testing programs for produce, and results have shown compliance with limits in recent years. Occupational monitoring would involve measuring DPA levels in air or perhaps metabolites (like aniline) in urine of workers, but given the limited hazard relative to more toxic chemicals, routine biomonitoring for DPA is not common. Summarily, DPA’s use is permitted but closely regulated in specific contexts (like fruit storage), and protections are in place to keep exposure low. The compound is on hazard lists (e.g., U.S. EPA’s list of toxic pollutants in some contexts), ensuring that industries using DPA follow environmental and safety regulations. As an example, industries must report significant DPA releases to EPA’s TRI if thresholds are exceeded. The current regulatory consensus is that when used as intended (e.g., at regulated levels on fruit, or as a bound antioxidant in rubber), DPA does not pose significant risk to the public, but occupational handlers and contaminated sites must be managed to prevent excessive exposure.",
+        "sources": []
       }
     ],
     "sources": [
-      "https://www.atsdr.cdc.gov/toxprofiles/tp67.pdf",
-      "https://www.thegoodscentscompany.com/data/rw1179161.html",
-      "https://www.epa.gov/sites/default/files/2014-03/documents/naphthalene_toxicology_profile_tp67_3v.pdf",
-      "https://pubmed.ncbi.nlm.nih.gov/12505278"
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/0796.pdf",
+      "WashingtonStateUniversityTreeFruitextension–DPAuseinscaldcontrol",
+      "EPA2014:DiphenylaminecancellationinEUandresiduemonitoringresults",
+      "40CFRPart423AppendixA"
     ]
   },
   {
@@ -701,6 +980,43 @@
       "https://www.cdc.gov/niosh/npg/npgd0247.html",
       "https://www.ncbi.nlm.nih.gov/pubmed/24172598",
       "https://p65warnings.ca.gov/chemicals/diuron"
+    ]
+  },
+  {
+    "compound_name": "Ethyl methanesulfonate",
+    "cas_rn": "62-50-0",
+    "summary_sections": [
+      {
+        "header": "Overview and Common Uses",
+        "content": "Ethyl methanesulfonate (EMS) is a chemical mutagen belonging to the alkylating agents class. It is a colorless liquid with a faint pleasant odor. EMS is not a household or consumer-use chemical; its primary use is in research and biotechnology. In laboratory settings, EMS is extensively used to induce random genetic mutations in organisms (such as fruit flies, plants, worms, and cell cultures) for experimental purposes. For example, EMS mutagenesis is a common technique in plant breeding and in genetic screens because EMS introduces point mutations in DNA. Outside of research, EMS has essentially no commercial applications due to its potent DNA-damaging properties. It has occasionally been encountered as a trace impurity in certain chemical syntheses or pharmaceuticals (where residual solvents like ethyl sulfate can react to form EMS), which has prompted regulatory scrutiny in drug manufacturing. However, EMS is not intentionally present in consumer products. Therefore, any detection of EMS in human blood would likely be from an occupational exposure in a laboratory or an incident (such as accidental release or contamination), rather than everyday consumer activities.",
+        "sources": []
+      },
+      {
+        "header": "Exposure Pathways",
+        "content": "Ethyl methanesulfonate exposure is uncommon and primarily concerns specialized workplaces:",
+        "bullets": [
+          "**Occupational (inhalation and dermal)** – Laboratory personnel or factory workers who handle EMS (for mutagenesis experiments or chemical synthesis) could be exposed by breathing EMS vapors or aerosol, or by skin contact if spills occur. EMS is reasonably volatile and can be inhaled if not handled in a fume hood. Skin absorption is also a serious concern, as EMS can readily penetrate skin and is toxic through dermal uptake. Strict controls (gloves, lab coat, fume hood) are used because EMS should be treated as a carcinogen and teratogen.",
+          "**Accidental ingestion** – In a lab, accidental hand-to-mouth contact or poorly handled contaminated food/drink could lead to ingestion. This is highly unlikely in a controlled lab, but any ingestion would be dangerous given EMS’s potency.",
+          "**Environmental** – EMS is not stable in the environment for long; it hydrolyzes in water to ethanol and methanesulfonic acid. As a result, general population exposure via air, water, or soil is expected to be negligible. There are no known cases of EMS contamination in environmental media at levels of concern. Thus, non-occupational exposure pathways are essentially absent under normal conditions.",
+          "In summary, exposure to EMS is almost exclusively occupational and usually intentional (as part of experimental procedures). The small number of people working with EMS do so under safety protocols. EMS is not in consumer items, so the public’s exposure is virtually zero."
+        ],
+        "sources": []
+      },
+      {
+        "header": "Health and Toxicological Information",
+        "content": "Ethyl methanesulfonate is a highly reactive alkylating agent that can transfer ethyl groups to DNA bases, causing mutations (like base substitutions). Health-wise, this means EMS is a potent genotoxic chemical. Animal studies have shown that EMS exposure can induce tumors; for example, chronic exposure in rats caused increased incidence of lung and kidney cancers, and EMS is therefore regarded as a possible human carcinogen. It also has teratogenic effects (can cause birth defects) in animal experiments. Acute toxicity: EMS can irritate eyes, skin, and respiratory tract on contact. Short-term inhalation may cause symptoms such as cough or sore throat, while skin contact can lead to redness or burns. At higher exposures, systemic effects like nausea, vomiting, and central nervous system depression (drowsiness) have been reported. There is evidence from animal tests that EMS can cause heritable genetic damage (mutations passed to offspring), making it a concern for reproductive health. In humans, no large-scale epidemiological data exist (given the small exposed population), but it is prudent to assume EMS could increase cancer or reproductive risk in exposed workers. If EMS were found in blood, it would indicate a very recent exposure because EMS is rapidly acting and also can hydrolyze in the body. The presence of EMS itself in blood would be rare; more likely, one would detect biomarkers of DNA or protein alkylation. There are no routine medical tests for EMS exposure specifically, but genetic assays (like the Ames test or chromosomal aberration tests) readily demonstrate its mutagenic potential. Clinically, any significant EMS exposure would be handled as an emergency, with measures to decontaminate and supportive care. In summary, EMS is recognized as a dangerous chemical – mutagenic, carcinogenic (inferred), and toxic via multiple routes – which is why it is handled with extreme caution in lab environments.",
+        "sources": []
+      },
+      {
+        "header": "Regulatory and Monitoring Context",
+        "content": "Ethyl methanesulfonate is subject to stringent control due to its hazardous nature. Although not produced in large quantities, it appears on various regulatory lists. For instance, EMS is listed by the U.S. National Toxicology Program (NTP) as a substance “reasonably anticipated to be a human carcinogen,” and by IARC as a Group 2A (probably carcinogenic) or similar category (based on sufficient evidence of carcinogenicity in animals). It is also cited by EPA’s IRIS program and is included on the Special Health Hazard Substance List in New Jersey due to its carcinogenic, mutagenic, and teratogenic properties. Workplace safety regulations require that EMS be handled in a chemical fume hood with appropriate personal protective equipment (PPE). There are no established OSHA PEL or ACGIH TLV for EMS specifically (likely because it is not used widely enough to warrant a standard, and any exposure should be minimized to as low as possible). Instead, guidelines demand treating EMS as if no safe exposure level exists. Laboratories using EMS follow OSHA’s Laboratory Standard and implement chemical hygiene plans that designate EMS as a “select carcinogen” requiring special handling and storage. EMS waste is managed as hazardous waste, and many countries require that any EMS spills or releases be reported to environmental authorities. Regarding pharmaceutical manufacturing, regulatory agencies like the FDA and EMA have set strict limits for EMS as a potential impurity in drug products (usually in the low ppm or ppb range) because of its genotoxicity – part of the guidance on genotoxic impurities. Environmental monitoring of EMS is not a focus (due to rare use and rapid breakdown), but any accidental release would trigger immediate remediation efforts. In summary, regulatory frameworks treat EMS with utmost caution: it is effectively controlled at the source (labs and factories), and it is not allowed in consumer products. The small number of workers potentially exposed fall under occupational health surveillance. EMS’s inclusion in hazard communication documents (material safety data sheets) mandates warning labels indicating it “may cause genetic defects” and “may cause cancer”, reinforcing the safety-first approach to this compound.",
+        "sources": []
+      }
+    ],
+    "sources": [
+      "https://nj.gov/health/eoh/rtkweb/documents/fs/1203.pdf",
+      "PubMed:UsesofEMSinmutagenesis",
+      "FisherScientificSDSforEMS"
     ]
   }
 ]
