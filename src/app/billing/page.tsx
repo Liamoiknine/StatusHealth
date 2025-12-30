@@ -1,7 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { Check, CreditCard, Package, Send, Clock, CheckCircle, FileText, Download, ArrowRight, Calendar } from 'lucide-react';
+import { useTest } from '@/contexts/TestContext';
+import { useRouter } from 'next/navigation';
 
 type PlanType = 'foundation' | 'deep-dive' | 'optimizer';
 
@@ -25,7 +27,10 @@ interface BillingHistoryItem {
 }
 
 export default function BillingPage() {
+  const { availableTests, setSelectedTest } = useTest();
+  const router = useRouter();
   const [currentPlan, setCurrentPlan] = useState<PlanType>('deep-dive');
+  const availablePlansRef = useRef<HTMLDivElement>(null);
   const [paymentMethod, setPaymentMethod] = useState({
     type: 'card',
     last4: '4242',
@@ -34,43 +39,109 @@ export default function BillingPage() {
     expiryYear: '2025',
   });
 
-  // Mock test kits data - based on The Deep Dive plan (2 tests per year)
-  const [testKits] = useState<TestKit[]>([
-    {
-      id: 1,
-      status: 'completed',
-      scheduledDate: '2024-01-15',
-      shippedDate: '2024-01-10',
-      returnedDate: '2024-01-25',
-      completedDate: '2024-02-05',
-      trackingNumber: 'TRK123456789',
-    },
-    {
-      id: 2,
-      status: 'processing',
-      scheduledDate: '2024-07-15',
-      shippedDate: '2024-07-10',
-      returnedDate: '2024-07-28',
-      trackingNumber: 'TRK987654321',
-    },
-  ]);
+  // Convert date from "M/D/YY" format to Date object
+  const parseTestDate = (dateStr: string): Date | null => {
+    if (!dateStr) return null;
+    try {
+      const [month, day, year] = dateStr.split('/');
+      return new Date(parseInt(year) + 2000, parseInt(month) - 1, parseInt(day));
+    } catch {
+      return null;
+    }
+  };
 
-  const [billingHistory] = useState<BillingHistoryItem[]>([
-    {
-      id: 'inv-001',
-      date: '2024-01-15',
-      amount: 898,
-      description: 'The Deep Dive - Annual Subscription',
-      status: 'paid',
-    },
-    {
-      id: 'inv-002',
-      date: '2023-01-15',
-      amount: 898,
-      description: 'The Deep Dive - Annual Subscription',
-      status: 'paid',
-    },
-  ]);
+  // Convert Date to YYYY-MM-DD format
+  const formatDateForKit = (date: Date): string => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  // Generate test kits from available tests
+  const testKits = useMemo<TestKit[]>(() => {
+    if (!availableTests || availableTests.length === 0) return [];
+    
+    return availableTests.map((test, index) => {
+      const testDate = parseTestDate(test.date);
+      if (!testDate) {
+        return {
+          id: test.id,
+          status: 'completed' as const,
+          scheduledDate: `2024-${String(test.id).padStart(2, '0')}-15`,
+          completedDate: `2024-${String(test.id).padStart(2, '0')}-15`,
+        };
+      }
+
+      // Calculate dates relative to test date
+      const scheduledDate = new Date(testDate);
+      scheduledDate.setDate(scheduledDate.getDate() - 5); // 5 days before test
+      
+      const shippedDate = new Date(scheduledDate);
+      shippedDate.setDate(shippedDate.getDate() - 5); // 5 days before scheduled
+      
+      const returnedDate = new Date(testDate);
+      returnedDate.setDate(returnedDate.getDate() - 10); // 10 days before test
+      
+      // All 4 tests are completed (since they have data)
+      return {
+        id: test.id,
+        status: 'completed' as const,
+        scheduledDate: formatDateForKit(scheduledDate),
+        shippedDate: formatDateForKit(shippedDate),
+        returnedDate: formatDateForKit(returnedDate),
+        completedDate: formatDateForKit(testDate),
+        trackingNumber: `TRK${String(test.id).padStart(9, '0')}`,
+      };
+    });
+  }, [availableTests]);
+
+  // Generate billing history based on subscription start (first test)
+  const billingHistory = useMemo<BillingHistoryItem[]>(() => {
+    if (!availableTests || availableTests.length === 0) return [];
+    
+    const firstTest = availableTests[0];
+    const firstTestDate = parseTestDate(firstTest.date);
+    if (!firstTestDate) return [];
+
+    const subscriptionStart = new Date(firstTestDate);
+    subscriptionStart.setMonth(0, 1); // January 1st of that year
+    
+    // Calculate years of subscription (assuming started in year of first test)
+    const currentYear = new Date().getFullYear();
+    const startYear = subscriptionStart.getFullYear();
+    const years = currentYear - startYear + 1;
+    
+    const history: BillingHistoryItem[] = [];
+    for (let i = 0; i < years; i++) {
+      const billingDate = new Date(subscriptionStart);
+      billingDate.setFullYear(startYear + i);
+      
+      history.push({
+        id: `inv-${String(i + 1).padStart(3, '0')}`,
+        date: formatDateForKit(billingDate),
+        amount: 898,
+        description: 'The Deep Dive - Annual Subscription',
+        status: 'paid' as const,
+      });
+    }
+    
+    return history.reverse(); // Most recent first
+  }, [availableTests]);
+
+  // Calculate member since date (from first test)
+  const memberSinceDate = useMemo(() => {
+    if (!availableTests || availableTests.length === 0) return new Date('2023-01-01');
+    
+    const firstTest = availableTests[0];
+    const firstTestDate = parseTestDate(firstTest.date);
+    if (!firstTestDate) return new Date('2023-01-01');
+    
+    // Member since is January of the year of first test
+    const memberSince = new Date(firstTestDate);
+    memberSince.setMonth(0, 1); // January 1st
+    return memberSince;
+  }, [availableTests]);
 
   const plans = {
     foundation: {
@@ -145,11 +216,20 @@ export default function BillingPage() {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   };
 
+  const formatMemberSince = (date: Date) => {
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  };
+
   const currentPlanData = plans[currentPlan];
-  const nextBillingDate = new Date();
-  nextBillingDate.setFullYear(nextBillingDate.getFullYear() + 1);
-  nextBillingDate.setMonth(0); // January
-  nextBillingDate.setDate(15);
+  
+  // Calculate next billing date (January 15th of next year)
+  const nextBillingDate = useMemo(() => {
+    const next = new Date();
+    next.setFullYear(next.getFullYear() + 1);
+    next.setMonth(0); // January
+    next.setDate(15);
+    return next;
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
@@ -210,13 +290,18 @@ export default function BillingPage() {
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-600">Tests remaining:</span>
                       <span className="font-medium text-gray-900">
-                        {currentPlanData.tests - testKits.filter(kit => kit.status === 'completed' || kit.status === 'processing').length}
+                        {Math.max(0, currentPlanData.tests - testKits.filter(kit => kit.status === 'completed' || kit.status === 'processing').length)}
                       </span>
                     </div>
                   </div>
 
                   <div className="mt-6 flex gap-3">
-                    <button className="flex-1 px-4 py-2 bg-white border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium text-sm">
+                    <button 
+                      onClick={() => {
+                        availablePlansRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                      className="flex-1 px-4 py-2 bg-white border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium text-sm cursor-pointer"
+                    >
                       Change Plan
                     </button>
                     <button className="flex-1 px-4 py-2 bg-[#9CBB04] text-white rounded-lg hover:bg-[#8AA803] transition-colors font-medium text-sm">
@@ -261,7 +346,7 @@ export default function BillingPage() {
                 <div className="space-y-2.5">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Member since</span>
-                    <span className="text-sm font-medium text-gray-900">January 2023</span>
+                    <span className="text-sm font-medium text-gray-900">{formatMemberSince(memberSinceDate)}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Total tests completed</span>
@@ -287,15 +372,29 @@ export default function BillingPage() {
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="text-sm text-gray-600">Next test scheduled</span>
                     <span className="text-sm font-medium text-gray-900">
-                      {testKits.find(kit => kit.status === 'pending' || kit.status === 'shipped') 
-                        ? formatDate(testKits.find(kit => kit.status === 'pending' || kit.status === 'shipped')!.scheduledDate)
-                        : 'Not scheduled'}
+                      {(() => {
+                        const pendingKit = testKits.find(kit => kit.status === 'pending' || kit.status === 'shipped');
+                        if (pendingKit) {
+                          return formatDate(pendingKit.scheduledDate);
+                        }
+                        // Calculate next test based on last test date (bi-annual = 6 months)
+                        if (availableTests && availableTests.length > 0) {
+                          const lastTest = availableTests[availableTests.length - 1];
+                          const lastTestDate = parseTestDate(lastTest.date);
+                          if (lastTestDate) {
+                            const nextTestDate = new Date(lastTestDate);
+                            nextTestDate.setMonth(nextTestDate.getMonth() + 6);
+                            return formatDate(formatDateForKit(nextTestDate));
+                          }
+                        }
+                        return 'Not scheduled';
+                      })()}
                     </span>
                   </div>
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="text-sm text-gray-600">Tests remaining</span>
                     <span className="text-sm font-medium text-gray-900">
-                      {currentPlanData.tests - testKits.filter(kit => kit.status === 'completed' || kit.status === 'processing').length}
+                      {Math.max(0, currentPlanData.tests - testKits.filter(kit => kit.status === 'completed' || kit.status === 'processing').length)}
                     </span>
                   </div>
                   <div className="text-xs text-gray-500">
@@ -379,7 +478,13 @@ export default function BillingPage() {
 
                     {kit.status === 'completed' && (
                       <div className="mt-4 ml-14">
-                        <button className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium flex items-center">
+                        <button 
+                          onClick={() => {
+                            setSelectedTest(kit.id);
+                            router.push('/dashboard');
+                          }}
+                          className="text-sm text-[#9CBB04] hover:text-[#8AA803] font-medium flex items-center cursor-pointer"
+                        >
                           View Results
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </button>
@@ -444,7 +549,7 @@ export default function BillingPage() {
         </div>
 
         {/* Available Plans */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <div ref={availablePlansRef} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-6 py-4 bg-[#404B69]">
             <h2 className="text-lg font-semibold text-white">Available Plans</h2>
           </div>
@@ -457,7 +562,7 @@ export default function BillingPage() {
                 return (
                   <div
                     key={key}
-                    className={`relative rounded-lg p-6 border-2 ${
+                    className={`relative rounded-lg p-6 border-2 flex flex-col ${
                       isCurrentPlan
                         ? 'border-[#9CBB04] bg-gradient-to-br from-[#9CBB04]/5 to-transparent'
                         : isPopular
@@ -501,7 +606,7 @@ export default function BillingPage() {
                       {plan.description}
                     </p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-6 flex-1">
                       {plan.features.map((feature, index) => (
                         <div key={index} className="flex items-center text-sm">
                           <Check className={`w-4 h-4 mr-2 flex-shrink-0 ${
@@ -513,7 +618,7 @@ export default function BillingPage() {
                     </div>
                     
                     <button
-                      className={`w-full py-2.5 rounded-lg font-medium text-sm transition-colors ${
+                      className={`w-full py-2.5 rounded-lg font-medium text-sm transition-colors mt-auto ${
                         isCurrentPlan
                           ? 'bg-white border-2 border-[#9CBB04] text-[#9CBB04] hover:bg-[#9CBB04]/5'
                           : isPopular
