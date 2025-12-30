@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar, Home } from 'lucide-react';
+import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar, Home, Edit } from 'lucide-react';
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { getAllCategoryNames } from '@/data/category-overviews';
 
@@ -230,6 +230,23 @@ export default function Sidebar() {
           );
         })}
       </nav>
+      
+      {/* Profile Section at Bottom */}
+      <div className="border-t border-gray-200 pt-4 pb-4 px-5">
+        <div className="flex items-center gap-1 mb-0">
+          <span className="text-sm font-semibold text-gray-900">Danny Griffen</span>
+          <Link
+            href="/settings"
+            className="p-1 rounded hover:bg-gray-100 transition-colors"
+            aria-label="Edit profile"
+          >
+            <Edit className="w-4 h-4 text-gray-500 hover:text-gray-700" strokeWidth={2} />
+          </Link>
+        </div>
+        <div className="flex items-center text-xs text-gray-600 overflow-hidden">
+          <span className="whitespace-nowrap truncate">The Deep Dive • dannygriffin@gmail.com</span>
+        </div>
+      </div>
     </aside>
   );
 }
