@@ -493,8 +493,90 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         </div>
 
         {/* Detailed Information with Sidebar */}
-        {householdDataStructured && (
+        {householdDataStructured ? (
           <ChemicalDetailSidebar data={householdDataStructured} />
+        ) : (
+          <div className="mb-8">
+            <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl shadow-sm py-6 px-12 relative">
+              <div className="absolute inset-0 overflow-hidden rounded-xl pointer-events-none">
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#404B69] rounded-full blur-3xl"></div>
+                </div>
+              </div>
+              <div className="relative z-10">
+                {/* Placeholder Notice */}
+                <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                  <div className="flex items-start gap-3">
+                    <svg 
+                      className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                      />
+                    </svg>
+                    <div>
+                      <p className="text-sm font-medium text-amber-900 mb-1">Placeholder Content</p>
+                      <p className="text-sm text-amber-700">
+                        Detailed information for this chemical is not yet available. The sections below show the structure of where this information will appear once it becomes available.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Placeholder CAS Registry Number */}
+                <div className="mb-2">
+                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 opacity-60">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-600">CAS Registry Number</span>
+                      <span className="text-sm font-semibold text-gray-400">Not available</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Placeholder Sections */}
+                {[
+                  { header: 'Overview and Common Uses', content: 'Detailed information about this chemical\'s overview and common uses will be available here.' },
+                  { header: 'Exposure Pathways', content: 'Information about how you may be exposed to this chemical will be provided in this section.' },
+                  { header: 'Health and Toxicological Information', content: 'Health effects and toxicological data for this chemical will be documented here.' },
+                  { header: 'Regulatory and Monitoring Context', content: 'Regulatory information and monitoring context will be included in this section.' },
+                ].map((section, index) => (
+                  <div key={section.header}>
+                    <div className="py-6">
+                      <h3 className="text-xl font-semibold text-[#404B69] mb-4 flex items-center gap-2 opacity-60">
+                        {section.header}
+                      </h3>
+                      <div className="prose max-w-none">
+                        <p className="text-gray-500 leading-relaxed whitespace-pre-wrap mb-4 italic">
+                          {section.content}
+                        </p>
+                      </div>
+                    </div>
+                    {index < 3 && (
+                      <div className="border-t border-gray-300 opacity-30"></div>
+                    )}
+                  </div>
+                ))}
+
+                {/* Placeholder General Sources */}
+                <div className="border-t border-gray-300 opacity-30"></div>
+                <div className="pt-6">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-3 opacity-60">General Sources</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="inline-flex items-center px-3 py-1.5 rounded-lg bg-gray-100 border border-gray-300 text-xs text-gray-400 opacity-60">
+                      Sources will appear here
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
 
       </div>
