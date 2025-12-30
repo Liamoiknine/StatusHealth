@@ -55,28 +55,12 @@ export default function TestsPage() {
   }
 
   return (
-    <div 
-      className="min-h-screen"
-      style={{
-        backgroundColor: '#F7F7F7',
-        backgroundImage: `
-          linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px)
-        `,
-        backgroundSize: '10px 10px'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-10 sm:px-16 lg:px-20 py-8">
+    <div className="min-h-screen bg-[#F7F7F7]">
+      <div className="max-w-7xl mx-auto px-8 py-8">
         {/* Header */}
-        <div className="mb-12">
-          <div>
-            <h1 className="text-5xl lg:text-6xl font-bold mb-3 tracking-tight leading-none text-gray-900">
-              All Tests
-            </h1>
-            <p className="text-lg text-gray-600">
-              View and select from all your test results
-            </p>
-          </div>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">All Tests</h1>
+          <p className="text-gray-600">View and select from all your test results</p>
         </div>
 
         {/* Tests List */}
