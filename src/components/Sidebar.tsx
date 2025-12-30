@@ -234,7 +234,7 @@ export default function Sidebar() {
       {/* Profile Section at Bottom */}
       <div className="border-t border-gray-200 pt-4 pb-4 px-5">
         <div className="flex items-center gap-1 mb-0">
-          <span className="text-sm font-semibold text-gray-900">Danny Griffen</span>
+          <span className="text-sm font-semibold text-gray-900">Danny Griffin</span>
           <Link
             href="/settings"
             className="p-1 rounded hover:bg-gray-100 transition-colors"
