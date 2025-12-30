@@ -10,7 +10,7 @@ import { EXPOSURE_COLOR_CLASSES, EXPOSURE_COLORS } from '@/lib/colors';
 import { useTest } from '@/contexts/TestContext';
 import Link from 'next/link';
 import LongitudinalChart from '@/components/LongitudinalChart';
-import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured } from '@/data/structured/household-products';
+import { findHouseholdChemicalStructured, HouseholdChemicalDataStructured, groupSectionsByHeader } from '@/data/structured/household-products';
 import { findPersonalCareProductsChemicalStructured } from '@/data/structured/personal-care-products';
 import { findPersistantPollutantsChemicalStructured } from '@/data/structured/persistent-pollutants';
 import { findContainersAndCoatingsChemicalStructured } from '@/data/structured/containers-and-coatings';
@@ -71,8 +71,18 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
           }
         }
         
+        // Only set structured data if it exists AND has valid sections with content
         if (structuredChemical) {
-          setHouseholdDataStructured(structuredChemical);
+          const groupedSections = groupSectionsByHeader(structuredChemical.summary_sections || []);
+          // Only set if there are sections with content
+          if (groupedSections.length > 0) {
+            setHouseholdDataStructured(structuredChemical);
+          } else {
+            setHouseholdDataStructured(null);
+          }
+        } else {
+          // Explicitly set to null when no structured data is found
+          setHouseholdDataStructured(null);
         }
       } catch (error) {
         console.error('Error loading data:', error);
@@ -200,6 +210,13 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
   }
 
   const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
+  
+  // Helper function to check if structured data has valid sections
+  const hasValidSections = (data: HouseholdChemicalDataStructured | null): boolean => {
+    if (!data) return false;
+    const groupedSections = groupSectionsByHeader(data.summary_sections || []);
+    return groupedSections.length > 0;
+  };
   
   // Get bar color based on classification
   const getBarColor = (): string => {
@@ -493,7 +510,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
         </div>
 
         {/* Detailed Information with Sidebar */}
-        {householdDataStructured ? (
+        {householdDataStructured && hasValidSections(householdDataStructured) ? (
           <ChemicalDetailSidebar data={householdDataStructured} />
         ) : (
           <div className="mb-8">
