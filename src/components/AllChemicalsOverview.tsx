@@ -197,23 +197,23 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
   return (
     <div className="space-y-6">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#9CBB04]/10 to-blue-50 border border-[#9CBB04]/30 rounded-xl p-8 mb-8 shadow-sm">
-        <div className="flex items-start justify-between">
+      <div className="bg-gradient-to-br from-[#9CBB04]/10 to-blue-50 border border-[#9CBB04]/30 rounded-xl p-4 lg:p-8 mb-8 shadow-sm">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-4">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Understanding Your Chemical Exposure Database</h2>
+            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">Understanding Your Chemical Exposure Database</h2>
             <p 
-              className="text-gray-700 leading-relaxed"
+              className="text-sm lg:text-base text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{
                 __html: parseMarkdown(databaseOverview?.content || '')
               }}
             />
           </div>
-          <div className="ml-6 flex-shrink-0">
+          <div className="lg:ml-6 flex-shrink-0 w-full lg:w-auto">
             <div className="bg-white/80 backdrop-blur-sm border border-[#9CBB04]/30 rounded-lg px-4 py-3 text-center shadow-sm">
-              <div className="text-2xl font-bold text-[#9CBB04]">{totalChemicals}</div>
+              <div className="text-xl lg:text-2xl font-bold text-[#9CBB04]">{totalChemicals}</div>
               <div className="text-xs text-gray-700 mt-0.5 font-medium">Total Chemicals</div>
               <div className="h-px bg-[#9CBB04]/20 my-2"></div>
-              <div className="text-2xl font-bold text-[#9CBB04]">{allCategories.length}</div>
+              <div className="text-xl lg:text-2xl font-bold text-[#9CBB04]">{allCategories.length}</div>
               <div className="text-xs text-gray-700 mt-0.5 font-medium">Categories</div>
             </div>
           </div>
@@ -223,17 +223,17 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
       {/* Category Cards Grid */}
       {categoryOrg && (
         <div className="mb-8">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4 flex items-center">
             <svg className="w-5 h-5 mr-2 text-[#404B69]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
             </svg>
             Explore by Category
           </h3>
-          <div className="pl-6">
+          <div className="pl-0 lg:pl-6">
             <p className="text-gray-600 mb-6 text-sm">
               {categoryOrg.content}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {allCategories.map((category) => {
               const stats = getCategoryStats(category);
               const icon = categoryIcons[category] || categoryIcons['Household Products'];
@@ -244,17 +244,17 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                 <button
                   key={category}
                   onClick={() => handleCategoryClick(category)}
-                  className="bg-white border border-gray-200 rounded-lg p-5 hover:border-[#404B69] hover:shadow-lg hover:shadow-[#404B69]/10 transition-all duration-300 text-left group shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 hover:border-[#404B69] hover:shadow-lg hover:shadow-[#404B69]/10 transition-all duration-300 text-left group shadow-sm"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[#9CBB04]/10 p-3 rounded-lg text-[#9CBB04] group-hover:bg-[#9CBB04]/20 transition-colors flex-shrink-0">
+                  <div className="flex items-start gap-3 lg:gap-4">
+                    <div className="bg-[#9CBB04]/10 p-2 lg:p-3 rounded-lg text-[#9CBB04] group-hover:bg-[#9CBB04]/20 transition-colors flex-shrink-0">
                       {icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-[#404B69] transition-colors">
+                      <h4 className="text-sm lg:text-base font-semibold text-gray-900 mb-2 group-hover:text-[#404B69] transition-colors">
                         {category}
                       </h4>
-                      <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+                      <p className="text-xs lg:text-sm text-gray-600 line-clamp-2 mb-3">
                         {description}
                       </p>
                       {stats && (
@@ -263,7 +263,7 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                         </div>
                       )}
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#404B69] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 lg:w-5 lg:h-5 text-gray-400 group-hover:text-[#404B69] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -277,38 +277,38 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
 
       {/* Classification System */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+        <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4 flex items-center">
           <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
           Understanding the Classification System
         </h3>
-        <div className="pl-6">
+        <div className="pl-0 lg:pl-6">
           <p className="text-gray-600 mb-6 text-sm">
             Your report uses a two-level classification system to help you understand your chemical exposure data. First, individual chemicals are classified based on how your levels compare to the general population. Then, entire categories are classified based on the chemicals they contain.
           </p>
           
           {/* Step 1: Individual Chemical Classification */}
         <div className="mb-6">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-            <span className="bg-[#9CBB04] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-2">1</span>
+          <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 flex items-center">
+            <span className="bg-[#9CBB04] text-white rounded-full w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center text-xs lg:text-sm font-bold mr-2">1</span>
             Individual Chemical Classification
           </h4>
           <p className="text-gray-600 mb-4 text-sm">
             Each chemical in your report is classified by comparing your exposure level to population data. This percentile ranking shows where you fall compared to others:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
             {/* Pay Attention */}
-            <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="bg-[#db2c1d]/10 p-3 rounded-lg text-[#db2c1d] flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 shadow-sm">
+              <div className="flex items-start gap-3 lg:gap-4">
+                <div className="bg-[#db2c1d]/10 p-2 lg:p-3 rounded-lg text-[#db2c1d] flex-shrink-0">
+                  <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-base font-semibold text-gray-900 mb-2">Pay Attention</h5>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <h5 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">Pay Attention</h5>
+                  <p className="text-xs lg:text-sm text-gray-600 mb-2">
                     <strong className="text-gray-900">60th-100th percentile:</strong> Your exposure is higher than 60% of the population. This indicates elevated levels that may warrant action to reduce exposure.
                   </p>
                 </div>
@@ -316,17 +316,17 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
             </div>
 
             {/* Monitor Only */}
-            <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="bg-[#f5c236]/10 p-3 rounded-lg text-[#f5c236] flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 shadow-sm">
+              <div className="flex items-start gap-3 lg:gap-4">
+                <div className="bg-[#f5c236]/10 p-2 lg:p-3 rounded-lg text-[#f5c236] flex-shrink-0">
+                  <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-base font-semibold text-gray-900 mb-2">Monitor Only</h5>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <h5 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">Monitor Only</h5>
+                  <p className="text-xs lg:text-sm text-gray-600 mb-2">
                     <strong className="text-gray-900">30th-60th percentile:</strong> Your exposure falls in the middle range. These levels are moderate and should be monitored over time.
                   </p>
                 </div>
@@ -334,16 +334,16 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
             </div>
 
             {/* Low Exposure */}
-            <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="bg-[#9CBB04]/10 p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 shadow-sm">
+              <div className="flex items-start gap-3 lg:gap-4">
+                <div className="bg-[#9CBB04]/10 p-2 lg:p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
+                  <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-base font-semibold text-gray-900 mb-2">Low Exposure</h5>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <h5 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">Low Exposure</h5>
+                  <p className="text-xs lg:text-sm text-gray-600 mb-2">
                     <strong className="text-gray-900">1st-30th percentile:</strong> Your exposure is lower than most of the population. These levels are generally considered low.
                   </p>
                 </div>
@@ -351,16 +351,16 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
             </div>
 
             {/* Not Detected */}
-            <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-50 p-3 rounded-lg text-gray-500 flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 shadow-sm">
+              <div className="flex items-start gap-3 lg:gap-4">
+                <div className="bg-gray-50 p-2 lg:p-3 rounded-lg text-gray-500 flex-shrink-0">
+                  <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-base font-semibold text-gray-900 mb-2">Not Detected</h5>
-                  <p className="text-sm text-gray-600 mb-2">
+                  <h5 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">Not Detected</h5>
+                  <p className="text-xs lg:text-sm text-gray-600 mb-2">
                     <strong className="text-gray-900">Not found in your sample:</strong> The chemical was not detected in your test, which is the best possible result.
                   </p>
                 </div>
@@ -371,22 +371,22 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
 
         {/* Step 2: Category Classification */}
         <div className="mb-4">
-          <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
-            <span className="bg-[#9CBB04] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-2">2</span>
+          <h4 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 flex items-center">
+            <span className="bg-[#9CBB04] text-white rounded-full w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center text-xs lg:text-sm font-bold mr-2">2</span>
             Category Classification
           </h4>
           <p className="text-gray-600 mb-4 text-sm">
             After individual chemicals are classified, entire categories (like "Household Products" or "Personal Care Products") receive an overall classification based on the chemicals they contain. This gives you a quick overview of each category's overall exposure level:
           </p>
-          <div className="bg-gradient-to-br from-[#9CBB04]/10 to-blue-50 border border-[#9CBB04]/30 rounded-xl p-5 mb-4 shadow-sm">
-            <p className="text-sm text-gray-900 font-medium mb-2">How It Works:</p>
-            <ul className="text-sm text-gray-700 space-y-1.5 pl-4 list-disc list-inside">
+          <div className="bg-gradient-to-br from-[#9CBB04]/10 to-blue-50 border border-[#9CBB04]/30 rounded-xl p-4 lg:p-5 mb-4 shadow-sm">
+            <p className="text-xs lg:text-sm text-gray-900 font-medium mb-2">How It Works:</p>
+            <ul className="text-xs lg:text-sm text-gray-700 space-y-1.5 pl-4 list-disc list-inside">
               <li><strong>Pay Attention:</strong> If 3 or more chemicals in the category are classified as "Pay Attention"</li>
               <li><strong>Monitor Only:</strong> If 3 or more chemicals are "Monitor Only" OR if 1 or more chemicals are "Pay Attention"</li>
               <li><strong>Low Exposure:</strong> If fewer than 3 chemicals are "Monitor Only" and no chemicals are "Pay Attention"</li>
             </ul>
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-xs lg:text-sm text-gray-600">
             This two-step approach helps you understand both individual chemical exposures and overall category patterns. A category might be "Monitor Only" even if most chemicals are low, if just one chemical requires attention—helping you prioritize where to focus your efforts.
           </p>
         </div>
@@ -396,17 +396,17 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
       {/* Exposure Pathways - Visual Cards */}
       {exposurePathways && (
         <div className="mb-8">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+          <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4 flex items-center">
             <svg className="w-5 h-5 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             How Chemicals Enter Your Body
           </h3>
-          <div className="pl-6">
+          <div className="pl-0 lg:pl-6">
             <p className="text-gray-600 mb-6 text-sm">
               {exposurePathways.content}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {exposurePathways.bullets?.map((bullet, index) => {
               const match = bullet.match(/\*\*(.*?):\*\*/);
               const pathwayName = match ? match[1] : '';
@@ -416,18 +416,18 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
               return (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-lg p-5 hover:border-[#9CBB04] transition-all shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg p-4 lg:p-5 hover:border-[#9CBB04] transition-all shadow-sm"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-[#9CBB04]/10 p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
+                  <div className="flex items-start gap-3 lg:gap-4">
+                    <div className="bg-[#9CBB04]/10 p-2 lg:p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
                       {icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-base font-semibold text-gray-900 mb-2">
+                      <h4 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">
                         {pathwayName}
                       </h4>
                       <p 
-                        className="text-sm text-gray-600 leading-relaxed"
+                        className="text-xs lg:text-sm text-gray-600 leading-relaxed"
                         dangerouslySetInnerHTML={{
                           __html: parseMarkdown(description)
                         }}
@@ -449,10 +449,10 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
           <div ref={interpretingResultsRef} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             <button
               onClick={() => toggleSection(interpretingResults.header, interpretingResultsRef)}
-              className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
+              className="w-full px-4 lg:px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
             >
-              <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-base lg:text-lg font-semibold text-gray-900 flex items-center">
+                <svg className="w-4 h-4 lg:w-5 lg:h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
                 {interpretingResults.header}
@@ -473,9 +473,9 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                   : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-6 pt-4 pb-6">
+              <div className="px-4 lg:px-6 pt-4 pb-6">
                 <p 
-                  className="text-gray-700 leading-relaxed"
+                  className="text-sm lg:text-base text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: parseMarkdown(interpretingResults.content)
                   }}
@@ -490,10 +490,10 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
           <div ref={regulatoryContextRef} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             <button
               onClick={() => toggleSection(regulatoryContext.header, regulatoryContextRef)}
-              className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
+              className="w-full px-4 lg:px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
             >
-              <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-base lg:text-lg font-semibold text-gray-900 flex items-center">
+                <svg className="w-4 h-4 lg:w-5 lg:h-5 mr-2 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 {regulatoryContext.header}
@@ -514,9 +514,9 @@ export default function AllChemicalsOverview({ data, onCategoryClick, categorySt
                   : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-6 pt-4 pb-6">
+              <div className="px-4 lg:px-6 pt-4 pb-6">
                 <p 
-                  className="text-gray-700 leading-relaxed"
+                  className="text-sm lg:text-base text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: parseMarkdown(regulatoryContext.content)
                   }}

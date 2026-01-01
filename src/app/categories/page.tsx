@@ -300,11 +300,11 @@ function CategoriesPageContent() {
   if (!selectedCategory) {
     return (
       <div className="min-h-screen bg-[#F7F7F7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
           {/* Header Section */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">Chemical Exposure Categories</h1>
-            <p className="text-lg text-gray-600 max-w-3xl">
+            <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">Chemical Exposure Categories</h1>
+            <p className="text-base lg:text-lg text-gray-600 max-w-3xl">
               Explore the six major categories of chemical exposures to understand their sources, 
               exposure pathways, and your individual exposure levels based on your test results.
             </p>
@@ -312,7 +312,7 @@ function CategoriesPageContent() {
 
           {/* Category Cards Grid */}
           <div className="mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
               {allCategories.map((category, index) => (
                 <CategoryCard
                   key={category.name}
@@ -327,8 +327,8 @@ function CategoriesPageContent() {
           </div>
 
           {/* Learn More Section */}
-          <div className="bg-gradient-to-r from-[#404B69] to-[#404B69]/90 rounded-lg p-6 mb-8 text-white">
-            <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <div className="bg-gradient-to-r from-[#404B69] to-[#404B69]/90 rounded-lg p-4 lg:p-6 mb-8 text-white">
+            <h2 className="text-lg lg:text-xl font-semibold mb-3 flex items-center">
               <Link href="/help" className="hover:opacity-80 transition-opacity">
                 <svg className="w-5 h-5 mr-2 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -336,12 +336,12 @@ function CategoriesPageContent() {
               </Link>
               Understanding Categories
             </h2>
-            <p className="text-white/90 mb-4">
+            <p className="text-white/90 mb-4 text-sm lg:text-base">
               Chemicals are organized into six categories based on their primary sources, uses, and exposure pathways. 
               This structure helps you understand not just what chemicals are present, but where they come from and 
               how they enter your body.
             </p>
-            <p className="text-white/80 text-sm">
+            <p className="text-white/80 text-xs lg:text-sm">
               Each category includes detailed information about exposure pathways, health implications, and regulatory context. 
               Click on any category card above to explore detailed insights about your exposure levels.
             </p>
@@ -366,34 +366,34 @@ function CategoriesPageContent() {
   // Show category detail view when a category is selected
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
-      <div className="mx-auto py-8 max-w-7xl px-8">
+      <div className="mx-auto py-8 max-w-7xl px-4 lg:px-8">
         <div className="flex items-start relative">
           {/* Main Content Area */}
           <div className="flex-1 min-w-0">
             <div>
               <div className="mb-8">
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between mb-6 gap-4">
                   <div>
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-2 lg:gap-3 mb-2">
                       <div className="bg-[#9CBB04]/20 p-2 rounded-lg text-[#9CBB04] flex-shrink-0">
                         {getCategoryIcon(selectedCategory)}
                       </div>
-                      <h1 className="text-3xl font-bold text-gray-900">{selectedCategory}</h1>
+                      <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">{selectedCategory}</h1>
                     </div>
-                    <p className="text-gray-600">Detected {detectedCount}/{totalCount} exposures</p>
+                    <p className="text-sm lg:text-base text-gray-600">Detected {detectedCount}/{totalCount} exposures</p>
                   </div>
-                  <div className="bg-white border border-gray-200 px-4 py-2 rounded-lg">
-                    <span className="text-sm font-medium text-gray-900">
+                  <div className="bg-white border border-gray-200 px-3 lg:px-4 py-2 rounded-lg">
+                    <span className="text-xs lg:text-sm font-medium text-gray-900">
                       {totalCount} chemicals
                     </span>
                   </div>
                 </div>
                 
                     {/* View Toggle */}
-                    <div className="flex items-center gap-2 mb-6">
+                    <div className="flex flex-wrap items-center gap-2 mb-6">
                       <button
                         onClick={() => setViewMode('overview')}
-                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        className={`px-3 lg:px-4 py-2 rounded-lg font-medium text-xs lg:text-sm transition-colors ${
                           viewMode === 'overview'
                             ? 'bg-[#9CBB04] text-white'
                             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -403,7 +403,7 @@ function CategoriesPageContent() {
                       </button>
                       <button
                         onClick={() => setViewMode('details')}
-                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        className={`px-3 lg:px-4 py-2 rounded-lg font-medium text-xs lg:text-sm transition-colors ${
                           viewMode === 'details'
                             ? 'bg-[#9CBB04] text-white'
                             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -413,7 +413,7 @@ function CategoriesPageContent() {
                       </button>
                       <button
                         onClick={() => setViewMode('chemicals')}
-                        className={`px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                        className={`px-3 lg:px-4 py-2 rounded-lg font-medium text-xs lg:text-sm transition-colors ${
                           viewMode === 'chemicals'
                             ? 'bg-[#9CBB04] text-white'
                             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -444,7 +444,7 @@ function CategoriesPageContent() {
               {/* Chemical List Section */}
               {viewMode === 'chemicals' && (
                 <div className="mb-8">
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between mb-6 gap-4">
                     <ExposureFilterButtons 
                       currentFilter={exposureFilter}
                       onFilterChange={(filter) => {
@@ -459,89 +459,91 @@ function CategoriesPageContent() {
                     />
                   </div>
                   <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
-                    <div className="px-6 py-4 bg-[#404B69]">
-                      <div className="grid grid-cols-12 gap-4 text-sm font-medium text-white">
-                        <div className="col-span-3">Chemical Name</div>
-                        <div className="col-span-2 text-center">Measured Value</div>
-                        <div className="col-span-1 text-center">Percentile</div>
-                        <div className="col-span-2">Primary Source</div>
-                        <div className="col-span-2">Status</div>
-                      </div>
-                    </div>
-                    <div>
-                      {selectedCategoryChemicals.map((chemical, index) => {
-                        const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
-                        const isExpanded = expandedChemical === chemical.compound;
-                        const isEven = index % 2 === 0;
-                        
-                        return (
-                          <div
-                            key={index}
-                            ref={(el) => {
-                              chemicalRefs.current[chemical.compound] = el;
-                            }}
-                          >
-                            {/* Clickable Row */}
-                            <div
-                              onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
-                              className={`px-6 py-3.5 transition-all duration-200 cursor-pointer ${
-                                isExpanded 
-                                  ? 'bg-gray-100' 
-                                  : isEven 
-                                    ? 'bg-white hover:bg-gray-50' 
-                                    : 'bg-gray-50 hover:bg-gray-100'
-                              }`}
-                            >
-                              <div className="grid grid-cols-12 gap-4 items-center">
-                                <div className="col-span-3 flex items-center gap-2">
-                                  <svg 
-                                    className={`w-4 h-4 text-[#9CBB04] transition-transform flex-shrink-0 ${isExpanded ? 'rotate-90' : ''}`}
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                  </svg>
-                                  <Link 
-                                    href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
-                                    onClick={(e) => e.stopPropagation()}
-                                    className="text-sm font-semibold text-gray-900 hover:text-[#9CBB04] truncate block transition-colors"
-                                  >
-                                    {chemical.compound}
-                                  </Link>
-                                </div>
-                                <div className="col-span-2 text-center">
-                                  <span className="text-sm text-gray-700">
-                                    {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
-                                  </span>
-                                </div>
-                                <div className="col-span-1 text-center">
-                                  <span className={`text-sm font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
-                                    {formatPercentile(chemical.percentile, chemical.value)}
-                                  </span>
-                                </div>
-                                <div className="col-span-2">
-                                  <p className="text-sm text-gray-600 truncate">
-                                    {chemical.primarySource}
-                                  </p>
-                                </div>
-                                <div className="col-span-2">
-                                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
-                                    {statusInfo.text}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
+                    <div className="overflow-x-auto">
+                      <div className="min-w-[600px]">
+                        <div className="px-4 lg:px-6 py-4 bg-[#404B69]">
+                          <div className="grid grid-cols-12 gap-2 lg:gap-4 text-xs lg:text-sm font-medium text-white">
+                            <div className="col-span-3">Chemical Name</div>
+                            <div className="col-span-2 text-center">Measured Value</div>
+                            <div className="col-span-1 text-center">Percentile</div>
+                            <div className="col-span-2">Primary Source</div>
+                            <div className="col-span-2">Status</div>
+                          </div>
+                        </div>
+                        <div>
+                          {selectedCategoryChemicals.map((chemical, index) => {
+                            const statusInfo = getChemicalStatusInfo(chemical.percentile, chemical.value);
+                            const isExpanded = expandedChemical === chemical.compound;
+                            const isEven = index % 2 === 0;
                             
-                            {/* Expanded Content */}
-                            {isExpanded && (
-                              <Link
-                                href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
-                                className={`block px-6 py-4 cursor-pointer transition-colors ${
-                                  isEven ? 'bg-gray-50 hover:bg-gray-100' : 'bg-gray-100 hover:bg-gray-200'
-                                }`}
+                            return (
+                              <div
+                                key={index}
+                                ref={(el) => {
+                                  chemicalRefs.current[chemical.compound] = el;
+                                }}
                               >
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                {/* Clickable Row */}
+                                <div
+                                  onClick={() => setExpandedChemical(isExpanded ? null : chemical.compound)}
+                                  className={`px-4 lg:px-6 py-3.5 transition-all duration-200 cursor-pointer ${
+                                    isExpanded 
+                                      ? 'bg-gray-100' 
+                                      : isEven 
+                                        ? 'bg-white hover:bg-gray-50' 
+                                        : 'bg-gray-50 hover:bg-gray-100'
+                                  }`}
+                                >
+                                  <div className="grid grid-cols-12 gap-2 lg:gap-4 items-center">
+                                    <div className="col-span-3 flex items-center gap-2">
+                                      <svg 
+                                        className={`w-4 h-4 text-[#9CBB04] transition-transform flex-shrink-0 ${isExpanded ? 'rotate-90' : ''}`}
+                                        fill="none" 
+                                        stroke="currentColor" 
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                      </svg>
+                                      <Link 
+                                        href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="text-xs lg:text-sm font-semibold text-gray-900 hover:text-[#9CBB04] truncate block transition-colors"
+                                      >
+                                        {chemical.compound}
+                                      </Link>
+                                    </div>
+                                    <div className="col-span-2 text-center">
+                                      <span className="text-xs lg:text-sm text-gray-700">
+                                        {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })} ng/mL` : 'Not Detected'}
+                                      </span>
+                                    </div>
+                                    <div className="col-span-1 text-center">
+                                      <span className={`text-xs lg:text-sm font-bold ${getPercentileColor(chemical.percentile, chemical.value)}`}>
+                                        {formatPercentile(chemical.percentile, chemical.value)}
+                                      </span>
+                                    </div>
+                                    <div className="col-span-2">
+                                      <p className="text-xs lg:text-sm text-gray-600 truncate">
+                                        {chemical.primarySource}
+                                      </p>
+                                    </div>
+                                    <div className="col-span-2">
+                                      <span className={`inline-flex items-center px-2 lg:px-2.5 py-0.5 rounded-full text-xs font-medium ${statusInfo.bgColor} ${statusInfo.textColor}`}>
+                                        {statusInfo.text}
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                {/* Expanded Content */}
+                                {isExpanded && (
+                                  <Link
+                                    href={`/chemical/${encodeURIComponent(chemical.compound)}?from=categories`}
+                                    className={`block px-4 lg:px-6 py-4 cursor-pointer transition-colors ${
+                                      isEven ? 'bg-gray-50 hover:bg-gray-100' : 'bg-gray-100 hover:bg-gray-200'
+                                    }`}
+                                  >
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
                                   <div>
                                     <h4 className="text-xs font-medium text-gray-600 mb-1">Primary Source</h4>
                                     <p className="text-sm text-gray-900">{chemical.primarySource}</p>
@@ -574,11 +576,13 @@ function CategoriesPageContent() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                   </svg>
                                 </div>
-                              </Link>
-                            )}
-                          </div>
-                        );
-                      })}
+                                  </Link>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
                     </div>
                   </div>
                   

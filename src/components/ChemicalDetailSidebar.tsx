@@ -240,7 +240,7 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
 
   return (
     <div className="mb-8">
-      <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl shadow-sm py-6 px-12 relative">
+      <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl shadow-sm py-4 lg:py-6 px-4 lg:px-12 relative">
         <div className="absolute inset-0 overflow-hidden rounded-xl pointer-events-none">
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#9CBB04] rounded-full blur-3xl"></div>
@@ -251,10 +251,10 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
         {/* CAS Registry Number */}
         {data.cas_rn && (
           <div className="mb-2">
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-600">CAS Registry Number</span>
-                <span className="text-sm font-semibold text-gray-900">{data.cas_rn}</span>
+            <div className="bg-gray-50 rounded-lg p-3 lg:p-4 border border-gray-200">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                <span className="text-xs lg:text-sm font-medium text-gray-600">CAS Registry Number</span>
+                <span className="text-xs lg:text-sm font-semibold text-gray-900">{data.cas_rn}</span>
               </div>
             </div>
           </div>
@@ -273,9 +273,9 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
                     sectionRefs.current.set(sectionId, el);
                   }
                 }}
-                className="scroll-mt-24 py-6"
+                className="scroll-mt-24 py-4 lg:py-6"
               >
-                <h3 className="text-xl font-semibold text-[#404B69] mb-4 flex items-center gap-2">
+                <h3 className="text-lg lg:text-xl font-semibold text-[#404B69] mb-3 lg:mb-4 flex items-center gap-2">
                   {section.header}
                   <button
                     ref={(el) => {
@@ -319,7 +319,7 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
                   )}
                 </h3>
                 <div className="prose max-w-none">
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-wrap mb-4">
+                  <p className="text-sm lg:text-base text-gray-700 leading-relaxed whitespace-pre-wrap mb-4">
                     {parseMarkdown(section.content)}
                   </p>
                   {section.bullets && section.bullets.length > 0 && (
@@ -339,7 +339,7 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
                               d="M9 12l2 2 4-4" 
                             />
                           </svg>
-                          <span className="leading-relaxed">{parseMarkdown(bullet)}</span>
+                          <span className="text-sm lg:text-base leading-relaxed">{parseMarkdown(bullet)}</span>
                         </li>
                       ))}
                     </ul>
@@ -352,7 +352,7 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
                           href={source} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#9CBB04] text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
+                          className="inline-flex items-center px-2 lg:px-3 py-1 lg:py-1.5 rounded-lg bg-white border border-[#9CBB04] text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
                           title={source}
                         >
                           {formatUrlForDisplay(source)}
@@ -373,8 +373,8 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
         {data.sources && data.sources.length > 0 && (
           <>
             <div className="border-t border-gray-300"></div>
-            <div className="pt-6">
-              <h4 className="text-sm font-semibold text-gray-900 mb-3">General Sources</h4>
+            <div className="pt-4 lg:pt-6">
+              <h4 className="text-xs lg:text-sm font-semibold text-gray-900 mb-3">General Sources</h4>
               <div className="flex flex-wrap gap-2">
                 {data.sources.map((source, index) => (
                   <a 
@@ -382,7 +382,7 @@ export default function ChemicalDetailSidebar({ data }: ChemicalDetailSidebarPro
                     href={source} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
+                    className="inline-flex items-center px-2 lg:px-3 py-1 lg:py-1.5 rounded-lg bg-white border border-gray-300 text-xs text-[#9CBB04] hover:text-[#8AA803] hover:border-[#9CBB04] transition-colors"
                     title={source}
                   >
                     {formatUrlForDisplay(source)}

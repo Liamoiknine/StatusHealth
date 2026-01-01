@@ -40,10 +40,10 @@ export default function RootLayout({
             <Sidebar />
           </Suspense>
           <div className="flex flex-col min-h-screen">
-            <main className="ml-60 flex-1">
+            <main className="lg:ml-60 flex-1">
               {children}
             </main>
-            <div className="ml-60">
+            <div className="lg:ml-60">
               <Footer />
             </div>
           </div>

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar, Home, Edit } from 'lucide-react';
+import { LayoutDashboard, Search, MessageSquare, FileText, Settings, CreditCard, ChevronDown, ChevronRight, Calendar, Home, Edit, Menu, X } from 'lucide-react';
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { getAllCategoryNames } from '@/data/category-overviews';
 
@@ -29,10 +29,16 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 });
   const [isCategoriesExpanded, setIsCategoriesExpanded] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const navRef = useRef<HTMLElement | null>(null);
   const categoriesSubmenuRef = useRef<HTMLDivElement | null>(null);
   const categoryNames = getAllCategoryNames();
+  
+  // Close mobile menu when pathname changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
   
   // Get selected category from URL
   const selectedCategory = searchParams?.get('category');
@@ -116,23 +122,59 @@ export default function Sidebar() {
     }
   }, [updateIndicatorPosition]);
 
+  // Close drawer handler
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <aside className="w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40">
-      {/* Banner with Logo and STATUS */}
-      <div className="bg-[#404B69] pl-3 pr-6 py-3 border-b border-[#404B69]/50">
-        <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src="/logo.png"
-            alt="StatusHealth Logo"
-            width={32}
-            height={32}
-            className="rounded-lg"
-          />
-          {/* Vertical divider */}
-          <div className="h-5 w-[2px] bg-white/30"></div>
-          <span className="text-lg font-extrabold text-white tracking-wide">STATUS</span>
-        </Link>
-      </div>
+    <>
+      {/* Hamburger Menu Button - Mobile Only */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-[#404B69] text-white rounded-lg shadow-lg hover:bg-[#404B69]/90 transition-colors"
+        aria-label="Toggle menu"
+      >
+        {isMobileMenuOpen ? (
+          <X className="w-6 h-6" strokeWidth={2} />
+        ) : (
+          <Menu className="w-6 h-6" strokeWidth={2} />
+        )}
+      </button>
+
+      {/* Overlay Backdrop - Mobile Only */}
+      {isMobileMenuOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 z-40 transition-opacity"
+          onClick={closeMobileMenu}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside
+        className={`
+          w-60 bg-white min-h-screen border-r border-gray-200 flex flex-col fixed left-0 top-0 z-40
+          transform transition-transform duration-300 ease-in-out
+          lg:translate-x-0
+          ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        `}
+      >
+        {/* Banner with Logo and STATUS */}
+        <div className="bg-[#404B69] pl-3 pr-6 py-3 border-b border-[#404B69]/50">
+          <Link href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
+            <Image
+              src="/logo.png"
+              alt="StatusHealth Logo"
+              width={32}
+              height={32}
+              className="rounded-lg"
+            />
+            {/* Vertical divider */}
+            <div className="h-5 w-[2px] bg-white/30"></div>
+            <span className="text-lg font-extrabold text-white tracking-wide">STATUS</span>
+          </Link>
+        </div>
       
       {/* Navigation */}
       <nav ref={navRef} className="flex-1 pt-6 pb-6 space-y-1 relative">
@@ -165,6 +207,7 @@ export default function Sidebar() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/categories"
+                      onClick={closeMobileMenu}
                       className={`flex-1 flex items-center space-x-2.5 pl-5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                         isActive && !selectedCategory
                           ? 'text-gray-900'
@@ -200,6 +243,7 @@ export default function Sidebar() {
                           <Link
                             key={categoryName}
                             href={`/categories?category=${encodeURIComponent(categoryName)}`}
+                            onClick={closeMobileMenu}
                             className={`block py-1.5 px-2 rounded text-sm transition-colors ${
                               isCategoryActive
                                 ? 'text-[#9CBB04] font-medium bg-[#9CBB04]/10'
@@ -216,6 +260,7 @@ export default function Sidebar() {
               ) : (
                 <Link
                   href={item.href}
+                  onClick={closeMobileMenu}
                   className={`flex items-center space-x-2.5 pl-5 pr-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
                       ? 'text-gray-900'
@@ -237,6 +282,7 @@ export default function Sidebar() {
           <span className="text-sm font-semibold text-gray-900">Danny Griffin</span>
           <Link
             href="/settings"
+            onClick={closeMobileMenu}
             className="p-1 rounded hover:bg-gray-100 transition-colors"
             aria-label="Edit profile"
           >
@@ -248,6 +294,7 @@ export default function Sidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }
 

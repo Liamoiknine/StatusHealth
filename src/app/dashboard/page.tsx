@@ -251,17 +251,17 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-8">
-        <h1 className="text-2xl font-bold text-black mb-2">Welcome back, <span>Danny</span></h1>
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-5 pb-8">
+        <h1 className="text-xl lg:text-2xl font-bold text-black mb-2">Welcome back, <span>Danny</span></h1>
         <div className="h-px bg-gray-300 mb-2"></div>
         
         {/* Test Selection Dropdown and Search Bar Row */}
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
           {/* Test Selection Dropdown */}
-          <div className="relative">
+          <div className="relative w-full lg:w-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-white border border-gray-200 rounded-lg px-4 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center gap-2 shadow-sm"
+              className="w-full lg:w-auto bg-white border border-gray-200 rounded-lg px-4 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors flex items-center gap-2 shadow-sm"
             >
               <svg 
                 className="w-4 h-4 text-gray-500"
@@ -309,7 +309,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Search Bar */}
-          <div ref={searchRef} className="relative flex-1 max-w-sm">
+          <div ref={searchRef} className="relative w-full lg:flex-1 lg:max-w-sm">
             <div className="relative">
               <input
                 ref={inputRef}
@@ -372,8 +372,8 @@ export default function DashboardPage() {
         </div>
 
         {/* Three Blank Cards */}
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-6 py-3 flex flex-col overflow-hidden">
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-4 lg:px-6 py-3 flex flex-col overflow-hidden">
             {chemicals.length > 0 && (() => {
               const detectedCount = chemicals.filter(c => c.value > 0).length;
               const totalCount = chemicals.length;
@@ -381,12 +381,12 @@ export default function DashboardPage() {
               
               return (
                 <>
-                  <div className="text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Exposures Detected</div>
+                  <div className="text-xs lg:text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Exposures Detected</div>
                   <div className="h-px bg-gray-200 mb-2"></div>
                   <div className="flex-1 flex flex-col justify-center gap-1 min-h-0">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-bold text-[#9CBB04] leading-none">{detectedCount}</span>
-                      <span className="text-sm text-gray-500">of {totalCount} chemicals</span>
+                      <span className="text-3xl lg:text-4xl font-bold text-[#9CBB04] leading-none">{detectedCount}</span>
+                      <span className="text-xs lg:text-sm text-gray-500">of {totalCount} chemicals</span>
                     </div>
                     <div className="w-full">
                       <div className="relative h-1.5 bg-gray-100 rounded-full overflow-hidden">
@@ -414,7 +414,7 @@ export default function DashboardPage() {
                 ? `/categories?category=${encodeURIComponent(topCategory.category)}`
                 : '#';
             })() : '#'}
-            className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-6 py-3 flex flex-col overflow-hidden relative hover:border-[#9CBB04] hover:shadow-md transition-all cursor-pointer"
+            className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-4 lg:px-6 py-3 flex flex-col overflow-hidden relative hover:border-[#9CBB04] hover:shadow-md transition-all cursor-pointer"
           >
             {chemicals.length > 0 && (() => {
               const categoryGroups = groupChemicalsByCategory(chemicals);
@@ -430,7 +430,7 @@ export default function DashboardPage() {
               if (!topCategory || topCategory.detectedCount === 0) {
                 return (
                   <div className="flex flex-col items-center justify-center h-full">
-                    <div className="text-sm font-bold text-gray-700 mb-1">Top Exposure Category</div>
+                    <div className="text-xs lg:text-sm font-bold text-gray-700 mb-1">Top Exposure Category</div>
                     <div className="text-xs text-gray-500">No exposures detected</div>
                   </div>
                 );
@@ -443,18 +443,20 @@ export default function DashboardPage() {
               
               return (
                 <>
-                  <div className="text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Top Exposure Category</div>
+                  <div className="text-xs lg:text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Top Exposure Category</div>
                   <div className="h-px bg-gray-200 mb-2"></div>
-                  <div className="flex-1 flex items-start gap-3 min-h-0">
-                    <div className="bg-[#9CBB04]/20 p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
-                      {getCategoryIcon(topCategory.category)}
+                  <div className="flex-1 flex items-start gap-2 lg:gap-3 min-h-0">
+                    <div className="bg-[#9CBB04]/20 p-2 lg:p-3 rounded-lg text-[#9CBB04] flex-shrink-0">
+                      <div className="scale-75 lg:scale-100">
+                        {getCategoryIcon(topCategory.category)}
+                      </div>
                     </div>
                     <div className="w-px h-full bg-gray-200 flex-shrink-0"></div>
                     <div className="flex flex-col justify-start gap-0.5 min-h-0">
-                      <div className="text-lg font-semibold text-gray-900">
+                      <div className="text-base lg:text-lg font-semibold text-gray-900">
                         {topCategory.category}
                       </div>
-                      <div className="flex items-center gap-2 text-xs text-gray-600">
+                      <div className="flex items-center gap-1.5 lg:gap-2 text-xs text-gray-600">
                         <span>{topCategory.detectedCount} chemicals</span>
                         <span className="text-gray-400">|</span>
                         <span>{detectionRate}% detection rate</span>
@@ -465,7 +467,7 @@ export default function DashboardPage() {
               );
             })()}
           </Link>
-          <div className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-6 py-3 flex flex-col overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm h-[120px] px-4 lg:px-6 py-3 flex flex-col overflow-hidden">
             {chemicals.length > 0 && (() => {
               const detectedChemicals = chemicals.filter(c => c.value > 0);
               const sortedChemicals = sortChemicalsByPercentile(detectedChemicals);
@@ -474,7 +476,7 @@ export default function DashboardPage() {
               if (top3Chemicals.length === 0) {
                 return (
                   <div className="flex flex-col items-center justify-center h-full">
-                    <div className="text-sm font-semibold text-gray-700 mb-1">Top 3 Exposures</div>
+                    <div className="text-xs lg:text-sm font-semibold text-gray-700 mb-1">Top 3 Exposures</div>
                     <div className="text-xs text-gray-500">No exposures detected</div>
                   </div>
                 );
@@ -482,7 +484,7 @@ export default function DashboardPage() {
               
               return (
                 <>
-                  <div className="text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Top 3 Highest Exposures</div>
+                  <div className="text-xs lg:text-sm font-bold text-gray-700 mb-2 flex-shrink-0">Top 3 Highest Exposures</div>
                   <div className="h-px bg-gray-200 mb-2"></div>
                   <div className="flex-1 flex flex-col gap-0.1 min-h-0">
                     {top3Chemicals.map((chemical, index) => {
@@ -899,29 +901,29 @@ export default function DashboardPage() {
             .slice(0, 6);
 
           return (
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-2">
               {topCategories.map((category) => (
                 <Link
                   key={category.name}
                   href={`/categories?category=${encodeURIComponent(category.name)}`}
-                  className="bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm relative min-h-[60px] flex items-center hover:border-[#9CBB04] hover:shadow-md transition-all cursor-pointer"
+                  className="bg-white border border-gray-200 rounded-xl px-3 lg:px-4 py-3 shadow-sm relative min-h-[60px] flex items-center hover:border-[#9CBB04] hover:shadow-md transition-all cursor-pointer"
                 >
-                  <div className="flex items-center gap-3 pr-2 flex-1">
-                    <div className="text-[#9CBB04] flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                      <div className="scale-75">
+                  <div className="flex items-center gap-2 lg:gap-3 pr-2 flex-1">
+                    <div className="text-[#9CBB04] flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <div className="scale-75 lg:scale-100">
                         {getCategoryIcon(category.name)}
                       </div>
                     </div>
-                    <div className="text-base font-bold text-gray-900">
+                    <div className="text-sm lg:text-base font-bold text-gray-900">
                       {category.name}
                     </div>
                   </div>
-                  <div className="absolute top-3 right-4">
+                  <div className="absolute top-2 lg:top-3 right-2 lg:right-4">
                     <div className={`text-xs font-medium ${category.classificationColor} whitespace-nowrap`}>
                       {category.classification}
                     </div>
                   </div>
-                  <div className="absolute bottom-3 right-4">
+                  <div className="absolute bottom-2 lg:bottom-3 right-2 lg:right-4">
                     <div className="text-xs font-normal text-gray-500">
                       {category.detectedCount} / {category.totalCount} elevated
                     </div>
@@ -934,7 +936,7 @@ export default function DashboardPage() {
 
         {/* Help Banner */}
         {isHelpBannerVisible && (
-          <div className="mt-8 bg-[#9CBB04]/10 border border-[#9CBB04]/30 rounded-xl px-6 py-4 relative">
+          <div className="mt-8 bg-[#9CBB04]/10 border border-[#9CBB04]/30 rounded-xl px-4 lg:px-6 py-4 relative">
             <button
               onClick={() => setIsHelpBannerVisible(false)}
               className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
@@ -944,9 +946,9 @@ export default function DashboardPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="flex items-center justify-between pr-8">
-              <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between pr-8 gap-3 lg:gap-0">
+              <div className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-[#9CBB04] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
@@ -956,7 +958,7 @@ export default function DashboardPage() {
               </div>
               <Link
                 href="/help"
-                className="px-4 py-2 bg-[#9CBB04] text-white text-sm font-medium rounded-lg hover:bg-[#8AA803] transition-colors whitespace-nowrap"
+                className="px-4 py-2 bg-[#9CBB04] text-white text-sm font-medium rounded-lg hover:bg-[#8AA803] transition-colors whitespace-nowrap w-full lg:w-auto text-center"
               >
                 Help Center
               </Link>

@@ -240,10 +240,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
-      <div className="container mx-auto px-8 py-8 max-w-7xl">
+      <div className="container mx-auto px-4 lg:px-8 py-8 max-w-7xl">
         {/* Hero Section - Two Column Layout */}
         <div className="mb-8">
-          <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm relative">
+          <div className="bg-gradient-to-r from-white via-gray-50 to-white border border-gray-200 rounded-xl p-4 lg:p-6 shadow-sm relative">
             <div className="absolute inset-0 overflow-hidden rounded-xl pointer-events-none">
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-5">
@@ -252,10 +252,10 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
               </div>
             </div>
             
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
               {/* Left Column: Name + Description */}
               <div className="flex flex-col">
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
                   {chemical.compound}
                 </h1>
                 <div className="border-t border-gray-300 mb-4"></div>
@@ -280,11 +280,11 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
               </div>
 
               {/* Right Column: Cards + Exposure Bar */}
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3 lg:gap-4">
                 {/* Top Row: Three Cards */}
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-3 gap-2 lg:gap-3">
                   {/* Population Percentile Card */}
-                  <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
+                  <div className="bg-white border border-gray-200 rounded-lg p-3 lg:p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
                     <button
                       ref={tooltipRefs.percentile}
                       onClick={() => setOpenTooltip(openTooltip === 'percentile' ? null : 'percentile')}
@@ -312,12 +312,12 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                       document.body
                     )}
                     <div className="flex items-center justify-between mb-2">
-                      <div className="p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
-                        <svg className="w-4 h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="p-1.5 lg:p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
+                        <svg className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
                       </div>
-                      <span className="text-xl font-bold text-gray-900">
+                      <span className="text-base lg:text-xl font-bold text-gray-900">
                         {formatPercentile(chemical.percentile, chemical.value)}
                       </span>
                     </div>
@@ -325,7 +325,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                   </div>
 
                   {/* Measured Value Card */}
-                  <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
+                  <div className="bg-white border border-gray-200 rounded-lg p-3 lg:p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
                     <button
                       ref={tooltipRefs.measuredValue}
                       onClick={() => setOpenTooltip(openTooltip === 'measuredValue' ? null : 'measuredValue')}
@@ -353,12 +353,12 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                       document.body
                     )}
                     <div className="flex items-center justify-between mb-2">
-                      <div className="p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
-                        <svg className="w-4 h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="p-1.5 lg:p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
+                        <svg className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                       </div>
-                      <span className="text-xl font-bold text-gray-900">
+                      <span className="text-base lg:text-xl font-bold text-gray-900">
                         {chemical.value > 0 ? `${chemical.value.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}` : 'N/D'}
                       </span>
                     </div>
@@ -370,7 +370,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
                   {/* Population Exposed Card */}
                   {chemical.population !== undefined ? (
-                    <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
+                    <div className="bg-white border border-gray-200 rounded-lg p-3 lg:p-4 hover:border-[#9CBB04] transition-all group shadow-sm relative overflow-visible">
                       <button
                         ref={tooltipRefs.populationExposed}
                         onClick={() => setOpenTooltip(openTooltip === 'populationExposed' ? null : 'populationExposed')}
@@ -398,19 +398,19 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
                         document.body
                       )}
                       <div className="flex items-center justify-between mb-2">
-                        <div className="p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
-                          <svg className="w-4 h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="p-1.5 lg:p-2 bg-[#9CBB04]/10 rounded-lg group-hover:bg-[#9CBB04]/20 transition-colors">
+                          <svg className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#9CBB04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                           </svg>
                         </div>
-                        <span className="text-xl font-bold text-gray-900">
+                        <span className="text-base lg:text-xl font-bold text-gray-900">
                           {(chemical.population * 100).toFixed(1)}%
                         </span>
                       </div>
                       <p className="text-xs text-gray-600">Population Exposed</p>
                     </div>
                   ) : (
-                    <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm opacity-50 relative overflow-visible">
+                    <div className="bg-white border border-gray-200 rounded-lg p-3 lg:p-4 shadow-sm opacity-50 relative overflow-visible">
                       <button
                         ref={tooltipRefs.populationExposed}
                         onClick={() => setOpenTooltip(openTooltip === 'populationExposed' ? null : 'populationExposed')}
@@ -452,7 +452,7 @@ export default function ChemicalPage({ params }: { params: Promise<{ name: strin
 
                 {/* Bottom Row: Exposure Range Bar */}
                 {(chemical.rangeLow !== undefined && chemical.rangeHigh !== undefined) && (
-                  <div className="bg-white border border-gray-200 rounded-lg p-4 pb-8 shadow-sm relative overflow-visible">
+                  <div className="bg-white border border-gray-200 rounded-lg p-3 lg:p-4 pb-6 lg:pb-8 shadow-sm relative overflow-visible">
                     <button
                       ref={tooltipRefs.exposureRange}
                       onClick={() => setOpenTooltip(openTooltip === 'exposureRange' ? null : 'exposureRange')}

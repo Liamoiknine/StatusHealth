@@ -56,11 +56,11 @@ export default function TestsPage() {
 
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
-      <div className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">All Tests</h1>
-          <p className="text-gray-600">View and select from all your test results</p>
+          <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">All Tests</h1>
+          <p className="text-sm lg:text-base text-gray-600">View and select from all your test results</p>
         </div>
 
         {/* Tests List */}
@@ -73,27 +73,27 @@ export default function TestsPage() {
               <div key={test.id}>
                 <button
                   onClick={() => handleTestClick(test.id)}
-                  className={`w-full text-left p-4 hover:bg-gray-50 transition-all ${
+                  className={`w-full text-left p-3 lg:p-4 hover:bg-gray-50 transition-all ${
                     isSelected ? 'bg-[#9CBB04]/10' : ''
                   }`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 flex-1">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 lg:gap-4 flex-1 w-full sm:w-auto">
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold text-gray-900">
+                        <h3 className="text-base lg:text-lg font-bold text-gray-900">
                           {testDate}
                         </h3>
-                        <p className="text-sm text-gray-500 mt-0.5">
+                        <p className="text-xs lg:text-sm text-gray-500 mt-0.5">
                           Test #{test.id}
                         </p>
                       </div>
                       {isSelected && (
-                        <div className="bg-[#9CBB04] text-white rounded-full px-3 py-1 text-xs font-semibold">
+                        <div className="bg-[#9CBB04] text-white rounded-full px-2 lg:px-3 py-1 text-xs font-semibold">
                           Current
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center text-sm text-[#9CBB04] font-medium ml-4">
+                    <div className="flex items-center text-xs lg:text-sm text-[#9CBB04] font-medium sm:ml-4 w-full sm:w-auto justify-start sm:justify-end">
                       <span>View Results</span>
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -116,16 +116,16 @@ export default function TestsPage() {
         )}
 
         {/* Schedule Next Test Panel */}
-        <div className="mt-8 bg-[#404B69] rounded-lg p-8 shadow-sm">
+        <div className="mt-8 bg-[#404B69] rounded-lg p-4 lg:p-8 shadow-sm">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="flex-1">
-              <h2 className="text-2xl font-bold text-white mb-2">
+              <h2 className="text-xl lg:text-2xl font-bold text-white mb-2">
                 Schedule Your Next Test
               </h2>
-              <p className="text-gray-300 mb-4">
+              <p className="text-sm lg:text-base text-gray-300 mb-4">
                 Regular testing helps you track changes in your chemical exposure over time and make informed decisions about your health.
               </p>
-              <div className="space-y-2 text-sm text-gray-300">
+              <div className="space-y-2 text-xs lg:text-sm text-gray-300">
                 <div className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-[#9CBB04] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -146,11 +146,11 @@ export default function TestsPage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-3 lg:ml-6">
-              <button className="bg-[#9CBB04] text-white rounded-lg px-6 py-3 hover:bg-[#8AA803] transition-colors font-medium text-sm whitespace-nowrap">
+            <div className="flex flex-col gap-3 lg:ml-6 w-full sm:w-auto">
+              <button className="bg-[#9CBB04] text-white rounded-lg px-6 py-3 hover:bg-[#8AA803] transition-colors font-medium text-sm whitespace-nowrap w-full sm:w-auto">
                 Schedule Test
               </button>
-              <button className="bg-white text-[#404B69] border border-white rounded-lg px-6 py-3 hover:bg-gray-100 transition-colors font-medium text-sm whitespace-nowrap">
+              <button className="bg-white text-[#404B69] border border-white rounded-lg px-6 py-3 hover:bg-gray-100 transition-colors font-medium text-sm whitespace-nowrap w-full sm:w-auto">
                 Contact Support
               </button>
             </div>
