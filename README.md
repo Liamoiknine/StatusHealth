@@ -1,6 +1,6 @@
 # StatusHealth
 
-StatusHealth is a startup centered around accurate measurement of environmental exposures in your blood, currently not measured elsewhere. Check out [Statushealth.com](Statushealth.com) to learn more.
+StatusHealth is a startup centered around accurate measurement of environmental exposures in your blood, currently not measured elsewhere. Check out [Statushealth.com]([url](https://statushealth.com/)) to learn more.
 
 ## Project Overview
 
