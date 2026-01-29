@@ -132,7 +132,7 @@ export default function Sidebar() {
       {/* Hamburger Menu Button - Mobile Only */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-[#404B69] text-white rounded-lg shadow-lg hover:bg-[#404B69]/90 transition-colors"
+        className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-[#404B69] text-white rounded-lg shadow-lg hover:bg-[#404B69]/90 transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
