@@ -1,10 +1,8 @@
 # StatusHealth
 
-StatusHealth is a startup centered around accurate measurement of environmental exposures in your blood, currently not measured elsewhere.
+StatusHealth is a startup centered around accurate measurement of environmental exposures in your blood, currently not measured elsewhere. Check out [Statushealth.com](Statushealth.com) to learn more.
 
 ## Project Overview
-
-StatusHealth is a health status monitoring application for tracking chemical exposures from biomonitoring test data. The application visualizes and analyzes chemical exposure data across multiple test dates, organized by exposure categories. Users can understand their data very clearly, with as much depth as they personally desire.
 
 This application is the first prototype of our user portal, where users will visualize their results and understand how to breakdown their health and take positive action. We provide a dashboard for viewing chemical exposure levels, percentiles, detection rates, and longitudinal trends.
 
@@ -67,15 +65,3 @@ public/
 - Data flows: CSV → ChemicalData interface → Components
 - Test selection managed via TestContext
 - API routes provide server-side data processing endpoints
-
-## Key Concepts
-
-- **Chemical Categories**: Six main exposure categories organize chemicals by source/use
-- **Exposure Levels**: Based on percentile rankings:
-  - Pay Attention (>60th percentile)
-  - Monitor Only (30-60th percentile)
-  - Low Exposure (0-30th percentile)
-  - Not Detected (value = 0)
-- **Percentiles**: Represent where a measured value falls relative to population data
-- **Test Metadata**: Each test has an ID, filename, and date for longitudinal tracking
-- **Longitudinal Data**: Tracks chemical levels across multiple test dates
